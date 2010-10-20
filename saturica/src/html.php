@@ -31,7 +31,7 @@ function footer()
 {
 	echo "<div id='footer'>";
 	echo "<p id='legal'>Copyright &copy; 2010 by Yossi Jacob & Roee Minster. All Rights Reserved.</p>";
-	echo "<p id='links'><a href='#'>Privacy Policy</a> | <a href='#'>Terms of Use</a></p>";
+	//echo "<p id='links'><a href='#'>Privacy Policy</a> | <a href='#'>Terms of Use</a></p>";
 	echo "</div>";
 }
 //************************************************************************
