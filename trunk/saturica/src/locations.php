@@ -16,25 +16,26 @@ if ($row==null)  // if null then put header
 	{
 		echo "<thead>";
 		echo "<tr>";
-		echo "<th>Location number</th>";
-		echo "<th>Fake location name</th>";
-		echo "<th>Real location name</th>";
-		echo "<th>Description</th>";
-		echo "<th>Picture</th>";
-		echo "<th>Rank</th>";
+		echo "<th>דירוג פנימי</th>";
+		echo "<th>תמונה </th>";
+		echo "<th>מיקום גאוגרפי</th>";
+		echo "<th>טקסט תיאור</th>";
+		echo "<th>שם מיקום אמיתי</th>";
+		echo "<th>שם מיקום בדוי</th>";
+		echo "<th>מספר מיקום</th>";
 		echo "</tr>";
 		echo "</thead>";
 	}
 	else
 	{
 		echo "<tr>";
-		echo "<td>$row[1]</td>"; // Location number
-		echo "<td>$row[2]</td>"; // Fake location name
-		echo "<td>$row[3]</td>"; // Real location name
-		echo "<td>$row[4]</td>"; // Fake location name
-		echo "<td>$row[5]</td>"; // Description
-		echo "<td>$row[6]</td>"; // Picture
-		echo "<td>$row[7]</td>"; // Rank
+		echo "<td>$row[7]</td>"; // דירוג פנימי 	
+		echo "<td>$row[6]</td>"; // תמונה 
+		echo "<td>$row[5]</td>"; // מיקום גאוגרפי
+		echo "<td>$row[4]</td>"; // טקסט תיאור
+		echo "<td>$row[3]</td>"; // שם מיקום אמיתי
+		echo "<td>$row[2]</td>"; // שם מיקום בדוי
+		echo "<td>$row[1]</td>"; // מספר מיקום
 		echo "</tr>";
 	}
 }
@@ -49,7 +50,7 @@ function ShowLocationTable()
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-<title>לוקיישנים</title>
+<title>מיקומים</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="default.css" rel="stylesheet" type="text/css" />
@@ -62,10 +63,10 @@ function ShowLocationTable()
 	
 <div id="content">
 	    <br/>
-	    <h1>לוקיישנים</h1>
+	    <h1>מיקומים</h1>
 	    <hr></hr>
 	    <div id="right_menu">
-    	<a href="addlocation.php" class="icon_button"><span class="add">הוסף לוקיישן חדש</span></a>
+    	<a href="addlocation.php" class="icon_button"><span class="add">הוסף מיקום חדש</span></a>
     	</div>
 	    <br/>
 	    <br/>
