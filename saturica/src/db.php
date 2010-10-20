@@ -6,11 +6,11 @@ function GetPreferences()
 {
 	$result = mysql_query("SELECT * FROM preferences");
 	$row = mysql_fetch_row($result);
-	$preferences['email'] = $row[0];
-	$preferences['recomend1'] = $row[3];
-	$preferences['recomend2'] = $row[4];
-	$preferences['recomend3'] = $row[5];
-	$preferences['cap'] = $row[6];
+	$preferences['email'] = $row[1];
+	$preferences['recomend1'] = $row[4];
+	$preferences['recomend2'] = $row[5];
+	$preferences['recomend3'] = $row[6];
+	$preferences['cap'] = $row[7];
 	return $preferences;
 }
 //********************************************************************
