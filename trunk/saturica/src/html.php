@@ -27,6 +27,15 @@ function isemail($email) {
     return preg_match('|^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]{2,})+$|i', $email);
 }
 //***********************************************************************
+
+
+function isrank($rank) {
+    if ( ( $rank < 1 ) || ( $rank > 5 ) ) return false;
+    return true; 
+}
+//***********************************************************************
+
+
 function footer()
 {
 	echo "<div id='footer'>";
