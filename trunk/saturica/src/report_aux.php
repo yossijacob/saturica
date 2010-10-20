@@ -64,9 +64,10 @@ function ShowTable($table,$query,$row_func,$class,$curr_page,$table_id)
 {	// shows a table 
 	// table to show from
 	// query is the required query	
-	// row_func - function to hande row printing 
+	// row_func - function to hande row printing the function will get null to put header
 	// table class
 	// curr_page - current page
+	// table_id make an id for the table - for example if u want to use jExpand to expand rows
 	
 	$preferences = GetPreferences();  // get prefereces
 	if (isset($_POST['num_results_dropdown']))
@@ -107,92 +108,6 @@ function ShowTable($table,$query,$row_func,$class,$curr_page,$table_id)
 	ShowResultNavigatior($record_count,$start,$cap,$curr_page);
 	
 	mysql_free_result($result);
-}
-
-//---------------------------------------------------------------------------------------------
-function ShowAllLeadsTable2($start_date, $end_date)
-{
-	$start = DateToPosTime($start_date);	//get the dates as seconds from 1970
-	$end = DateToPosTime($end_date);
-	$query = "WHERE date_entered BETWEEN $start AND $end"; // set query
-	// and now show the table
-	ShowTable("leads", $query,"AllLeadsTableRow","report_table","leadsincoming.php?start_date=$start_date&end_date=$end_date&submitted=true","report");  
-}
-//---------------------------------------------------------------------------------------------
-function AllLeadsTableRow($row)
-{
-	if ($row==null)  // if null then put header
-	{
-		echo "<thead>";
-		echo "<tr>";
-		echo "<th>From City</th>";
-		echo "<th>From State</th>";
-		//echo "<th>From Zip</th>";
-		echo "<th>To City</th>";
-		echo "<th>To State</th>";
-		//echo "<th>To Zip</th>";
-		echo "<th>Shiping Date</th>";
-		//echo "<th>Carrier Type</th>";
-		echo "<th>Year</th>";
-		//echo "<th>Make</th>";
-		echo "<th>Model</th>";
-		//echo "<th>Condition</th>";
-		echo "<th>Name</th>";
-		echo "<th>Phone</th>";
-		//echo "<th>Email</th>";
-		//echo "<th>Ip</th>";
-		//echo "<th>Time Entered</th>";
-		//echo "<th>Receiving Brokers</th>";
-		echo "</tr>";
-		echo "</thead>";
-	}
-	else
-	{
-		/*$rowname = $row[0].'row';
-		$divname = $row[0].'info';*/
-		//echo "<tr id='$rowname' onclick='showhide(\"$divname\");ChangeClass(\"$rowname\",\"expanded\"); return true;'>";
-		echo "<tr>";
-		echo "<td>$row[1]</td>"; // from city
-		echo "<td>$row[2]</td>"; // from state
-		//echo "<td>$row[3]</td>"; // from zip
-		echo "<td>$row[4]</td>"; // to city
-		echo "<td>$row[5]</td>"; // to state
-		//echo "<td>$row[6]</td>"; // to zip
-		echo "<td>$row[7]</td>"; // shiping date
-		//echo "<td>$row[8]</td>"; // carrier type
-		echo "<td>$row[9]</td>"; // year
-		//echo "<td>$row[10]</td>"; // make
-		echo "<td>$row[11]</td>"; // model
-		//echo "<td>$row[12]</td>"; // condition
-		echo "<td>$row[13]</td>"; // name
-		echo "<td>$row[14]</td>"; // phone
-		//echo "<td>$row[15]</td>"; // email
-		//echo "<td>$row[16]</td>"; // ip
-		//echo "<td>$row[17]</td>"; // time entered
-		//echo "<td>$row[18]</td>"; // Receiving brokers
-		//echo "<td><div class='arrow'></div></td>";
-		echo "</tr>";
-		echo "<tr>";
-		echo "<td colspan='9'>";
-		echo "<div class='infopopup'>";
-		//echo "<div id='$divname' class='infopopup' style='display:none;'>";
-		//echo "<tr id='$row[0]info' style='display:block'>";
-			//echo "<ul>";
-			echo "<li>From Zip: $row[3]</li>"; // from zip
-			echo "<li>To Zip: $row[6]</li>"; // to zip
-			echo "<li>Carrier Type: $row[8]</li>"; // carrier type
-			echo "<li>Make: $row[10]</li>"; // make
-			echo "<li>Condition: $row[12]</li>"; // condition
-			echo "<li>Email: $row[15]</li>"; // email
-			echo "<li>Ip: $row[16]</li>"; // ip
-			echo "<li>Time Entered$row[17]</li>"; // time entered
-			echo "<li>Receiving Brokers: $row[18]</li>"; // Receiving brokers
-			//echo "</ul>";
-		echo "</div>";
-		echo "</td>";
-		echo "</tr>";
-		 
-	}
 }
 
 //---------------------------------------------------------------------------------------------
