@@ -4,6 +4,7 @@ include_once 'html.php';
 include_once 'mysql.php';
 include_once 'db.php';
 include_once 'connect.php';
+include_once 'report_aux';
 		
 connect();   //connect to mysql DB	 
 //---------------------------------------------------------------------------------------------
@@ -62,17 +63,10 @@ function ShowCustomerTable()
 	    <br/>
 	    <br/>
 		
-		<!-- <div class='table_bl'>
-			<div class='table_br'>
-				<div class='table_tl'>
-					<div class='table_tr'> -->
 		<?php
 		ShowCustomerTable();
 		?>
-					<!-- </div>
-				</div>
-  			</div>
-  		</div> -->
+		
 </div>   <!--  end of content -->
 <?php 
 footer();
