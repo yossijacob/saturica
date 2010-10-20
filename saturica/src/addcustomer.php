@@ -52,9 +52,8 @@ connect();   //connect to mysql DB
   	$dont_show_form = false;
   	$miss = false;
   	$missing = "";
-  	$name_exist = "";
   	
-  	if (isset($_POST['submitted']))
+  	if (isset($_POST['submitted']))  // if form was submitted then check and process it
   	{
   	
   	if ($phone == "") 
