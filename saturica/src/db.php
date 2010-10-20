@@ -6,7 +6,7 @@ function GetPreferences()
 {
 	$result = mysql_query("SELECT * FROM preferences");
 	$row = mysql_fetch_row($result);
-	$preferences['prime_email'] = $row[0];
+	$preferences['email'] = $row[0];
 	$preferences['recomend1'] = $row[3];
 	$preferences['recomend2'] = $row[4];
 	$preferences['recomend3'] = $row[5];
@@ -16,7 +16,7 @@ function GetPreferences()
 //********************************************************************
 function SetPreferences($preferences)
 {
-	$query  = "UPDATE preferences SET recomend1 ='".$preferences['recomend1']."',cap ='".$preferences['cap']."',recomend2 ='".$preferences['recomend2']."',prime_email ='".$preferences['prime_email']."',recomend3 = '".$preferences['recomend3']."'";
+	$query  = "UPDATE preferences SET recomend1 ='".$preferences['recomend1']."',cap ='".$preferences['cap']."',recomend2 ='".$preferences['recomend2']."',email ='".$preferences['email']."',recomend3 = '".$preferences['recomend3']."'";
 	$result = mysql_query($query)
 	or die(mysql_error());
 }
