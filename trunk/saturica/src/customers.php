@@ -4,11 +4,11 @@ include_once 'html.php';
 include_once 'mysql.php';
 include_once 'db.php';
 include_once 'connect.php';
-include_once 'report_aux';
+include_once 'report_aux.php';
 		
 connect();   //connect to mysql DB	 
 //---------------------------------------------------------------------------------------------
-function CunstomersTableRow($row)
+function CustomersTableRow($row)
 {	/* this function print the row in the customers table
 	   it gets the array $row as a paramater.
 	*/

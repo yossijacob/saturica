@@ -111,77 +111,7 @@ function ShowTable($table,$query,$row_func,$class,$curr_page,$table_id)
 }
 
 //---------------------------------------------------------------------------------------------
-function ShowAllLeadsTable($start_date , $end_date)
-{
-	$start = DateToPosTime($start_date);	//get the dates as seconds from 1970
-	$end = DateToPosTime($end_date);
-	
-	$result = mysql_query("SELECT * FROM leads WHERE date_entered BETWEEN $start AND $end")
-	or die(mysql_error());
-	echo "report for period : $start_date($start) - $end_date($end) <br/>";
-	echo "<table>";
-	echo "<thead>";
-	echo "<tr>";
-	echo "<th>From City</th>";
-	echo "<th>From State</th>";
-	echo "<th>To City</th>";
-	echo "<th>To State</th>";
-	echo "<th>Shiping Date</th>";
-	echo "<th>Year</th>";
-	echo "<th>Make</th>";
-	echo "<th>Model</th>";
-	echo "<th>Name</th>";
-	echo "<th>Phone</th>";
-	echo "<th>Email</th>";
-	echo "<th>Ip</th>";
-	echo "</tr>";
-	echo "</thead>";
-	
-	while ($row = mysql_fetch_row($result))
-	{
-	
-	echo "<tr>";
-	echo "<td>$row[1]</td>"; // from city
-	echo "<td>$row[2]</td>"; // from state
-	echo "<td>$row[4]</td>"; // to city
-	echo "<td>$row[5]</td>"; // to state
-	echo "<td>$row[7]</td>"; // shiping date
-	echo "<td>$row[9]</td>"; // year
-	echo "<td>$row[10]</td>"; // make
-	echo "<td>$row[11]</td>"; // model
-	echo "<td>$row[13]</td>"; // name
-	echo "<td>$row[14]</td>"; // phone
-	echo "<td>$row[15]</td>"; // email
-	echo "<td>$row[16]</td>"; // ip
-	echo "</tr>";
-	}
-	echo "</table>";
-	mysql_free_result ( $result );
-}
-//**************************************************************************
-function ShowDispatchTable()
-{
-	$result = mysql_query("SELECT * FROM brokers_queue")
-	or die(mysql_error());
-	echo "<table class='dispatch_table' cellspacing='0'>";
-	
-	echo "<tr id='dispatch_table_head'>";
-	echo "<th>Name</th>";
-	echo "<th>Daily Leads Left</th>";
-	echo "<th>Daily Cap</th>";
-	echo "</tr>";
-	
-	while ($row = mysql_fetch_row($result))
-	{
-	
-	echo "<tr>";
-	echo "<td>$row[2]</td>"; // name
-	echo "<td>$row[3]</td>"; // leads left
-	echo "<td>$row[4]</td>"; // cap
-	echo "</tr>";
-	}
-	echo "</table>";
-}
+
 
 
 ?>

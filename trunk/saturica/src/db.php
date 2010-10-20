@@ -6,18 +6,17 @@ function GetPreferences()
 {
 	$result = mysql_query("SELECT * FROM preferences");
 	$row = mysql_fetch_row($result);
-	$preferences['prime_email'] = $row[1];
-	$preferences['delay'] = $row[2];
-	$preferences['broker_count'] = $row[3];
-	$preferences['broker_index'] = $row[4];
-	$preferences['dispatch_amount'] = $row[5];
+	$preferences['prime_email'] = $row[0];
+	$preferences['recomend1'] = $row[3];
+	$preferences['recomend2'] = $row[4];
+	$preferences['recomend3'] = $row[5];
 	$preferences['cap'] = $row[6];
 	return $preferences;
 }
 //********************************************************************
 function SetPreferences($preferences)
 {
-	$query  = "UPDATE preferences SET dispatch_amount ='".$preferences['dispatch_amount']."',cap ='".$preferences['cap']."',broker_index ='".$preferences['broker_index']."',prime_email ='".$preferences['prime_email']."',delay = '".$preferences['delay']."',broker_count = '".$preferences['broker_count']."'";
+	$query  = "UPDATE preferences SET recomend1 ='".$preferences['recomend1']."',cap ='".$preferences['cap']."',recomend2 ='".$preferences['recomend2']."',prime_email ='".$preferences['prime_email']."',recomend3 = '".$preferences['recomend3']."'";
 	$result = mysql_query($query)
 	or die(mysql_error());
 }
