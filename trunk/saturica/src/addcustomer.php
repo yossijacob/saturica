@@ -118,8 +118,7 @@ connect();   //connect to mysql DB
 	 <tr>
 	 	<td><b>שם</b></td>
 	 <?php 	
-	 echo "<td><input type='text' name='name' value='$name' title='name of borker'/></td>";
-	 echo "<td>$name_exist</td>"; 
+	 echo "<td><input type='text' name='name' value='$name' title='name of customer'/></td>";
 	 ?>
 	 </tr>
 	 <tr>
@@ -128,7 +127,7 @@ connect();   //connect to mysql DB
 	 </tr>
 	 <tr>
 	 	<td><b>דואר אלקטרוני</b></td>
-	 <?php echo "<td><input type='text' name='email' value='$email' title='email for contacting broker'/></td>";?>
+	 <?php echo "<td><input type='text' name='email' value='$email' title='email for contacting customer'/></td>";?>
 	 </tr>
 	 <tr>
 	 	<td><b>חברה</b></td>
