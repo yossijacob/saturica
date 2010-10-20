@@ -16,16 +16,17 @@ if ($row==null)  // if null then put header
 	{
 		echo "<thead>";
 		echo "<tr>";
-		echo "<th>From City</th>";
-		echo "<th>From State</th>";
+		echo "<th>חברה</th>";
+		echo "<th>שם</th>";
 		echo "</tr>";
 		echo "</thead>";
 	}
 	else
 	{
 		echo "<tr>";
-		echo "<td>$row[1]</td>"; // from city
-		echo "<td>$row[2]</td>"; // from state
+		
+		echo "<td>$row[2]</td>"; // company
+		echo "<td>$row[1]</td>"; // name
 		echo "</tr>";
 	}
 }
@@ -33,7 +34,7 @@ if ($row==null)  // if null then put header
 function ShowCustomerTable()
 {
 	// usage ShowTable ( table, query, row_func, class, curr_page, table_id)
-	ShowTable("customers","","CustomersTableRow","report_table","customers.php","");  
+	ShowTable("customers","","CustomersTableRow","report_table","customers.php?","");  
 }
 ?>
 
