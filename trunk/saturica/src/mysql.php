@@ -4,7 +4,7 @@
 function AddRecord($table,$data)
 {
 	// gets an array of data and insert it as a record into the table
-	Debug("Function: AddRecord to table: $table <br/>");
+//	Debug("Function: AddRecord to table: $table <br/>");
 	$data_msg = implode("','", $data);
 	$query = "INSERT INTO $table VALUES (NULL,'".$data_msg."')";
 	$result = mysql_query($query) 
@@ -22,8 +22,8 @@ or die(mysql_error());
 //********************************************************************
 function DeleteRecordByIntField($table,$field,$val)
 { // delete a record by a field and its value
-Debug("FUNCTION:DeleteRecordByIntField($table,$field,$val)<br/>");
-Debug("FUNCTION:DeleteRecordByIntField: query=DELETE FROM $table WHERE $field='$val'<br/>");
+//Debug("FUNCTION:DeleteRecordByIntField($table,$field,$val)<br/>");
+//Debug("FUNCTION:DeleteRecordByIntField: query=DELETE FROM $table WHERE $field='$val'<br/>");
 $result = mysql_query("DELETE FROM $table WHERE $field='$val'")
 or die(mysql_error());	
 }
