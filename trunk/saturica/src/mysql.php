@@ -1,5 +1,4 @@
 <?php
-include_once 'debug.php';
 
 //********************************************************************
 function AddRecord($table,$data)
