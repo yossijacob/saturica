@@ -1,7 +1,5 @@
 <?php
-include_once 'debug.php';
 include_once 'time.php';
-
 
 //********************************************************************
 function GetPreferences()
