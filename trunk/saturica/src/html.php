@@ -26,25 +26,25 @@ mysql_free_result($result);
 function isemail($email) {
     return preg_match('|^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]{2,})+$|i', $email);
 }
+
 //***********************************************************************
-
-
-function isrank($rank) {
+function isrank($rank) 
+{
     if ( ( $rank < 1 ) || ( $rank > 5 ) ) return false;
     return true; 
 }
-//***********************************************************************
-function UploadPicture($file,$tmp_name,$target) {
-//	upload a picture to $target. the target needs to be an existing folder.
 
+//***********************************************************************
+function UploadPicture($file,$tmp_name,$target) 
+{
+	//	upload a picture to $target. the target needs to be an existing folder.
 	if (move_uploaded_file($tmp_name, $target) ) 
 		{ echo "The file ".$file." has been uploaded"; } 
 	else{
    		 echo "There was an error uploading the file, please try again!";
 		}
 }
-  
-  //***********************************************************************
+//***********************************************************************
   
 function footer()
 {
