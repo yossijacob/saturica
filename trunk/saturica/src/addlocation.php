@@ -96,7 +96,7 @@ connect();   //connect to mysql DB
   		{
   			$miss_msg = implode(",",$missing);
   			echo "<br/>";
-  			echo "<b>חסרים הפרטים הבאים:</b>";
+  			echo "<b>:חסרים הפרטים הבאים</b>";
   			echo "<h4>".$miss_msg."</h4>";	
   		}	
   	
@@ -109,7 +109,12 @@ connect();   //connect to mysql DB
   			$data[4] = $place;
   			$data[5] = $picture;  
   			$data[6] = $rank;   
-  			  			
+  			 
+  			
+  			$target_path = "workshop_pic/";
+			$target_path = $target_path . basename( $_FILES['picture']['name']); 
+			UploadPicture( $_FILES['picture']['name'],$_FILES['picture']['tmp_name'],$target_path);
+  			
   			$location_id = AddRecord("locations", $data);     			// add the location
 
   			//$dont_show_form = true;
@@ -126,7 +131,7 @@ connect();   //connect to mysql DB
 ?>
 	<br/>
 	<div id="add_location_div" dir="rtl">
-	<form name="add_location_form" id="add_location_form" method="post" action="addlocation.php">
+	<form enctype="multipart/form-data" name="add_location_form" id="add_location_form" method="post" action="addlocation.php">
 	<input type="hidden" name="submitted" value="true"/>
 	<table cellspacing="10">
 	 <tr>
@@ -150,11 +155,11 @@ connect();   //connect to mysql DB
 	 </tr>
 	 <tr>
 	 	<td><b>מקום</b></td>
-	 <?php echo "<td><input type='text' name='place' value='$place' /></td>";?>
+	 <?php echo "<td><enctype='multipart/form-data'><input type='text' name='place' value='$place' /></td>";?>
 	 </tr>
 	 <tr>
 	 	<td><b>תמונה</b></td>
-	 <?php 	echo "<td><input type='text' name='picture' value='$picture' title='picture'/></td>"; ?>
+	 <?php 	echo "<td><input type='file' name='picture' value='$picture' title='picture'/></td>";?>
 	 </tr>
 	 <tr>
 	 <td><b>דירוג פנימי</b></td>
@@ -167,7 +172,7 @@ connect();   //connect to mysql DB
 	<br/>
 	
   	<div class="centered_button_div"> 
-		<div id="shiny-demo-green" class="demo-button" onclick="javascript:document.add_location_form.submit();">הוסף מיקום<span/></div>
+		<div id="shiny-demo-green" class="demo-button" onclick="javascript:document.add_location_form.submit()";>הוסף מיקום<span/></div>
 		<!-- <a class="green_ovalbutton" href="javascript:document.add_broker_form.submit();"><span>Add broker</span></a> -->
   	</div>
 	</form>
