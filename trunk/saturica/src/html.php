@@ -35,7 +35,8 @@ function isrank($rank) {
 }
 //***********************************************************************
 function UploadPicture($file,$tmp_name,$target) {
- 	
+//upload a picture to $target. the target needs to be an existing folder.
+
 	if (move_uploaded_file($tmp_name, $target) ) 
 		{ echo "The file ".$file." has been uploaded"; } 
 	else{
