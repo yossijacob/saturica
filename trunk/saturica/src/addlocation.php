@@ -93,7 +93,7 @@ connect();   //connect to mysql DB
   			$missing['rank'] = "על הדירוג להיות מספר בין 1 ל 5";
   		}
   	
-  	if ($miss== true)
+  	if ($miss == true)
   		{
   			$miss_msg = implode(",",$missing);
   			echo "<br/>";
