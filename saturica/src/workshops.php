@@ -66,7 +66,7 @@ function ShowWorkshopTable()
 	    <h1>סדנאות</h1>
 	    <hr></hr>
 	    <div id="right_menu">
-    	<a href="addlocation.php" class="icon_button"><span class="add">הוסף סדנא חדשה</span></a>
+    	<a href="addworkshop.php" class="icon_button"><span class="add">הוסף סדנא חדשה</span></a>
     	</div>
 	    <br/>
 	    <br/>
