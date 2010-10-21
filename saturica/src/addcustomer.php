@@ -15,8 +15,7 @@ connect();   //connect to mysql DB
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="default.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="javascript/calendar.css"/>
-<script type="text/javascript" src="javascript/calendar_us.js"></script>
+
 </head>
 <body>
 	<?php 
