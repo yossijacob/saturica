@@ -22,7 +22,6 @@ connect();   //connect to mysql DB
 		MenuBar('customers'); 
 	?>
     
-	
 <div id="content">
     <br/>
     <h1>הוספת לקוח חדש</h1>
@@ -47,7 +46,6 @@ connect();   //connect to mysql DB
   $comments = CleanText($comments);
   
   
-
   	$dont_show_form = false;
   	$miss = false;
   	$missing = "";
