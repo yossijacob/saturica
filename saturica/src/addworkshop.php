@@ -97,7 +97,7 @@ connect();   //connect to mysql DB
   		{
   			$miss_msg = implode(",",$missing);
   			echo "<br/>";
-  			echo "<b>חסרים הפרטים הבאים:</b>";
+  			echo "<b>:חסרים הפרטים הבאים</b>";
   			echo "<h4>".$miss_msg."</h4>";	
   		}	
   	
