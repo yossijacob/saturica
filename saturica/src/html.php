@@ -34,8 +34,17 @@ function isrank($rank) {
     return true; 
 }
 //***********************************************************************
-
-
+function UploadPicture($file,$tmp_name,$target) {
+ 	
+	if (move_uploaded_file($tmp_name, $target) ) 
+		{ echo "The file ".$file." has been uploaded"; } 
+	else{
+   		 echo "There was an error uploading the file, please try again!";
+		}
+}
+  
+  //***********************************************************************
+  
 function footer()
 {
 	echo "<div id='footer'>";
