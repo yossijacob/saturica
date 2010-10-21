@@ -43,7 +43,7 @@ if ($row==null)  // if null then put header
 function ShowLocationTable()
 {
 	// usage ShowTable ( table, query, row_func, class, curr_page, table_id)
-	ShowTable("locations","","LocationsTableRow","report_table","locations.php","");  
+	ShowTable("locations","","LocationsTableRow","report_table","locations.php?","");  
 }
 ?>
 
