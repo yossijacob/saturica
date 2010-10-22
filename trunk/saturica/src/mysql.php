@@ -64,7 +64,7 @@ function EditRecord($table,$id,$data)
 //*********************************************************************
 function CheckIfRecordExist($table,$col_name,$val)
 {		// check if a record for field= $col_name and value = val exist
-		$result = mysql_query("SELECT * FROM $table WHERE $col_name='$val'");
+		$result = mysql_query("SELECT name FROM $table WHERE $col_name='$val'");
 		$res = mysql_num_rows($result);
 		//Debug("function: CheckIfRecordExist($table,$col_name,$val) --> $res<br/>");
 		return  $res;
@@ -77,6 +77,27 @@ function CleanText($text)
 	return strip_tags(mysql_real_escape_string($text)); 
 }
 
+//*********************************************************************
+function db_createlist($linkID,$default,$query,$blank)
+{
+    if($blank)
+    {
+        print("<option select value=\"0\">$blank</option>");
+    }
+    
+    $resultID = mysql_query($query);
+    $num = mysql_num_rows($resultID); 
+ 
+    for ($i=0;$i<$num;$i++)
+    {	
+    	$row = mysql_fetch_row($resultID);
+        
+        if($row[0]==$default)$dtext = "selected";
+        else $dtext = "";
+    
+        print("<option $dtext value=\"$row[0]\">$row[1]</option>");
+    }
+}
 
-
+//*********************************************************************
 ?>
