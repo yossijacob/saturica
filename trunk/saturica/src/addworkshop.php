@@ -173,7 +173,7 @@ connect();   //connect to mysql DB
 		 *  $_FILES['picture']['tmp_name'] - tmp_name contains the path to the temporary file that is on the server.  */
 			
 	
-			$data[2] = $target_path.$picture;
+			$data[2] = $target_path.$workshoppic;
   			
   			
   			
