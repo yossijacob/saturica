@@ -1,5 +1,16 @@
 <?php
 
+
+//---------------------------------------------------------------------
+function GetRecord($table,$id)
+{
+	$query = "SELECT * FROM $table WHERE id=$id";
+	$result = mysql_query($query)
+	or die(mysql_error());
+	$row = mysql_fetch_row($result);
+	return $row;
+}
+
 //********************************************************************
 function AddRecord($table,$data)
 {
@@ -46,7 +57,7 @@ function EditRecord($table,$id,$data)
 	}
 	
 	$query = "UPDATE $table $data_msg WHERE id='$id'";
-	//echo $query;
+	echo $query;
 	$result = mysql_query($query) or die(mysql_error());
 }
 

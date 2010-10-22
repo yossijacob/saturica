@@ -39,75 +39,7 @@ function ShowBrokersDropDown($name,$deafult,$selected)
 }
 
 
-//************************************************************************************
-function GetBrokerCredit($broker_id)
-{
-	$result = mysql_query("SELECT * FROM brokers WHERE id=$broker_id");
-	$row = mysql_fetch_row($result);
-	return $row[10];
-}
-//************************************************************************************
-function SetBrokerCredit($broker_id,$credit)
-{
-	$result = mysql_query("UPDATE brokers SET credit='$credit' WHERE id=$broker_id")
-	or die(mysql_error());
-}
-//************************************************************************************
-function GetLead($lead_id,$as_name_index)
-{	// get the lead data from the lead queue
-	$result = mysql_query("SELECT * FROM queue WHERE id=$lead_id")
-	or die(mysql_error());
-	$row = mysql_fetch_row($result);
-	if ($as_name_index == true)
-	{
-		$lead['fromcity'] = $row[1];
-		$lead['fromstate'] = $row[2];
-		$lead['from_zip'] = $row[3];
-		$lead['tocity'] = $row[4];
-		$lead['tostate'] = $row[5];
-		$lead['to_zip'] = $row[6];
-		$lead['shipingdate'] = $row[7];
-		$lead['carriertype'] = $row[8];
-		$lead['year'] = $row[9];
-		$lead['make'] = $row[10];
-		$lead['model'] = $row[11];
-		$lead['condition'] = $row[12];
-		$lead['name'] = $row[13];
-		$lead['phone'] = $row[14];
-		$lead['email'] = $row[15];
-		$lead['ip'] = $row[16];
-		$lead['date_enterd'] = $row[17];
-		return $lead;
-	}
-	else
-	{
-		$lead[0] = $row[1];
-		$lead[1] = $row[2];
-		$lead[2] = $row[3];
-		$lead[3] = $row[4];
-		$lead[4] = $row[5];
-		$lead[5] = $row[6];
-		$lead[6] = $row[7];
-		$lead[7] = $row[8];
-		$lead[8] = $row[9];
-		$lead[9] = $row[10];
-		$lead[10] = $row[11];
-		$lead[11] = $row[12];
-		$lead[12] = $row[13];
-		$lead[13] = $row[14];
-		$lead[14] = $row[15];
-		$lead[15] = $row[16];
-		$lead[16] = $row[17];
-		return $lead;	
-	}
-}
-//************************************************************************************
-function AddLeadToArchive($lead_id,$reception_list)
-{
-	$lead = GetLead($lead_id,false);
-	$lead[17] = $reception_list;
-	AddRecord("leads",$lead);
-}
+
 //***********************************************************************
 function SetDailyCap($table_id,$cap)
 {
@@ -179,19 +111,7 @@ function GetBroker($broker_id,$as_name_index)
 	
 	return $broker;	
 }
-//*************************************************************************
-function GetBrokerName($borker_id)
-{
-	$result = mysql_query("SELECT * FROM brokers WHERE id=$borker_id")
-	or die(mysql_error());
-	$row = mysql_fetch_row($result);
-	return  $row[1];
-}
-//*************************************************************************
-function GetBrokerTableName($broker_id)
-{
-	return  "zleads_".$broker_id;
-}
+
 //**************************************************************************
 function ShowBrokerTable()
 {
@@ -223,15 +143,6 @@ function ShowBrokerTable()
 	echo "</table>";
 } 
 //**************************************************************************
-function DeleteBroker($broker_id)
-{
-	DeleteRecord("brokers", $broker_id);  // delete from borkers table
-	$broker_lead_table_name = GetBrokerTableName($broker_id); // get name of borker's table
-	mysql_query("drop table if exists $broker_lead_table_name");
-	DeleteRecordByIntField("brokers_queue", "broker_id", $broker_id);
-	$preferences = GetPreferences();
-  	$preferences['broker_count']--;
-  	SetPreferences($preferences);
-}
+
 
 ?>
