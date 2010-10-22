@@ -1,26 +1,32 @@
 <?php
 
 
+
 //--------------------------------------------------------------------------------------------------
-function ShowStatesDropdown($name , $deafult,$wildcard_bool)
-// creates a drop down of numbers by the $name and with range from low to high
+function ShowDropDown($name,$data,$deafult,$selected)
 {
+	/*
+	 * show data as a drop down box
+	 * name - name of select
+	 * data - array of values
+	 * deafult added data value that is not in the array
+	 * selected the value which is selected by deafult
+	 */
 echo  "<select id ='$name' name='$name'>";
-if ($wildcard_bool == 'true')
-	echo "<option value='Any' selected>Any</option>";
+if ($deafult != '')
+	echo "<option value='$deafult' selected>$deafult</option>";
 
-$result = mysql_query("SELECT * FROM states ");
-
-while($row = mysql_fetch_row($result))
-{
-	if ($row[0] == $deafult)
-	echo "<option value='$row[0]' selected>$row[0]</option>";
+foreach($data as $element)
+	{
+	if ($element == $selected)
+	echo "<option value='$element' selected>$element</option>";
 	else
-	echo "<option value='$row[0]'>$row[0]</option>";
-}
+	echo "<option value='$element'>$element</option>";
+	}
 echo "</select>";
-mysql_free_result($result);
 }
+
+
 
 //**********************************************************************
 function isemail($email) {
@@ -49,8 +55,14 @@ function UploadPicture($file,$tmp_name,$target)
 function footer()
 {
 	echo "<div id='footer'>";
+	echo "<div class='footer_pics'>";
+	echo "<a href='http://validator.w3.org/check/referer' target='_blank'>
+		  <img src='http://www.w3.org/Icons/valid-xhtml10'
+          alt='Valid XHTML 1.0!' height='31'' width='88'' /></a>";
+	echo "</div>";
+	echo "<p>best viewed using <a href='http://www.google.com/chrome/' target='_blank'>google chrome</a></p>";
+	echo "<br/>";
 	echo "<p id='legal'>Copyright &copy; 2010 by Yossi Jacob & Roee Minster. All Rights Reserved.</p>";
-	//echo "<p id='links'><a href='#'>Privacy Policy</a> | <a href='#'>Terms of Use</a></p>";
 	echo "</div>";
 }
 //************************************************************************

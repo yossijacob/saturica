@@ -15,6 +15,7 @@ connect();   //connect to mysql DB
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="default.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="javascript/functions.js"></script>
 
 </head>
 <body>
@@ -90,8 +91,8 @@ connect();   //connect to mysql DB
   			$data[3] = $email;
   			$data[4] = $comments;
   			$data[5] = time();  // join date
-  			$data[6] = "yes";   // active
-  			$data[7] = "no";  // sent feedback
+  			$data[6] = "כן";   // active
+  			$data[7] = "לא";  // sent feedback
   			  			
   			$customer_id = AddRecord("customers", $data);     			// add the customer
 

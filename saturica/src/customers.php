@@ -16,17 +16,33 @@ if ($row==null)  // if null then put header
 	{
 		echo "<thead>";
 		echo "<tr>";
+		echo "<th></th>";
+		echo "<th>משוב</th>";
+		echo "<th>פעיל</th>";
+		echo "<th>תאריך הצטרפות</th>";
+		echo "<th>הערות</th>";
+		echo "<th>דואר אלקטרוני</th>";
+		echo "<th>טלפון</th>";
 		echo "<th>חברה</th>";
 		echo "<th>שם</th>";
+		echo "<th></th>";
 		echo "</tr>";
 		echo "</thead>";
 	}
 	else
 	{
+		$id = $row[0];  // get the id
 		echo "<tr>";
-		
+		echo "<td><a title='מחק רשומה' href='javascript:DeleteRecord(\"deletecustomer.php\",\"$id\",\"$row[1]\")'><img src='images/delete.gif' class='small_icon_button' /></a></td>";
+		echo "<td>$row[8]</td>"; // sent feedback
+		echo "<td>$row[7]</td>"; // active ?
+		echo "<td>$row[6]</td>"; // join date
+		echo "<td>$row[5]</td>"; // comments
+		echo "<td>$row[4]</td>"; // eamil
+		echo "<td>$row[3]</td>"; // phone
 		echo "<td>$row[2]</td>"; // company
 		echo "<td>$row[1]</td>"; // name
+		echo "<td><a title='ערוך רשומה' href='javascript:OpenPageWithId(\"editcustomer.php\",\"$id\")'><img src='images/edit_small.png' class='small_icon_button'/></a></td>";
 		echo "</tr>";
 	}
 }
@@ -40,11 +56,12 @@ function ShowCustomerTable()
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>לקוחות</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="default.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="javascript/functions.js"></script>
 </head>
 <body>
 	<?php 
