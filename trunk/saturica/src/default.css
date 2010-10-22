@@ -542,6 +542,11 @@ a:hover.icon_button{
 		text-indent:30px;
 		display:block;
 	}
+.deletesmall{
+		background:url(images/delete.gif) no-repeat 10px 8px;
+		text-indent:15px;
+		display:block;
+	}
 .user{
 		background:url(images/user.gif) no-repeat 10px 8px;
 		text-indent:30px;
