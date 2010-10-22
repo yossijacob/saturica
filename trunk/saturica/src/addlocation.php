@@ -111,7 +111,7 @@ connect();   //connect to mysql DB
   			$data[6] = $rank;   
   			 
   			
-  			$target_path = "location_pic/";	//upload the picture to 'workshop_pic' folder
+  			$target_path = "location_pic/";	//upload the picture to 'location_pic' folder
 			$target_path = $target_path . basename( $_FILES['picture']['name']); 
 			UploadPicture( $_FILES['picture']['name'],$_FILES['picture']['tmp_name'],$target_path);
   			
