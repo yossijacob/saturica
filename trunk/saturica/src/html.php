@@ -3,25 +3,30 @@
 
 
 //--------------------------------------------------------------------------------------------------
-function ShowDropDown($name,$data,$deafult,$selected)
+function ShowDropDown($name,$data,$data_text,$deafult_val,$deafult_text,$selected)
 {
 	/*
 	 * show data as a drop down box
 	 * name - name of select
 	 * data - array of values
+	 * data_text - array of text values
 	 * deafult added data value that is not in the array
+	 * val- values 
 	 * selected the value which is selected by deafult
 	 */
 echo  "<select id ='$name' name='$name'>";
-if ($deafult != '')
-	echo "<option value='$deafult' selected>$deafult</option>";
-
+if ($deafult_text != '')
+	{	
+	echo "<option value='$deafult_val' selected>$deafult_text</option>";
+	}
+	$index = 0;
 foreach($data as $element)
 	{
 	if ($element == $selected)
-	echo "<option value='$element' selected>$element</option>";
+	echo "<option value='$element' selected>$data_text[$index]</option>";
 	else
-	echo "<option value='$element'>$element</option>";
+	echo "<option value='$element'>$data_text[$index]</option>";
+	$index++;
 	}
 echo "</select>";
 }

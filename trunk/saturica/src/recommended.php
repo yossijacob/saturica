@@ -32,15 +32,23 @@ connect();   //connect to mysql DB
 	    בחר 3 סדנאות שיופיעו בעמוד המומלצים
 	   <br/>
 	   <br/>
-	   <select name="select_workshop">
-		<?php 
-    	// default is 0, no entry will be selected.
-    		db_createlist($linkID,0,
-            "SELECT * FROM workshops","Please select recommended workshop");
-		
-    		?>
-</select>
-	    <br/>
+	   <table dir="rtl" cellspacing='15' class='recommend_pick_table'>
+	   <tr>
+			<td>
+			<?php ShowColumnDropDown("workshops",0,2,"select_workshop1",-1,"Please select recommended workshop",-1);?>
+			</td>
+	   </tr>
+	   <tr>	
+		    <td>
+			<?php ShowColumnDropDown("workshops",0,2,"select_workshop2",-1,"Please select recommended workshop",-1);?>
+			</td>
+	   </tr>
+	   <tr>
+		    <td>
+		    <?php ShowColumnDropDown("workshops",0,2,"select_workshop3",-1,"Please select recommended workshop",-1);?>
+		    </td>
+	   </tr> 
+	   </table>
 	    <br/>
 	    <br/>
 	    <br/>

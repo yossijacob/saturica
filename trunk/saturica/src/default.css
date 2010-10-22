@@ -364,89 +364,14 @@ h4		/*error messege*/
 
 
 /*------------------------------------------------------------------------------------*/
-/* broker table*/
-.broker_table
+
+.recommend_pick_table
 {
-	position:relative;
-	margin-left:auto;
-	margin-right:auto;
-	font-size:medium;
-	text-align:center;
-	-moz-border-radius: 15px;
-	border-radius: 15px;
-	/*background-color:#dbedf7;*/
-	background-color:White;
-	/*border-color:#A3CCE2;*/
-	border-color:#70a5cd;
-	border-style:solid;
-	
+	float:right;
+	margin:10px;
 }
 
-.broker_table th
-{
-	/*background-color:#a2cce2;*/
-	border-bottom-color:#70a5cd;
-	border-bottom-style:solid;
-	border-bottom-width:medium;
-	color:Black;
-}
-
-.broker_table tr:hover
-{
-	color:black;
-	/*background-color:#fff3d3;*/
-	background-color:#D1E6F0;
-}
-
-.broker_table thead:hover
-{
-}
-
-.broker_table td
-{
-	width:200px;
-	/*border-bottom-style:solid;
-	border-bottom-width:thin;*/
-	padding-bottom:10px;
-	padding-top:10px;
-	/*background-color:#dbedf7;*/
-}
-
-
-/* dispatch table*/
-.dispatch_table
-{
-	position:relative;
-	margin-left:auto;
-	margin-right:auto;
-	font-size:15px;
-	text-align:center;
-	width:100%;
-	-moz-border-radius: 15px;
-	border-radius: 15px;
-	/*background-color:#dbedf7;*/
-	background-color:White;
-	border-color:#70a5cd;
-	border-style:solid;
-}
-
-
-.dispatch_table th
-{
-	padding-left:15px;
-	padding-right:15px;
-	color:Black;
-	border-bottom-color:#70a5cd;
-	border-bottom-style:solid;
-	border-bottom-width:medium;
-}
-
-.dispatch_table td
-{
-	padding-bottom:10px;
-	padding-top:10px;
-}
-
+/*-------------------------------------------------------------------------------------*/
 /* menu bar*/
 
 .menu_bar

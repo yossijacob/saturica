@@ -78,6 +78,23 @@ function CleanText($text)
 }
 
 //*********************************************************************
+function GetColumn($table,$col_number)
+{	// return an entire column as an array
+	// first col_number is 0
+	$col = null;
+	$index = 0;
+	$query = "SELECT * FROM $table";
+	$result = mysql_query($query)
+	or die(mysql_error());
+	while ($row = mysql_fetch_row($result))
+	{
+		$col[$index++] = $row[$col_number]; // get the current field
+	}
+	return $col;
+}
+
+//*********************************************************************
+/*
 function db_createlist($linkID,$default,$query,$blank)
 {
     if($blank)
@@ -97,7 +114,6 @@ function db_createlist($linkID,$default,$query,$blank)
     
         print("<option $dtext value=\"$row[0]\">$row[1]</option>");
     }
-}
+}*/
 
-//*********************************************************************
 ?>
