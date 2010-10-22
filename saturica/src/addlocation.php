@@ -118,8 +118,8 @@ connect();   //connect to mysql DB
 		/*	$_FILES['picture']['name'] - name contains the original path of the user uploaded file.
 		 *  $_FILES['picture']['tmp_name'] - tmp_name contains the path to the temporary file that is on the server.  */
 			
-	//TODO -	should we change data[5] to $data[5] = $target_path.$picture;		?
-	//	$data[5] = $target_path.$picture;
+	
+		$data[5] = $target_path.$picture;
   			
 			$location_id = AddRecord("locations", $data);     			// add the location
 
