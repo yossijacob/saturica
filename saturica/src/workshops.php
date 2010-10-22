@@ -29,13 +29,13 @@ if ($row==null)  // if null then put header
 	else
 	{
 		echo "<tr>";
-		echo "<td>$row[7]</td>"; // מיקום	
-		echo "<td>$row[6]</td>"; // פעיל 
-		echo "<td>$row[5]</td>"; // שם ספק
-		echo "<td>$row[4]</td>"; // מחיר למשתתף
-		echo "<td>$row[3]</td>"; // מחיר קבוע
-		echo "<td>$row[2]</td>"; // נושא
-		echo "<td>$row[1]</td>"; // שם
+		echo "<td>$row[17]</td>"; // מיקום	
+		echo "<td>$row[12]</td>"; // פעיל 
+		echo "<td>$row[11]</td>"; // שם ספק
+		echo "<td>$row[7]</td>"; // מחיר למשתתף
+		echo "<td>$row[6]</td>"; // מחיר קבוע
+		echo "<td>$row[4]</td>"; // נושא
+		echo "<td>$row[2]</td>"; // שם
 		echo "</tr>";
 	}
 }
