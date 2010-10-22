@@ -17,28 +17,24 @@ function SetPreferences($preferences)
 	$result = mysql_query($query)
 	or die(mysql_error());
 }
-//------------------------------------------------------------------------------------*/
-function GetBrokerList()
-{
-	$list[] = null;
-	$query = "SELECT name FROM brokers";
-	$result = mysql_query($query)
-	or die(mysql_error());
-	$i = 0;
-	while($row = mysql_fetch_array($result))
-	{
-		$list[$i++] = $row['name'];
-	}
-	return  $list;
-}
-//------------------------------------------------------------------------------------*/
-function ShowBrokersDropDown($name,$deafult,$selected)
-{
-	$list = GetBrokerList();
-	ShowDropDown($name, $list, $deafult, $selected);
-}
 
-
+//------------------------------------------------------------------------------------*/
+function ShowColumnDropDown($table,$val_col_num,$text_col_num,$name,$deafult,$deafult_text,$selected)
+/**
+ * Enter description here ...
+ *  $table - the table from which to take data
+ * $val_col_num - the number of column to get values from
+ * $text_col_num - the number of columns to get text from
+ * $name - the name of the select box
+ * $deafult - deafult value
+ * $deafult_text - deafult text
+ * $selected - selected value
+ */
+{
+	$data_val = GetColumn($table, $val_col_num);
+	$data_text = GetColumn($table, $text_col_num);
+	ShowDropDown($name, $data_val,$data_text, $deafult,$deafult_text,$selected);
+}
 
 //***********************************************************************
 function SetDailyCap($table_id,$cap)

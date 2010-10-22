@@ -159,7 +159,7 @@ connect();   //connect to mysql DB
 	 	<td>האם פעיל</td>
 	 	<td>
 	 	<?php 
-	 	ShowDropDown("active",$yesno,"",$active);
+	 	ShowDropDown("active",$yesno,$yesno,"","",$active);
 	 	?>
 	 	</td>
 	 </tr>
@@ -167,7 +167,7 @@ connect();   //connect to mysql DB
 	 	<td>האם שלח משוב</td>
 	 	<td>
 	 	<?php 
-	 	ShowDropDown("sent_feedback",$yesno,"",$sent_feedback);
+	 	ShowDropDown("sent_feedback",$yesno,$yesno,"","",$sent_feedback);
 	 	?>
 	 	</td>
 	 </tr>
