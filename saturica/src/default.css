@@ -325,7 +325,7 @@ h4		/*error messege*/
 	text-align:center;
 	-moz-border-radius: 7px;
 	border-radius: 7px;
-	background-color:#b5d3eb;
+	background-color:#E4BBC0;
 	/*border-color:#70a5cf;
 	border-style:solid;
 	border-width:thin;*/
@@ -334,10 +334,10 @@ h4		/*error messege*/
 
 .report_table th
 {
-	border-bottom-color:#b5d3eb;
+	border-bottom-color:#E4BBC0;
 	border-bottom-style:solid;
 	border-bottom-width:thin;
-	background-color:#b5d3eb;
+	background-color:#E4BBC0;
 	color:Black;
 	padding-left:5px;
 	padding-right:5px;
