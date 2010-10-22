@@ -35,22 +35,60 @@ connect();   //connect to mysql DB
     
   <?php
   
-  //TODO 
   
-  $number = isset($_POST['number']) ? $_POST['number']: "";
-  $number = CleanText($number);
-  $fake_name  = isset($_POST['fake_name'])? $_POST['fake_name']: "";
-  $fake_name = CleanText($fake_name);
-  $real_name  = isset($_POST['real_name'])? $_POST['real_name']: "";
-  $real_name = CleanText($real_name);
-  $description  = isset($_POST['description'])? $_POST['description']: "";
-  $description = CleanText($description);
-  $place  = isset($_POST['place'])? $_POST['place']: "";
-  $place = CleanText($place);
-  $picture  = isset($_POST['picture'])? $_POST['picture']: "";
-  $picture = CleanText($picture);
-  $rank  = isset($_POST['rank'])? $_POST['rank']: "";
-  $rank = CleanText($rank);
+  $workshopnum = isset($_POST['workshopnum']) ? $_POST['workshopnum']: "";
+  $workshopnum = CleanText($workshopnum);
+  
+  $workshopname  = isset($_POST['workshopname'])? $_POST['workshopname']: "";
+  $workshopname = CleanText($workshopname);
+  
+  $workshoppic  = isset($_POST['workshoppic'])? $_POST['workshoppic']: "";
+  $workshoppic = CleanText($workshoppic);
+  
+  $workshopsubject  = isset($_POST['workshopsubject'])? $_POST['workshopsubject']: "";
+  $workshopsubject = CleanText($workshopsubject);
+  
+  $workshopstyle  = isset($_POST['workshopstyle'])? $_POST['workshopstyle']: "";
+  $workshopstyle = CleanText($workshopstyle);
+  
+  $workshopfixprice  = isset($_POST['workshopfixprice'])? $_POST['workshopfixprice']: "";
+  $workshopfixprice = CleanText($workshopfixprice);
+  
+  $workshoppersonprice  = isset($_POST['workshoppersonprice'])? $_POST['workshoppersonprice']: "";
+  $workshoppersonprice = CleanText($workshoppersonprice);
+  
+  $workshopdesc = isset($_POST['workshopdesc'])? $_POST['workshopdesc']: "";
+  $workshopdesc = CleanText($workshopdesc);
+
+  $workshopcomments  = isset($_POST['workshopcomments'])? $_POST['workshopcomments']: "";
+  $workshopcomments = CleanText($workshopcomments);
+  
+  $workshopdetails = isset($_POST['workshopdetails']) ? $_POST['workshopdetails']: "";
+  $workshopdetails = CleanText($workshopdetails);
+  
+  $workshopsupllier  = isset($_POST['workshopsupllier'])? $_POST['workshopsupllier']: "";
+  $workshopsupllier = CleanText($workshopsupllier);
+  
+  $workshopactive  = isset($_POST['workshopactive'])? $_POST['workshopactive']: "";
+  $workshopactive = CleanText($workshopactive);
+  
+  $workshopminsize = isset($_POST['workshopminsize']) ? $_POST['workshopminsize']: "";
+  $workshopminsize = CleanText($workshopminsize);
+  $workshopmaxsize  = isset($_POST['workshopmaxsize'])? $_POST['workshopmaxsize']: "";
+  $workshopmaxsize = CleanText($workshopmaxsize);
+  $workshoprank  = isset($_POST['workshoprank'])? $_POST['workshoprank']: "";
+  $workshoprank = CleanText($workshoprank);
+  
+  //more questions (expert / wiz questions )
+
+  $workshoptype  = isset($_POST['workshoptype'])? $_POST['workshoptype']: "";
+  $workshoptype = CleanText($workshoptype);
+  
+  $workshoplocation  = isset($_POST['workshoplocation'])? $_POST['workshoplocation']: "";
+  $workshoplocation = CleanText($workshoplocation);
+  
+  $workshoptimeframe  = isset($_POST['workshoptimeframe'])? $_POST['workshoptimeframe']: "";
+  $workshoptimeframe = CleanText($workshoptimeframe);
   
 
 
@@ -62,35 +100,40 @@ connect();   //connect to mysql DB
   	if (isset($_POST['submitted']))
   	{
   	
-  	if ($number == "") 
+  	if ($workshopnum == "") 
   		{
   			$miss = true;
-  			$missing['number'] = "מספר מיקום";
+  			$missing['workshopnum'] = "מספר סדנא";
   		}
-  	if ($fake_name == "") 
+  	if ($workshopname == "") 
   		{
   			$miss = true;
-  			$missing['fake_name'] = "שם בדוי";
+  			$missing['workshopname'] = "שם סדנא";
   		}
-  	if ($real_name == "") 
+  	if ($workshopsubject == "") 
   		{
   			$miss = true;
-  			$missing['real_name'] = "שם אמיתי";
+  			$missing['workshopsubject'] = "נושא סדנא";
   		}
-  	if ($place == "") 
+  	if ($workshopfixprice == "") 
   		{
   			$miss = true;
-  			$missing['place'] = "מיקום";
+  			$missing['workshopfixprice'] = "מחיר קבוע";
   		}
-  	if ($rank == "") 
+  	if ($workshoppersonprice == "") 
   		{
   			$miss = true;
-  			$missing['rank'] = "דירוג פנימי";
+  			$missing['workshoppersonprice'] = "מחיר למשתתף";
   		}
-  	else if (!isrank($rank))
+  	if ($workshoprank == "") 
   		{
   			$miss = true;
-  			$missing['rank'] = "על הדירוג להיות מספר בין 1 ל 5";
+  			$missing['workshoprank'] = "דירוג סדנא";
+  		}
+  	else if (!isrank($workshoprank))
+  		{
+  			$miss = true;
+  			$missing['workshoprank'] = "על הדירוג להיות מספר בין 1 ל 5";
   		}
   	
   	if ($miss == true)
@@ -103,20 +146,44 @@ connect();   //connect to mysql DB
   	
 	if ($miss != true)
   		{		// the form was validated successfully now we process the form
-  			$data[0] = $number;
-  			$data[1] = $fake_name;
-  			$data[2] = $real_name;
-  			$data[3] = $description;
-  			$data[4] = $place;
-  			$data[5] = $picture;  
-  			$data[6] = $rank;   
-  			  			
-  			$location_id = AddRecord("locations", $data);     			// add the location
+  			$data[0] = $workshopnum;
+  			$data[1] = $workshopname;
+  			$data[2] = $workshoppic;
+  			$data[3] = $workshopsubject;
+  			$data[4] = $workshopstyle;
+  			$data[5] = $workshopfixprice;  
+  			$data[6] = $workshoppersonprice;  
+  			$data[7] = $workshopdesc;
+  			$data[8] = $workshopcomments;
+  			$data[9] = $workshopdetails;
+  			$data[10] = $workshopsupllier;
+  			$data[11] = $workshopactive;
+  			$data[12] = $workshopminsize;  
+  			$data[13] = $workshopmaxsize; 
+  			$data[14] = $workshoprank; 
+  			$data[15] = $workshoptype; 
+			$data[16] = $workshoplocation; 
+			$data[17] = $workshoptimeframe; 
+  			
+  			$target_path = "workshop_pic/";	//upload the picture to 'workshop_pic' folder
+			$target_path = $target_path . basename( $_FILES['workshoppic']['name']); 
+			UploadPicture( $_FILES['workshoppic']['name'],$_FILES['workshoppic']['tmp_name'],$target_path);
+  			
+		/*	$_FILES['picture']['name'] - name contains the original path of the user uploaded file.
+		 *  $_FILES['picture']['tmp_name'] - tmp_name contains the path to the temporary file that is on the server.  */
+			
+	//TODO -	should we change data[2] to $data[2] = $target_path.$picture;		?
+	//	$data[2] = $target_path.$picture;
+  			
+  			
+  			
+  			
+  			$location_id = AddRecord("workshops", $data);     			// add the workshop
 
   			//$dont_show_form = true;
 	  		//echo "<h3>Broker Have Been Added</h3>";
   			//echo "<br/>";
-  			header('Location:locations.php');
+  			header('Location:workshops.php');
   		}
   	
   	}  // close if submitted 
@@ -126,41 +193,88 @@ connect();   //connect to mysql DB
  			
 ?>
 	<br/>
-	<div id="add_location_div" dir="rtl">
-	<form name="add_location_form" id="add_location_form" method="post" action="addlocation.php">
+	<div id="add_workshop_div" dir="rtl">
+	<form enctype="multipart/form-data" name="add_workshop_form" id="add_workshop_form" method="post" action="addworkshop.php">
 	<input type="hidden" name="submitted" value="true"/>
 	<table cellspacing="10">
 	 <tr>
-	 	<td><b>מספר מיקום</b></td>
+	 	<td><b>מספר סדנא</b></td>
 	 <?php 	
-	 echo "<td><input type='text' name='number' value='$number' title='number'/></td>";
-	 echo "<td>$name_exist</td>"; 
+	 echo "<td><input type='text' name='workshopnum' value='$workshopnum' title='workshopnumber'/></td>";
+	 echo "<td>$workshopnum</td>"; 
 	 ?>
 	 </tr>
 	 <tr>
-	 	<td><b>שם בדוי</b></td>
-	 <?php echo "<td><input type='text' name='fake_name' value='$fake_name' title='fake name'/></td>";?>
-	 </tr>
-	 <tr>
-	 	<td><b>שם אמיתי</b></td>
-	 <?php echo "<td><input type='text' name='real_name' value='$real_name' title='real_name'/></td>";?>
-	 </tr>
-	 <tr>
-	 	<td><b>תיאור</b></td>
-	 <?php 	echo "<td><input type='text' name='description' value='$description' title='description'/></td>"; ?>
-	 </tr>
-	 <tr>
-	 	<td><b>מקום</b></td>
-	 <?php echo "<td><input type='text' name='place' value='$place' /></td>";?>
+	 	<td><b>שם סדנא</b></td>
+	 <?php echo "<td><input type='text' name='workshopname' value='$workshopname' title='workshopname'/></td>";?>
 	 </tr>
 	 <tr>
 	 	<td><b>תמונה</b></td>
-	 <?php 	echo "<td><input type='text' name='picture' value='$picture' title='picture'/></td>"; ?>
+	 <?php 	echo "<td><input type='file' name='workshoppic' value='$workshoppic' title='workshoppic'/></td>";?>
 	 </tr>
 	 <tr>
-	 <td><b>דירוג פנימי</b></td>
-	 <?php 	echo "<td><input type='text' name='rank' value='$rank' title='rank'/></td>"; ?>
+	 	<td><b>נושא סדנא </b></td>
+	 <?php echo "<td><input type='text' name='workshopsubject' value='$workshopsubject' title='workshopsubject'/></td>";?>
 	 </tr>
+	 <tr>
+	 	<td><b>סגנון סדנא</b></td>
+	 <?php 	echo "<td><input type='text' name='workshopstyle' value='$workshopstyle' title='workshopstyle'/></td>"; ?>
+	 </tr>
+	 <tr>
+	 	<td><b>מחיר קבוע</b></td>
+	 <?php echo "<td><input type='text' name='workshopfixprice' value='$workshopfixprice' /></td>";?>
+	 </tr>
+	 <tr>
+	 <td><b>מחיר למשתתף</b></td>
+	 <?php 	echo "<td><input type='text' name='workshoppersonprice' value='$workshoppersonprice' title='workshoppersonprice'/></td>"; ?>
+	 </tr>
+	 <tr>
+	 	<td><b>תאור סדנא</b></td>
+	 <?php echo "<td><input type='text' name='workshopdesc' value='$workshopdesc' title='workshopdesc'/></td>";?>
+	 </tr>
+	 <tr>
+	 	<td><b>הערות סדנא</b></td>
+	 <?php echo "<td><input type='text' name='workshopcomments' value='$workshopcomments' title='workshopcomments'/></td>";?>
+	 </tr>
+	 <tr>
+	 	<td><b>פרטים חשובים בסדנא</b></td>
+	 <?php echo "<td><input type='text' name='workshopdetails' value='$workshopdetails' title='workshopdetails'/></td>";?>
+	 </tr>
+	 <tr>
+	 	<td><b>שם הספק</b></td>
+	 <?php echo "<td><input type='text' name='workshopsupllier' value='$workshopsupllier' title='$workshopsupllier'/></td>";?>
+	 </tr>
+	 <tr>
+	 	<td><b>סדנא פעילה</b></td>
+	 <?php echo "<td><input type='text' name='workshopactive' value='$workshopactive' title='workshopactive'/></td>";?>
+	 </tr>
+	 <tr>
+	 	<td><b>גודל סדנא מינימלי</b></td>
+	 <?php echo "<td><input type='text' name='workshopminsize' value='$workshopminsize' title='workshopminsize'/></td>";?>
+	 </tr>
+	 <tr>
+	 	<td><b>גודל סדנא מקסימלי</b></td>
+	 <?php echo "<td><input type='text' name='workshopmaxsize' value='$workshopmaxsize' title='workshopmaxsize'/></td>";?>
+	 </tr>
+	 <tr>
+	 	<td><b>דירוג סדנא</b></td>
+	 <?php echo "<td><input type='text' name='workshoprank' value='$workshoprank' title='workshoprank'/></td>";?>
+	 </tr>
+	 	 <tr>
+	 	<td><b>סוג סדנא</b></td>
+	 <?php echo "<td><input type='text' name='workshoptype' value='$workshoptype' title='workshoptype'/></td>";?>
+	 </tr>
+	 	 <tr>
+	 	<td><b>מיקום סדנא</b></td>
+	 <?php echo "<td><input type='text' name='workshoplocation' value='$workshoplocation' title='workshoplocation'/></td>";?>
+	 </tr>
+	 	 <tr>
+	 	<td><b>זמן סדנא</b></td>
+	 <?php echo "<td><input type='text' name='workshoptimeframe' value='$workshoptimeframe' title='$workshoptimeframe'/></td>";?>
+	 </tr>
+	 
+	 
+	 
 	
 	 <tr><td></td></tr>
 	 <tr><td></td></tr>
@@ -168,7 +282,7 @@ connect();   //connect to mysql DB
 	<br/>
 	
   	<div class="centered_button_div"> 
-		<div id="shiny-demo-green" class="demo-button" onclick="javascript:document.add_location_form.submit();">הוסף מיקום<span/></div>
+		<div id="shiny-demo-green" class="demo-button" onclick="javascript:document.add_workshop_form.submit();">הוסף סדנא<span/></div>
 		<!-- <a class="green_ovalbutton" href="javascript:document.add_broker_form.submit();"><span>Add broker</span></a> -->
   	</div>
 	</form>
