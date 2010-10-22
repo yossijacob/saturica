@@ -564,7 +564,8 @@ img:hover.small_icon_button
 		font-weight:bold;
 		text-shadow:1px 1px 3px rgba(0,0,0,0.5);
 		background-image:-webkit-gradient(linear, 0% 0%, 0% 90%, from(rgba(64,64,64,0.75)), to(rgba(192,192,192,0.9)));
-		background-image:-moz-linear-gradient(top,bottom,from(rgba(64,64,64,0.75)), to(rgba(192,192,192,0.9)));
+		/*background-image:-moz-linear-gradient(top,bottom,from(rgba(64,64,64,0.75)), to(rgba(192,192,192,0.9)));*/
+		background-image:-moz-linear-gradient(top,rgba(64,64,64,0.75),rgba(192,192,192,0.9));
 	}
  
 	.demo-button span {
@@ -582,7 +583,7 @@ img:hover.small_icon_button
 		border-color:#6699cc;
 		background-color:rgba(64,128,192,0.75);
 		background-image:-webkit-gradient(linear, 0% 0%, 0% 90%, from(rgba(16,96,192,0.75)), to(rgba(96,192,255,0.9)));
-		background-image:-moz-linear-gradient(top,bottom,from(rgba(16,96,192,0.75)), to(rgba(96,192,255,0.9)));
+		background-image:-moz-linear-gradient(top,rgba(16,96,192,0.75),rgba(96,192,255,0.9));
 		-khtml-box-shadow:rgba(128,192,255,0.75) 0px 8px 24px;
 		-moz-box-shadow:rgba(128,192,255,0.75) 0px 8px 24px;
 		box-shadow:rgba(128,192,255,0.75) 0px 8px 24px;
@@ -592,7 +593,7 @@ img:hover.small_icon_button
 		border-color:#aa7777;
 		background-color:rgba(255,0,0,0.75);
 		background-image:-webkit-gradient(linear, 0% 0%, 0% 90%, from(rgba(128,64,64,0.75)), to(rgba(256,128,128,0.9)));
-		background-image:-moz-linear-gradient(top,bottom,from(rgba(128,64,64,0.75)), to(rgba(192,128,128,0.9)));
+		background-image:-moz-linear-gradient(top,rgba(128,64,64,0.75),rgba(192,128,128,0.9));
 		-khtml-box-shadow:rgba(256,128,128,0.5) 0px 8px 24px;
 		-moz-box-shadow:rgba(256,128,128,0.5) 0px 8px 24px;
 		box-shadow:rgba(256,128,128,0.5) 0px 8px 24px;
@@ -602,7 +603,7 @@ img:hover.small_icon_button
 		border-color:#77cc77;
 		background-color:rgba(0,128,0,0.75);
 		background-image:-webkit-gradient(linear, 0% 0%, 0% 90%, from(rgba(64,128,64,0.75)), to(rgba(128,255,128,0.9)));
-		background-image:-moz-linear-gradient(top,bottom,from(rgba(64,128,64,0.75)), to(rgba(128,192,128,0.9)));
+		background-image:-moz-linear-gradient(top,rgba(64,128,64,0.75),rgba(128,192,128,0.9));
 		-khtml-box-shadow:rgba(128,256,128,0.6) 0px 8px 24px;
 		-moz-box-shadow:rgba(128,256,128,0.6) 0px 8px 24px;
 		box-shadow:rgba(128,256,128,0.6) 0px 8px 24px;
