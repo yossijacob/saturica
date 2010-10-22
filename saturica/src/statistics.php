@@ -20,14 +20,16 @@
 		MenuBar('statistics'); 
 	?>
     
-	
-	
 <div id="content">
 	    <br/>
 	    <h1>Users</h1>
 	    <hr></hr>
 	    <br/>
 	    <h2><u>buttons examples for batlan</u></h2>
+	    <br/>
+	    <br/>
+	    
+	    <br/>
 	    <br/>
     	<a href="user.php" class="icon_button"><span class="add">Add</span></a>
     	<a href="user.php" class="icon_button"><span class="delete">Delete</span></a>
