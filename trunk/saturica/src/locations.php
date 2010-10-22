@@ -16,6 +16,7 @@ if ($row==null)  // if null then put header
 	{
 		echo "<thead>";
 		echo "<tr>";
+		echo "<th>מחק שורה</th>";
 		echo "<th>דירוג פנימי</th>";
 		echo "<th>תמונה </th>";
 		echo "<th>מיקום גאוגרפי</th>";
@@ -29,6 +30,11 @@ if ($row==null)  // if null then put header
 	else
 	{
 		echo "<tr>";
+		echo "<td>";
+		?>
+		<div class="icon_button"> <span class="delete" onclick="DeleteRecord(locations,$row[0])";>מחק</span></div>
+		<?php
+		echo "</td>";
 		echo "<td>$row[7]</td>"; // דירוג פנימי 	
 		echo "<td>$row[6]</td>"; // תמונה 
 		echo "<td>$row[5]</td>"; // מיקום גאוגרפי
@@ -36,6 +42,7 @@ if ($row==null)  // if null then put header
 		echo "<td>$row[3]</td>"; // שם מיקום אמיתי
 		echo "<td>$row[2]</td>"; // שם מיקום בדוי
 		echo "<td>$row[1]</td>"; // מספר מיקום
+
 		echo "</tr>";
 	}
 }
