@@ -29,9 +29,40 @@ connect();   //connect to mysql DB
 	    <br/>
 	    <h1>מומלצים</h1>
 	    <hr></hr>
+	    
+	    
+  	  <?php
+  
+	  $select_workshop1  = isset($_POST['select_workshop1'])? $_POST['select_workshop1']: "";
+	  $select_workshop1 = CleanText($select_workshop1);
+	  $select_workshop2 = isset($_POST['select_workshop2'])? $_POST['select_workshop2']: "";
+	  $select_workshop2 = CleanText($select_workshop2);
+	  $select_workshop3 = isset($_POST['select_workshop3'])? $_POST['select_workshop3']: "";
+	  $select_workshop3 = CleanText($select_workshop3);
+	  
+	    
+		echo $select_workshop1;
+		echo "<br/>";
+		
+		echo $select_workshop2;
+		$first = GetRecord("workshops",$select_workshop1);
+		echo $first;
+		echo "<br/>";
+		
+		echo $select_workshop3;
+		
+
+		?>
+  	
+  		
+	    
+	    
+	    <hr></hr>
 	    בחר 3 סדנאות שיופיעו בעמוד המומלצים
 	   <br/>
 	   <br/>
+	   <form name="choose_recommended_form" id="choose_recommended_form" method="post" action="recommended.php">
+		<input type="hidden" name="submitted" value="true"/>	
 	   <table dir="rtl" cellspacing='15' class='recommend_pick_table'>
 	   <tr>
 			<td>
@@ -52,6 +83,10 @@ connect();   //connect to mysql DB
 	    <br/>
 	    <br/>
 	    <br/>
+	    
+	    <div class="centered_button_div"> 
+		<div id="shiny-demo-green" class="demo-button" onclick="javascript:document.choose_recommended_form.submit();">בחר כמומלצים<span/></div>
+  		</div>
 		
 
 		
