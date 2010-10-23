@@ -116,7 +116,7 @@ connect();   //connect to mysql DB
 	 <tr>
 	 	<td><b>כתובת מייל חדשה</b></td>
 	 <?php 	
-	 echo "<td><input type='text' name='new_mail' value='$new_mail' title='new email'/></td>";
+	 echo "<td><input type='text' size='50' name='new_mail' value='$new_mail' title='new email'/></td>";
 	 ?>
 	 </tr>
 	 
