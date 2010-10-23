@@ -33,8 +33,8 @@ connect();   //connect to mysql DB
 	    <br/> <br/>
 	    <br/> <br/>
 	    
-	 	<div id="shiny-demo-green" class="demo-button" onclick="location.href='changemail.php'">שינוי ססמא<span/></div>
-	    <div id="shiny-demo-red" class="demo-button" onclick="javascript:alert('batlanit ya batlanit');">שינוי מייל<span/></div>
+	 	<div id="shiny-demo-green" class="demo-button" onclick="location.href='changepassword.php'">שינוי ססמא<span/></div>
+	    <div id="shiny-demo-red" class="demo-button" onclick="location.href='changemail.php'">שינוי מייל<span/></div>
 	   <!--  <div id="shiny-demo-blue" class="demo-button" onclick="javascript:alert('batlan ya batlan');">Blue Button<span/></div>	-->
 
 		
