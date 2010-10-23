@@ -144,7 +144,6 @@ connect();   //connect to mysql DB
 	
   	<div class="centered_button_div"> 
 		<div id="shiny-demo-green" class="demo-button" onclick="javascript:document.add_customer_form.submit();">הוסף לקוח<span/></div>
-		<!-- <a class="green_ovalbutton" href="javascript:document.add_broker_form.submit();"><span>Add broker</span></a> -->
   	</div>
 	</form>
 	</div>
