@@ -16,7 +16,7 @@ if ($row==null)  // if null then put header
 	{
 		echo "<thead>";
 		echo "<tr>";
-		echo "<th>מחק שורה</th>";
+		echo "<th></th>";
 		echo "<th>דירוג פנימי</th>";
 		echo "<th>תמונה </th>";
 		echo "<th>מיקום גאוגרפי</th>";
@@ -24,17 +24,15 @@ if ($row==null)  // if null then put header
 		echo "<th>שם מיקום אמיתי</th>";
 		echo "<th>שם מיקום בדוי</th>";
 		echo "<th>מספר מיקום</th>";
+		echo "<th></th>";
 		echo "</tr>";
 		echo "</thead>";
 	}
 	else
 	{
+		$id = $row[0];  // get the id
 		echo "<tr>";
-		echo "<td>";
-		?>
-		<div class="icon_button"> <span class="delete" onclick="DeleteRecord(locations,$row[0])";>מחק</span></div>
-		<?php
-		echo "</td>";
+		echo "<td><a title='מחק רשומה' href='javascript:DeleteRecord(\"deletelocation.php\",\"$id\",\"$row[3]\")'><img src='images/delete.gif' class='small_icon_button' /></a></td>";
 		echo "<td>$row[7]</td>"; // דירוג פנימי 	
 		echo "<td>$row[6]</td>"; // תמונה 
 		echo "<td>$row[5]</td>"; // מיקום גאוגרפי
@@ -42,7 +40,8 @@ if ($row==null)  // if null then put header
 		echo "<td>$row[3]</td>"; // שם מיקום אמיתי
 		echo "<td>$row[2]</td>"; // שם מיקום בדוי
 		echo "<td>$row[1]</td>"; // מספר מיקום
-
+		echo "<td><a title='ערוך רשומה' href='javascript:OpenPageWithId(\"editlocation.php\",\"$id\")'><img src='images/edit_small.png' class='small_icon_button'/></a></td>";
+		
 		echo "</tr>";
 	}
 }
@@ -56,11 +55,12 @@ function ShowLocationTable()
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>מיקומים</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="default.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="javascript/functions.js"></script>
 </head>
 <body>
 	<?php 
