@@ -208,6 +208,8 @@ connect();   //connect to mysql DB
 		$workshoplocation = $workshop[17]; 
 		$workshoptimeframe = $workshop[18];
  		
+		$yesno[0] = "כן";		// for the active dropdown box
+		$yesno[1] = "לא";
  			
 ?>
 	<br/>
@@ -264,8 +266,13 @@ connect();   //connect to mysql DB
 	 <?php echo "<td><input type='text' name='workshopsupllier' value='$workshopsupllier' title='$workshopsupllier'/></td>";?>
 	 </tr>
 	 <tr>
-	 	<td><b>סדנא פעילה</b></td>
-	 <?php echo "<td><input type='text' name='workshopactive' value='$workshopactive' title='workshopactive'/></td>";?>
+	 	<td>האם סדנא פעילה</td>
+	 	<td>
+	 	<?php 
+	 	ShowDropDown("workshopactive",$yesno,$yesno,"","",$workshopactive);
+	 	?>
+	 	</td>
+	<!--  <?php echo "<td><input type='text' name='workshopactive' value='$workshopactive' title='workshopactive'/></td>";?>	-->
 	 </tr>
 	 <tr>
 	 	<td><b>גודל סדנא מינימלי</b></td>
