@@ -157,7 +157,8 @@ connect();   //connect to mysql DB
   			$data[8] = $workshopcomments;
   			$data[9] = $workshopdetails;
   			$data[10] = $workshopsupllier;
-  			$data[11] = $workshopactive;
+  		//	$data[11] = $workshopactive;
+  			$data[11] =	"כן";   // active
   			$data[12] = $workshopminsize;  
   			$data[13] = $workshopmaxsize; 
   			$data[14] = $workshoprank; 
@@ -244,10 +245,10 @@ connect();   //connect to mysql DB
 	 	<td><b>שם הספק</b></td>
 	 <?php echo "<td><input type='text' name='workshopsupllier' value='$workshopsupllier' title='$workshopsupllier'/></td>";?>
 	 </tr>
-	 <tr>
-	 	<td><b>סדנא פעילה</b></td>
-	 <?php echo "<td><input type='text' name='workshopactive' value='$workshopactive' title='workshopactive'/></td>";?>
-	 </tr>
+<!--  <tr> -->	
+<!--	 	<td><b>סדנא פעילה</b></td>	-->	
+<!--	 <?php echo "<td><input type='text' name='workshopactive' value='$workshopactive' title='workshopactive'/></td>";?>	-->	
+<!--	 </tr>	-->	
 	 <tr>
 	 	<td><b>גודל סדנא מינימלי</b></td>
 	 <?php echo "<td><input type='text' name='workshopminsize' value='$workshopminsize' title='workshopminsize'/></td>";?>
