@@ -31,21 +31,21 @@ connect();   //connect to mysql DB
 	    <br/>
 	    <br/>
 	    <br/>
-	    מספר המיקומים הכולל במערכת :
+	    <b>מספר המיקומים הכולל במערכת :</b>
 	   <?php echo GetTableSize("locations"); ?>
 	    <br/>
 	    <br/>
-	    מספר הלקוחות הכולל במערכת :
+	    <b>מספר הלקוחות הכולל במערכת :</b>
 	    <?php echo GetTableSize("customers"); ?>
 	    <br/>
-	    מספר הלקוחות הפעילים במערכת :
+	    <b>מספר הלקוחות הפעילים במערכת :</b>
 	    <?php echo GetTableActiveSize("customers"); ?>
 	    <br/>
 	    <br/>
-	    מספר הסדנאות הכולל במערכת :
+	    <b>מספר הסדנאות הכולל במערכת :</b>
 	    <?php echo GetTableSize("workshops"); ?>
 	    <br/>
-	    מספר הסדנאות הפעילות במערכת :
+	    <b>מספר הסדנאות הפעילות במערכת :</b>
 	    <?php echo GetTableActiveSize("workshops"); ?>
 	   
 	    
