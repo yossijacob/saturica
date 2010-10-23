@@ -124,7 +124,7 @@ function MenuBar($selected)
 	$sel['statistics'] = "not";
 	$sel['customers'] = "not";
 	$sel['locations'] = "not";
-	$sel['reccomended'] = "not";
+	$sel['recommended'] = "not";
 	$sel['workshops'] = "not";
 	$sel['newsletter'] = "not";
 	$sel['preferences'] = "not";
@@ -137,7 +137,7 @@ echo '<div id="menu">';
     echo   	"<li class=".$sel["statistics"]."><a href='statistics.php'  title='statistics'>סטטיסטיקה</a></li>";    
     echo    "<li class=".$sel['customers']."><a href='customers.php' title=''>לקוחות</a></li>";  
     echo    "<li class=".$sel['locations']."><a href='locations.php' title='locations'>מיקומים</a></li>";   
-    echo   	"<li class=".$sel['reccomended']."><a href='recommended.php' title='reccomended'>מומלצים</a></li>";    
+    echo   	"<li class=".$sel['recommended']."><a href='recommended.php' title='recommended'>מומלצים</a></li>";    
     echo   	"<li class=".$sel['workshops']."><a href='workshops.php' title='workshops'>סדנאות</a></li>";    
     echo   	"<li class=".$sel['newsletter']."><a href='newsletter.php' title='newsletter'>ניוזלטר</a></li>";    
     echo   	"<li class=".$sel['preferences']."><a href='preferences.php' title='preferences'>הגדרות</a></li>";   
