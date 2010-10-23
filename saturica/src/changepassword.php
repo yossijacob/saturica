@@ -65,7 +65,7 @@ connect();   //connect to mysql DB
   		}
   	else
   		{
-  		if ($old != $old_pass) 
+  		if ($old != sha1($old_pass)) 
   	
   		{
   			$miss = true;
@@ -102,7 +102,7 @@ connect();   //connect to mysql DB
   	
 	if ($miss != true)
   		{		// the form was validated successfully now we process the form
-  			
+  			$new_pass_1= sha1($new_pass_1);
   			
   			$data[0] = $email;
   			$data[1] = $user;
@@ -135,16 +135,16 @@ connect();   //connect to mysql DB
 	 <tr>
 	 	<td><b>ססמא נוכחית</b></td>
 	 <?php 	
-	 echo "<td><input type='text' name='old_pass' value='$old_pass' title='old password'/></td>";
+	 echo "<td><input type='password' name='old_pass' value='$old_pass' title='old password'/></td>";
 	 ?>
 	 </tr>
 	 <tr>
 	 	<td><b>ססמא חדשה</b></td>
-	 <?php echo "<td><input type='text' name='new_pass_1' value='$new_pass_1' title='new password1'/></td>";?>
+	 <?php echo "<td><input type='password' name='new_pass_1' value='$new_pass_1' title='new password1'/></td>";?>
 	 </tr>
 	 <tr>
 	 	<td><b>הקש שוב ססמא חדשה</b></td>
-	 <?php echo "<td><input type='text' name='new_pass_2' value='$new_pass_2' title='new password2'/></td>";?>
+	 <?php echo "<td><input type='password' name='new_pass_2' value='$new_pass_2' title='new password2'/></td>";?>
 	 </tr>
 	 
 	 <tr><td></td></tr>
