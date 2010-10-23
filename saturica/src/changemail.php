@@ -45,11 +45,18 @@ connect();   //connect to mysql DB
   $user =  $preferences[2];
   $password = $preferences[3];
   $cap =   $preferences[4];
+  
+  $old_email = $preferences[1];  // for displying the old mail
 
   	$dont_show_form = false;
   	$miss = false;
   	$missing = "";
   	$name_exist = "";
+  	
+  	echo "$old_email המייל הנוכחי שלך הוא";
+  	echo "<br/>";
+  	echo  "אם ברצונך לשנותו אנא הכנס מייל חדש ולחץ על שמור";
+  	echo "<br/>";
   	
   	
   	if (isset($_POST['submitted']))
