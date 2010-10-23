@@ -24,6 +24,20 @@ function AddRecord($table,$data)
 	return $auto_id;				// return the auto id generated
 }
 //********************************************************************
+function GetTableSize($table)
+{
+	$result = mysql_query("SELECT * FROM $table") or die(mysql_error());
+	$res = mysql_num_rows($result);
+	return $res;
+}
+//********************************************************************
+function GetTableActiveSize($table)
+{
+	$result = mysql_query("SELECT * FROM $table Where active='כן'") or die(mysql_error());
+	$res = mysql_num_rows($result);
+	return $res;
+}
+//********************************************************************
 
 function DeleteRecord($table,$id)
 {
