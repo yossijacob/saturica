@@ -45,8 +45,8 @@ connect();   //connect to mysql DB
 		echo "<br/>";
 		
 		echo $select_workshop2;
-		$first = GetRecord("workshops",$select_workshop1);
-		echo $first;
+		//$first = GetRecord("workshops",$select_workshop1);
+		
 		echo "<br/>";
 		
 		echo $select_workshop3;
