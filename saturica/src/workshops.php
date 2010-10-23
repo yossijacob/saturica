@@ -16,6 +16,7 @@ if ($row==null)  // if null then put header
 	{
 		echo "<thead>";
 		echo "<tr>";
+		echo "<th></th>";
 		echo "<th>מיקום</th>";
 		echo "<th>פעיל</th>";
 		echo "<th>שם ספק</th>";
@@ -23,12 +24,15 @@ if ($row==null)  // if null then put header
 		echo "<th>מחיר קבוע</th>";
 		echo "<th>נושא</th>";
 		echo "<th>שם</th>";
+		echo "<th></th>";
 		echo "</tr>";
 		echo "</thead>";
 	}
 	else
 	{
+		$id = $row[0];  // get the id
 		echo "<tr>";
+		echo "<td><a title='מחק רשומה' href='javascript:DeleteRecord(\"deleteworkshop.php\",\"$id\",\"$row[2]\")'><img src='images/delete.gif' class='small_icon_button' /></a></td>";
 		echo "<td>$row[17]</td>"; // מיקום	
 		echo "<td>$row[12]</td>"; // פעיל 
 		echo "<td>$row[11]</td>"; // שם ספק
@@ -36,6 +40,7 @@ if ($row==null)  // if null then put header
 		echo "<td>$row[6]</td>"; // מחיר קבוע
 		echo "<td>$row[4]</td>"; // נושא
 		echo "<td>$row[2]</td>"; // שם
+		echo "<td><a title='ערוך רשומה' href='javascript:OpenPageWithId(\"editworkshop.php\",\"$id\")'><img src='images/edit_small.png' class='small_icon_button'/></a></td>";
 		echo "</tr>";
 	}
 }
@@ -49,11 +54,12 @@ function ShowWorkshopTable()
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>סדנאות</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="default.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="javascript/functions.js"></script>
 </head>
 <body>
 	<?php 
