@@ -65,7 +65,7 @@ connect();   //connect to mysql DB
   	if ($new_mail == "") 
   		{
   			$miss = true;
-  			$missing['old_pass'] = "לא הוכנה כתובת מייל";
+  			$missing['old_pass'] = "לא הוכנסה כתובת מייל";
   		}
   	else if (!isemail($new_mail))
   		{
