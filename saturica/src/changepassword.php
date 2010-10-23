@@ -65,8 +65,7 @@ connect();   //connect to mysql DB
   		}
   	else
   		{
-  		if ($old != sha1($old_pass)) 
-  	
+  		if ($old != hash('sha256',$old_pass)) 
   		{
   			$miss = true;
   			$missing['old_pass'] = "ססמא נוכחית לא נכונה";			
@@ -102,8 +101,7 @@ connect();   //connect to mysql DB
   	
 	if ($miss != true)
   		{		// the form was validated successfully now we process the form
-  			$new_pass_1= sha1($new_pass_1);
-  			
+  			$new_pass_1 = hash('sha256',$new_pass_1);
   			$data[0] = $email;
   			$data[1] = $user;
   			$data[2] = $new_pass_1;
