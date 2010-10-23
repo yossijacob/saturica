@@ -47,14 +47,13 @@ connect();   //connect to mysql DB
   $email = $preferences[1];  // mail remains the same
   $user =  $preferences[2];
   $cap =   $preferences[4];
+  $old = $preferences[3];
 
   	$dont_show_form = false;
   	$miss = false;
   	$missing = "";
   	$name_exist = "";
   	
-  	$old = GetRecord("preferences",1);
-  	$old = $old[3];
   	
   	if (isset($_POST['submitted']))
   	{
@@ -129,7 +128,7 @@ connect();   //connect to mysql DB
 ?>
 	<br/>
 	<div id="add_password_div" dir="rtl">
-	<form name="edit_password_form" id="edit_password_form" method="post" action="changemail.php">
+	<form name="edit_password_form" id="edit_password_form" method="post" action="changepassword.php">
 	<?php echo "<input type='hidden' name='id' value=1/>"; ?>
 	<input type="hidden" name="submitted" value="true"/>
 	<table cellspacing="10">
