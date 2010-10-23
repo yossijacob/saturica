@@ -1,10 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<?php
-		include_once 'html.php';
-		//include_once 'mysql.php';
-		//include_once 'db.php';
-		//connect();   //connect to mysql DB 
-		?>
+<?php 
+include_once 'html.php';
+include_once 'mysql.php';
+include_once 'db.php';
+include_once 'connect.php';
+
+connect();   //connect to mysql DB
+
+?>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -22,14 +26,29 @@
     
 <div id="content">
 	    <br/>
-	    <h1>Users</h1>
+	    <h1>סטטיסטיקה</h1>
 	    <hr></hr>
 	    <br/>
-	    <h2><u>buttons examples for batlan</u></h2>
 	    <br/>
 	    <br/>
+	    מספר המיקומים הכולל במערכת :
+	   <?php echo GetTableSize("locations"); ?>
+	    <br/>
+	    <br/>
+	    מספר הלקוחות הכולל במערכת :
+	    <?php echo GetTableSize("customers"); ?>
+	    <br/>
+	    מספר הלקוחות הפעילים במערכת :
+	    <?php echo GetTableActiveSize("customers"); ?>
+	    <br/>
+	    <br/>
+	    מספר הסדנאות הכולל במערכת :
+	    <?php echo GetTableSize("workshops"); ?>
+	    <br/>
+	    מספר הסדנאות הפעילות במערכת :
+	    <?php echo GetTableActiveSize("workshops"); ?>
+	   
 	    
-	    <br/>
 	    <br/>
     	<a href="user.php" class="icon_button"><span class="add">Add</span></a>
     	<a href="user.php" class="icon_button"><span class="delete">Delete</span></a>
