@@ -123,6 +123,22 @@ a:hover {
 	margin-top:20px;
 }
 
+.framed_centered_button_div
+{
+	text-align: center;
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:20px;
+	-moz-border-radius: 0.5em 0.5em 0.5em 0.5em;
+	border-radius: 0.5em 0.5em 0.5em 0.5em;
+	border-style:solid;
+	background-color:#E4BBC0;
+	border-width:medium;
+	padding:5px;
+	width:500px;
+}
+
 
 h4		/*error messege*/
 {
@@ -544,6 +560,30 @@ img:hover.small_icon_button
 
 /* shiny buttons*/
 
+.demo-button-file {
+		position:relative;
+		display:inline-block;
+		width:25em;
+		padding:0.25em 0.5em 0.3em 0.5em;
+		text-align:center;
+		cursor:pointer;
+		border:2px solid #999;
+                background-color:#666;
+		background-color:rgba(128,128,128,0.75);
+	    -moz-border-radius:16px;
+	    -webkit-border-radius:16px;
+	    -opera-border-radius:16px;
+	    -khtml-border-radius:16px;
+	    border-radius:16px;
+		font-size:1.0em;
+		color:#fff;
+		font-weight:bold;
+		text-shadow:1px 1px 3px rgba(0,0,0,0.5);
+		background-image:-webkit-gradient(linear, 0% 0%, 0% 90%, from(rgba(64,64,64,0.75)), to(rgba(192,192,192,0.9)));
+		/*background-image:-moz-linear-gradient(top,bottom,from(rgba(64,64,64,0.75)), to(rgba(192,192,192,0.9)));*/
+		background-image:-moz-linear-gradient(top,rgba(64,64,64,0.75),rgba(192,192,192,0.9));
+	}
+
 .demo-button {
 		position:relative;
 		display:inline-block;
@@ -608,3 +648,5 @@ img:hover.small_icon_button
 		-moz-box-shadow:rgba(128,256,128,0.6) 0px 8px 24px;
 		box-shadow:rgba(128,256,128,0.6) 0px 8px 24px;
 	}
+	
+	
