@@ -60,7 +60,7 @@ function ShowRecommendedTable()
 	    <hr></hr>
 	    <br/>
 	    <br/>
-	    :המומלצים הנוכחיים הם 
+	    <b>:המומלצים הנוכחיים הם </b>
 	    
   	  <?php
 
@@ -114,10 +114,10 @@ function ShowRecommendedTable()
 
 		?>
 	
-	    <br/><br/><br/><br/>   
-	    <hr></hr>
-	    <br/><br/> 
-	  <b> "אם ברצונך לשנות את הסדנאות המומלצות,אנא בחר סדנאות חדשות ולחץ על "בחר כמומלצים</b>
+	   <br/><br/><br/><br/>   
+	   <hr></hr>
+	   <br/><br/> 
+	   <b> "אם ברצונך לשנות את הסדנאות המומלצות,אנא בחר סדנאות חדשות ולחץ על "בחר כמומלצים</b>
 	   <br/>
 	   <br/>
 	   <form name="choose_recommended_form" id="choose_recommended_form" method="post" action="recommended.php">
