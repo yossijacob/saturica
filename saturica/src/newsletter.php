@@ -81,7 +81,8 @@
 		<br/>
 		<br/>
 		<br/>
-		 <h2>יצוא הניוזלטר</h2>
+		 <form name="export_newsletter_form" id="export_newsletter_form" method="post" action="newsletter.php?pending=export">
+		<h2>יצוא הניוזלטר</h2>
 		<hr></hr>
 		<div class="centered_button_div">
 	    <div id="shiny-demo-blue" class="demo-button" onclick="javascript:document.add_customer_form.submit();">שמור ניוזלטר למחשבך<span/></div>
