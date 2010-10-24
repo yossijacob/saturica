@@ -77,32 +77,44 @@ function ShowRecommendedTable()
 
 	    if (isset($_POST['submitted']))  // if form was submitted - process it
   		{
+  		 if (check_not_same($select_workshop1,$select_workshop2,$select_workshop3))
+  		 {
   			
   			if (!($select_workshop1==-1)) // if we change the first recommended workshop
   			{
-  			$select_workshop1 = GetRecord("workshops",$select_workshop1);
-  			$data[0] = $select_workshop1[0]; //the id of the record at the original "workshops" table
-  			$data[1] = $select_workshop1[2];    // workshop name
-  			EditRecord("recommendeds","1",$data);	
+	  			$select_workshop1 = GetRecord("workshops",$select_workshop1);
+	  			$data[0] = $select_workshop1[0]; //the id of the record at the original "workshops" table
+	  			$data[1] = $select_workshop1[2];    // workshop name
+	  			EditRecord("recommendeds","1",$data);	
   			}
   			
-  		if (!($select_workshop2==-1))	// if we change the second recommended workshop
+  			if (!($select_workshop2==-1))	// if we change the second recommended workshop
   			{
-  			$select_workshop2 = GetRecord("workshops",$select_workshop2);
-  			$data[0] = $select_workshop2[0]; 
-  			$data[1] = $select_workshop2[2];
-  			EditRecord("recommendeds","2",$data);	
+	  			$select_workshop2 = GetRecord("workshops",$select_workshop2);
+	  			$data[0] = $select_workshop2[0]; 
+	  			$data[1] = $select_workshop2[2];
+	  			EditRecord("recommendeds","2",$data);	
   			}
   			
-  		if (!($select_workshop3==-1))	// if we change the third recommended workshop
+  			if (!($select_workshop3==-1))	// if we change the third recommended workshop
   			{
-  			$select_workshop3 = GetRecord("workshops",$select_workshop3);
-  			$data[0] = $select_workshop3[0]; 
-  			$data[1] = $select_workshop3[2];
-  			EditRecord("recommendeds","3",$data);	
+	  			$select_workshop3 = GetRecord("workshops",$select_workshop3);
+	  			$data[0] = $select_workshop3[0]; 
+	  			$data[1] = $select_workshop3[2];
+	  			EditRecord("recommendeds","3",$data);	
   			}	
-  			
   			header('Location:recommended.php');	
+  		 }
+  		 else
+  		 {
+  			?>	
+  			<script type="text/javascript">
+  			alert('עליך לבחור מומלצים שונים') 
+  			</script>
+  			<?php 	
+  		 }
+  			
+  			
   		}
 		
 
