@@ -1,10 +1,40 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <?php
 		include_once 'html.php';
-		//include_once 'mysql.php';
-		//include_once 'db.php';
-		//connect();   //connect to mysql DB 
-		?>
+
+		$fileName = "letter.html";
+	
+		if ((isset($_GET['pending'])) && ($_GET['pending'] =="export" ))
+		{					// exporiting the newsletter file
+			header("Location:saveas.php?filename=$fileName");
+		}
+		else if ((isset($_GET['pending'])) && ($_GET['pending'] =="savenewsletter" ))
+		{
+			$filedata = $_POST['editor1']; // get data from editor
+			$fileHandle = fopen($fileName, 'w+') or die("can't open file"); // open file
+			fwrite($fileHandle,$_POST['editor1']); // write
+			echo "הקובץ נשמר בהצלחה";
+		}
+		else if ((isset($_GET['pending'])) && ($_GET['pending'] =="import" ))
+		{
+			$target_path = $fileName;
+			UploadFile( $_FILES['picture']['name'],$_FILES['picture']['tmp_name'],$target_path);
+		}
+		else
+		{	//get data from file
+			$fileHandle = fopen($fileName, 'r+') or die("can't open file");
+			$filesize = filesize($fileName);
+			if ($filesize)
+				{
+				$filedata = fread($fileHandle, $filesize);
+				}
+			else
+				{
+				$filedata = "";
+				}
+		}
+		fclose($fileHandle);
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">	    
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -37,40 +67,7 @@
 	   
 	    <br/>
 	   
-	    <?php 
-		$fileName = "newsletter.html";
-	
-		if ((isset($_GET['pending'])) && ($_GET['pending'] =="savenewsletter" ))
-		{
-			$filedata = $_POST['editor1']; // get data from editor
-			$fileHandle = fopen($fileName, 'w+') or die("can't open file"); // open file
-			fwrite($fileHandle,$_POST['editor1']); // write
-			echo "הקובץ נשמר בהצלחה";
-		}
-		else if ((isset($_GET['pending'])) && ($_GET['pending'] =="exportnewsletter" ))
-		{					// exporiting the newsletter file
-			SaveFile($fileName);
-		}
-		else if ((isset($_GET['pending'])) && ($_GET['pending'] =="importnewsletter" ))
-		{
-			$target_path = $fileName;
-			UploadFile( $_FILES['picture']['name'],$_FILES['picture']['tmp_name'],$target_path);
-		}
-		else
-		{	//get data from file
-			$fileHandle = fopen($fileName, 'r+') or die("can't open file");
-			$filesize = filesize($fileName);
-			if ($filesize)
-				{
-				$filedata = fread($fileHandle, $filesize);
-				}
-			else
-				{
-				$filedata = "";
-				}
-		}
-		fclose($fileHandle);
-		?>	    
+	   
 	    
 	    <br/>
 	    <form name="save_newsletter_form" id="save_newsletter_form" method="post" action="newsletter.php?pending=savenewsletter">
