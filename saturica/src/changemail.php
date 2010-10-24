@@ -53,9 +53,11 @@ connect();   //connect to mysql DB
   	$missing = "";
   	$name_exist = "";
   	
-  	echo "$old_email המייל הנוכחי שלך הוא";
   	echo "<br/>";
-  	echo  "אם ברצונך לשנותו אנא הכנס מייל חדש ולחץ על שמור";
+  	echo "<FONT COLOR='RED'>$old_email</FONT> המייל הנוכחי שלך הוא";
+  	echo "<br/>";
+  	echo "<br/>";
+  	echo  "אם ברצונך לשנותו, אנא הכנס מייל חדש ולחץ על שמור";
   	echo "<br/>";
   	
   	
