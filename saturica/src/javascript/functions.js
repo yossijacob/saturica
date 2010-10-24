@@ -3,7 +3,8 @@
 /*
     this function is used to open a page with an id field as a POST argument.
 */
-function OpenPageWithId(page, id) {
+function OpenPageWithId(page, id) 
+{
     
     var form = document.createElement("form");  // create a new form
     form.setAttribute("method", "post");
@@ -22,7 +23,7 @@ function OpenPageWithId(page, id) {
 /*-------------------------------------------------------------------------*/
 function DeleteRecord(page, id, name) 
 {
-    message = "האם אתה בטוח שברצונך למחוק את " + name + " לאחר המחיקה לא יהיה ניתן לשחזר את המידע";
+    var message = "האם אתה בטוח שברצונך למחוק את " + name + " לאחר המחיקה לא יהיה ניתן לשחזר את המידע";
     agree = confirm( message );
     if (agree) 
     {
