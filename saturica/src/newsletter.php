@@ -57,18 +57,17 @@
 	    <hr></hr>
 	    <br/>
 	    <br/>
-	    <p>כאן ניתן לערוך לשמור ולשלוח עמוד לכל הלקוחות
+	    כאן ניתן לערוך לשמור ולשלוח עמוד לכל הלקוחות
 	    <br/>
-	    ניתן להחדיר את שם הלקוח לתוך הטקסט על ידי שימוש בתווית מיוחדת
-	    </p>
-	    [name] - יוחךף על ידי שם הלקוח 
-	    <br/>
-	    
-	   
+	     
 	    <br/>
 	   
+	    <h2>ערוך מכתב</h2>
+		<hr></hr>
+		<br/>
+		ניתן להחדיר את שם הלקוח לתוך הטקסט על ידי שימוש בתווית מיוחדת
 	   
-	    
+	    [name] - יוחלף על ידי שם הלקוח
 	    <br/>
 	    <form name="save_newsletter_form" id="save_newsletter_form" method="post" action="newsletter.php?pending=savenewsletter">
 	    <label for="editor1"></label><br />
@@ -85,7 +84,12 @@
 		</form>
 		<br/>
 		<br/>
-		<br/>
+		<h2>שליחת דואר</h2>
+		<hr></hr>	   
+	    <br/>
+	    <div class="centered_button_div"> 
+	    <div id="shiny-demo-blue" class="demo-button" onclick="javascript:document.save_newsletter_form.submit();">שלח דואר לכל הלקוחות<span/></div>
+		</div>
 		<br/>
 		<form name="export_newsletter_form" id="export_newsletter_form" method="post" action="newsletter.php?pending=export">
 		<h2>יצוא הניוזלטר</h2>
@@ -96,7 +100,6 @@
 	    <br/>
 	    ייצא את הקובץ למחשבך
 	    </div>
-	    <br/>
 	    <br/>
 	    <br/>
 	    <form name="import_newsletter_form" id="import_newsletter_form" method="post" action="newsletter.php?pending=import">
