@@ -46,6 +46,7 @@ function isrank($rank)
 }
 
 //***********************************************************************
+
 function check_not_same($choise1,$choise2,$choise3)
 {
 	if ( ($choise1 != -1) && ( ($choise1 == $choise2) || ($choise1 == $choise3) ) )
@@ -57,9 +58,9 @@ function check_not_same($choise1,$choise2,$choise3)
 }
 
 //***********************************************************************
-function UploadPicture($file,$tmp_name,$target) 
+function UploadFile($file,$tmp_name,$target)
 {
-	//	upload a picture to $target. the target needs to be an existing folder.
+	//	upload a file to $target. the target needs to be an existing folder.
 	if (move_uploaded_file($tmp_name, $target) ) 
 		{ echo "The file ".$file." has been uploaded"; } 
 	else{
@@ -158,6 +159,16 @@ echo '<div id="menu">';
 
 }
 //************************************************************************
-
+function SaveFile($file_name)
+{
+	header("Cache-Control: public");
+	header("Content-Description: File Transfer");
+	header("Content-Disposition: attachment; filename=$file_name");
+	header("Content-Type: application/zip");
+	header("Content-Transfer-Encoding: binary");
+	    
+	// Read the file from disk
+	readfile($file_name);
+}
 
 ?>
