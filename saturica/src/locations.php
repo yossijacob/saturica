@@ -18,7 +18,6 @@ if ($row==null)  // if null then put header
 		echo "<tr>";
 		echo "<th></th>";
 		echo "<th>דירוג פנימי</th>";
-		echo "<th>תמונה </th>";
 		echo "<th>מיקום גאוגרפי</th>";
 		echo "<th>טקסט תיאור</th>";
 		echo "<th>שם מיקום אמיתי</th>";
@@ -34,7 +33,6 @@ if ($row==null)  // if null then put header
 		echo "<tr>";
 		echo "<td><a title='מחק רשומה' href='javascript:DeleteRecord(\"deletelocation.php\",\"$id\",\"$row[3]\")'><img src='images/delete.gif' class='small_icon_button' /></a></td>";
 		echo "<td>$row[7]</td>"; // דירוג פנימי 	
-		echo "<td>$row[6]</td>"; // תמונה 
 		echo "<td>$row[5]</td>"; // מיקום גאוגרפי
 		echo "<td>$row[4]</td>"; // טקסט תיאור
 		echo "<td>$row[3]</td>"; // שם מיקום אמיתי
