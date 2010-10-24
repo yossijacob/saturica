@@ -46,6 +46,17 @@ function isrank($rank)
 }
 
 //***********************************************************************
+function check_not_same($choise1,$choise2,$choise3)
+{
+	if ( ($choise1 != -1) && ( ($choise1 == $choise2) || ($choise1 == $choise3) ) )
+		return false;
+	if ( ($choise2 != -1) && ($choise2 == $choise3)  )
+		return false;
+	
+	return true;	
+}
+
+//***********************************************************************
 function UploadPicture($file,$tmp_name,$target) 
 {
 	//	upload a picture to $target. the target needs to be an existing folder.
