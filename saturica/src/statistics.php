@@ -48,18 +48,7 @@ connect();   //connect to mysql DB
 	    <b>מספר הסדנאות הפעילות במערכת :</b>
 	    <?php echo GetTableActiveSize("workshops"); ?>
 	   
-	    
-	    <br/>
-    	<a href="user.php" class="icon_button"><span class="add">Add</span></a>
-    	<a href="user.php" class="icon_button"><span class="delete">Delete</span></a>
-    	<a href="user.php" class="icon_button"><span class="edit">Edit</span></a>
-    	<a href="create_dispatch_table.php?next=home.php" class="big_icon_button"><span class="refresh">Bigger button</span></a>
-    	and there are more pics ,and more can be added ofcourse.
-	    <br/>
-	    <br/>
-	    <div id="shiny-demo-green" class="demo-button" onclick="javascript:alert('batlan ya batlan');">Green Button<span/></div>
-	    <div id="shiny-demo-red" class="demo-button" onclick="javascript:alert('batlanit ya batlanit');">Red Button<span/></div>
-	    <div id="shiny-demo-blue" class="demo-button" onclick="javascript:alert('batlan ya batlan');">Blue Button<span/></div>
+    	
 	    <br/>
 		
   
