@@ -38,29 +38,38 @@
 	    <br/>
 	   
 	    <?php 
-		$FileName = "newsletter.html";
+		$fileName = "newsletter.html";
 	
 		if ((isset($_GET['pending'])) && ($_GET['pending'] =="savenewsletter" ))
 		{
 			$filedata = $_POST['editor1']; // get data from editor
-			$FileHandle = fopen($FileName, 'w+') or die("can't open file"); // open file
-			fwrite($FileHandle,$_POST['editor1']); // write
+			$fileHandle = fopen($fileName, 'w+') or die("can't open file"); // open file
+			fwrite($fileHandle,$_POST['editor1']); // write
 			echo "הקובץ נשמר בהצלחה";
+		}
+		else if ((isset($_GET['pending'])) && ($_GET['pending'] =="exportnewsletter" ))
+		{					// exporiting the newsletter file
+			SaveFile($fileName);
+		}
+		else if ((isset($_GET['pending'])) && ($_GET['pending'] =="importnewsletter" ))
+		{
+			$target_path = $fileName;
+			UploadFile( $_FILES['picture']['name'],$_FILES['picture']['tmp_name'],$target_path);
 		}
 		else
 		{	//get data from file
-			$FileHandle = fopen($FileName, 'r+') or die("can't open file");
-			$filesize = filesize($FileName);
+			$fileHandle = fopen($fileName, 'r+') or die("can't open file");
+			$filesize = filesize($fileName);
 			if ($filesize)
 				{
-				$filedata = fread($FileHandle, $filesize);
+				$filedata = fread($fileHandle, $filesize);
 				}
 			else
 				{
 				$filedata = "";
 				}
 		}
-		fclose($FileHandle);
+		fclose($fileHandle);
 		?>	    
 	    
 	    <br/>
@@ -81,22 +90,24 @@
 		<br/>
 		<br/>
 		<br/>
-		 <form name="export_newsletter_form" id="export_newsletter_form" method="post" action="newsletter.php?pending=export">
+		<form name="export_newsletter_form" id="export_newsletter_form" method="post" action="newsletter.php?pending=export">
 		<h2>יצוא הניוזלטר</h2>
 		<hr></hr>
 		<div class="centered_button_div">
-	    <div id="shiny-demo-blue" class="demo-button" onclick="javascript:document.add_customer_form.submit();">שמור ניוזלטר למחשבך<span/></div>
+	    <div id="shiny-demo-blue" class="demo-button" onclick="javascript:document.export_newsletter_form.submit();">שמור ניוזלטר למחשבך<span/></div>
+	    </form>
 	    <br/>
 	    ייצא את הקובץ למחשבך
 	    </div>
 	    <br/>
 	    <br/>
 	    <br/>
-	     <h2>יבוא ניוזלטר</h2>
+	    <form name="import_newsletter_form" id="import_newsletter_form" method="post" action="newsletter.php?pending=import">
+	    <h2>יבוא ניוזלטר</h2>
 	    <hr></hr>
 	      לשימוש בתור ניוזלטר html בחר קובץ 
 	    <div class="framed_centered_button_div"> 
-	  	<div id="shiny-demo-red" class="demo-button" onclick="javascript:document.loadfile.click();">טען ניוזלטר ממחשבך<span/></div>
+	  	<div id="shiny-demo-red" class="demo-button" onclick="javascript:document.import_newsletter_form.submit();">טען ניוזלטר ממחשבך<span/></div>
 	  	&nbsp &nbsp &nbsp &nbsp
 	  	<input type="file"  name="loadnewsletter"/>
 	    </div>
