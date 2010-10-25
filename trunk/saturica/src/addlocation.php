@@ -60,12 +60,12 @@ connect();   //connect to mysql DB
   	$name_exist = "";
   	
   	
-  	  	  	$places[0] = "צפון";		// for the places dropdown boxes
-			$places[1] = "חיפה והסביבה";
-			$places[2] = "אזור השרון";
-			$places[3] = "מרכז";
-			$places[4] = "ירושליים";
-			$places[5] = "דרום";		
+    $places[0] = "צפון";		// for the places dropdown boxes
+	$places[1] = "חיפה והסביבה";
+	$places[2] = "אזור השרון";
+	$places[3] = "מרכז";
+	$places[4] = "ירושליים";
+	$places[5] = "דרום";		
   	
   	
   	if (isset($_POST['submitted']))
