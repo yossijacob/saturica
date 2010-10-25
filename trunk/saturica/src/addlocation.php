@@ -172,7 +172,7 @@ connect();   //connect to mysql DB
 	 </tr>
 	 
 	 <tr>
-	 	<td>מקום</td>
+	 	<td><b>מקום</b></td>
 	 	<td>
 	 	<?php 
 	 	ShowDropDown("place",$places,$places,"","",$place);
