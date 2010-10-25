@@ -16,6 +16,7 @@ connect();   //connect to mysql DB
 <meta name="description" content="" />
 <link href="default.css" rel="stylesheet" type="text/css" />
 
+
 </head>
 <body>
 	<?php 
@@ -44,8 +45,8 @@ connect();   //connect to mysql DB
   $real_name = CleanText($real_name);
   $description  = isset($_POST['description'])? $_POST['description']: "";
   $description = CleanText($description);
-  $place  = isset($_POST['place'])? $_POST['place']: "";
-  $place = CleanText($place);
+  $places  = isset($_POST['places'])? $_POST['places']: "";
+  $places = CleanText($places);
   $picture  = isset($_POST['picture'])? $_POST['picture']: "";
   $picture = CleanText($picture);
   $rank  = isset($_POST['rank'])? $_POST['rank']: "";
@@ -57,6 +58,15 @@ connect();   //connect to mysql DB
   	$miss = false;
   	$missing = "";
   	$name_exist = "";
+  	
+  	
+  	  	  	$places[0] = "north";		// for the places dropdown boxes
+			$places[1] = "חיפה והסביבה";
+			$places[2] = "אזור השרון";
+			$places[3] = "center";
+			$places[4] = "ירושליים";
+			$places[5] = "דרום";
+  	
   	
   	if (isset($_POST['submitted']))
   	{
@@ -76,7 +86,7 @@ connect();   //connect to mysql DB
   			$miss = true;
   			$missing['real_name'] = "שם אמיתי";
   		}
-  	if ($place == "") 
+  	if ($places == "") 
   		{
   			$miss = true;
   			$missing['place'] = "מיקום";
@@ -106,14 +116,21 @@ connect();   //connect to mysql DB
   			$data[1] = $fake_name;
   			$data[2] = $real_name;
   			$data[3] = $description;
-  			$data[4] = $place;
+  			$data[4] = $places;
   			$data[5] = $picture;  
   			$data[6] = $rank;   
+  			
+  			$places[0] = "north";		// for the places dropdown boxes
+			$places[1] = "חיפה והסביבה";
+			$places[2] = "אזור השרון";
+			$places[3] = "center";
+			$places[4] = "ירושליים";
+			$places[5] = "דרום";		
   			 
   			
   			$target_path = "location_pic/";	//upload the picture to 'location_pic' folder
 			$target_path = $target_path . basename( $_FILES['picture']['name']); 
-			UploadPicture( $_FILES['picture']['name'],$_FILES['picture']['tmp_name'],$target_path);
+			UploadFile( $_FILES['picture']['name'],$_FILES['picture']['tmp_name'],$target_path);
   			
 		/*	$_FILES['picture']['name'] - name contains the original path of the user uploaded file.
 		 *  $_FILES['picture']['tmp_name'] - tmp_name contains the path to the temporary file that is on the server.  */
@@ -131,6 +148,10 @@ connect();   //connect to mysql DB
   	
   	}  // close if submitted 
 
+
+  	
+  	
+  	
   if ($dont_show_form == false)
   {
  			
@@ -159,10 +180,16 @@ connect();   //connect to mysql DB
 	 	<td><b>תיאור</b></td>
 	 <?php 	echo "<td><input type='text' name='description' value='$description' title='description'/></td>"; ?>
 	 </tr>
+	 
 	 <tr>
-	 	<td><b>מקום</b></td>
-	 <?php echo "<td><enctype='multipart/form-data'><input type='text' name='place' value='$place' /></td>";?>
+	 	<td>מקום</td>
+	 	<td>
+	 	<?php 
+	 	ShowDropDown("places",$places,$places,"","",$places);
+	 	?>
+	 	</td>
 	 </tr>
+	 
 	 <tr>
 	 	<td><b>תמונה</b></td>
 	 <?php 	echo "<td><input type='file' name='picture' value='$picture' title='picture'/></td>";?>
