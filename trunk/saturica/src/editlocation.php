@@ -179,7 +179,7 @@ connect();   //connect to mysql DB
 	 <?php 	echo "<td><input type='text' name='description' value='$description' title='description'/></td>"; ?>
 	 </tr>
 	 <tr>
-	 	<td>מקום</td>
+	 	<td><b>מקום</b></td>
 	 	<td>
 	 	<?php 
 	 	ShowDropDown("place",$places,$places,"","",$place);
