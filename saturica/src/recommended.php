@@ -85,6 +85,7 @@ function ShowRecommendedTable()
 	  			$select_workshop1 = GetRecord("workshops",$select_workshop1);
 	  			$data[0] = $select_workshop1[0]; //the id of the record at the original "workshops" table
 	  			$data[1] = $select_workshop1[2];    // workshop name
+	  			$data[2] = $select_workshop1[3];    // workshop picture
 	  			EditRecord("recommendeds","1",$data);	
   			}
   			
@@ -93,6 +94,7 @@ function ShowRecommendedTable()
 	  			$select_workshop2 = GetRecord("workshops",$select_workshop2);
 	  			$data[0] = $select_workshop2[0]; 
 	  			$data[1] = $select_workshop2[2];
+	  			$data[2] = $select_workshop1[3];    // workshop picture
 	  			EditRecord("recommendeds","2",$data);	
   			}
   			
@@ -101,6 +103,7 @@ function ShowRecommendedTable()
 	  			$select_workshop3 = GetRecord("workshops",$select_workshop3);
 	  			$data[0] = $select_workshop3[0]; 
 	  			$data[1] = $select_workshop3[2];
+	  			$data[2] = $select_workshop1[3];    // workshop picture
 	  			EditRecord("recommendeds","3",$data);	
   			}	
   			header('Location:recommended.php');	
