@@ -45,8 +45,8 @@ connect();   //connect to mysql DB
   $real_name = CleanText($real_name);
   $description  = isset($_POST['description'])? $_POST['description']: "";
   $description = CleanText($description);
-  $places  = isset($_POST['places'])? $_POST['places']: "";
-  $places = CleanText($places);
+  $place  = isset($_POST['place'])? $_POST['place']: "";
+  $place = CleanText($place);
   $picture  = isset($_POST['picture'])? $_POST['picture']: "";
   $picture = CleanText($picture);
   $rank  = isset($_POST['rank'])? $_POST['rank']: "";
@@ -60,12 +60,12 @@ connect();   //connect to mysql DB
   	$name_exist = "";
   	
   	
-  	  	  	$places[0] = "north";		// for the places dropdown boxes
+  	  	  	$places[0] = "צפון";		// for the places dropdown boxes
 			$places[1] = "חיפה והסביבה";
 			$places[2] = "אזור השרון";
-			$places[3] = "center";
+			$places[3] = "מרכז";
 			$places[4] = "ירושליים";
-			$places[5] = "דרום";
+			$places[5] = "דרום";		
   	
   	
   	if (isset($_POST['submitted']))
@@ -116,17 +116,10 @@ connect();   //connect to mysql DB
   			$data[1] = $fake_name;
   			$data[2] = $real_name;
   			$data[3] = $description;
-  			$data[4] = $places;
+  			$data[4] = $place;
   			$data[5] = $picture;  
   			$data[6] = $rank;   
-  			
-  			$places[0] = "north";		// for the places dropdown boxes
-			$places[1] = "חיפה והסביבה";
-			$places[2] = "אזור השרון";
-			$places[3] = "center";
-			$places[4] = "ירושליים";
-			$places[5] = "דרום";		
-  			 
+
   			
   			$target_path = "location_pic/";	//upload the picture to 'location_pic' folder
 			$target_path = $target_path . basename( $_FILES['picture']['name']); 
@@ -149,9 +142,6 @@ connect();   //connect to mysql DB
   	}  // close if submitted 
 
 
-  	
-  	
-  	
   if ($dont_show_form == false)
   {
  			
@@ -185,7 +175,7 @@ connect();   //connect to mysql DB
 	 	<td>מקום</td>
 	 	<td>
 	 	<?php 
-	 	ShowDropDown("places",$places,$places,"","",$places);
+	 	ShowDropDown("place",$places,$places,"","",$place);
 	 	?>
 	 	</td>
 	 </tr>
