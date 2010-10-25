@@ -174,7 +174,7 @@ connect();   //connect to mysql DB
   			
   			$target_path = "workshop_pic/";	//upload the picture to 'workshop_pic' folder
 			$target_path = $target_path . basename( $_FILES['workshoppic']['name']); 
-			UploadPicture( $_FILES['workshoppic']['name'],$_FILES['workshoppic']['tmp_name'],$target_path);
+			UploadFile( $_FILES['workshoppic']['name'],$_FILES['workshoppic']['tmp_name'],$target_path);
   			
 		/*	$_FILES['picture']['name'] - name contains the original path of the user uploaded file.
 		 *  $_FILES['picture']['tmp_name'] - tmp_name contains the path to the temporary file that is on the server.  */
