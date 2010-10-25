@@ -64,6 +64,14 @@ connect();   //connect to mysql DB
   	$missing = "";
   	$name_exist = "";
   	
+  	
+  	$places[0] = "צפון";		// for the places dropdown boxes
+	$places[1] = "חיפה והסביבה";
+	$places[2] = "אזור השרון";
+	$places[3] = "מרכז";
+	$places[4] = "ירושליים";
+	$places[5] = "דרום";		
+  	
   	if (isset($_POST['submitted']))
   	{
   	
@@ -171,8 +179,12 @@ connect();   //connect to mysql DB
 	 <?php 	echo "<td><input type='text' name='description' value='$description' title='description'/></td>"; ?>
 	 </tr>
 	 <tr>
-	 	<td><b>מקום</b></td>
-	 <?php echo "<td><enctype='multipart/form-data'><input type='text' name='place' value='$place' /></td>";?>
+	 	<td>מקום</td>
+	 	<td>
+	 	<?php 
+	 	ShowDropDown("place",$places,$places,"","",$place);
+	 	?>
+	 	</td>
 	 </tr>
 	 <tr>
 	 	<td><b>תמונה</b></td>
