@@ -222,7 +222,7 @@ connect();   //connect to mysql DB
 	 	<td><b>מספר סדנא</b></td>
 	 <?php 	
 	 echo "<td><input type='text' name='workshopnum' value='$workshopnum' title='workshopnumber'/></td>";
-	 echo "<td>$workshopnum</td>"; 
+	 
 	 ?>
 	 </tr>
 	 <tr>
