@@ -8,35 +8,6 @@ include_once 'report_aux.php';
 		
 connect();   //connect to mysql DB	 
 //---------------------------------------------------------------------------------------------
-function RecommendedsTableRow($row)
-{	/* this function print the row in the customers table
-	   it gets the array $row as a paramater.
-	*/
-if ($row==null)  // if null then put header
-	{
-		echo "<thead>";
-
-		echo "<th>שם סדנא מומלצת</th>";
-		echo "<th>מומלץ מספר</th>";
-		echo "</tr>";
-		echo "</thead>";
-	}
-	else
-	{
-		$id = $row[0];  // get the id
-		echo "<tr>";
-		echo "<td>$row[2]</td>"; // name
-		echo "<td>$row[0]</td>"; 
-		echo "</tr>";
-	}
-}
-//---------------------------------------------------------------------------------------------
-function ShowRecommendedTable()
-{
-	// usage ShowTable ( table, query, row_func, class, curr_page, table_id)
-	ShowTable("recommendeds","","RecommendedsTableRow","report_table","recommended.php?","");  
-}
-//---------------------------------------------------------------------------------------------
 
 ?>
 
@@ -60,13 +31,10 @@ function ShowRecommendedTable()
 	    <hr></hr>
 	    <br/>
 	    <br/>
-	    <b>:המומלצים הנוכחיים הם </b>
+	    <b>.המומלצים הנוכחיים הם המומלצים המופיעים בתיבות הבאות </b>
 	    
   	  <?php
 
-		ShowRecommendedTable();
-	
-  
 	  $select_workshop1  = isset($_POST['select_workshop1'])? $_POST['select_workshop1']: "";
 	  $select_workshop1 = CleanText($select_workshop1);
 	  $select_workshop2 = isset($_POST['select_workshop2'])? $_POST['select_workshop2']: "";
@@ -74,57 +42,66 @@ function ShowRecommendedTable()
 	  $select_workshop3 = isset($_POST['select_workshop3'])? $_POST['select_workshop3']: "";
 	  $select_workshop3 = CleanText($select_workshop3);
 	  
+	  $workshop1_id = GetRecord("recommendeds","1"); // get the 'workshop table id' of the record
+	  $workshop1_id = $workshop1_id[1]; //the id at the workshop table
+	  $workshop1_name = GetRecord("workshops",$workshop1_id); // get the name of the record
+	  $workshop1_name = $workshop1_name[2];
+	  
+	  $workshop2_id = GetRecord("recommendeds","2"); // get the 'workshop table id' of the record
+	  $workshop2_id = $workshop2_id[1]; //the id at the workshop table
+	  $workshop2_name = GetRecord("workshops",$workshop2_id); // get the name of the record
+	  $workshop2_name = $workshop2_name[2];
+	  
+	  $workshop3_id = GetRecord("recommendeds","3"); // get the 'workshop table id' of the record
+	  $workshop3_id = $workshop3_id[1]; //the id at the workshop table
+	  $workshop3_name = GetRecord("workshops",$workshop3_id); // get the name of the record
+	  $workshop3_name = $workshop3_name[2];
+	  
 
 	    if (isset($_POST['submitted']))  // if form was submitted - process it
   		{
   		 if (check_not_same($select_workshop1,$select_workshop2,$select_workshop3))
   		 {
   			
-  			if (!($select_workshop1==-1)) // if we change the first recommended workshop
+  			if (!($select_workshop1 == -1)) // if we change the first recommended workshop
   			{
 	  			$select_workshop1 = GetRecord("workshops",$select_workshop1);
 	  			$data[0] = $select_workshop1[0]; //the id of the record at the original "workshops" table
-	  			$data[1] = $select_workshop1[2];    // workshop name
-	  			$data[2] = $select_workshop1[3];    // workshop picture
+	  			$data[1] = $select_workshop1[3];    // workshop picture
 	  			EditRecord("recommendeds","1",$data);	
   			}
   			
-  			if (!($select_workshop2==-1))	// if we change the second recommended workshop
+  			if (!($select_workshop2 == -1))	// if we change the second recommended workshop
   			{
 	  			$select_workshop2 = GetRecord("workshops",$select_workshop2);
 	  			$data[0] = $select_workshop2[0]; 
-	  			$data[1] = $select_workshop2[2];
-	  			$data[2] = $select_workshop1[3];    // workshop picture
+	  			$data[1] = $select_workshop2[3];    // workshop picture
 	  			EditRecord("recommendeds","2",$data);	
   			}
   			
-  			if (!($select_workshop3==-1))	// if we change the third recommended workshop
+  			if (!($select_workshop3 == -1))	// if we change the third recommended workshop
   			{
 	  			$select_workshop3 = GetRecord("workshops",$select_workshop3);
 	  			$data[0] = $select_workshop3[0]; 
-	  			$data[1] = $select_workshop3[2];
-	  			$data[2] = $select_workshop1[3];    // workshop picture
+	  			$data[1] = $select_workshop3[3];    // workshop picture
 	  			EditRecord("recommendeds","3",$data);	
   			}	
   			header('Location:recommended.php');	
   		 }
   		 else
-  		 {
-  			?>	
-  			<script type="text/javascript">
-  			alert('עליך לבחור מומלצים שונים') 
-  			</script>
-  			<?php 	
-  		 }
-  			
-  			
+  		 	{
+	  			?>	
+	  			<script type="text/javascript">
+	  			alert('עליך לבחור מומלצים שונים') 
+	  			</script>
+	  			<?php 	
+  		 	}
+	
   		}
 		
 
 		?>
 	
-	   <br/><br/><br/><br/>   
-	   <hr></hr>
 	   <br/><br/> 
 	   <b> "אם ברצונך לשנות את הסדנאות המומלצות,אנא בחר סדנאות חדשות ולחץ על "בחר כמומלצים</b>
 	   <br/>
@@ -134,24 +111,24 @@ function ShowRecommendedTable()
 	   <table dir="rtl" cellspacing='15' class='recommend_pick_table'>
 	   <tr>
 			<td>
-			<?php ShowColumnDropDown("workshops",0,2,"select_workshop1",-1,"Please select recommended workshop",-1);?>
+			<?php ShowColumnDropDown("workshops",0,2,"select_workshop1",-1,$workshop1_name,-1);?>
 			</td>
 	   </tr>
 	   <tr>	
 		    <td>
-			<?php ShowColumnDropDown("workshops",0,2,"select_workshop2",-1,"Please select recommended workshop",-1);?>
+			<?php ShowColumnDropDown("workshops",0,2,"select_workshop2",-1,$workshop2_name,-1);?>
 			</td>
 	   </tr>
 	   <tr>
 		    <td>
-		    <?php ShowColumnDropDown("workshops",0,2,"select_workshop3",-1,"Please select recommended workshop",-1);?>
+		    <?php ShowColumnDropDown("workshops",0,2,"select_workshop3",-1,$workshop3_name,-1);?>
 		    </td>
 	   </tr> 
 	   </table>
 	    <br/>
 	    <br/>
 	    <br/>
-	    
+	     <br/> <br/> <br/> <br/> <br/> <br/> <br/>
 	    <div class="centered_button_div"> 
 		<div id="shiny-demo-green" class="demo-button" onclick="javascript:document.choose_recommended_form.submit();">בחר כמומלצים<span/></div>
   		</div>
