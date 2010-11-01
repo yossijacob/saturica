@@ -5,9 +5,9 @@ include_once 'mysql.php';
 include_once 'db.php';
 include_once 'connect.php';
 
-session_start();
+session_start();	// start session
 connect();   //connect to mysql DB	 
-//session_unset();
+
 
 
 ?>
@@ -29,7 +29,7 @@ connect();   //connect to mysql DB
 
 <div id="content">
     <br/>
-    <h1>אנא התחבר לאתר </h1>
+    <h1>:אנא הזדהה</h1>
     <hr></hr>
     <br/>	
 	</div>	
@@ -38,21 +38,20 @@ connect();   //connect to mysql DB
 	
 <?php
 	
-
 	$username  = isset($_POST['username'])? $_POST['username']: "";
   	$username = CleanText($username);
   
- 	$pass  = isset($_POST['pass'])? $_POST['pass']: "";
-  	$pass = CleanText($pass); 
+ 	$entered_pass  = isset($_POST['entered_pass'])? $_POST['entered_pass']: "";
+  	$entered_pass = CleanText($entered_pass); 	//the password the user entered
 
   	$_SESSION['authenticated'] = "no";	
 
 	if (isset($_POST['submitted']))  
 	  	{
-	  		$preferences = GetRecord("preferences",1);  // get user data
-	  		$old_pass = $preferences[3];
+	  		$userdetails = GetRecord("preferences",1);  // get user data
+	  		$user_password = $userdetails[3];			//get the password of the user
 	  		
-	  	if ( ( $username == "yy") && (hash('sha256',$pass) == $old_pass) )
+	  	if ( ( $username == "yy") && (hash('sha256',$entered_pass) == $user_password) )
 	  		{
 	  			$_SESSION['authenticated'] = "yes";
 	  			header("Location:statistics.php");
@@ -79,7 +78,7 @@ connect();   //connect to mysql DB
 	 <tr>
 	 	<td><b>ססמא</b></td>
 	 <?php
-	 echo "<td><input type='text' name='pass' value='$pass' title='pass'/></td>";
+	 echo "<td><input type='text' name='entered_pass' value='$entered_pass' title='entered_pass'/></td>";
 	 ?>
 	 </tr>
 	 
@@ -96,17 +95,6 @@ connect();   //connect to mysql DB
 
 </div>   <!--  end of content -->
 
-
-
-
-
-
-<?php 
-//if (is_authenticated()) header("Location:statistics.php?logged=OK");
-//else authenticate();
-
-
-?>
 
 </body>
 </html>
