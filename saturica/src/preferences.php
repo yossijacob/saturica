@@ -6,6 +6,7 @@ include_once 'db.php';
 include_once 'connect.php';
 include_once 'report_aux.php';
 		
+session_start();	
 connect();   //connect to mysql DB	 
 //---------------------------------------------------------------------------------------------
 
@@ -21,7 +22,9 @@ connect();   //connect to mysql DB
 <script type="text/javascript" src="javascript/functions.js"></script>
 </head>
 <body>
-	<?php 
+	<?php
+		if (!is_authenticated()) 
+			header("Location:login.php");  
 		MenuBar('preferences'); 
 	?>
     
