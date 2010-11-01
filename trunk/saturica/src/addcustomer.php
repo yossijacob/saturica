@@ -5,7 +5,9 @@ include_once 'mysql.php';
 include_once 'db.php';
 include_once 'connect.php';
 
+session_start();	
 connect();   //connect to mysql DB
+
 
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -20,6 +22,8 @@ connect();   //connect to mysql DB
 </head>
 <body>
 	<?php 
+		if (!is_authenticated()) 
+			header("Location:login.php");
 		MenuBar('customers'); 
 	?>
     
