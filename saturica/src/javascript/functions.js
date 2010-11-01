@@ -30,3 +30,18 @@ function DeleteRecord(page, id, name)
         OpenPageWithId(page, id);
     }
 }
+
+/*-------------------------------------------------------------------------*/
+function ResetPassword() 
+{
+    var message = " ?האם אתה בטוח שברצונך לאפס את ססמת החשבון שלך  לחיצה על אישור תגרום לשליחת ססמא חדשה אל תיבת הדואר שלך " ;
+    agree = confirm( message );
+    if (agree) 
+    {
+    	location.replace('sendpassword.php'); 
+    }
+}
+
+
+
+
