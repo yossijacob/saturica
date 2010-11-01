@@ -62,7 +62,9 @@ function ShowLocationTable()
 <script type="text/javascript" src="javascript/functions.js"></script>
 </head>
 <body>
-	<?php 
+	<?php
+		if (!is_authenticated()) 
+			header("Location:login.php"); 
 		MenuBar('locations'); 
 	?>
     
@@ -81,11 +83,6 @@ function ShowLocationTable()
 		
 		<?php
 		ShowLocationTable();
-		
-		if (!is_authenticated()) 
-			header("Location:login.php");
-		//if ($_SESSION['authenticated'] == "no")
-			//header("Location:login.php");
 		?>
 		
 </div>   <!--  end of content -->
