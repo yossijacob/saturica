@@ -146,4 +146,51 @@ return ( isset($_SESSION['authenticated']) && ($_SESSION['authenticated'] == "ye
 }
 //**************************************************************************
 
+function CreatePassword()
+{
+	
+	$challenge = "";
+ 	for ($i = 0; $i < 8; $i++) {
+  		$challenge .= dechex(rand(0, 15));
+ 	}
+ 	return $challenge;
+}
+//**************************************************************************
+function SendPassword ($pass)
+{
+	$user = GetRecord("preferences",1);
+	$mail = $user[1];
+	$name = $user[2];
+	$subject = "Saturica site";
+	$message = "Hello $name....bla bla bla your password is ....$pass";
+	mail($mail,$subject,$message);
+	
+}
+
+//**************************************************************************
+function InsertPassword ($pass)
+{
+	$safe_pass = hash('sha256',$pass);
+	$user = GetRecord("preferences",1);
+	$data[0] = $user[1];	//email
+	$data[1] = $user[2];	//user
+	$data[2] = $safe_pass;	//new password
+	$data[3] = $user[4];	//cap
+	
+	EditRecord("preferences",1, $data);
+
+}
+//**************************************************************************
+function ForgotPassword()
+{
+	header("Location:statistics.php");
+	$pass = CreatePassword();
+	SendPassword($pass);
+	InsertPassword($pass);
+	
+}
+//**************************************************************************
+
+
+
 ?>
