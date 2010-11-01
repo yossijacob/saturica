@@ -5,9 +5,8 @@ include_once 'mysql.php';
 include_once 'db.php';
 include_once 'connect.php';
 include_once 'report_aux.php';
-include_once 'login.php';
 
-session_start();		
+session_start();	
 connect();   //connect to mysql DB	 
 //---------------------------------------------------------------------------------------------
 function LocationsTableRow($row)
@@ -83,9 +82,10 @@ function ShowLocationTable()
 		<?php
 		ShowLocationTable();
 		
-		//if (!is_authenticated()) 
-		if ($_SESSION['authenticated'] == "no")
+		if (!is_authenticated()) 
 			header("Location:login.php");
+		//if ($_SESSION['authenticated'] == "no")
+			//header("Location:login.php");
 		?>
 		
 </div>   <!--  end of content -->
