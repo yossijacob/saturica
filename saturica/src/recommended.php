@@ -45,7 +45,18 @@ connect();   //connect to mysql DB
 	  $select_workshop3 = isset($_POST['select_workshop3'])? $_POST['select_workshop3']: "";
 	  $select_workshop3 = CleanText($select_workshop3);
 	  
+	  $workshoppic1 = isset($_POST['workshoppic1'])? $_POST['workshoppic1']: "";
+	  $workshoppic1 = CleanText($workshoppic1);
+	  $workshoppic2 = isset($_POST['workshoppic2'])? $_POST['workshoppic2']: "";
+	  $workshoppic2 = CleanText($workshoppic2);
+	  $workshoppic3 = isset($_POST['workshoppic3'])? $_POST['workshoppic3']: "";
+	  $workshoppic3 = CleanText($workshoppic3);
+	  
+	  
+	  
+	  
 	  $workshop1_id = GetRecord("recommendeds","1"); // get the 'workshop table id' of the record
+	  $workshop1_curr_pic = $workshop1_id[2];
 	  $workshop1_id = $workshop1_id[1]; //the id at the workshop table
 	  $workshop1_name = GetRecord("workshops",$workshop1_id); // get the name of the record
 	  $workshop1_name = $workshop1_name[2];
@@ -70,23 +81,33 @@ connect();   //connect to mysql DB
   			{
 	  			$select_workshop1 = GetRecord("workshops",$select_workshop1);
 	  			$data[0] = $select_workshop1[0]; //the id of the record at the original "workshops" table
-	  			$data[1] = $select_workshop1[3];    // workshop picture
+	  			//if ($workshoppic1 == "") $workshoppic1 = $select_workshop1[3];
+	  			$data[1] = $workshoppic1;    // workshop picture
 	  			EditRecord("recommendeds","1",$data);	
+	  	
+	  			
+	  				
+	  				$target_path = "recommended_pic/";	//upload the picture to 'recommended_pic' folder
+					$target_path = $target_path . basename( $_FILES['workshoppic1']['name']); 
+					UploadFile( $_FILES['workshoppic1']['name'],$_FILES['workshoppic1']['tmp_name'],$target_path);
+	  			
   			}
   			
   			if (!($select_workshop2 == -1))	// if we change the second recommended workshop
   			{
 	  			$select_workshop2 = GetRecord("workshops",$select_workshop2);
 	  			$data[0] = $select_workshop2[0]; 
-	  			$data[1] = $select_workshop2[3];    // workshop picture
+	  			if ($workshoppic2 != "") $data[1] = $workshoppic2;
+	  				else $data[1] = $select_workshop2[3];    // workshop picture
 	  			EditRecord("recommendeds","2",$data);	
   			}
   			
   			if (!($select_workshop3 == -1))	// if we change the third recommended workshop
   			{
 	  			$select_workshop3 = GetRecord("workshops",$select_workshop3);
-	  			$data[0] = $select_workshop3[0]; 
-	  			$data[1] = $select_workshop3[3];    // workshop picture
+	  			$data[0] = $select_workshop3[0];
+	  			if ($workshoppic3 != "") $data[1] = $workshoppic3; 
+	  				else $data[1] = $select_workshop3[3];    // workshop picture
 	  			EditRecord("recommendeds","3",$data);	
   			}	
   			header('Location:recommended.php');	
@@ -116,16 +137,22 @@ connect();   //connect to mysql DB
 			<td>
 			<?php ShowColumnDropDown("workshops",0,2,"select_workshop1",-1,$workshop1_name,-1);?>
 			</td>
+			<td><b>תמונה למומלץ ראשון</b></td>
+	 		<?php 	echo "<td><input type='file' name='workshoppic1' value='$workshoppic1' title='workshoppic1'/></td>";?>
 	   </tr>
 	   <tr>	
 		    <td>
 			<?php ShowColumnDropDown("workshops",0,2,"select_workshop2",-1,$workshop2_name,-1);?>
 			</td>
+			<td><b>תמונה למומלץ שני</b></td>
+	 		<?php 	echo "<td><input type='file' name='workshoppic2' value='$workshoppic2' title='workshoppic2'/></td>";?>
 	   </tr>
 	   <tr>
 		    <td>
 		    <?php ShowColumnDropDown("workshops",0,2,"select_workshop3",-1,$workshop3_name,-1);?>
 		    </td>
+		    	<td><b>תמונה למומלץ שלישי</b></td>
+	 		<?php 	echo "<td><input type='file' name='workshoppic3' value='$workshoppic3' title='workshoppic3'/></td>";?>
 	   </tr> 
 	   </table>
 	    <br/>
@@ -140,6 +167,8 @@ connect();   //connect to mysql DB
 		
 </div>   <!--  end of content -->
 <?php 
+echo "<img src=\"recommended_pic\$workshoppic1\" border=0>";
+echo $workshop1_curr_pic;
 footer();
 ?>
 </body>
