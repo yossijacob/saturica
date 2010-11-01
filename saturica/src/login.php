@@ -89,9 +89,12 @@ connect();   //connect to mysql DB
 	
   	<div class="centered_button_div"> 
 		<div id="shiny-demo-green" class="demo-button" onclick="javascript:document.login_form.submit();">התחבר<span/></div>
+  		<div id="shiny-demo-blue" class="demo-button" onclick="javascript:ResetPassword();">שכחתי ססמא<span/></div>
   	</div>
 	</form>
 	</div>
+	
+	
 
 </div>   <!--  end of content -->
 
