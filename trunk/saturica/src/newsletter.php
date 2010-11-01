@@ -2,6 +2,9 @@
 		include_once 'connect.php';
 		include_once 'html.php';
 		include_once 'mysql.php';
+		include_once 'db.php';
+		
+		session_start();
 
 		$fileName = "letter.html";
 		$emails = "";
@@ -79,7 +82,9 @@
 </head>
 <body>
 	
-	<?php 
+	<?php
+		if (!is_authenticated()) 
+			header("Location:login.php"); 
 		MenuBar('newsletter'); 
 	?>
     
