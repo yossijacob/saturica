@@ -78,7 +78,7 @@ connect();   //connect to mysql DB
 	 <tr>
 	 	<td><b>ססמא</b></td>
 	 <?php
-	 echo "<td><input type='text' name='entered_pass' value='$entered_pass' title='entered_pass'/></td>";
+	 echo "<td><input type='password' name='entered_pass' value='$entered_pass' title='entered_pass'/></td>";
 	 ?>
 	 </tr>
 	 
