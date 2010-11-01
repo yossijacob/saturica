@@ -6,6 +6,7 @@ include_once 'db.php';
 include_once 'connect.php';
 include_once 'report_aux.php';
 		
+session_start();	
 connect();   //connect to mysql DB	 
 //---------------------------------------------------------------------------------------------
 function CustomersTableRow($row)
@@ -65,6 +66,8 @@ function ShowCustomerTable()
 </head>
 <body>
 	<?php 
+			if (!is_authenticated()) 
+				header("Location:login.php");
 		MenuBar('customers'); 
 	?>
     
