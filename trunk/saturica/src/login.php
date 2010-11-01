@@ -10,15 +10,6 @@ connect();   //connect to mysql DB
 //session_unset();
 
 
-
-//--------------------------------------------------------------------------------
-function is_authenticated() 
-{
-return ( isset($_SESSION['authenticated']) && ($_SESSION['authenticated'] == "yes"));
-}
-//--------------------------------------------------------------------------------
-
-
 ?>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -63,14 +54,12 @@ return ( isset($_SESSION['authenticated']) && ($_SESSION['authenticated'] == "ye
 	  		
 	  	if ( ( $username == "yy") && (hash('sha256',$pass) == $old_pass) )
 	  		{
-	  			session_start();
 	  			$_SESSION['authenticated'] = "yes";
 	  			header("Location:statistics.php");
 	  		}
 	  		
 	  	else
 	  		{
-	  			session_unset();
 	  			header("Location:login.php");		
 	  		}
 	  	}
