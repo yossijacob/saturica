@@ -145,7 +145,6 @@ function is_authenticated()
 return ( isset($_SESSION['authenticated']) && ($_SESSION['authenticated'] == "yes"));
 }
 //**************************************************************************
-
 function CreatePassword()
 {
 	
