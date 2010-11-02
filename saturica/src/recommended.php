@@ -175,36 +175,35 @@ connect();   //connect to mysql DB
 		
 </div>   <!--  end of content -->
 <?php 
-if ($workshop1_curr_pic != "")
-{
-	echo "<br/><br/>";
-	echo "המומלץ הראשון";
-	echo "<br/><br/><br/>";
-		echo "<img src='recommended_pic/$workshop1_curr_pic' border=0 >";
-	echo "<br/>";
-	echo "<br/>";
-}
-if ($workshop2_curr_pic != "")
-{
-	echo "<br/><br/>";
-	echo "המומלץ השני";
-	echo "<br/><br/><br/>";
-		echo "<img src='recommended_pic/$workshop2_curr_pic' border=0 >";
-	echo "<br/>";
-	echo "<br/>";
-}
-if ($workshop3_curr_pic != "")
-{
-	echo "<br/><br/>";
-	echo "המומלץ השלישי";
-	echo "<br/><br/><br/>";
-		echo "<img src='recommended_pic/$workshop3_curr_pic' border=0 >";
-	echo "<br/>";
-	echo "<br/>";
-}
-
-
-footer();
+	if ($workshop1_curr_pic != "")
+	{
+		echo "<br/><br/>";
+		echo "המומלץ הראשון";
+		echo "<br/><br/><br/>";
+			echo "<img src='recommended_pic/$workshop1_curr_pic' border=0 >";
+		echo "<br/>";
+		echo "<br/>";
+	}
+	if ($workshop2_curr_pic != "")
+	{
+		echo "<br/><br/>";
+		echo "המומלץ השני";
+		echo "<br/><br/><br/>";
+			echo "<img src='recommended_pic/$workshop2_curr_pic' border=0 >";
+		echo "<br/>";
+		echo "<br/>";
+	}
+	if ($workshop3_curr_pic != "")
+	{
+		echo "<br/><br/>";
+		echo "המומלץ השלישי";
+		echo "<br/><br/><br/>";
+			echo "<img src='recommended_pic/$workshop3_curr_pic' border=0 >";
+		echo "<br/>";
+		echo "<br/>";
+	}
+	
+	footer();
 ?>
 </body>
 </html>
