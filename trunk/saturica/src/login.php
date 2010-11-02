@@ -60,7 +60,8 @@ connect();   //connect to mysql DB
 	  		
 	  	else
 	  		{
-	  			header("Location:login.php");		
+	  			echo "<b><FONT COLOR='RED'>שם משתמש או ססמא אינם נכונים</FONT></b>";
+	  			//header("Location:login.php");		
 	  		}
 	  	}
 	  	
