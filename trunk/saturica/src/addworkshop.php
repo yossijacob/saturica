@@ -45,7 +45,7 @@ connect();   //connect to mysql DB
   $workshopname  = isset($_POST['workshopname'])? $_POST['workshopname']: "";
   $workshopname = CleanText($workshopname);
   
-  $workshoppic  = isset($_POST['workshoppic'])? $_POST['workshoppic']: "";
+  $workshoppic  = isset($_FILES['workshoppic']['name'])? $_FILES['workshoppic']['name']: "";
   $workshoppic = CleanText($workshoppic);
   
   $workshopsubject  = isset($_POST['workshopsubject'])? $_POST['workshopsubject']: "";
@@ -172,16 +172,11 @@ connect();   //connect to mysql DB
   			$target_path = "workshop_pic/";	//upload the picture to 'workshop_pic' folder
 			$target_path = $target_path . basename( $_FILES['workshoppic']['name']); 
 			UploadFile( $_FILES['workshoppic']['name'],$_FILES['workshoppic']['tmp_name'],$target_path);
-  			
+			
 		/*	$_FILES['picture']['name'] - name contains the original path of the user uploaded file.
 		 *  $_FILES['picture']['tmp_name'] - tmp_name contains the path to the temporary file that is on the server.  */
 			
 	
-			$data[2] = $target_path.$workshoppic;
-  			
-  			
-  			
-  			
   			$location_id = AddRecord("workshops", $data);     			// add the workshop
 
   			//$dont_show_form = true;
