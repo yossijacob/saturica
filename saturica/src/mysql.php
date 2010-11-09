@@ -121,11 +121,20 @@ function SearchWorkshop($column,$val)
 	return $res;
 
 }
+//*********************************************************************
+function SearchFreeText($column,$val)
+{
+	$index = 0;
+	$res="";
+	$query = "SELECT * FROM workshops WHERE $column LIKE '%$val%'";
+	$result = mysql_query($query) or die(mysql_error());
+	while ($row = mysql_fetch_row($result))
+	{
+		$res[$index++] = $row; // get the current field
+	}
+	return $res;
 
-
-
-
-
+}
 
 //*********************************************************************
 /*
