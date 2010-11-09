@@ -108,6 +108,26 @@ function GetColumn($table,$col_number)
 }
 
 //*********************************************************************
+function SearchWorkshop($column,$val)
+{
+	$index = 0;
+	$res="";
+	$query = "SELECT * FROM workshops WHERE $column = '$val'";
+	$result = mysql_query($query) or die(mysql_error());
+	while ($row = mysql_fetch_row($result))
+	{
+		$res[$index++] = $row; // get the current field
+	}
+	return $res;
+
+}
+
+
+
+
+
+
+//*********************************************************************
 /*
 function db_createlist($linkID,$default,$query,$blank)
 {
