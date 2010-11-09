@@ -104,7 +104,7 @@ connect();   //connect to mysql DB
 ?>
 	<br/>
 	<div id="search_name_form" dir="rtl">
-	<form name="search_name_form" id="search_name_form" method="post" action="name.php">
+	<form name="search_name_form" id="search_name_form" method="post" action="subject.php">
 	<input type="hidden" name="submitted" value="true"/>
 	<table cellspacing="10">
 	 <tr>
