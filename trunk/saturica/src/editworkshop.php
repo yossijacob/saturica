@@ -46,7 +46,7 @@ connect();   //connect to mysql DB
   $workshopname  = isset($_POST['workshopname'])? $_POST['workshopname']: "";
   $workshopname = CleanText($workshopname);
   
-  $workshoppic  = isset($_POST['workshoppic'])? $_POST['workshoppic']: "";
+  $workshoppic  = isset($_FILES['workshoppic']['name'])? $_FILES['workshoppic']['name']: "";
   $workshoppic = CleanText($workshoppic);
   
   $workshopsubject  = isset($_POST['workshopsubject'])? $_POST['workshopsubject']: "";
@@ -179,12 +179,10 @@ connect();   //connect to mysql DB
 			$target_path = $target_path . basename( $_FILES['workshoppic']['name']); 
 			UploadFile( $_FILES['workshoppic']['name'],$_FILES['workshoppic']['tmp_name'],$target_path);
   			
+			
 		/*	$_FILES['picture']['name'] - name contains the original path of the user uploaded file.
 		 *  $_FILES['picture']['tmp_name'] - tmp_name contains the path to the temporary file that is on the server.  */
-			
 	
-			$data[2] = $target_path.$workshoppic;
-  			
   			EditRecord("workshops",$id, $data);     			// add the workshop		
 
   			header('Location:workshops.php');
@@ -217,7 +215,7 @@ connect();   //connect to mysql DB
 ?>
 	<br/>
 	<div id="add_workshop_div" dir="rtl">
-	<form enctype="multipart/form-data" name="edit_workshop_form" id="edit_workshop_form" method="post" action="editworkshop.php">
+	<form enctype="multipart/form-data" name="edit_workshop_form" id="edit_workshop_form" method="post" action="editworkshop.php">	
 	<?php echo "<input type='hidden' name='id' value='$id'/>"; ?>
 	<input type="hidden" name="submitted" value="true"/>
 	<table cellspacing="10">
@@ -234,8 +232,7 @@ connect();   //connect to mysql DB
 	 </tr>
 	 <tr>
 	 	<td><b>תמונה</b></td>
-	 <?php 	echo "<td><input type='file' name='workshoppic' value='$workshoppic' title='workshoppic'/></td>";?>
-	 </tr>
+	 <?php 	echo "<td><input type='file' name='workshoppic' value='$workshoppic' title='workshoppic'/></td>";?>	 </tr>
 	 <tr>
 	 	<td><b>נושא סדנא </b></td>
 	 <?php echo "<td><input type='text' name='workshopsubject' value='$workshopsubject' title='workshopsubject'/></td>";?>
