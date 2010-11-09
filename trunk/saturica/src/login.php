@@ -32,7 +32,6 @@ connect();   //connect to mysql DB
     <h1>:אנא הזדהה</h1>
     <hr></hr>
     <br/>	
-	</div>	
 	
 	
 	
