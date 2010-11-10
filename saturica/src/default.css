@@ -239,6 +239,75 @@ h4		/*error messege*/
 }
 
 
+/******************************************************************************************/
+
+
+
+/* SearchMenu */
+
+#searchmenu {
+	
+	/*width: 740px;*/
+	width:auto;
+	height: 40px;
+	/*margin: 0 auto;*/
+	/*background-color:#A3CCE2;*/
+	/*background-color:#69a7d6;*/
+	/*background-color:#AD3041;*/
+	background-color:#A3CCE2;
+}
+
+#searchmenu ul 
+{
+	margin-left:300px;
+	width:730px;
+	height:26px;
+	/*margin: 0;*/
+	padding-top: 14px;
+	/*list-style: none;*/
+}
+
+#searchmenu li {
+	display: inline;
+}
+
+#searchmenu a 
+{
+	-moz-border-radius: 0.3em 0.3em 0em 0em;  /* tl tr br bl*/
+	border-radius: 0.3em 0.3em 0em 0em;
+	height: 15px;
+	margin-left: 1px;
+	padding: 3px 15px 5px 15px;
+	/*background-color:#fafaf2;*/
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	font-size:large;
+	color:white;
+	/*border-color:#A3CCE2;
+	border-width:thin;
+	border-style:solid;*/
+}
+
+#searchmenu a:hover {
+	/*background-image: url(images/img03.gif);*/
+	/*background-color:Yellow;
+	color: #CC0000;*/
+	background-color:#A3CCA2;
+	color:black;
+}
+
+#searchmenu .active a {
+	height: 20px;
+	/*margin-top: -4px;*/
+	background-color:white;
+	/*border: 1px solid #479AC6;*/
+	/*border-bottom: none;*/
+	font-weight: bold;
+	color: black;
+}
+
+/******************************************************************************************/
 
 /* Content */
 
