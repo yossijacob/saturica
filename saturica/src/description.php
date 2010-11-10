@@ -22,7 +22,8 @@ connect();   //connect to mysql DB
 	<?php
 		if (!is_authenticated()) 
 			header("Location:login.php"); 
-		MenuBar(''); 
+		MenuBar('');
+		MenuBarSearch('description');
 	?>
     
 	
