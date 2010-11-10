@@ -159,6 +159,25 @@ echo '<div id="menu">';
 
 }
 //************************************************************************
+function MenuBarSearch($selected)
+{
+	$sel['name'] = "not";
+	$sel['subject'] = "not";
+	$sel['description'] = "not";
+	$sel[$selected]= "active";
+	echo '<div id="searchmenu">';
+	
+	echo	"<ul>";	
+    echo   	"<li class=".$sel["name"]."><a href='name.php'  title='names'>חיפוש לפי שם</a></li>";    
+    echo    "<li class=".$sel['subject']."><a href='subject.php' title='subject'>חיפוש לפי קטגוריה</a></li>";  
+    echo    "<li class=".$sel['description']."><a href='description.php' title='locations'>חיפוש לפי תאור</a></li>";   
+	echo 	"</ul>";	
+	echo 	"</div>";	
+
+}
+
+//************************************************************************
+
 
 
 ?>
