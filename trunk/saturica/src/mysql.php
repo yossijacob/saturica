@@ -140,25 +140,26 @@ function SearchFreeText($column1,$column2,$column3,$val)
 	
 	$unique_res = $res;
 	if ( $unique_res != "") 
-		deletedup($unique_res);	//function to remove duplicate values at the array
+		DeleteDupplicate($unique_res);	//function to remove duplicate values at the array
 				//need it cause array_unique doesnt work on array of arrays
-				//downloaded it from http://php.net/manual/en/function.array-unique.php
-
+				
 	return $unique_res;
 
 }
 
 
 //*********************************************************************
-function deletedup($arrayOfArrays)
+function DeleteDupplicate($arrayOfArrays)
 {
-foreach ($arrayOfArrays as $key=>$value) { 
-  $arrayOfArrays[$key] = "'" . serialize($value) . "'"; 
-} 
-$arrayOfArrays = array_unique($arrayOfArrays); 
-foreach ($arrayOfArrays as $key=>$value) { 
-  $arrayOfArrays[$key] = unserialize(trim($value, "'")); 
-} 
+	// this function removes duplicated values from array (even array of array)
+	//downloaded it from http://php.net/manual/en/function.array-unique.php
+	foreach ($arrayOfArrays as $key=>$value) { 
+	  $arrayOfArrays[$key] = "'" . serialize($value) . "'"; 
+	} 
+	$arrayOfArrays = array_unique($arrayOfArrays); 
+	foreach ($arrayOfArrays as $key=>$value) { 
+	  $arrayOfArrays[$key] = unserialize(trim($value, "'")); 
+	} 
 
 }
 
