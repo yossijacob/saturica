@@ -43,10 +43,7 @@ connect();   //connect to mysql DB
   	$miss = false;
   	$missing = "";
 
-  	echo "(בחר את התקציב למשתתף (לא כולל אוכל";
-  	echo "<br/><br/>";
-  	echo '.המחירים אינם כוללים מע"מ';
-  	echo "<br/><br/>";
+
   	$prices[0] = "פחות מ50";		// for the places dropdown boxes
 	$prices[1] = "50-150";
   	$prices[2] = "150-250";
@@ -150,6 +147,10 @@ connect();   //connect to mysql DB
 	 <tr>
 	 	
 	 	<?php 
+	 	echo " בחר את התקציב למשתתף (לא כולל אוכל)";
+  		echo "<br/><br/>";
+  		echo '.המחירים אינם כוללים מע"מ';
+  		echo "<br/><br/>";
 	 	ShowDropDown("price",$prices,$prices,"","",$price);
 	 	?>
 	 </tr>
