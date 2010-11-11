@@ -63,8 +63,11 @@ connect();   //connect to mysql DB
 	if ($miss != true)
   		{		// the form was validated successfully now we process the form
   			
-			$col="description_text";
-  			$result = SearchFreeText($col,$search);
+			$colA="description_text";	//columns to search in
+			$colB="name";				//search in name
+			$colC="subject";			//search in subject
+			
+  			$result = SearchFreeText($colA,$colB,$colC,$search);
  			if ($result !="")
  			{
  				foreach ($result as $value)
