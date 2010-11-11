@@ -112,7 +112,7 @@ connect();   //connect to mysql DB
 	<input type="hidden" name="submitted" value="true"/>
 	<table cellspacing="10">
 	 <tr>
-	 	<td><b>חיפוש לפי תאור</b></td>
+	 	<td><b>הקלד טקסט לחיפוש</b></td>
 	 <?php 	
 	 echo "<td><input type='text' size='50' name='search' value='$search' title='search'/></td>";
 	 ?>
