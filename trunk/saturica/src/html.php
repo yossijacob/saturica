@@ -170,9 +170,9 @@ function MenuBarSearch($selected)
 	
 	echo	"<ul>";	
     echo   	"<li class=".$sel["name"]."><a href='name.php'  title='names'>חיפוש לפי שם</a></li>";    
-    echo    "<li class=".$sel['subject']."><a href='subject.php' title='subject'>חיפוש לפי קטגוריה</a></li>";  
-    echo    "<li class=".$sel['description']."><a href='description.php' title='locations'>חיפוש לפי תאור</a></li>";   
+    echo    "<li class=".$sel['subject']."><a href='subject.php' title='subject'>חיפוש לפי קטגוריה</a></li>";    
     echo    "<li class=".$sel['price']."><a href='price.php' title='locations'>חיפוש לפי מחיר</a></li>";   
+    echo    "<li class=".$sel['description']."><a href='description.php' title='locations'>חיפוש חופשי</a></li>"; 
     echo 	"</ul>";	
 	echo 	"</div>";	
 }
