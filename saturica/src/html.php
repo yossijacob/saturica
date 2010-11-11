@@ -175,7 +175,6 @@ function MenuBarSearch($selected)
     echo    "<li class=".$sel['price']."><a href='price.php' title='locations'>חיפוש לפי מחיר</a></li>";   
     echo 	"</ul>";	
 	echo 	"</div>";	
-
 }
 
 //************************************************************************
