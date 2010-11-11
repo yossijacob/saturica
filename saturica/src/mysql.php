@@ -126,7 +126,7 @@ function SearchFreeText($column,$val)
 {
 	$index = 0;
 	$res="";
-	$query = "SELECT * FROM workshops WHERE $column LIKE '%$val%'";
+	$query = "SELECT * FROM workshops WHERE  $column LIKE '%$val%'";
 	$result = mysql_query($query) or die(mysql_error());
 	while ($row = mysql_fetch_row($result))
 	{
@@ -136,6 +136,20 @@ function SearchFreeText($column,$val)
 
 }
 
+//*********************************************************************
+function SearchWorkshopPrice($column,$lowval,$highval)
+{
+	$index = 0;
+	$res="";
+	$query = "SELECT * FROM workshops WHERE  $column BETWEEN $lowval AND $highval ";
+	$result = mysql_query($query) or die(mysql_error());
+	while ($row = mysql_fetch_row($result))
+	{
+		$res[$index++] = $row; // get the current field
+	}
+	return $res;
+
+}
 //*********************************************************************
 /*
 function db_createlist($linkID,$default,$query,$blank)
