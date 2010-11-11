@@ -126,13 +126,20 @@ function SearchFreeText($column,$val)
 {
 	$index = 0;
 	$res="";
-	$query = "SELECT * FROM workshops WHERE  $column LIKE '%$val%'";
-	$result = mysql_query($query) or die(mysql_error());
-	while ($row = mysql_fetch_row($result))
-	{
-		$res[$index++] = $row; // get the current field
+	$unique_res="";
+	$words = explode(" ", $val);
+	foreach ($words as $singleword)
+	{	
+		$query = "SELECT * FROM workshops WHERE  $column LIKE '%$singleword%'";
+		$result = mysql_query($query) or die(mysql_error());
+		while ($row = mysql_fetch_row($result))
+		{
+			$res[$index++] = $row; // get the current field
+		}
+		if ( $res != "")
+			$unique_res = array_unique($res);
 	}
-	return $res;
+	return $unique_res;
 
 }
 
