@@ -23,6 +23,7 @@ connect();   //connect to mysql DB
 		if (!is_authenticated()) 
 			header("Location:login.php"); 
 		MenuBar(''); 
+		MenuBarSearch('subject');
 	?>
     
 	
