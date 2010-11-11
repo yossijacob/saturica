@@ -122,26 +122,46 @@ function SearchWorkshop($column,$val)
 
 }
 //*********************************************************************
-function SearchFreeText($column,$val)
+function SearchFreeText($column1,$column2,$column3,$val)
 {
 	$index = 0;
 	$res="";
-	$unique_res="";
 	$words = explode(" ", $val);
+	
 	foreach ($words as $singleword)
 	{	
-		$query = "SELECT * FROM workshops WHERE  $column LIKE '%$singleword%'";
+		$query = "SELECT * FROM workshops WHERE $column1 LIKE '%$singleword%' OR $column2 LIKE '%$singleword%' OR $column3 LIKE '%$singleword%' ";
 		$result = mysql_query($query) or die(mysql_error());
 		while ($row = mysql_fetch_row($result))
 		{
 			$res[$index++] = $row; // get the current field
 		}
-		if ( $res != "")
-			$unique_res = array_unique($res);
 	}
+	
+	$unique_res = $res;
+	if ( $unique_res != "") 
+		deletedup($unique_res);	//function to remove duplicate values at the array
+				//need it cause array_unique doesnt work on array of arrays
+				//downloaded it from http://php.net/manual/en/function.array-unique.php
+
 	return $unique_res;
 
 }
+
+
+//*********************************************************************
+function deletedup($arrayOfArrays)
+{
+foreach ($arrayOfArrays as $key=>$value) { 
+  $arrayOfArrays[$key] = "'" . serialize($value) . "'"; 
+} 
+$arrayOfArrays = array_unique($arrayOfArrays); 
+foreach ($arrayOfArrays as $key=>$value) { 
+  $arrayOfArrays[$key] = unserialize(trim($value, "'")); 
+} 
+
+}
+
 
 //*********************************************************************
 function SearchWorkshopPrice($column,$lowval,$highval)
@@ -157,6 +177,7 @@ function SearchWorkshopPrice($column,$lowval,$highval)
 	return $res;
 
 }
+
 //*********************************************************************
 /*
 function db_createlist($linkID,$default,$query,$blank)
