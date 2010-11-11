@@ -143,6 +143,8 @@ function SearchFreeText($column1,$column2,$column3,$val)
 		DeleteDupplicate($unique_res);	//function to remove duplicate values at the array
 				//need it cause array_unique doesnt work on array of arrays
 				//NOT WORKING PERFECTLY YET !
+				//maybe needs to use another function 
+				// or just unique... 
 	return $unique_res;
 
 }
