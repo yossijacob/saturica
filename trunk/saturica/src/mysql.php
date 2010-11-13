@@ -143,7 +143,7 @@ function SearchFreeText($column1,$column2,$column3,$val)
 
 	if ($res != "")	//we found requested workshops
 	{
-		$res = array_unique($res); 	//remove duplicate workshops (so we wont show the same workshope more then once) 
+		$res = array_unique($res); 	//remove duplicate workshops (so we wont show the same workshop more then one time) 
 		$index = 0;
 		$col = "id";
 		
