@@ -121,50 +121,47 @@ function SearchWorkshop($column,$val)
 	return $res;
 
 }
+
 //*********************************************************************
 function SearchFreeText($column1,$column2,$column3,$val)
 {
 	$index = 0;
 	$res="";
+	$unique_res="";
 	$words = explode(" ", $val);
 	
+	// get the id of the workshops that needs to be return
 	foreach ($words as $singleword)
 	{	
-		$query = "SELECT * FROM workshops WHERE $column1 LIKE '%$singleword%' OR $column2 LIKE '%$singleword%' OR $column3 LIKE '%$singleword%' ";
+		$query = "SELECT id FROM workshops WHERE $column1 LIKE '%$singleword%' OR $column2 LIKE '%$singleword%' OR $column3 LIKE '%$singleword%' ";
 		$result = mysql_query($query) or die(mysql_error());
 		while ($row = mysql_fetch_row($result))
 		{
-			$res[$index++] = $row; // get the current field
+			$res[$index++] = $row[0]; // get the current field
 		}
 	}
-	
-	$unique_res = $res;
-	if ( $unique_res != "") 
-		DeleteDupplicate($unique_res);	//function to remove duplicate values at the array
-				//need it cause array_unique doesnt work on array of arrays
-				//NOT WORKING PERFECTLY YET !
-				//maybe needs to use another function 
-				// or just unique... 
+
+	if ($res != "")	//we found requested workshops
+	{
+		$res = array_unique($res); 	//remove duplicate workshops (so we wont show the same workshope more then once) 
+		$index = 0;
+		$col = "id";
+		
+		//get the workshope by their id that we found.
+		foreach ($res as $selectedworkshop)
+		{	
+			$query = "SELECT * FROM workshops WHERE $col=$selectedworkshop ";
+			$result = mysql_query($query) or die(mysql_error());
+			while ($row = mysql_fetch_row($result))
+			{
+				$unique_res[$index++] = $row; // get the current field
+			}
+		}
+	}
+
 	return $unique_res;
 
 }
-
-
-//*********************************************************************
-function DeleteDupplicate($arrayOfArrays)
-{
-	// this function removes duplicated values from array (even array of array)
-	//downloaded it from http://php.net/manual/en/function.array-unique.php
-	foreach ($arrayOfArrays as $key=>$value) { 
-	  $arrayOfArrays[$key] = "'" . serialize($value) . "'"; 
-	} 
-	$arrayOfArrays = array_unique($arrayOfArrays); 
-	foreach ($arrayOfArrays as $key=>$value) { 
-	  $arrayOfArrays[$key] = unserialize(trim($value, "'")); 
-	} 
-
-}
-
 
 //*********************************************************************
 function SearchWorkshopPrice($column,$lowval,$highval)
