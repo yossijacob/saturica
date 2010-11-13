@@ -135,11 +135,17 @@ function SearchFreeText($column1,$column2,$column3,$val)
 	// get the id of the workshops that needs to be return
 	foreach ($words as $singleword)
 	{	
-		$query = "SELECT id FROM workshops WHERE $column1 LIKE '%$singleword%' OR $column2 LIKE '%$singleword%' OR $column3 LIKE '%$singleword%' ";
-		$result = mysql_query($query) or die(mysql_error());
-		while ($row = mysql_fetch_row($result))
+		//ignore all of the following common words  (search only  uncommon words)
+		if ( ($singleword !="ו") && ($singleword !="סדנא") && ($singleword !="סדנאות") && ($singleword !="או") && ($singleword !="על") && ($singleword !="בסדנא")
+			&& ($singleword !="בסדנאות") && ($singleword !="וגם") && ($singleword !="עם") && ($singleword !="ה") && ($singleword !="הסדנא") && ($singleword !="הסדנאות")) 
 		{
-			$res[$index++] = $row[0]; // get the workshop id 
+		
+			$query = "SELECT id FROM workshops WHERE $column1 LIKE '%$singleword%' OR $column2 LIKE '%$singleword%' OR $column3 LIKE '%$singleword%' ";
+			$result = mysql_query($query) or die(mysql_error());
+			while ($row = mysql_fetch_row($result))
+			{
+				$res[$index++] = $row[0]; // get the workshop id 
+			}
 		}
 	}
 
