@@ -141,6 +141,8 @@ function SearchFreeText($column1,$column2,$column3,$val)
 		{
 		
 			$query = "SELECT id FROM workshops WHERE $column1 LIKE '%$singleword%' OR $column2 LIKE '%$singleword%' OR $column3 LIKE '%$singleword%' ";
+			//OR CONTAINS($column1, '$singleword') OR CONTAINS($column2, '$singleword') OR CONTAINS($column3, '$singleword')
+			//OR CONTAINS('$singleword',$column1) OR CONTAINS('$singleword',$column2) OR CONTAINS('$singleword',$column3)
 			$result = mysql_query($query) or die(mysql_error());
 			while ($row = mysql_fetch_row($result))
 			{
