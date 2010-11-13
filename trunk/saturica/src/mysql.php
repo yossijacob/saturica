@@ -137,7 +137,7 @@ function SearchFreeText($column1,$column2,$column3,$val)
 		$result = mysql_query($query) or die(mysql_error());
 		while ($row = mysql_fetch_row($result))
 		{
-			$res[$index++] = $row[0]; // get the current field
+			$res[$index++] = $row[0]; // get the workshop id 
 		}
 	}
 
