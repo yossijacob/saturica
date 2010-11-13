@@ -110,6 +110,7 @@ function GetColumn($table,$col_number)
 //*********************************************************************
 function SearchWorkshop($column,$val)
 {
+	//return workshops that their value at the column "$column"   =   $val
 	$index = 0;
 	$res="";
 	$query = "SELECT * FROM workshops WHERE $column = '$val'";
@@ -125,6 +126,7 @@ function SearchWorkshop($column,$val)
 //*********************************************************************
 function SearchFreeText($column1,$column2,$column3,$val)
 {
+	//search each word that appears at $val in the columns 1,2,3 
 	$index = 0;
 	$res="";
 	$unique_res="";
@@ -166,6 +168,7 @@ function SearchFreeText($column1,$column2,$column3,$val)
 //*********************************************************************
 function SearchWorkshopPrice($column,$lowval,$highval)
 {
+	//return the workshops that their value at $column is between $lowval and $highval
 	$index = 0;
 	$res="";
 	$query = "SELECT * FROM workshops WHERE  $column BETWEEN $lowval AND $highval ";
