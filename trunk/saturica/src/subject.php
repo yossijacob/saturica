@@ -65,35 +65,7 @@ connect();   //connect to mysql DB
   			
 			$col="subject";
   			$result = SearchWorkshop($col,$search);
- 			if ($result !="")
- 			{
- 				foreach ($result as $value)
- 				{
- 					echo "<br/>";
- 					echo "  שם הסדנא: $value[2]  "; 
- 					echo "<br/>";
- 					echo "  נושא הסדנא: $value[4]  "; 
- 					echo "<br/>";
- 					echo "  סגנון הסדנא: $value[5]  "; 
- 					echo "<br/>";
- 					echo "  מחיר קבוע: $value[6]  "; 	
- 					echo "<br/>";
- 					echo "  מחיר למשתתף: $value[7]  "; 
- 					echo "<br/>";
- 					echo "  תאור הסדנא: $value[8]  "; 	
- 					echo "<br/>";
- 					
- 					if ($value[3] !="")
- 						echo "<img src='workshop_pic/$value[3]' border=0 >";
- 					echo "<br/>";
- 						
- 					echo "<hr></hr>";
- 				}
-
- 			}
- 			 else{
- 					echo "לא נמצאו סדנאות מתאימות";
- 				 }
+ 			PrintWorkshops($result);
   			
   			//header('Location:preferences.php');
 
