@@ -137,7 +137,8 @@ function SearchFreeText($column1,$column2,$column3,$val)
 	{	
 		//ignore all of the following common words  (search only  uncommon words)
 		if ( ($singleword !="ו") && ($singleword !="סדנא") && ($singleword !="סדנאות") && ($singleword !="או") && ($singleword !="על") && ($singleword !="בסדנא")
-			&& ($singleword !="בסדנאות") && ($singleword !="וגם") && ($singleword !="עם") && ($singleword !="ה") && ($singleword !="הסדנא") && ($singleword !="הסדנאות")) 
+			&& ($singleword !="בסדנאות") && ($singleword !="וגם") && ($singleword !="עם") && ($singleword !="ה") && ($singleword !="הסדנא") && ($singleword !="הסדנאות")
+			 && ($singleword !="")) 
 		{
 		
 			$query = "SELECT id FROM workshops WHERE $column1 LIKE '%$singleword%' OR $column2 LIKE '%$singleword%' OR $column3 LIKE '%$singleword%' ";
