@@ -156,7 +156,9 @@
 	    <form name="import_newsletter_form" id="import_newsletter_form" method="post" action="newsletter.php?pending=import">
 	    <h2>יבוא ניוזלטר</h2>
 	    <hr></hr>
-	      לשימוש בתור ניוזלטר html בחר קובץ 
+	    לחץ על 
+	    choose file לבחירת קובץ
+	    ואז לחץ על "טען ניוזלטר ממחשבך" על מנת לבצע 
 	    <div class="framed_centered_button_div"> 
 	  	<div id="shiny-demo-red" class="demo-button" onclick="javascript:document.import_newsletter_form.submit();">טען ניוזלטר ממחשבך<span/></div>
 	  	&nbsp &nbsp &nbsp &nbsp
