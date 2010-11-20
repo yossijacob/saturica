@@ -173,7 +173,7 @@ connect();   //connect to mysql DB
 		
 
 		
-</div>   <!--  end of content -->
+
 <?php 
 	if ($workshop1_curr_pic != "")
 	{
@@ -205,5 +205,7 @@ connect();   //connect to mysql DB
 	
 	footer();
 ?>
+
+</div>   <!--  end of content -->
 </body>
 </html>
