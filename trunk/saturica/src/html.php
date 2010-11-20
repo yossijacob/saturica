@@ -126,7 +126,7 @@ function Logo()
 {
 echo <<<TT
 <div class="logo">
-    SATURICA
+    <img src="images/logo_small.gif" alt="logo" />
 </div>
 TT;
 }
