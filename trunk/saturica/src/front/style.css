@@ -1,0 +1,94 @@
+@CHARSET "UTF-8";
+
+
+* {
+margin: 0px;
+padding: 0px;
+}
+
+/* LAYOUT */
+
+#header
+{
+	/*width:1300px;*/
+	height:171px;
+	background-color:#473B2F;
+	/*background:url("images/logo_bg.jpg");*/
+}
+
+#header ul
+{
+height:171px;
+list-style-type: none;
+position:relative;
+margin-left:auto;
+margin-right:auto;
+width:1108px;
+}
+
+#header li
+{
+	float:left;
+}
+
+#header_content
+{
+	width:977px;
+	background:url("images/top_strip_main_bg.jpg") no-repeat;
+	height:171px;
+}
+
+#header_content_search
+{
+	margin-top:80px;
+	margin-left:10px;
+	height:30px;
+	width:260px;
+	float:left;
+}
+
+#header_content_search .textInput
+{
+	background:url("images/search_text_box_idle.jpg") no-repeat;
+	border:none;
+	height:35px;
+	width:212px;
+	color:#CEBDAD;
+}
+
+#header_right
+{
+	width:130px;
+	background:url("images/top_strip_right_side.jpg") no-repeat;
+	height:171px;
+}
+
+#search_wizard
+{
+	height:336px;
+	background-color: #B8A47F;
+}
+
+#workshop_buttons
+{
+	height:116px;
+	background-color: #1B1B1B;	
+}
+
+#main_text
+{
+	height:200px;
+	background-color: #473B2F;	
+}
+
+#bottom
+{
+	height:448px;
+	background-color: #E0D1B0;
+}
+
+#footer
+{
+	height:75px;
+	background-color: #1B1B1B;	
+}
