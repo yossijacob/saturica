@@ -1,21 +1,72 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" href="jqtransformplugin/jqtransform.css" type="text/css" media="all" />
+<!--
+<script type="text/javascript" src="requiered/jquery.js" ></script>
+<script type="text/javascript" src="jqtransformplugin/jquery.jqtransform.js" ></script>
+<script type="text/javascript" language="javascript">
+	    $(function () {
+	        $('#wizard').jqTransform({ imgPath: 'jqtransformplugin/img/' });
+	    });
+</script>-->
+<script type="text/javascript" language="javascript">
+    var hide = false;
+    function show_dropdown(id) 
+    {
+        if (!hide) document.getElementById(id).style.visibility = "visible";  // dd_list
+        hide = false;
+        //document.getElementById("dd_text").value=121;
+    }
+    function downkey()
+    {
+
+    }
+
+    function setText(text_id,list_id, val) 
+    {
+        hide = true;
+        hide_list(list_id);
+        document.getElementById(text_id).value = val;    // dd_text
+
+    }
+    function hide_list(id) 
+    {
+        document.getElementById(id).style.visibility = "hidden";  // dd_list
+    }
+</script>
 <title>סטוריקה</title>
 </head>
 <body>
 	<div id="header">
 	    <ul>
             <li >
+                <div id="header_left">
+                </div>
+            </li>
+            <li >
                 <div id="header_content">
                     <div id="header_content_search">
-                        <img src="images/search_icon.jpg" alt="search icon"/>
+                        <form method="get" action="index.html">
+                        <input type="image" src="images/search_icon.jpg" alt="Search button"/>
                         &nbsp;
-                        <input type="text" name="field" class="textInput" dir="rtl"/>
+                        <input type="text" name="searchString" class="textInput" dir="rtl"/>
+                        </form>
                     </div>
                     <div id="navigation">
+                        <ul>
+                            <li id="menu_contact" onclick="location.href='contact.html'"></li>
+			                <li id="menu_blog" onclick="location.href='blog.html'"></li>
+                            <li id="menu_gallery" onclick="location.href='gallery.html'"></li>
+                            <li id="menu_locations" onclick="location.href='locations.html'"></li>
+                            <li id="menu_customized" onclick="location.href='customized.html'"></li>
+			                <li id="menu_recommended" onclick="location.href='recommended.html'"></li>
+			                <li id="menu_whatwedo" onclick="location.href='whatwedo.html'"></li>
+                            <li id="menu_home_pushed" onclick="location.href='index.html'"></li>
+                        </ul>
                     </div>
                 </div>
             </li>
@@ -23,11 +74,66 @@
                 <div id="header_right">
                 </div>
             </li>
-        </ul>
-        
+        </ul>  
 	</div>
 	
 	<div id="search_wizard">
+        <div id="search_wizard_content">
+            <ul>
+                <li>
+                    <div id="wizard_slogen">
+                    </div>
+                </li>
+                <li>
+                    <div id="wizard">
+                        
+                        <!--<form action="index.html" method="post">
+			               <div class="rowElem">
+			                <label>Select :</label>
+			                <select name="select">
+				                <option value="">בחר מהרשימה חיעלעלחע</option>
+				                <option value="opt1">2&nbsp;</option>
+                                <option value="opt2">2&nbsp;</option>
+			                </select>
+		                    </div>
+                        </form>
+                        -->
+                        <span class="questions" id="whattodo_Question">
+                            מה רוצים לעשות
+                        </span>
+                        <form action="index.html" method="post">
+			               <div id="whattodo" class="dropdown"  onclick="show_dropdown('whattodo_ddlist')" >
+                                <input id="whattodo_ddtext" class="dd_text" name="whatodo_ddtext" type="text" value="SE"  size="10"  readonly="yes"  />
+                                <div id="whattodo_ddlist" class="dd_list" onmousemove="show_dropdown('whattodo_ddlist')" onmouseout="hide_list('whattodo_ddlist')" >
+	                                <div class="my_ul">
+		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','sekar 1');">Sekar 1</a></div>
+		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','sekar 2');">Sekar 2</a></div>
+		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','sekar 3');">Sekar 3</a></div>
+		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','sekar 4');">Sekar 4</a></div>
+	                                </div>
+                                </div>
+                            </div>
+                           <!--<div id="whattodo">
+			                <select name="select">
+				                <option value="">בחר מהרשימה חיעלעלחע</option>
+				                <option value="opt1">2&nbsp;</option>
+                                <option value="opt2">2&nbsp;</option>
+			                </select>
+		                    </div>-->
+                        </form>
+
+                        <div id="wizard_title">
+                        :מצאו את הסדנא המתאימה לכם
+                        </div>
+                        <div id="wizard_find_button" onclick="location.href='index.html'">
+                        </div>
+                        <div id="need_help_button">
+                            <a href="index.html">? צריכים עזרה</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
 	</div>
 	
 	<div id="workshop_buttons">
