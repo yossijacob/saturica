@@ -328,11 +328,6 @@ width:977px;
 	position:absolute;
 }
 
-#whattodo_Question
-{
-	top:125px;
-	right:35px;
-}
 
 /* dropdown section*/
 
@@ -348,6 +343,7 @@ width:977px;
  cursor:default;
  font-size:14px;
 font-family:Tahoma;
+color:#514E47;
 }
 
 .dropdown
@@ -355,18 +351,18 @@ font-family:Tahoma;
 /*padding:1px;*/
 width:193px;
 height:31px;
-background:url(images/select_font.gif);
+background:url(images/select_font.gif) no-repeat;
 direction:rtl;
 cursor:pointer;
 font-size:14px;
 font-family:Tahoma;
+color:#514E47;
 }
 
 .dd_list
 {
 border:1px #CCCCCC solid;
 width:180px;
-
 position:relative;
 padding-left:-12px;
 overflow:hidden;
@@ -374,13 +370,12 @@ visibility:hidden;
 direction:rtl;
 margin-right:0px;
 cursor:pointer;
+color:#514E47;
+z-index:1;
 }
 
 .my_ul
 {
- /*font:Verdana, Arial, Helvetica, sans-serif;
- font-size:14px;
- font-weight:bold;*/
  width:100%;
 }
 
@@ -396,22 +391,81 @@ cursor:pointer;
 	color:Blue;
 }
 
+/*****************/
+#whattodo_Question
+{
+	top:125px;
+	right:35px;
+}
+
 #whattodo
 {
 	position:absolute;
 	top:144px;
-	right:25px;
+	right:24px;
 }
-#whattodo select
+/*****************/
+#where_Question
 {
-	background:url("images/wizard_dropdown.jpg") no-repeat;
-	
-	width:193px;
-	height:31px;
-	border:none;
-	direction:rtl;
+	top:125px;
+	right:475px;
 }
 
+#where
+{
+	position:absolute;
+	top:144px;
+	right:464px;
+}
+/*****************/
+#howlong_Question
+{
+	top:245px;
+	right:35px;
+}
+
+#howlong
+{
+	position:absolute;
+	top:263px;
+	right:24px;
+}
+/*****************/
+#whatbudget_Question
+{
+	top:245px;
+	right:254px;
+}
+
+#whatbudget
+{
+	position:absolute;
+	top:263px;
+	right:244px;
+}
+/*****************/
+#howmany_Question
+{
+	top:125px;
+	right:254px;
+}
+
+#howmany
+{
+	position:absolute;
+	top:144px;
+	right:257px;
+}
+
+.howmany_text
+{
+	background:url(images/wizard_textbox.jpg) no-repeat;
+	height:31px;
+	width:180px;
+	border:none;
+	direction:rtl;
+	color:#514E47;
+}
 
 /*------------ WORKSHOP -------------------*/
 #workshop_buttons
@@ -420,20 +474,233 @@ cursor:pointer;
 	background-color: #1B1B1B;	
 }
 
+#buttons_strip
+{
+	margin-left:auto;
+	margin-right:auto;
+	width:977px;
+}
+
+#buttons_strip ul
+{
+
+}
+
+#buttons_strip li
+{
+	height:116px;
+	width:160px;
+	list-style-type: none;
+	float:left;
+	cursor:pointer;
+}
+
+#team_button
+{
+	background:url(images/main_icon_team_idle.jpg) no-repeat;
+}
+
+#team_button:hover
+{
+	background:url(images/main_icon_team_hover.jpg) no-repeat;
+}
+
+#managers_button
+{
+	background:url(images/main_icon_managers_idle.jpg) no-repeat;
+}
+
+#managers_button:hover
+{
+	background:url(images/main_icon_managers_hover.jpg) no-repeat;
+}
+
+#workers_button
+{
+	background:url(images/main_icon_workers_idle.jpg) no-repeat;
+}
+
+#workers_button:hover
+{
+	background:url(images/main_icon_workers_hover.jpg) no-repeat;
+}
+
+#lectures_button
+{
+	background:url(images/main_icon_lectures_idle.jpg) no-repeat;
+}
+
+#lectures_button:hover
+{
+	background:url(images/main_icon_lectures_hover.jpg) no-repeat;
+}
+
+#enrichment_button
+{
+	background:url(images/main_icon_enrichment_idle.jpg) no-repeat;
+}
+
+#enrichment_button:hover
+{
+	background:url(images/main_icon_enrichment_hover.jpg) no-repeat;
+}
+
+#contact_button
+{
+	background:url(images/main_icon_contact_idle.jpg) no-repeat;
+}
+
+#contact_button:hover
+{
+	background:url(images/main_icon_contact_hover.jpg) no-repeat;
+}
+/*------------ MAIN TEXT -------------------*/
 #main_text
 {
 	height:200px;
 	background-color: #473B2F;	
 }
 
+#main_text_content
+{
+	background:url(images/main_text.jpg) no-repeat;
+	width:959px;
+	height:205px;
+	margin-left:auto;
+	margin-right:auto;
+}
+/*------------ bottom -------------------*/
 #bottom
 {
-	height:448px;
+	height:428px;
 	background-color: #E0D1B0;
 }
 
+#bottom_content
+{
+	background:url(images/bottom_bg.jpg) no-repeat;
+	margin-left:auto;
+	margin-right:auto;
+	width:959px;
+	height:428px;
+	position:relative;
+}
+
+#bottom_content li
+{
+	list-style-type: none;
+	float:left;
+	
+}
+
+#blog
+{
+	background:url(images/blog_bg.jpg) no-repeat;
+	width:276px;
+	height:378px;
+	position:absolute;
+	top:25px;
+	right:25px;
+}
+
+#recomended
+{
+	background:url(images/recommended_bg.jpg) no-repeat;
+	width:277px;
+	height:275px;
+	position:absolute;
+	top:25px;
+	right:315px;
+}
+
+#dictionery
+{
+	background:url(images/dictionary_bg_text.jpg) no-repeat;
+	width:277px;
+	height:88px;
+	position:absolute;
+	top:315px;
+	right:315px;
+}
+
+#video
+{
+	width:305px;
+	height:377px;
+	position:absolute;
+	top:25px;
+	right:630px;
+}
+/*------------ footer -------------------*/
 #footer
 {
 	height:75px;
-	background-color: #1B1B1B;	
+	background:url(images/bottom_menu_bg02.jpg);
+	/*background-color: #1B1B1B;*/
 }
+
+#footer_content
+{
+	margin-left:auto;
+	margin-right:auto;
+	width:959px;
+	height:75px;
+	position:relative;
+}
+
+#footer_content li
+{
+	list-style-type: none;
+	float:left;	
+}
+
+#links
+{
+	font-size:11px;
+	font-family:Tahoma;
+	text-align:right;
+	color:#AF674E;
+	line-height:20px;
+	height:40px;
+	margin-top:20px;
+	position:absolute;
+	right:0px;
+}
+
+#links a
+{
+	color:#B2C5CD;
+	text-decoration:none;
+}
+
+#links a:hover
+{
+	text-decoration:underline;
+}
+
+#small_logo
+{
+	background:url(images/bottom_menu_logo.jpg) no-repeat;
+	width:160px;
+	height:50px;
+	margin-top:20px;
+	margin-left:85px;
+}
+
+#midigital_logo
+{
+	color:#B2C5CD;
+	font-size:11px;
+	font-family:Tahoma;
+	width:100px;
+	height:40px;
+	text-align:center;
+	margin-top:30px;
+}
+
+#midigital_logo a
+{
+	color:White;
+	text-decoration:none;
+}
+
