@@ -38,17 +38,17 @@ include_once '../functions/functions.php';
 	<?php
 	HeaderFunc();
 	?>
-	<div id="search_wizard">
-	
-	        <div id="results"> 
-	        
-               
-	        <div id="search_results_content">
-                       <form action="index.html" method="post">
+	<div id="results_wizard">
+	 <div id="results_wizard_content">
+	 
+	 
+		<div id="results">
+				       <div id="search_results_content">
+                       <form action="index.html" method="set">
 			            <span class="questions" id="filter_Subjects">
                             : סנן נושאי פעילות
                         </span>
-			               <div id="filter" class="dropdown"  onclick="show_dropdown('whattodo_ddlist')" >
+			                <div id="filter" class="dropdown"  onclick="show_dropdown('whattodo_ddlist')" >
                                 <input id="whattodo_ddtext" class="dd_text" name="whatodo_ddtext" type="text" value=""  size="10"  readonly="readonly"  />
                                 <div id="whattodo_ddlist" class="dd_list" onmousemove="show_dropdown('whattodo_ddlist')" onmouseout="hide_list('whattodo_ddlist')" >
 	                                <div class="my_ul">
@@ -58,48 +58,62 @@ include_once '../functions/functions.php';
 		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','sekar 4');">Sekar 4</a></div>
 	                                </div>
                                 </div>
-                            </div>
-                            </div>
-                
-
-	
-	            <div>  
-	           <ul id="results_boxes">
-	               <li> 
-	                <div id="results_title">
-                        :אלה הפעילויות המתאימות לבחרה שלך
-                        <div id="results_title_small">
-                       </br> </br> ?רוצה למקד את החיפוש שלך עוד יותר
-                       </div> 
-                       
+                             </div>
                        </div>
-                      </li> 
-
-                      <li>
-                         <div id="results_box_A">
-	           			 info1
-	            		</div>
-	            		</li>
-	            	<li>
-                         <div id="results_box_B">
-	           			 info2
-	            		</div>
-                   	  </li>
-                   <li>
-                         <div id="results_box_A">
-	           			 info3
-	            		</div>
-	            	</li>
-	            	<li>
-                         <div id="results_box_B">
-	           			 info4
-	            		</div>
-                   	  </li>
-                   	  
-                   	  
-               </ul> 
-               </div>        
-                    </div>
+		
+		
+		
+		
+				       <div>  
+				           <ul id="results_boxes">
+				             <li> 
+					                <div id="results_title">
+				                        :אלה הפעילויות המתאימות לבחירה שלך
+				                        <div id="results_title_small">
+				                       </br> </br> ?רוצה למקד את החיפוש שלך עוד יותר
+				                       </div> 
+				                     </div>
+			                 </li> 
+			
+			                 <li>
+			                         <div id="results_box_A">
+				           			 info1
+				           			 <div id="get_details_button" onclick="location.href='index.php'"></div>
+				            		</div>
+				           	 </li>
+				           	 
+				             <li>
+			                         <div id="results_box_B">
+				           			 info2
+				           			 <div id="get_details_button" onclick="location.href='index.php'"></div>
+				           			 
+				            		</div>
+			                   	  </li>
+			                   <li>
+			                         <div id="results_box_A">
+				           			 info3
+				           			 <div id="get_details_button" onclick="location.href='index.php'"></div>
+				            		</div>
+				            	</li>
+				            	<li>
+			                         <div id="results_box_B">
+				           			 info4
+				           			 <div id="get_details_button" onclick="location.href='index.php'"></div>
+				            		</div>
+			                   	  </li>
+			                   	  
+			                   	  
+			               </ul> 
+               		   </div>  
+		
+		
+		
+		</div>
+		
+		
+	
+	</div>
+		
 
 	</div>
 	
@@ -111,8 +125,8 @@ include_once '../functions/functions.php';
 	<div id="buttom_search_content">
 	</br>
 	?לא מצאת את מה שחיפשת
-	<div id="buttom_search_button"></div>
-	<div id="buttom_contact_button"></div>
+	<div id="buttom_search_button" onclick="location.href='index.php'"></div>
+	<div id="buttom_contact_button" onclick="location.href='contact.php'"></div>
 	</div>
 	</div>
 	<?php
