@@ -58,31 +58,13 @@ $third_workshop = GetRecord('workshops',$third_workshop_id[1]); //get the worksh
                     המומלצים שלנו
         </div>
         
-        <div id="recommended_A">
         
-        	<div id="recommended_title">
-        	<?php echo $first_workshop[2];?>
-        	</div>
-        
-	       <br/> <br/>
-			<span id="recommended_small_text">:נושא</span>
-			<span id="recommended_small_text_content">
-			<?php 
-			echo $first_workshop[4];
-			?></span>
-
-		
-		</div>
-		
-		<div id="recommended_A_image">
+        <div id="recommended_A_image">
 		<?php
 		echo "<img src='../recommended_pic/$first_workshop[3]' border=0 width=240>";
 		?>
 		</div>
-		
-		
-		
-		
+
 		<div id="recommended_B_image">
 		<?php
 		echo "<img src='../recommended_pic/$second_workshop[3]' border=0 width=240>";
@@ -94,9 +76,30 @@ $third_workshop = GetRecord('workshops',$third_workshop_id[1]); //get the worksh
 		echo "<img src='../recommended_pic/$third_workshop[3]' border=0 width=240>";
 		?>
 		</div>
+        
+        
+        
+        <div id="recommended_A">
+			<?php
+			PrintDetails($first_workshop);
+			?>
+		</div>
+		
+		<div id="recommended_B">
+			<?php
+			PrintDetails($second_workshop);
+			?>
+		</div>
 		
 		
+		<div id="recommended_C">
+			<?php
+			PrintDetails($third_workshop);
+			?>
+        
+		</div>
 		
+
 		</div>
 	</div>
 	
