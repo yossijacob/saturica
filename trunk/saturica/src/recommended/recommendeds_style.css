@@ -383,6 +383,14 @@ width:977px;
 }
 
 
+#recommended_A_image
+{
+	
+	position:absolute;
+	top:137px;
+	right:82px;
+
+}
 
 
 
@@ -392,6 +400,28 @@ width:977px;
 
 
 
+
+#recommended_B_image
+{
+	
+	position:absolute;
+	top:137px;
+	right:380px;
+
+}
+
+
+
+
+
+#recommended_C_image
+{
+	
+	position:absolute;
+	top:137px;
+	right:676px;
+
+}
 
 
 /*------------ SEARCH WIZARD -------------------*/
