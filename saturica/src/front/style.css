@@ -1,6 +1,5 @@
 @CHARSET "UTF-8";
 
-
 * {
 margin: 0px;
 padding: 0px;
@@ -45,7 +44,7 @@ width:1238px;
 #header_content_search
 {
 	margin-top:80px;
-	margin-left:10px;
+	margin-left:6px;
 	height:30px;
 	width:260px;
 	float:left;
@@ -55,7 +54,7 @@ width:1238px;
 {
 	background:url("images/search_text_box_idle.jpg") no-repeat;
 	border:none;
-	height:35px;
+	height:38px;
 	width:212px;
 	color:#CEBDAD;
 	font-size:12px;
@@ -71,7 +70,7 @@ width:1238px;
 
 #header_left
 {
-	width:130px;
+	width:122px;
 	height:171px;
 }
 
@@ -87,7 +86,9 @@ width:1238px;
 {
 height:45px;
 list-style-type: none;
-width:977px;
+width:969px;
+bottom: 6px;
+right: 1px;
 }
 
 #navigation li
@@ -110,12 +111,27 @@ width:977px;
 	background:url("images/main_menu_homepage_pushed.jpg") no-repeat;
 }
 
+#menu_home:hover
+{
+	width:99px;
+	height:45px;
+	background:url("images/main_menu_homepage_hover.jpg") no-repeat;
+}
+
 #menu_whatwedo
 {
 	width:154px;
 	height:45px;
 	background:url("images/main_menu_whatwedo_idle.jpg") no-repeat;
 }
+
+#menu_whatwedo:hover
+{
+	width:154px;
+	height:45px;
+	background:url("images/main_menu_whatwedo_hover.jpg") no-repeat;
+}
+
 
 #menu_whatwedo_pushed
 {
@@ -129,6 +145,13 @@ width:977px;
 	width:144px;
 	height:45px;
 	background:url("images/main_menu_recommended_idle.jpg") no-repeat;
+}
+
+#menu_recommended:hover
+{
+	width:144px;
+	height:45px;
+	background:url("images/main_menu_recommended_hover.jpg") no-repeat;
 }
 
 #menu_recommended_pushed
@@ -145,6 +168,13 @@ width:977px;
 	background:url("images/main_menu_customized_idle.jpg") no-repeat;
 }
 
+#menu_customized:hover
+{
+	width:196px;
+	height:45px;
+	background:url("images/main_menu_customized_hover.jpg") no-repeat;
+}
+
 #menu_customized_pushed
 {
 	width:196px;
@@ -157,6 +187,13 @@ width:977px;
 	width:107px;
 	height:45px;
 	background:url("images/main_menu_locations_idle.jpg") no-repeat;
+}
+
+#menu_locations:hover
+{
+	width:107px;
+	height:45px;
+	background:url("images/main_menu_locations_hover.jpg") no-repeat;
 }
 
 #menu_locations_pushed
@@ -173,6 +210,13 @@ width:977px;
 	background:url("images/main_menu_gallery_idle.jpg") no-repeat;
 }
 
+#menu_gallery:hover
+{
+	width:85px;
+	height:45px;
+	background:url("images/main_menu_gallery_hover.jpg") no-repeat;
+}
+
 #menu_gallery_pushed
 {
 	width:85px;
@@ -187,6 +231,13 @@ width:977px;
 	background:url("images/main_menu_blog_idle.jpg") no-repeat;
 }
 
+#menu_blog:hover
+{
+	width:78px;
+	height:45px;
+	background:url("images/main_menu_blog_hover.jpg") no-repeat;
+}
+
 #menu_blog_pushed
 {
 	width:78px;
@@ -199,6 +250,13 @@ width:977px;
 	width:99px;
 	height:45px;
 	background:url("images/main_menu_contact_idle.jpg") no-repeat;
+}
+
+#menu_contact:hover
+{
+	width:99px;
+	height:45px;
+	background:url("images/main_menu_contact_hover.jpg") no-repeat;
 }
 
 #menu_contact_pushed
@@ -256,8 +314,8 @@ width:977px;
 	height:53px;
 	width:172px;
 	position:absolute;
-	bottom:62px;
-	left:47px;
+	bottom:71px;
+	left:44px;
 	cursor:pointer;
 }
 
@@ -267,8 +325,8 @@ width:977px;
 	height:53px;
 	width:172px;
 	position:absolute;
-	bottom:62px;
-	left:47px;
+	bottom:71px;
+	left:44px;
 	cursor:pointer;
 }
 
@@ -467,11 +525,20 @@ z-index:1;
 	color:#514E47;
 }
 
+/*-----------------------------------------*/
+#black_strip
+{
+	height: 3px;
+	width: 100%;
+	background: black;
+}
+
 /*------------ WORKSHOP -------------------*/
 #workshop_buttons
 {
-	height:116px;
-	background-color: #1B1B1B;	
+	height:119px;
+	/*background-color: #1B1B1B;*/
+	background:url(images/icons_strip_sides_strech.jpg) repeat-x;
 }
 
 #buttons_strip
@@ -479,6 +546,7 @@ z-index:1;
 	margin-left:auto;
 	margin-right:auto;
 	width:977px;
+	position: relative;
 }
 
 #buttons_strip ul
@@ -488,8 +556,9 @@ z-index:1;
 
 #buttons_strip li
 {
+	margin-top:3px;	
 	height:116px;
-	width:160px;
+	width:159px;
 	list-style-type: none;
 	float:left;
 	cursor:pointer;
@@ -557,23 +626,51 @@ z-index:1;
 /*------------ MAIN TEXT -------------------*/
 #main_text
 {
-	height:200px;
+	height:232px;
 	background-color: #473B2F;	
 }
 
 #main_text_content
 {
-	background:url(images/main_text.jpg) no-repeat;
-	width:959px;
-	height:205px;
+	/*background:url(images/main_text.jpg) no-repeat;*/
+	width:945px;
+	padding-right:20px;
+	height:354px;
 	margin-left:auto;
 	margin-right:auto;
+	font-family:Tahoma;
+}
+
+#main_text_head
+{
+	color:white;
+	font-size: 23px;
+}
+
+#saturica_name
+{
+	color:#6DCFF6;
+	font-size: 23px;
+	font-weight: bold;
+}
+
+#main_text_mid
+{
+	color:#CEBCAA;
+	font-size: 14px;
+}
+
+.white_text
+{
+	color:white;
+	font-size: 14px;
 }
 /*------------ bottom -------------------*/
 #bottom
 {
 	height:428px;
-	background-color: #E0D1B0;
+	/*background-color: #E0D1B0;*/
+	background-color: #b8a47f;
 }
 
 #bottom_content
