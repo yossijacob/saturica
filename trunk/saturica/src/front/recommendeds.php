@@ -87,12 +87,26 @@ $third_workshop = GetRecord('workshops',$third_workshop_id[1]); //get the worksh
 	</div>
 	
 	
+
+	
+	
+	
+	
 	<div id="recommendeds_wizard">
+	
+		<div id="recommendeds_main_title"> 
+			<div id="recommended_title">
+                    המומלצים שלנו
+        	</div>
+        	<div id="recommended_title_B">
+                     :אנחנו מקפידים על כך שכל הפעילויות באתר יהיו טובות ואיכותיות, אבל יש כמה שחשוב לנו במיוחד שתכירו
+        	</div>
+		</div>
+	
+	
 		<div id="recommendeds">
 		
-		<div id="recommended_title">
-                    המומלצים שלנו
-        </div>
+
         
         
         <div id="recommended_A_image">
@@ -137,6 +151,7 @@ $third_workshop = GetRecord('workshops',$third_workshop_id[1]); //get the worksh
 		
 
 		</div>
+		
 	</div>
 	
 	
