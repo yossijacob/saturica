@@ -19,7 +19,7 @@ $third_workshop = GetRecord('workshops',$third_workshop_id[1]); //get the worksh
 <head>
 <meta charset="utf-8"/>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="stylesheet" type="text/css" href="recommendeds_style.css" />
+<link rel="stylesheet" type="text/css" href="style.css" />
 <script type="text/javascript" language="javascript">
     var hide = false;
     function show_dropdown(id) 
@@ -48,9 +48,45 @@ $third_workshop = GetRecord('workshops',$third_workshop_id[1]); //get the worksh
 <title>סטוריקה</title>
 </head>
 <body>
-	<?php
-	HeaderFunc();
-	?>
+
+
+	<div id="header">
+	    <ul>
+            <li >
+                <div id="header_left">
+                </div>
+            </li>
+            <li >
+                <div id="header_content">
+                    <div id="header_content_search">
+                        <form method="get" action="index.html">
+                        <input type="image" src="images/search_icon.jpg" alt="Search button"/>
+                        &nbsp;
+                        <input type="text" name="searchString" class="textInput" dir="rtl"/>
+                        </form>
+                    </div>
+                    <div id="navigation">
+                        <ul>
+                            <li id="menu_contact" onclick="location.href='contact.html'"></li>
+			                <li id="menu_blog" onclick="location.href='blog.html'"></li>
+                            <li id="menu_gallery" onclick="location.href='gallery.html'"></li>
+                            <li id="menu_locations" onclick="location.href='locations.html'"></li>
+                            <li id="menu_customized" onclick="location.href='customized.html'"></li>
+			                <li id="menu_recommended_pushed" onclick="location.href='recommended.html'"></li>
+			                <li id="menu_whatwedo" onclick="location.href='whatwedo.html'"></li>
+                            <li id="menu_home" onclick="location.href='index.html'"></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li >
+                <div id="header_right">
+                </div>
+            </li>
+        </ul>  
+	</div>
+	
+	
 	<div id="recommendeds_wizard">
 		<div id="recommendeds">
 		
