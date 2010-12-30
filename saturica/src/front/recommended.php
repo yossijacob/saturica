@@ -25,7 +25,7 @@ $third_workshop = GetRecord('workshops',$third_workshop_id[1]); //get the worksh
 </head>
 <body>
 	
-	<?php HeaderFunc("recomnded");?>
+	<?php HeaderFunc("recommended");?>
 	<div id="recommendeds_wizard">
 	
 		<div id="recommendeds_main_title"> 
