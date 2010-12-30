@@ -43,10 +43,11 @@ width:1238px;
 
 #header_content_search
 {
+	position:relative;
 	margin-top:80px;
 	margin-left:6px;
 	height:30px;
-	width:260px;
+	width:250px;
 	float:left;
 }
 
@@ -59,6 +60,16 @@ width:1238px;
 	color:#CEBDAD;
 	font-size:12px;
 	font-family:Tahoma;
+	position:absolute;
+	right:0px;
+}
+
+#search_icon
+{
+	position:absolute;
+	bottom:5px;
+	right:230px;
+	height:16px;
 }
 
 #header_right
@@ -667,9 +678,10 @@ color:#514E47;
 .dropdown
 {
 /*padding:1px;*/
-width:193px;
+width:197px;
 height:31px;
-background:url(images/select_font.gif) no-repeat;
+/*background:url(images/select_font.gif) no-repeat;*/
+background:url(images/wizard_dropdown.jpg) no-repeat;
 direction:rtl;
 cursor:pointer;
 font-size:14px;
@@ -720,7 +732,7 @@ z-index:1;
 {
 	position:absolute;
 	top:144px;
-	right:24px;
+	right:33px;
 }
 /*****************/
 #where_Question
@@ -733,7 +745,7 @@ z-index:1;
 {
 	position:absolute;
 	top:144px;
-	right:464px;
+	right:473px;
 }
 /*****************/
 #howlong_Question
@@ -746,7 +758,7 @@ z-index:1;
 {
 	position:absolute;
 	top:263px;
-	right:24px;
+	right:33px;
 }
 /*****************/
 #whatbudget_Question
@@ -759,7 +771,16 @@ z-index:1;
 {
 	position:absolute;
 	top:263px;
-	right:244px;
+	right:253px;
+}
+
+#not_including_food
+{
+	color:#DBCAA7;
+	font-size: 12px;
+	position:absolute;
+	top:293px;
+	right:255px;
 }
 /*****************/
 #howmany_Question
@@ -772,14 +793,14 @@ z-index:1;
 {
 	position:absolute;
 	top:144px;
-	right:257px;
+	right:253px;
 }
 
 .howmany_text
 {
 	background:url(images/wizard_textbox.jpg) no-repeat;
 	height:31px;
-	width:180px;
+	width:197px;
 	border:none;
 	direction:rtl;
 	color:#514E47;
