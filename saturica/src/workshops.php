@@ -1,12 +1,13 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <?php
+session_start();
+if (!is_authenticated()) 
+			header("Location:login.php");	
 include_once 'html.php';
 include_once 'mysql.php';
 include_once 'db.php';
 include_once 'connect.php';
 include_once 'report_aux.php';
 		
-session_start();	
 connect();   //connect to mysql DB	 
 //---------------------------------------------------------------------------------------------
 function WorkshopsTableRow($row)
@@ -52,7 +53,7 @@ function ShowWorkshopTable()
 	ShowTable("workshops","","WorkshopsTableRow","report_table","workshops.php?","");  
 }
 ?>
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -63,9 +64,7 @@ function ShowWorkshopTable()
 <script type="text/javascript" src="javascript/functions.js"></script>
 </head>
 <body>
-	<?php
-		if (!is_authenticated()) 
-			header("Location:login.php");  
+	<?php  
 		MenuBar('workshops'); 
 	?>
     

@@ -6,6 +6,7 @@ include_once 'db.php';
 include_once 'connect.php';
 include_once 'report_aux.php';
 
+
 session_start();	
 connect();   //connect to mysql DB	 
 //---------------------------------------------------------------------------------------------
@@ -83,6 +84,7 @@ function ShowLocationTable()
 		
 		<?php
 		ShowLocationTable();
+
 		?>
 		
 </div>   <!--  end of content -->
