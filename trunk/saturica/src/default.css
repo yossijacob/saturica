@@ -193,7 +193,9 @@ h4		/*error messege*/
 
 #menu ul 
 {
-	margin-left:300px;
+	/*margin-left:300px;*/
+	margin-left:auto;
+	margin-right:auto;
 	width:730px;
 	height:40px;
 	/*margin: 0;*/
