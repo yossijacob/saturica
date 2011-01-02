@@ -343,7 +343,7 @@ right: 1px;
 #results_boxes li
 {	
 	height:147px;
-	width:960px;
+	width:977px;
 	list-style-type: none;
 	float:left;
 	
@@ -354,7 +354,7 @@ right: 1px;
 {
 	
 	height:147px;
-	width:960px;
+	width:977px;
 	
 	background:url("images/search_results_bright_bg.jpg") no-repeat;
 }
@@ -362,7 +362,7 @@ right: 1px;
 {
 	
 	height:147px;
-	width:960px;
+	width:977px;
 	
 	background:url("images/search_results_dark_bg.jpg") no-repeat;
 }
@@ -556,44 +556,6 @@ right: 1px;
 	margin-left:auto;
 	margin-right:auto;
 }
-
-
-#search_harder_button
-{
-	background:url("images/additional_search_button_idle.jpg") no-repeat;
-	height:30px;
-	width:95px;
-	
-	position:absolute;
-	top:103px;
-	left:220px;
-	cursor:pointer;
-}
-
-#search_harder_button:hover
-{
-	background:url("images/additional_search_button_hover.jpg") no-repeat;
-	height:53px;
-	width:172px;
-	
-	position:absolute;
-	top:103px;
-	left:220px;
-	cursor:pointer;
-}
-
-#search_harder_button:pushed
-{
-	background:url("images/additional_search_button_pushed.jpg") no-repeat;
-	height:53px;
-	width:172px;
-	
-	position:absolute;
-	top:103px;
-	left:220px;
-	cursor:pointer;
-}
-
 
 #search_wizard_content ul
 {
@@ -1087,7 +1049,7 @@ z-index:1;
 	position:relative;
 
 	left:50px;
-	top:100px;	
+	top:74px;	
 	cursor:pointer;
 }
 
@@ -1100,7 +1062,7 @@ z-index:1;
 	position:relative;
 
 	left:50px;
-	top:100px;	
+	top:74px;	
 	cursor:pointer;
 }
 
@@ -1112,7 +1074,7 @@ z-index:1;
 	position:relative;
 
 	left:50px;
-	top:100px;	
+	top:74px;	
 	cursor:pointer;
 }
 
@@ -1315,6 +1277,7 @@ z-index:1;
 {
 	background-color:#b8a47f;
 	color: #44382c;
+	font-family:Tahoma;
 }
 
 #customized_head
@@ -1345,20 +1308,22 @@ z-index:1;
 
 .customized_header
 {
-	font-size: 28px;
-	color: #574737;
+	font-size: 22px;
+	color: #514E47;
 }
 
 .customized_header_small
 {
-	font-size: 20px;
-	color: #574737;
+	font-size: 16px;
+	color: #514E47;
 	
 }
 
 .customized_text
 {
-	line-height:85%;
-	color: #574737;
+	/*line-height:95%;*/
+	color: #514E47;
+	font-size: 12px;
+	/*font-weight:bold;*/
 }
 /******** for customized page*/
