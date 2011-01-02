@@ -6,32 +6,32 @@ include_once 'connect.php';
 
 connect();   //connect to mysql DB	 
 	
-	$username  = isset($_POST['username'])? $_POST['username']: "";
-  	$username = CleanText($username);
+$wrong_pass = false;
+
+$username  = isset($_POST['username'])? $_POST['username']: "";
+$username = CleanText($username);
   
- 	$entered_pass  = isset($_POST['entered_pass'])? $_POST['entered_pass']: "";
-  	$entered_pass = CleanText($entered_pass); 	//the password the user entered
+$entered_pass  = isset($_POST['entered_pass'])? $_POST['entered_pass']: "";
+$entered_pass = CleanText($entered_pass); 	//the password the user entered
 
-  	$_SESSION['authenticated'] = "no";	
+$_SESSION['authenticated'] = "no";	
 
-	if (isset($_POST['submitted']))  
-	  	{
-	  		$userdetails = GetRecord("preferences",1);  // get user data
-	  		$user_password = $userdetails[3];			//get the password of the user
+if (isset($_POST['submitted']))  
+{
+	  $userdetails = GetRecord("preferences",1);  // get user data
+	  $user_password = $userdetails[3];			//get the password of the user
 	  		
-
-	  	if ( ( $username == "yy") /*&& (hash('sha256',$entered_pass) == $user_password)*/ ) 	
-	  		{
-	  			$_SESSION['authenticated'] = "yes";
-	  			header("Location:statistics.php");
-	  		}
+	if ( ( $username == "yy") /*&& (hash('sha256',$entered_pass) == $user_password)*/ ) 	
+	{
+	  $_SESSION['authenticated'] = "yes";
+	  header("Location:statistics.php");
+	}
 	  		
-	  	else
-	  		{
-	  			echo "<b><FONT COLOR='RED'>שם משתמש או ססמא אינם נכונים</FONT></b>";
-	  			//header("Location:login.php");		
-	  		}
-	  	}
+	else
+	{
+	  			$wrong_pass = true;
+	 }
+}
 	  
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -54,7 +54,7 @@ connect();   //connect to mysql DB
     <h1>:אנא הזדהה</h1>
     <hr></hr>
     <br/>	
-	
+	<?php if ($wrong_pass == true) echo "<b><FONT COLOR='RED'>שם משתמש או ססמא אינם נכונים</FONT></b>";?>
 	<br/>
 	<div id="login_div" dir="rtl">
 	<form name="login_form" id="login_form" method="post" action="login.php">
