@@ -51,19 +51,20 @@
 	    	לנו להצליח? מה כל אחד תרם לצוות? איך אפשר להשתמש בכך יותר כדי להביא לעוד הצלחות? וכו'.
 	    	</div>
 	    	
-	    	<div style="height:24px;width:29px;position: absolute;top: 240px;right:240px; background:url(images/customized_number_02.jpg) no-repeat;">
+	    	<div style="height:24px;width:29px;position: absolute;top: 255px;right:240px; background:url(images/customized_number_02.jpg) no-repeat;">
 	    	</div>
-	    	<div class="customized_header" style="position: absolute;top: 237px;right:280px;" dir="rtl">
+	    	<div class="customized_header" style="position: absolute;top: 252px;right:280px;" dir="rtl">
 	   		התאמת סדנה קיימת
 	    	</div>
-	    	<div class="customized_text" style="position: absolute;top: 275px;right:240px;" dir="rtl">
-	    	למרבית הארגונים יש ערכי חברה (או מותג), שפה ותרבות אגונית מוגדרים. מצאתם סדנא שמדברת אליכם? אנחנו
+	    	<div class="customized_text" style="position: absolute;top: 290px;right:240px;" dir="rtl">
+	    	למרבית הארגונים יש ערכי חברה (או מותג), שפה ותרבות אגונית מוגדרים. מצאתם סדנא שמדברת אליכם?
 	    	<br/>
-	    	נדאג שהיא תדבר בשפה שלכם.
+	    	אנחנו נדאג שהיא תדבר בשפה שלכם.
 	    	<br/>
 	    	<br/>
-	    	לדוגמא: לחטיבת החלב של חברת מזון גדולה יצרנו סדנה משימתית שבה כל המשימות נסובו סביב נושא המרעה ועולם הפרות.
+	    	לדוגמא: לחטיבת החלב של חברת מזון גדולה יצרנו סדנה משימתית שבה כל המשימות נסובו סביב נושא
 	    	<br/>
+	    	המרעה ועולם הפרות.
 	    	 היה מה זה מו-צלח.
 	    	</div>
 	    	
