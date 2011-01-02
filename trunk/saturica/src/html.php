@@ -1,7 +1,4 @@
 <?php
-
-
-
 //--------------------------------------------------------------------------------------------------
 function ShowDropDown($name,$data,$data_text,$deafult_val,$deafult_text,$selected)
 {
