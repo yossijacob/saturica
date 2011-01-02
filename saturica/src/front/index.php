@@ -94,9 +94,12 @@
 		                                </div>
 		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','manager');">
 		                                פיתוח מנהלים</a></div>
-		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','worker');">פיתוח עובדים</a></div>
-		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','lecture');">הרצאות</a></div>
-		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','teacher');">פעילות מיוחדת למורים</a></div>
+		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','worker');">
+		                                פיתוח עובדים</a></div>
+		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','lecture');">
+		                                הרצאות</a></div>
+		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','teacher');">
+		                                פעילות מיוחדת למורים</a></div>
 		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','social');">מפגשים חברתיים</a></div>
 	                                </div>
                                 </div>
