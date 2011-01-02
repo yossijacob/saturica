@@ -1,4 +1,7 @@
 <?php
+	session_start();
+	if (!is_authenticated()) 
+			header("Location:login.php"); 
 	$file_name = $_GET['filename'];
 	header("Cache-Control: public");
 	header("Content-Description: File Transfer");
