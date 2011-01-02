@@ -76,7 +76,7 @@ function footer()
 	echo "</div>";
 	echo "<p>best viewed using <a href='http://www.google.com/chrome/' target='_blank'>google chrome</a></p>";
 	echo "<br/>";
-	echo "<p id='legal'>Copyright &copy; 2010 by Yossi Jacob & Roee Minster. All Rights Reserved.</p>";
+	echo "<p id='legal'>Copyright &copy; 2010 by <a href='http://yossijacob.comli.com/'>Yossi Jacob</a> & Roee Minster. All Rights Reserved.</p>";
 	echo "</div>";
 }
 //************************************************************************
