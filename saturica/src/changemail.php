@@ -98,8 +98,13 @@ session_start();
   			
   			
   			EditRecord("preferences",1, $data);     			// edit the email
- 			header('Location:preferences.php');
-
+  			?>
+  			<script type="text/javascript" language="javascript">
+   			window.location = 'http://www.preferences.php'
+   			</script>
+  			window.location = 'http://www.yourdomain.com'
+ 			<?php 	//header('Location:preferences.php');
+	
   		}
   	
   	}  // close if submitted 
