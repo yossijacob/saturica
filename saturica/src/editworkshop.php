@@ -1,7 +1,5 @@
 <?php 
-if (!is_authenticated()) 
-	header("Location:login.php");
-session_start();	
+
 include_once 'html.php';
 include_once 'mysql.php';
 include_once 'db.php';
@@ -9,6 +7,9 @@ include_once 'connect.php';
 
 
 connect();   //connect to mysql DB
+if (!is_authenticated()) 
+	header("Location:login.php");
+session_start();	
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">

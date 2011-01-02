@@ -4,7 +4,10 @@
 		include_once 'mysql.php';
 		include_once 'db.php';
 		
+		connect();
 		session_start();
+		if (!is_authenticated()) 
+			header("Location:login.php");	
 
 		$fileName = "letter.html";
 		$emails = "";
