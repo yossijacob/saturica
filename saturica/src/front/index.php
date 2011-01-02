@@ -81,7 +81,7 @@
                 <li>
                     <div id="wizard">
                         
-                       <form action="index.html" method="post">
+                       <form action="search.html" method="get">
 			            <span class="questions" id="whattodo_Question">
                             ? מה רוצים לעשות
                         </span>
@@ -89,10 +89,15 @@
                                 <input id="whattodo_ddtext" class="dd_text" name="whatodo_ddtext" type="text" value=""  size="10"  readonly="readonly"  />
                                 <div id="whattodo_ddlist" class="dd_list" onmousemove="show_dropdown('whattodo_ddlist')" onmouseout="hide_list('whattodo_ddlist')" >
 	                                <div class="my_ul">
-		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','sekar 1');">Sekar 1</a></div>
-		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','sekar 2');">Sekar 2</a></div>
-		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','sekar 3');">Sekar 3</a></div>
-		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','sekar 4');">Sekar 4</a></div>
+		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','גיבוש ועבודת צוות');">
+		                                גיבוש ועבודת צוות</a>
+		                                </div>
+		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','manager');">
+		                                פיתוח מנהלים</a></div>
+		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','worker');">פיתוח עובדים</a></div>
+		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','lecture');">הרצאות</a></div>
+		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','teacher');">פעילות מיוחדת למורים</a></div>
+		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','social');">מפגשים חברתיים</a></div>
 	                                </div>
                                 </div>
                             </div>
