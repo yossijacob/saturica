@@ -5,7 +5,9 @@ include_once 'db.php';
 include_once 'connect.php';
 
 connect();   //connect to mysql DB	 
-	
+
+session_start();
+
 $wrong_pass = false;
 
 $username  = isset($_POST['username'])? $_POST['username']: "";
