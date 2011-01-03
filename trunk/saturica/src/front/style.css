@@ -385,6 +385,69 @@ right: 1px;
 }
 
 
+/*------------ ABOUT WHAT WE DO -------------------*/
+
+
+#about_wizard
+{
+	height:322px;
+	background-color: #B8A47F;
+
+}
+
+#about_main_title
+{	
+	
+	height:375px;
+	position:relative;
+	
+	width:960px;
+	margin-left:auto;
+	margin-right:auto;
+
+	background:url("images/about_header_bg.jpg") no-repeat;
+}
+
+
+
+#about_title
+{
+	position:absolute;
+	top:105px;
+	right:55px;
+	color:#514E47;
+	font-size:13px;
+	font-family:Tahoma;
+	text-align:right;
+}
+
+
+#about_second_title
+{	
+	
+	height:375px;
+	position:relative;
+	
+	width:960px;
+	margin-left:auto;
+	margin-right:auto;
+
+	background:url("images/about_limor_bg.jpg") no-repeat;
+}
+
+
+#about_title_second_text
+{
+	position:absolute;
+	top:40px;
+	right:55px;
+	color:#514E47;
+	font-size:13px;
+	font-family:Tahoma;
+	text-align:right;
+}
+
+
 /*------------ RECOMMENDEDS -------------------*/
 
 
