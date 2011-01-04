@@ -81,7 +81,7 @@
                 <li>
                     <div id="wizard">
                         
-                       <form action="search.html" method="get">
+                       <form action="search.php" method="get" id="wizard_form">
 			            <span class="questions" id="whattodo_Question">
                             ? מה רוצים לעשות
                         </span>
@@ -92,15 +92,16 @@
 		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','גיבוש ועבודת צוות');">
 		                                גיבוש ועבודת צוות</a>
 		                                </div>
-		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','manager');">
+		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','פיתוח מנהלים');">
 		                                פיתוח מנהלים</a></div>
-		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','worker');">
+		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','פיתוח עובדים');">
 		                                פיתוח עובדים</a></div>
-		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','lecture');">
+		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','הרצאות');">
 		                                הרצאות</a></div>
-		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','teacher');">
+		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','פעילות מיוחדת למורים');">
 		                                פעילות מיוחדת למורים</a></div>
-		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','social');">מפגשים חברתיים</a></div>
+		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','מפגשים חברתיים');">
+		                                מפגשים חברתיים</a></div>
 	                                </div>
                                 </div>
                             </div>
@@ -165,7 +166,8 @@
                         <div id="wizard_title">
                         :מצאו את הסדנא המתאימה לכם
                         </div>
-                        <div id="wizard_find_button" onclick="location.href='index.html'">
+                        <!-- <div id="wizard_find_button" onclick="location.href='index.html'"> -->
+                        <div id="wizard_find_button" onclick="javascript:document.wizard_form.submit();">
                         </div>
                         <div id="need_help_button">
                             <a href="index.html">? צריכים עזרה</a>
