@@ -26,8 +26,9 @@ function SendPassword ($pass)
 	$user = GetRecord("preferences",1);
 	$mail = $user[1];
 	$name = $user[2];
-	$subject = "Saturica site";
-	$message = "Hello $name....bla bla bla your password is ....$pass";
+	$subject = "Satorika site";
+	$message = "Hello $name,
+	your new password to Satorika is: $pass";
 	mail($mail,$subject,$message);
 	
 }
