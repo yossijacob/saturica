@@ -120,10 +120,18 @@
                                 <input id="where_ddtext" class="dd_text" name="where_ddtext" type="text" value=""  size="10"  readonly="readonly"  />
                                 <div id="where_ddlist" class="dd_list" onmousemove="show_dropdown('where_ddlist')" onmouseout="hide_list('where_ddlist')" >
 	                                <div class="my_ul">
-		                                <div class="my_li"><a onclick="setText('where_ddtext','where_ddlist','sekar 1');">Sekar 1</a></div>
-		                                <div class="my_li"><a onclick="setText('where_ddtext','where_ddlist','sekar 2');">Sekar 2</a></div>
-		                                <div class="my_li"><a onclick="setText('where_ddtext','where_ddlist','sekar 3');">Sekar 3</a></div>
-		                                <div class="my_li"><a onclick="setText('where_ddtext','where_ddlist','sekar 4');">Sekar 4</a></div>
+		                                <div class="my_li"><a onclick="setText('where_ddtext','where_ddlist','במבנה ממוזג\מחומם');">
+		                                 במבנה ממוזג\מחומם</a></div>
+		                                <div class="my_li"><a onclick="setText('where_ddtext','where_ddlist','אצלכם בארגון');">
+		                                אצלכם בארגון</a></div>
+		                                <div class="my_li"><a onclick="setText('where_ddtext','where_ddlist','בחוץ במקום מיוחד');">
+		                                בחוץ במקום מיוחד</a></div>
+		                                <div class="my_li"><a onclick="setText('where_ddtext','where_ddlist','על שפת הבריכה');">
+		                                על שפת הבריכה</a></div>
+		                                <div class="my_li"><a onclick="setText('where_ddtext','where_ddlist','על חוף הים');">
+		                                על חוף הים</a></div>
+		                                <div class="my_li"><a onclick="setText('where_ddtext','where_ddlist','רוצים לנוע ממקום למקום');">
+		                                רוצים לנוע ממקום למקום</a></div>
 	                                </div>
                                 </div>
                             </div>
@@ -135,10 +143,16 @@
                                 <input id="howlong_ddtext" class="dd_text" name="howlong_ddtext" type="text" value=""  size="10"  readonly="readonly"  />
                                 <div id="howlong_ddlist" class="dd_list" onmousemove="show_dropdown('howlong_ddlist')" onmouseout="hide_list('howlong_ddlist')" >
 	                                <div class="my_ul">
-		                                <div class="my_li"><a onclick="setText('howlong_ddtext','howlong_ddlist','sekar 1');">Sekar 1</a></div>
-		                                <div class="my_li"><a onclick="setText('howlong_ddtext','howlong_ddlist','sekar 2');">Sekar 2</a></div>
-		                                <div class="my_li"><a onclick="setText('howlong_ddtext','howlong_ddlist','sekar 3');">Sekar 3</a></div>
-		                                <div class="my_li"><a onclick="setText('howlong_ddtext','howlong_ddlist','sekar 4');">Sekar 4</a></div>
+		                                <div class="my_li"><a onclick="setText('howlong_ddtext','howlong_ddlist','קצר, מקסימום 3 שעות');">
+		                                קצר, מקסימום 3 שעות</a></div>
+		                                <div class="my_li"><a onclick="setText('howlong_ddtext','howlong_ddlist','חצי יום');">
+		                                חצי יום</a></div>
+		                                <div class="my_li"><a onclick="setText('howlong_ddtext','howlong_ddlist','יום מלא');">
+		                                יום מלא</a></div>
+		                                <div class="my_li"><a onclick="setText('howlong_ddtext','howlong_ddlist','ערב');">
+		                                ערב</a></div>
+		                                <div class="my_li"><a onclick="setText('howlong_ddtext','howlong_ddlist','יותר מיום אחד');">
+		                                יותר מיום אחד</a></div>
 	                                </div>
                                 </div>
                             </div>
@@ -150,14 +164,20 @@
                                 <input id="whatbudget_ddtext" class="dd_text" name="whatbudget_ddtext" type="text" value=""  size="10"  readonly="readonly"  />
                                 <div id="whatbudget_ddlist" class="dd_list" onmousemove="show_dropdown('whatbudget_ddlist')" onmouseout="hide_list('whatbudget_ddlist')" >
 	                                <div class="my_ul">
-		                                <div class="my_li"><a onclick="setText('whatbudget_ddtext','whatbudget_ddlist','sekar 1');">Sekar 1</a></div>
-		                                <div class="my_li"><a onclick="setText('whatbudget_ddtext','whatbudget_ddlist','sekar 2');">Sekar 2</a></div>
-		                                <div class="my_li"><a onclick="setText('whatbudget_ddtext','whatbudget_ddlist','sekar 3');">Sekar 3</a></div>
-		                                <div class="my_li"><a onclick="setText('whatbudget_ddtext','whatbudget_ddlist','sekar 4');">Sekar 4</a></div>
+		                                <div class="my_li"><a onclick="setText('whatbudget_ddtext','whatbudget_ddlist','מעל 300');">
+		                                מעל 300 ש"ח</a></div>
+		                                <div class="my_li"><a onclick="setText('whatbudget_ddtext','whatbudget_ddlist','200 - 300');">
+		                                200 - 300 ש"ח</a></div>
+		                                <div class="my_li"><a onclick="setText('whatbudget_ddtext','whatbudget_ddlist','100 - 200');">
+		                                100 - 200 ש"ח</a></div>
+		                                <div class="my_li"><a onclick="setText('whatbudget_ddtext','whatbudget_ddlist','50 -100');">
+		                                50 -100 ש"ח</a></div>
+		                                <div class="my_li"><a onclick="setText('whatbudget_ddtext','whatbudget_ddlist','פחות מ 50');">
+		                                פחות מ 50 ש"ח</a></div>
 	                                </div>
                                 </div>
                             </div>
-                        </form>
+                        
                         
                         <span id="not_including_food" dir="rtl">
                         *לא כולל אוכל
@@ -167,11 +187,12 @@
                         :מצאו את הסדנא המתאימה לכם
                         </div>
                         <!-- <div id="wizard_find_button" onclick="location.href='index.html'"> -->
-                        <div id="wizard_find_button" onclick="javascript:document.wizard_form.submit();">
+                        <div id="wizard_find_button" onclick="document.forms['wizard_form'].submit();">
                         </div>
                         <div id="need_help_button">
                             <a href="index.html">? צריכים עזרה</a>
                         </div>
+                        </form>
                     </div>
                 </li>
             </ul>
