@@ -1,6 +1,10 @@
 ﻿<!DOCTYPE html>
 <?php 
 include_once 'functions.php';
+include_once '../connect.php';
+include_once '../mysql.php';		//change to the correct location ! 
+
+connect();   //connect to mysql DB
 ?>
 <html>
 <head>
@@ -37,6 +41,22 @@ include_once 'functions.php';
 <body>
 	<?php
 	HeaderFunc('empty');
+	//get the input to search at the DB 
+	$whatodo = $_GET['whatodo_ddtext'];
+  	$whatodo = CleanText($whatodo);
+  	
+  	$howmany = $_GET['howmany_text'];
+  	$howmany = CleanText($howmany);
+  	
+  	$where = $_GET['where_ddtext'];
+  	$where = CleanText($where);
+  	
+  	$howlong = $_GET['howlong_ddtext'];
+  	$howlong = CleanText($howlong);
+  	
+    $whatbudget = $_GET['whatbudget_ddtext'];
+  	$whatbudget = CleanText($whatbudget);	
+  
 	?>
 	<div id="results_wizard">
 	 <div id="results_wizard_content">
