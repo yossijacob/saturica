@@ -1,5 +1,8 @@
 ﻿<!DOCTYPE html>
-<?php include_once 'functions.php';?>
+<?php 
+include_once 'functions.php';
+include_once 'getposts.php';
+?>
 <html>
 <head>
 <meta charset="utf-8"/>
@@ -245,6 +248,7 @@
 	    <ul id="bottom_content">
             <li>
                 <div id="blog">
+                <?php echo GetPosts("http://www.satorika.co.il/blog/?feed=rss2")?>
                 </div>
             </li>
             <li>
@@ -254,25 +258,11 @@
                 </div>
             </li>
             <li>
-                <div id="video">   
-                <!--<object width="315" height="377"><param name="movie" value="http://www.youtube.com/v/4A-EllJptgg?fs=1&amp;hl=en_US"/><param name="allowFullScreen" value="true"/><param name="allowscriptaccess" value="always"/><param name="border" value="1"/><param name="color2" value="#E0D1B0"/><embed src="http://www.youtube.com/v/4A-EllJptgg?fs=1&amp;hl=en_US" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="315" height="377" color2=0xE0D1B0></embed></object>-->
-                <!-- 
+                <div id="video">       
                 <object width="325" height="375">
-                    <param name="movie" value="http://www.youtube.com/v/4A-EllJptgg?rel=1&color1=0xAF674E&color2=0xAF674E&border=1&fs=1"/>
-                    <param name="allowFullScreen" value="true"/>
-                    <param name="allowScriptAccess" value="always"/>
-                    <embed src="http://www.youtube.com/v/4A-EllJptgg?rel=1&color1=0xAF674E&color2=0xAF674E&border=1&fs=1"
-                        type="application/x-shockwave-flash"
-                        allowscriptaccess="always"
-                        width="325" height="375" 
-                        allowfullscreen="false">
-                    </embed>
-                </object>
-                 -->
-                <object width="325" height="375">
-                    <param name="movie" value="http://www.youtube.com/v/gkvpuOebd88?rel=1&color1=0xAF674E&color2=0xAF674E&border=1&fs=1"></param>
+                    <param name="movie" value="http://www.youtube.com/v/axCT1a_M0lc?rel=1&color1=0xAF674E&color2=0xAF674E&border=1&fs=1"></param>
                     <param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param>
-                    <embed src="http://www.youtube.com/v/gkvpuOebd88?rel=1&color1=0xAF674E&color2=0xAF674E&border=1&fs=1" 
+                    <embed src="http://www.youtube.com/v/axCT1a_M0lc?rel=1&color1=0xAF674E&color2=0xAF674E&border=1&fs=1" 
                     type="application/x-shockwave-flash" 
                     allowscriptaccess="always" 
                     allowfullscreen="true" 
