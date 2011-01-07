@@ -45,19 +45,19 @@ $third_workshop = GetRecord('workshops',$third_workshop_id[1]); //get the worksh
         
         <div id="recommended_A_image">
 		<?php
-		echo "<img src='../recommended_pic/$first_workshop[3]' border=0 width=240>";
+		echo "<img src='recommended_pic/$first_workshop[3]' border=0 width=240>";
 		?>
 		</div>
 
 		<div id="recommended_B_image">
 		<?php
-		echo "<img src='../recommended_pic/$second_workshop[3]' border=0 width=240>";
+		echo "<img src='recommended_pic/$second_workshop[3]' border=0 width=240>";
 		?>
 		</div>
 		
 		<div id="recommended_C_image">
 		<?php
-		echo "<img src='../recommended_pic/$third_workshop[3]' border=0 width=240>";
+		echo "<img src='recommended_pic/$third_workshop[3]' border=0 width=240>";
 		?>
 		</div>
         
