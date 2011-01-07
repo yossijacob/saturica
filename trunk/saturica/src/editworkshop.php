@@ -188,7 +188,13 @@ session_start();
 	
   			EditRecord("workshops",$id, $data);     			// add the workshop		
 
-  			header('Location:workshops.php');
+  			?>
+		
+			<script type="text/javascript" language="javascript">
+   			window.location = 'http://satorika.co.il/backoffice/workshops.php';
+   			</script>
+   			<?php 
+  			//header('Location:workshops.php');
   		}
   	
   	}  // close if submitted 
