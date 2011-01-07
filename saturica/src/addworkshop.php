@@ -101,6 +101,30 @@ session_start();
   	$missing = "";
   	$name_exist = "";
   	
+  	
+  	
+  	$workshopsubjects[0] = "גיבוש ועבודת צוות";		// for the places dropdown boxes
+	$workshopsubjects[1] = "פיתוח מנהלים";
+	$workshopsubjects[2] = "פיתוח עובדים";
+	$workshopsubjects[3] = "הרצאות";
+	$workshopsubjects[4] = "פעילות מיוחדת למורים";
+	$workshopsubjects[5] = "מפגשים חברתיים";	
+	
+	$workshoplocations[0] = "במבנה ממוזג\מחומם";		// for the places dropdown boxes
+	$workshoplocations[1] = "אצלכם בארגון";
+	$workshoplocations[2] = "בחוץ במקום מיוחד";
+	$workshoplocations[3] = "על שפת הבריכה";
+	$workshoplocations[4] = "על חוף הים";
+	$workshoplocations[5] = "רוצים לנוע ממקום למקום";
+	
+	$workshoptimeframes[0] = "קצר, מקסימום 3 שעות";		// for the places dropdown boxes
+	$workshoptimeframes[1] = "חצי יום";
+	$workshoptimeframes[2] = "יום מלא";
+	$workshoptimeframes[3] = "ערב";
+	$workshoptimeframes[4] = "יותר מיום אחד";
+	
+	
+  	
   	if (isset($_POST['submitted']))
   	{
   	
@@ -221,7 +245,11 @@ session_start();
 	 </tr>
 	 <tr>
 	 	<td><b>נושא סדנא </b></td>
-	 <?php echo "<td><input type='text' name='workshopsubject' value='$workshopsubject' title='workshopsubject'/></td>";?>
+	 	<td>
+	 	<?php 
+	 	ShowDropDown("workshopsubject",$workshopsubjects,$workshopsubjects,"","",$workshopsubject);
+	 	?>
+	 	</td>
 	 </tr>
 	 <tr>
 	 	<td><b>סגנון סדנא</b></td>
@@ -273,11 +301,19 @@ session_start();
 	 </tr>
 	 	 <tr>
 	 	<td><b>מיקום סדנא</b></td>
-	 <?php echo "<td><input type='text' name='workshoplocation' value='$workshoplocation' title='workshoplocation'/></td>";?>
+		 	<td>
+	 	<?php 
+	 	ShowDropDown("workshoplocation",$workshoplocations,$workshoplocations,"","",$workshoplocation);
+	 	?>
+	 	</td>
 	 </tr>
 	 	 <tr>
 	 	<td><b>זמן סדנא</b></td>
-	 <?php echo "<td><input type='text' name='workshoptimeframe' value='$workshoptimeframe' title='$workshoptimeframe'/></td>";?>
+	 		 	<td>
+	 	<?php 
+	 	ShowDropDown("workshoptimeframe",$workshoptimeframes,$workshoptimeframes,"","",$workshoptimeframe);
+	 	?>
+	 	</td>
 	 </tr>
 	 
 	 
