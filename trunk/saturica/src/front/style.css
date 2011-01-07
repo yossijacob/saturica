@@ -1052,6 +1052,30 @@ z-index:1;
 	right:25px;
 }
 
+#blog ul
+{
+	margin-top: 50px;
+	text-align: center;
+	padding: 5px;
+}
+	
+#blog li
+{
+	list-style-type: none;
+	float: none;
+	border-bottom-color: #AF674E;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+}
+
+#blog li a
+{
+	text-decoration: none;
+	color : #403e32;
+	font-size: 12px;
+	font-family:Tahoma;
+}
+
 #recomended
 {
 	background:url(images/recommended_bg.jpg) no-repeat;
