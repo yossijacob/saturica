@@ -1054,9 +1054,12 @@ z-index:1;
 
 #blog ul
 {
-	margin-top: 50px;
+	margin-top: 60px;
+	margin-left:auto;
+	margin-right:auto;
 	text-align: center;
 	padding: 5px;
+	width: 250px;
 }
 	
 #blog li
@@ -1066,14 +1069,23 @@ z-index:1;
 	border-bottom-color: #AF674E;
 	border-bottom-style: solid;
 	border-bottom-width: 1px;
+	max-height: 60px;
+	overflow:hidden;
+	
 }
 
 #blog li a
 {
+	line-height:60px;
 	text-decoration: none;
 	color : #403e32;
 	font-size: 12px;
 	font-family:Tahoma;
+}
+
+#blog li a:hover
+{
+	color: #AF674E;
 }
 
 #recomended
