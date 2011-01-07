@@ -141,7 +141,14 @@ if (!is_authenticated())
   			
 			EditRecord("locations",$id, $data);     			// edit the location
 
-  			header('Location:locations.php');
+			
+			?>
+		
+			<script type="text/javascript" language="javascript">
+   			window.location = 'http://satorika.co.il/backoffice/locations.php';
+   			</script>
+   			<?php 
+  			//header('Location:locations.php');
   		}
   	
   	}  // close if submitted 
