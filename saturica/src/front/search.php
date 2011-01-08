@@ -64,6 +64,10 @@ connect();   //connect to mysql DB
   	$where = $_GET['where_ddtext'];
   	$where = CleanText($where);
   	
+  	$howlong = $_GET['howlong_ddtext'];
+  	$howlong = CleanText($howlong);
+  	
+  	
 	?>
 	<div id="results_wizard">
 	 <div id="results_wizard_content">
@@ -176,7 +180,18 @@ connect();   //connect to mysql DB
 			                    	
 
 						 			PrintWorkshops($result);
-			                    }		
+			                    }	
+
+			                    if ($howlong != null)
+			                    {
+			                    	$result='';
+			                    	$col="time_frame";
+			                    	
+			                    		$result = SearchWorkshop($col,$howlong);
+			                    	
+
+						 			PrintWorkshops($result);
+			                    }
 										
 										
 										
