@@ -3,6 +3,7 @@
 include_once 'functions.php';
 include_once '../connect.php';
 include_once '../mysql.php';		//change to the correct location ! 
+include_once '../html.php';			//for the printworkshop function. maybe would be better to place the func at functions.php
 
 connect();   //connect to mysql DB
 ?>
@@ -55,8 +56,14 @@ connect();   //connect to mysql DB
   	$howlong = CleanText($howlong);
   	
     $whatbudget = $_GET['whatbudget_ddtext'];
-  	$whatbudget = CleanText($whatbudget);	
-  
+  	$whatbudget = CleanText($whatbudget);
+
+  	$whattodo = $_GET['whatodo_ddtext'];
+  	$whattodo = CleanText($whattodo);
+  	
+  	$where = $_GET['where_ddtext'];
+  	$where = CleanText($where);
+  	
 	?>
 	<div id="results_wizard">
 	 <div id="results_wizard_content">
@@ -99,6 +106,87 @@ connect();   //connect to mysql DB
 			
 			                 <li>
 			                         <div id="results_box_A">
+			                         <?php 
+				           			 
+			                    if ($whatbudget != null)
+			                    {
+			                    	  	$prices[0] = "פחות מ 50";		// for the places dropdown boxes
+										$prices[1] = "50 -100";
+									  	$prices[2] = "100 - 200";
+										$prices[3] = "200 - 300";
+										//$prices[4] = "350-500";
+										$prices[4] = "מעל 300";
+										
+										$col="personal_price";
+										$result='';
+										
+				           			if ($whatbudget == $prices[0])
+						  			{
+						  				$result = SearchWorkshopPrice($col,0,50);
+						  			}
+						  			
+						  			if ($whatbudget == $prices[1])
+						  			{
+						  				
+						  				$result = SearchWorkshopPrice($col,50,100);
+						  			}
+						  			
+						  		  	if ($whatbudget == $prices[2])
+						  			{
+						  				
+						  				$result = SearchWorkshopPrice($col,100,200);
+						  			}
+						  		  	
+						  			if ($whatbudget == $prices[3])
+						  			{
+						  				
+						  				$result = SearchWorkshopPrice($col,200,300);
+						  			}
+						  			
+						  		  	if ($whatbudget == $prices[4])
+						  			{
+						  				
+						  				$result = SearchWorkshopPrice($col,300,5000000);
+						  			}
+		
+						 			PrintWorkshops($result);
+			                    }
+			                    
+			                    
+			                    
+			                   
+			                    if ($whattodo != null)
+			                    {
+			                    	$result='';
+			                    	$col="subject";
+			                    	$result = SearchWorkshop($col,$whattodo);
+
+						 			PrintWorkshops($result);
+			                    }
+										
+								if ($where != null)
+			                    {
+			                    	$result='';
+			                    	$col="location";
+			                    	
+			                    	if ($where == "במבנה+ממוזגמחומם")
+			                    		$result = SearchWorkshop($col,"במבנה ממוזג\מחומם");
+			                    	else
+			                    		$result = SearchWorkshop($col,$where);
+			                    	
+
+						 			PrintWorkshops($result);
+			                    }		
+										
+										
+										
+										
+										
+										
+										
+										
+										
+				           			 ?>
 				           			 
 				           			 <div id="get_details_button" onclick="location.href='index.php'"></div>
 				            		</div>
