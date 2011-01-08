@@ -162,7 +162,7 @@ include_once 'getposts.php';
                           
                         <span class="questions" id="whatbudget_Question">
                             ? מה התקציב למשתתף
-                        </span>
+                        </span> 
 			               <div id="whatbudget" class="dropdown"  onclick="show_dropdown('whatbudget_ddlist')" >
                                 <input id="whatbudget_ddtext" class="dd_text" name="whatbudget_ddtext" type="text" value=""  size="10"  readonly="readonly"  />
                                 <div id="whatbudget_ddlist" class="dd_list" onmousemove="show_dropdown('whatbudget_ddlist')" onmouseout="hide_list('whatbudget_ddlist')" >
