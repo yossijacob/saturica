@@ -39,9 +39,13 @@ SetupJqueryContactDialog();
 		<label for="email">דוא"ל</label> 
 		<input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all" /> 
 		<label for="password">טלפון</label> 
-		<input type="text" name="phone" id="phone" value="" class="text ui-widget-content ui-corner-all" /> 
+		<input type="text" name="phone" id="phone" value="" class="text ui-widget-content ui-corner-all" />
+		<label for="password">תוכן</label> 
+		<textarea rows="4" cols="47" name="content" id="content" value="" class="text ui-widget-content ui-corner-all"></textarea>
+		<br/>
+		<br/>
 	</fieldset> 
-	<input type="button" name="submit" value="קבל הצעה"/>
+	<input type="submit" value="קבל הצעה"/>
 	</form> 
 </div> 
 
