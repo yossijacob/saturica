@@ -21,9 +21,30 @@ $third_workshop = GetRecord('workshops',$third_workshop_id[1]); //get the worksh
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" type="text/css" href="style.css" />
 
+<?php 
+SetupJquery();
+SetupJqueryContactDialog();
+?>
 <title>סטוריקה - מומלצים</title>
 </head>
 <body>
+
+<div id="dialog-form" title="קבל הצעה" dir="rtl"> 
+	<p class="validateTips">כל השדות הם חובה</p> 
+ 
+	<form name="get_offer" method="post" action="getoffer.php"> 
+	<fieldset> 
+		<label for="name">שם</label> 
+		<input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all" /> 
+		<label for="email">דוא"ל</label> 
+		<input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all" /> 
+		<label for="password">טלפון</label> 
+		<input type="text" name="phone" id="phone" value="" class="text ui-widget-content ui-corner-all" /> 
+	</fieldset> 
+	<input type="button" name="submit" value="קבל הצעה"/>
+	</form> 
+</div> 
+
 	
 	<?php HeaderFunc("recommended");?>
 	<div id="recommendeds_wizard">
