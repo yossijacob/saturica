@@ -119,7 +119,13 @@ if (!is_authenticated())
 				UploadFile( $_FILES['workshoppic3']['name'],$_FILES['workshoppic3']['tmp_name'],$target_path);
 				
   			}	
-  			header('Location:recommended.php');	
+  			
+  		 ?>		
+  	 		<script type="text/javascript" language="javascript">
+   			window.location = 'http://satorika.co.il/backoffice/recommended.php';
+   			</script> 
+   		
+   			<?php 
   		 }
   		 else
   		 	{
@@ -135,8 +141,10 @@ if (!is_authenticated())
 
 		?>
 	
-	   <br/><br/> 
-	   <b> "אם ברצונך לשנות את הסדנאות המומלצות,אנא בחר סדנאות חדשות ולחץ על "בחר כמומלצים</b>
+	   <br/><br/> .
+	   <b> אם ברצונך לשנות את הסדנאות המומלצות,אנא בחר את הסדנא המומלצת החדשה
+	   <br/>
+	   "ניתן גם לבחור בסדנא מומלצת שכבר מומלצת כרגע, ולהחליף לה תמונה. לאחר בחירת הסדנאות והתמונות , אנא לחץ על "בחר כמומלצים</b>
 	   <br/>
 	   <br/>
 	   <form enctype="multipart/form-data" name="choose_recommended_form" id="choose_recommended_form" method="post" action="recommended.php">
