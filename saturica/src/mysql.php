@@ -113,11 +113,12 @@ function SearchWorkshop($column,$val)
 	//return workshops that their value at the column "$column"   =   $val
 	$index = 0;
 	$res="";
-	$query = "SELECT * FROM workshops WHERE $column = '$val'";
+	$query = "SELECT id FROM workshops WHERE $column = '$val'";
 	$result = mysql_query($query) or die(mysql_error());
 	while ($row = mysql_fetch_row($result))
 	{
-		$res[$index++] = $row; // get the current field
+		$temp = $row[0];
+		$res[$index++] = $temp; // get the current field
 	}
 	return $res;
 
@@ -188,6 +189,37 @@ function SearchWorkshopPrice($column,$lowval,$highval)
 	}
 	return $res;
 
+}
+
+
+
+//*********************************************************************
+// search at 'workshop' table all the rows that has the given values 
+function SearchAllParams_Workshop($whattodo,$where,$howlong)
+{
+	$index = 0;
+	$res="";
+
+	
+	$query = "SELECT id FROM workshops WHERE ";
+	if ($whattodo != null) $query .= "subject = '$whattodo' "; // AND
+	else $query .= "subject LIKE '%' "; // AND
+	
+	//if ($where != null) $query .= "location = ' $where '"; // AND";
+	//else $query .= "location LIKE % "; //AND
+	
+	
+	
+	
+	$result = mysql_query($query) or die(mysql_error());
+	while ($row = mysql_fetch_row($result))
+	{
+		$temp = $row[0];
+		$res[$index++] = $temp; // get the current field
+	}
+	return $res;
+		
+	
 }
 
 //*********************************************************************
