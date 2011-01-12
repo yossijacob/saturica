@@ -158,28 +158,37 @@ connect();   //connect to mysql DB
 			                    
 			                    
 			                    
-			                   
+			                    
+			                    $result = SearchAllParams_Workshop($whattodo,$where,$howlong);
+			                    PrintWorkshops($result);
+			                    /*
+			                    
+			                    
+			                  
 			                    if ($whattodo != null)
 			                    {
 			                    	$result='';
 			                    	$col="subject";
 			                    	$result = SearchWorkshop($col,$whattodo);
 
-						 			PrintWorkshops($result);
+			                    //	foreach ($result as $value)
+			                    	//echo $value;
+						 			//PrintWorkshops($result);
 			                    }
 										
 								if ($where != null)
 			                    {
-			                    	$result='';
+			                    	//$result='';
 			                    	$col="location";
 			                    	
 			                    	if ($where == "במבנה+ממוזגמחומם")
-			                    		$result = SearchWorkshop($col,"במבנה ממוזג\מחומם");
+			                    		$result += SearchWorkshop($col,"במבנה ממוזג\מחומם");
 			                    	else
-			                    		$result = SearchWorkshop($col,$where);
+			                    		$result += SearchWorkshop($col,$where);
 			                    	
-
-						 			PrintWorkshops($result);
+								foreach ($result as $value)
+			                    	echo $value;
+						 			//PrintWorkshops($result);
 			                    }	
 
 			                    if ($howlong != null)
@@ -195,7 +204,7 @@ connect();   //connect to mysql DB
 										
 										
 										
-										
+								*/		
 										
 										
 										
