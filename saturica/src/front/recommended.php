@@ -9,10 +9,16 @@ connect();   //connect to mysql DB
 
 
 $first_workshop_id = GetRecord('recommendeds',1);	//get id of the recommended workshop
+$first_pic_workshop_recommended = $first_workshop_id[2];	//the picture from recommendeds table 
 $first_workshop = GetRecord('workshops',$first_workshop_id[1]); //get the workshop
+
 $second_workshop_id = GetRecord('recommendeds',2);
+$second_pic_workshop_recommended = $second_workshop_id[2];	//the picture from recommendeds table 
 $second_workshop = GetRecord('workshops',$second_workshop_id[1]); //get the workshop
+
+
 $third_workshop_id = GetRecord('recommendeds',3);
+$third_pic_workshop_recommended = $third_workshop_id[2];	//the picture from recommendeds table 
 $third_workshop = GetRecord('workshops',$third_workshop_id[1]); //get the workshop
 ?>
 <html>
@@ -69,19 +75,29 @@ SetupJqueryContactDialog();
         
         <div id="recommended_A_image">
 		<?php
-		echo "<img src='recommended_pic/$first_workshop[3]' border=0 width=240>";
+		//echo "<img src='recommended_pic/$first_pic_workshop_recommended' border=0 width=240>";
+		//echo "<img src='recommended_pic/$first_workshop[3]' border=0 width=240>";
+		
+		//for testing at home - different folders. the path is below : 
+		echo "<img src='../recommended_pic/$first_pic_workshop_recommended' border=0 width=240>";
 		?>
 		</div>
 
 		<div id="recommended_B_image">
 		<?php
-		echo "<img src='recommended_pic/$second_workshop[3]' border=0 width=240>";
+		//echo "<img src='recommended_pic/$second_workshop[3]' border=0 width=240>";
+		//below is path at home 
+		echo "<img src='../recommended_pic/$second_pic_workshop_recommended' border=0 width=240>";
+		
 		?>
 		</div>
 		
 		<div id="recommended_C_image">
 		<?php
-		echo "<img src='recommended_pic/$third_workshop[3]' border=0 width=240>";
+		//echo "<img src='recommended_pic/$third_workshop[3]' border=0 width=240>";
+		//below is path at home 
+		echo "<img src='../recommended_pic/$third_pic_workshop_recommended' border=0 width=240>";
+		
 		?>
 		</div>
         
