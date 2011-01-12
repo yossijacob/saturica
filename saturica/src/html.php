@@ -182,12 +182,12 @@ function PrintWorkshops($result)
  			{
  				foreach ($result as $value)
  				{
+ 					echo "<div style='text-align:right;'>";
  					echo "<br/>";
- 					echo "  שם הסדנא: $value[2]  "; 
+ 					echo "<span style='font-size: 0.5cm; font-weight:bold;'>$value[2]</span> "; 
  					echo "<br/>";
- 					echo "  נושא הסדנא: $value[4]  "; 
- 					echo "<br/>";
- 					echo "  סגנון הסדנא: $value[5]  "; 
+ 					echo " נושא : $value[4]  "; 
+ 					echo "סגנון : $value[5]  "; 
  					echo "<br/>";
  					echo "  מחיר קבוע: $value[6]  "; 	
  					echo "<br/>";
@@ -196,6 +196,7 @@ function PrintWorkshops($result)
  					echo "  תאור הסדנא: $value[8]  "; 	
  					echo "<br/>";
  					
+ 					echo "</div>";
  					if ($value[3] !="")
  						echo "<img src='workshop_pic/$value[3]' border=0 >";
  					echo "<br/>";
