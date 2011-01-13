@@ -195,18 +195,28 @@ function SearchWorkshopPrice($column,$lowval,$highval)
 
 //*********************************************************************
 // search at 'workshop' table all the rows that has the given values 
-function SearchAllParams_Workshop($whattodo,$where,$howlong)
+function SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$howmany)
 {
 	$index = 0;
 	$res="";
 
 	
 	$query = "SELECT id FROM workshops WHERE ";
-	if ($whattodo != null) $query .= "subject = '$whattodo' "; // AND
-	else $query .= "subject LIKE '%' "; // AND
+	if ($whattodo != null) $query .= "subject = '$whattodo' AND "; 
+	else $query .= "subject LIKE '%' AND "; 
 	
-	//if ($where != null) $query .= "location = ' $where '"; // AND";
-	//else $query .= "location LIKE % "; //AND
+	if ($where != null) $query .= "location = '$where' AND "; 
+	else $query .= "location LIKE '%' AND "; 
+	
+	if ($howlong != null) $query .= "time_frame = '$howlong' AND "; 
+	else $query .= "time_frame LIKE '%' AND "; 
+	
+	if ($lowval != null) $query .= "personal_price BETWEEN $lowval AND $highval AND ";
+	else $query .= "personal_price LIKE '%' AND "; 
+	
+	if ($howmany != null) $query .= "minimum_size <= $howmany AND maximum_size >= $howmany  ";
+	else $query .= "minimum_size LIKE '%' "; 
+	
 	
 	
 	
@@ -217,10 +227,30 @@ function SearchAllParams_Workshop($whattodo,$where,$howlong)
 		$temp = $row[0];
 		$res[$index++] = $temp; // get the current field
 	}
-	return $res;
-		
 	
+	
+	if ($res != "")	//we found requested workshops
+	{
+		$res = array_unique($res); 	//remove duplicate workshops (so we wont show the same workshop more then one time) 
+		$index = 0;
+		$col = "id";
+		
+		//get the workshope by their id that we found.
+		foreach ($res as $selectedworkshop)
+		{	
+			$query = "SELECT * FROM workshops WHERE $col=$selectedworkshop ";
+			$result = mysql_query($query) or die(mysql_error());
+			while ($row = mysql_fetch_row($result))
+			{
+				$unique_res[$index++] = $row; // get the current field
+			}
+		}
+	}
+
+	return $unique_res;
+
 }
+
 
 //*********************************************************************
 /*
