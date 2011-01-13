@@ -16,9 +16,9 @@ function ListFiles($folder,$mask)
 function InitGallery()
 {
 	?>
+	<link rel="stylesheet" type="text/css" href="js/adgallery/jquery.ad-gallery.css"/>
 	<script type="text/javascript" src="js/adgallery/jquery.min.js"></script>
 	<script type="text/javascript" src="js/adgallery/jquery.ad-gallery.js"></script>
-	<link rel="stylesheet" type="text/css" href="js/adgallery/jquery.ad-gallery.css"/>
 	<script type="text/javascript">
 	  	$(function() 
 	  	{
@@ -57,7 +57,6 @@ function InitGallery()
 	</script>
 	<?php 
 }
-
 
 
 /**

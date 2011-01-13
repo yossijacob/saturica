@@ -142,8 +142,8 @@
       overflow: hidden;
       width: 100%;
       /*background: #759EC3;*/
-      -moz-border-radius: 5px 5px 5px 5px; /* tl tr br bl */
-	  border-radius: 5px 5px 5px 5px;
+      /*-moz-border-radius: 5px 5px 5px 5px; /* tl tr br bl */
+	  /*border-radius: 5px 5px 5px 5px;*/
     }
     
       .ad-gallery .ad-thumbs .ad-thumb-list {
