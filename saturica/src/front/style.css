@@ -1438,13 +1438,52 @@ z-index:1;
 	background-color: #b8a47f;
 }
 
+#gallery_head
+{
+	width: 959px;
+	height:149px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	background:url(images/gallery_header_bg.jpg) no-repeat;
+}
+
+#gallery_head_content
+{
+	position: absolute;
+	font-size:22px;
+	font-family:Tahoma;
+	color: #514E47;
+	top:30px;
+	right:25px;
+}
+
+#gallery_head_content2
+{
+	position: absolute;
+	font-size:16px;
+	font-family:Tahoma;
+	color: #514E47;
+	top:100px;
+	right:50px;
+}
+
+#gallery_main
+{
+	width: 959px;
+	padding-top:20px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	background:url(images/gallery_main_bg.jpg) no-repeat;
+}
+
 #channel_div
 {
 	width: 959px;
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
-	background:url(images/customized_main_bg.jpg) no-repeat;
 	padding-top:20px; 
 }
 
@@ -1458,15 +1497,19 @@ z-index:1;
 
 #gallery_div
 {
-	width: 959px;
+	width: 699px;
+	height:435px;
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
-	background:url(images/customized_main_bg.jpg) no-repeat;
+	background:url(images/stills_main_bg.jpg) no-repeat;
 }
 
   #gallery {
-    padding: 30px;
+    width: 699px;
+    height:435px;
+    padding-top:15px;
+    /*padding: 30px;*/
     position: relative;
 	margin-left: auto;
 	margin-right: auto;
@@ -1483,6 +1526,8 @@ z-index:1;
     width: 640px;
     padding: 10px;
     overflow: hidden;
+    font-size:12px;
+	font-family:Tahoma;
   }
     #descriptions .ad-image-description {
       position: absolute;
