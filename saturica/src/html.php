@@ -210,5 +210,33 @@ function PrintWorkshops($result)
  				 }
 }
 //************************************************************************
+function Print_Single_Workshop($value)
+{
+	
+					
+					echo "<div style='text-align:right; height:147px;padding-right:20px;'>";
+ 					echo "<br/>";
+ 					echo "<span style='font-size: 0.5cm; font-weight:bold;'>$value[2]</span> "; 
+ 					echo "<br/>";
+ 					echo " נושא : $value[4]  "; 	
+ 					echo "סגנון : $value[5]  "; 
+ 					echo "<br/>";
+ 					echo "  מחיר קבוע: $value[6]  "; 	
+ 					echo "<br/>";
+ 					echo "  מחיר למשתתף: $value[7]  "; 
+ 					echo "<br/>";
+ 					echo "  תאור הסדנא: $value[8]  "; 	
+ 					echo "<br/>";
+ 					echo "</div>";
+ 					if ($value[3] !="")
+ 						echo "<img src='workshop_pic/$value[3]' border=0 >";
+ 					echo "<br/>";
+ 						
 
+}
+
+
+
+
+//************************************************************************
 ?>
