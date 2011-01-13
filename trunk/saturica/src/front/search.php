@@ -42,9 +42,10 @@ connect();   //connect to mysql DB
 <body>
 	<?php
 	HeaderFunc('empty');
+	
 	//get the input to search at the DB 
-	$whatodo = $_GET['whatodo_ddtext'];
-  	$whatodo = CleanText($whatodo);
+	$whattodo = $_GET['whatodo_ddtext'];
+  	$whattodo = CleanText($whattodo);
   	
   	$howmany = $_GET['howmany_text'];
   	$howmany = CleanText($howmany);
@@ -58,16 +59,69 @@ connect();   //connect to mysql DB
     $whatbudget = $_GET['whatbudget_ddtext'];
   	$whatbudget = CleanText($whatbudget);
 
-  	$whattodo = $_GET['whatodo_ddtext'];
-  	$whattodo = CleanText($whattodo);
+    $lowval = null;
+    $highval = null;
+  
   	
-  	$where = $_GET['where_ddtext'];
-  	$where = CleanText($where);
+ 
   	
-  	$howlong = $_GET['howlong_ddtext'];
-  	$howlong = CleanText($howlong);
+	 
+  	$i = 0; //for the foreach , and the boxA or boxB
   	
-  	
+     if ($whatbudget != null)
+     {
+          $prices[0] = "פחות מ 50";		// for the places dropdown boxes
+		  $prices[1] = "50 -100";
+		  $prices[2] = "100 - 200";
+		  $prices[3] = "200 - 300";
+		  //$prices[4] = "350-500";
+		  $prices[4] = "מעל 300";
+					
+		  $col="personal_price";
+		  $result='';
+
+					
+           	if ($whatbudget == $prices[0])
+  			{
+  				$lowval = 0;
+  				$highval = 50;
+  				
+  			}
+  			
+  			if ($whatbudget == $prices[1])
+  			{
+  				$lowval = 50;
+  				$highval = 100;
+  				
+  				
+  			}
+  			
+  		  	if ($whatbudget == $prices[2])
+  			{
+  				$lowval= 100;
+  				$highval = 200;
+  			}
+  		  	
+  			if ($whatbudget == $prices[3])
+  			{
+  				$lowval = 200;
+  				$highval = 300;		
+  			}
+  			
+  		  	if ($whatbudget == $prices[4])
+  			{
+  				$lowval = 300;
+  				$highval = 5000000;
+  			}
+
+ 	}
+                    
+          
+     $result = SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$howmany);
+
+     
+
+
 	?>
 	<div id="results_wizard">
 	 <div id="results_wizard_content">
@@ -108,134 +162,26 @@ connect();   //connect to mysql DB
 				                     </div>
 			                 </li> 
 			
-			                 <li>
-			                         <div id="results_box_A">
-			                         <?php 
-				           			 
-			                    if ($whatbudget != null)
-			                    {
-			                    	  	$prices[0] = "פחות מ 50";		// for the places dropdown boxes
-										$prices[1] = "50 -100";
-									  	$prices[2] = "100 - 200";
-										$prices[3] = "200 - 300";
-										//$prices[4] = "350-500";
-										$prices[4] = "מעל 300";
-										
-										$col="personal_price";
-										$result='';
-										
-				           			if ($whatbudget == $prices[0])
-						  			{
-						  				$result = SearchWorkshopPrice($col,0,50);
-						  			}
-						  			
-						  			if ($whatbudget == $prices[1])
-						  			{
-						  				
-						  				$result = SearchWorkshopPrice($col,50,100);
-						  			}
-						  			
-						  		  	if ($whatbudget == $prices[2])
-						  			{
-						  				
-						  				$result = SearchWorkshopPrice($col,100,200);
-						  			}
-						  		  	
-						  			if ($whatbudget == $prices[3])
-						  			{
-						  				
-						  				$result = SearchWorkshopPrice($col,200,300);
-						  			}
-						  			
-						  		  	if ($whatbudget == $prices[4])
-						  			{
-						  				
-						  				$result = SearchWorkshopPrice($col,300,5000000);
-						  			}
-		
-						 			PrintWorkshops($result);
-			                    }
-			                    
-			                    
-			                    
-			                    
-			                    $result = SearchAllParams_Workshop($whattodo,$where,$howlong);
-			                    PrintWorkshops($result);
-			                    /*
-			                    
-			                    
-			                  
-			                    if ($whattodo != null)
-			                    {
-			                    	$result='';
-			                    	$col="subject";
-			                    	$result = SearchWorkshop($col,$whattodo);
-
-			                    //	foreach ($result as $value)
-			                    	//echo $value;
-						 			//PrintWorkshops($result);
-			                    }
-										
-								if ($where != null)
-			                    {
-			                    	//$result='';
-			                    	$col="location";
-			                    	
-			                    	if ($where == "במבנה+ממוזגמחומם")
-			                    		$result += SearchWorkshop($col,"במבנה ממוזג\מחומם");
-			                    	else
-			                    		$result += SearchWorkshop($col,$where);
-			                    	
-								foreach ($result as $value)
-			                    	echo $value;
-						 			//PrintWorkshops($result);
-			                    }	
-
-			                    if ($howlong != null)
-			                    {
-			                    	$result='';
-			                    	$col="time_frame";
-			                    	
-			                    		$result = SearchWorkshop($col,$howlong);
-			                    	
-
-						 			PrintWorkshops($result);
-			                    }
-										
-										
-										
-								*/		
-										
-										
-										
-										
-										
-				           			 ?>
-				           			 
-				           			 <div id="get_details_button" onclick="location.href='index.php'"></div>
-				            		</div>
-				           	 </li>
-				           	 
-				             <li>
-			                         <div id="results_box_B">
-				           			  
-				           			 <div id="get_details_button" onclick="location.href='index.php'"></div>
-				           			 
-				            		</div>
-			                   	  </li>
-			                   <li>
-			                         <div id="results_box_A">
-				           			 
-				           			 <div id="get_details_button" onclick="location.href='index.php'"></div>
-				            		</div>
-				            	</li>
-				            	<li>
-			                         <div id="results_box_B">
-				           			 
-				           			 <div id="get_details_button" onclick="location.href='index.php'"></div>
-				            		</div>
-			                   	  </li>
-			                   	  
+			                
+			                
+			                <?php
+			                if ($result != null)
+			                     foreach ($result as $print_workshop)
+							     {
+							     	echo "<li>";
+							     	if ( ($i % 2) == 0)
+							     		echo "<div id='results_box_A'>";
+							     	else echo "<div id='results_box_B'>";
+									
+							     	Print_Single_Workshop($print_workshop);
+							     	echo "<div id='get_details_button' onclick='location.href='index.php''></div>";
+			                        echo "</div>";
+			                         $i++; 
+									echo "</li>";       
+							      }
+							  ?>		                
+			                
+  
 			                   	  
 			               </ul> 
                		   </div>  
