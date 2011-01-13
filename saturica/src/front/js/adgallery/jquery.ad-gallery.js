@@ -742,9 +742,11 @@
       this.settings = settings;
     },
     create: function() {
-      this.start_link = $('<span class="ad-slideshow-start">'+ this.settings.start_label +'</span>');
-      this.stop_link = $('<span class="ad-slideshow-stop">'+ this.settings.stop_label +'</span>');
-      this.countdown = $('<span class="ad-slideshow-countdown"></span>');
+      /*this.start_link = $('<span class="ad-slideshow-start">'+ this.settings.start_label +'</span>');
+      this.stop_link = $('<span class="ad-slideshow-stop">'+ this.settings.stop_label +'</span>');*/
+      this.start_link = $('<div class="ad-slideshow-start"></span></div>');
+      this.stop_link = $('<div class="ad-slideshow-stop"></div>');
+      this.countdown = $('<div class="ad-slideshow-countdown"></div>');
       this.controls = $('<div class="ad-slideshow-controls"></div>');
       this.controls.append(this.start_link).append(this.stop_link).append(this.countdown);
       this.countdown.hide();
