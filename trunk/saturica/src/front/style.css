@@ -309,7 +309,7 @@ right: 1px;
 
 #results_title
 {
-	position:absolute;
+	height:147px;
 	top:35px;
 	right:50px;
 	color:#514E47;
@@ -319,7 +319,7 @@ right: 1px;
 
 #results_title_small
 {
-	position:absolute;
+	height:147px;
 	top:32px;
 	right:0px;
 	color:#514E47;
