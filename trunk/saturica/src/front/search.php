@@ -1,9 +1,10 @@
 ﻿<!DOCTYPE html>
-<?php 
+<?php
+ 
 include_once 'functions.php';
-include_once '../connect.php';
-include_once '../mysql.php';		//change to the correct location ! 
-include_once '../html.php';			//for the printworkshop function. maybe would be better to place the func at functions.php
+include_once 'backoffice/connect.php';
+include_once 'backoffice/mysql.php';		//change to the correct location ! 
+include_once 'backoffice/html.php';			//for the printworkshop function. maybe would be better to place the func at functions.php
 
 connect();   //connect to mysql DB
 ?>
