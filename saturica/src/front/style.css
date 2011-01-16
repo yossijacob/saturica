@@ -320,11 +320,36 @@ right: 1px;
 #results_title_small
 {
 	height:147px;
-	top:32px;
+	top:35px;
 	right:0px;
 	color:#514E47;
 	font-size:16px;
 	font-family:Tahoma;
+}
+
+#results_title_text_A
+{
+	position:absolute;
+	top:25px;
+	right:22px;
+	color:#514E47;
+	font-size:22px;
+	font-family:Tahoma;
+	text-align:right;	
+	
+}
+
+
+#results_title_text_B
+{
+	position:absolute;
+	top:65px;
+	right:55px;
+	color:#514E47;
+	font-size:15px;
+	font-family:Tahoma;
+	text-align:right;	
+	
 }
 
 #search_results_content
@@ -348,6 +373,25 @@ right: 1px;
 	
 }
 
+
+#search_harder_button
+{
+	background:url("images/additional_search_button_idle.jpg") no-repeat;
+	height:23px;
+	width:100px;
+	position:absolute;
+	top:105px;
+	left:220px;
+	cursor:pointer;
+
+}
+
+
+#search_harder_button:hover
+{
+	
+}
+	
 
 #results_box_A
 {
@@ -1326,6 +1370,7 @@ z-index:1;
 
 	position:relative;
 	left:100px;
+	width:162px;
 	font-size:14px;
 	font-family:Tahoma;
 	text-align:left;
@@ -1337,6 +1382,7 @@ z-index:1;
 #NextStyle a
 {
 	position:relative;
+	width:162px;
 	left:100px;
 	color:white;
 	text-decoration:none;
@@ -1346,6 +1392,7 @@ z-index:1;
 #NextStyle A:hover
 {
 	position:relative;
+	width:162px;
 	left:100px;
 	text-decoration:underline;
 }
@@ -1353,7 +1400,8 @@ z-index:1;
 #PrevStyle
 {
 	position:relative;
-	right:100px;
+	width:162px;
+	left:500px;
 	font-size:14px;
 	font-family:Tahoma;
 	text-align:right ;
@@ -1364,8 +1412,9 @@ z-index:1;
 
 #PrevStyle A
 {
+	width:162px;
 	position:relative;
-	right:100px;
+	left:500px;
 	color:white;
 	text-decoration:none;
 }
