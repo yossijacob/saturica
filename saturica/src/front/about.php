@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <?php 
 
-include_once 'mysql.php';
-include_once 'connect.php';
+include_once 'backoffice/mysql.php';	
+include_once 'backoffice/connect.php';
 include_once 'functions.php';
-
-
-
+		
 ?>
 <html>
 <head>
