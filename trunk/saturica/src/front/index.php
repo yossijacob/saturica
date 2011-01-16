@@ -114,7 +114,15 @@ include_once 'getposts.php';
                         </span>
 			            <div id="howmany">
                             <input class="howmany_text" name="howmany_text" type="text" value=""  size="10"/>
-                        </div>                                 
+                        </div>    
+                        
+                      
+			            <div id="resset">
+                            <input class="Result_Set" name="Result_Set" type="text" value="0" style="display:none;"/>
+                        </div>  
+                        
+                        
+                                                     
                          
                         <span class="questions" id="where_Question">
                             ? היכן רוצים את הפעילות
