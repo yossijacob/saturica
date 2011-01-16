@@ -214,22 +214,25 @@ function Print_Single_Workshop($value)
 {
 	
 					
-					echo "<div style='text-align:right; height:147px;padding-right:20px;'>";
+					echo "<div style='text-align:right; height:147px; font-size:13px;'>";
  					echo "<br/>";
- 					echo "<span style='font-size: 0.5cm; font-weight:bold;'>$value[2]</span> "; 
+ 					echo "<span style='font-size:22px; color:rgb(81,78,71); font-family:'Tahoma'; '>$value[2]</span> "; 
  					echo "<br/>";
- 					echo " נושא : $value[4]  "; 	
- 					echo "סגנון : $value[5]  "; 
- 					echo "<br/>";
- 					echo "  מחיר קבוע: $value[6]  "; 	
- 					echo "<br/>";
- 					echo "  מחיר למשתתף: $value[7]  "; 
- 					echo "<br/>";
- 					echo "  תאור הסדנא: $value[8]  "; 	
+ 					echo "<span style='font-size:13px; color:red; font-family:'Tahoma'; '> נושא : </span> "; 
+ 					echo " $value[4]  &nbsp &nbsp &nbsp &nbsp"; 
+
+ 					echo "<span style='font-size:13px; color:red; font-family:'Tahoma'; '> סגנון : </span> "; 
+ 					echo "$value[5]  &nbsp &nbsp &nbsp &nbsp"; 
+ 					
+ 					echo "<span style='font-size:13px; color:red; font-family:'Tahoma'; '> מסגרת-זמן : </span> "; 
+ 					echo "$value[18]  "; 
+ 					
+ 					
+ 					echo "<br/><br/>";
+ 					echo "<span style='font-size:15px; font-family:'Tahoma'; '> $value[8] </span> ";
+ 					//echo "$value[8]  "; 	
  					echo "<br/>";
  					echo "</div>";
- 					if ($value[3] !="")
- 						echo "<img src='workshop_pic/$value[3]' border=0 >";
  					echo "<br/>";
  						
 
