@@ -122,6 +122,7 @@ connect();   //connect to mysql DB
 
  	//just for counting the number of results
  	$result = SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$howmany,0,500);
+ 	if ($result != null)
  	foreach ($result as $print_workshop)
  		$Total++;
  	
@@ -154,9 +155,7 @@ connect();   //connect to mysql DB
                                 </div>
                              </div>
                        </div>
-		
-		
-		
+
 		
 				       <div>  
 				           <ul id="results_boxes">
@@ -170,9 +169,7 @@ connect();   //connect to mysql DB
 				                        </div> 
 				                     </div>
 			                 </li> 
-			
-			                
-			                
+				                
 			                <?php
 			                if ($result != null)
 			                     foreach ($result as $print_workshop)
@@ -181,50 +178,73 @@ connect();   //connect to mysql DB
 							     	if ( ($i % 2) == 0)
 							     		echo "<div id='results_box_A'>";
 							     	else echo "<div id='results_box_B'>";
-									
+							     	echo "<div id='results_workshop_img_box'>";
+							     	 		if ($print_workshop[3] !="")
+							     	 		{
+							     	 			echo "<br/>";
+ 												echo "<img src='../workshop_pic/$print_workshop[3]' border=0 height=115px width=210px;>";
+							     	 		}
+							     	echo "</div>";
+							     	
+									echo "<div id='results_workshop_text_box'>";
 							     	Print_Single_Workshop($print_workshop);
+							     	echo "</div>";
 							     	echo "<div id='get_details_button' onclick='location.href='index.php''></div>";
 			                        echo "</div>";
 			                         $i++; 
 									echo "</li>";       
-							      }
-							 
-							  
-							  //maybe need  to be under the li div div......
+							      }				      			  	                					                
+					   ?>	
+			                   	  
+			               </ul> 
+               		   </div>   
+              </div> 
+            
+              	<div id='NextPrevious'> &nbsp </div>
+              		
+          </div>
+      </div>
+	
+		
+		
+		<?php 
+				//	echo "<div id='NextPrevious' >vsdvdvd   </div>";
+		
+				  //maybe need  to be under the li div div......
 							 // Create Next / Prev Links and $Result_Set Value 
 					if ($Total>0) 
 					   { 
 					   if ($Result_Set<$Total && $Result_Set>0) 
 					      { 
-					      $Res1=$Result_Set-$Per_Page; 
-					      echo "<A HREF=\"search.php?Result_Set=$Res1&whatodo_ddtext=$whattodo&howmany_text=$howmany&where_ddtext=$where&howlong_ddtext=$howlong&whatbudget_ddtext=$whatbudget\"><< Previous Page</A>&nbsp;"; 
+					      echo "<div id='PrevStyle' >";
+					      $Res1=$Result_Set-$Per_Page;  
+					      echo "<A HREF=\"search.php?Result_Set=$Res1&whatodo_ddtext=$whattodo&howmany_text=$howmany&where_ddtext=$where&howlong_ddtext=$howlong&whatbudget_ddtext=$whatbudget\"> קודם >> </A>&nbsp;"; 
+					      echo"</div>";
 					      } 
 					   if ($Result_Set>=0 && $Result_Set<$Total) 
 					      { 
 					      $Res1=$Result_Set+$Per_Page; 
 					      if ($Res1<$Total) 
 					         { 
-					         echo "&nbsp;<A HREF=\"search.php?Result_Set=$Res1&whatodo_ddtext=$whattodo&howmany_text=$howmany&where_ddtext=$where&howlong_ddtext=$howlong&whatbudget_ddtext=$whatbudget\">Next Page >></A>"; 
+					         echo "<div id='NextStyle' >";  	
+					         echo "&nbsp;<A HREF=\"search.php?Result_Set=$Res1&whatodo_ddtext=$whattodo&howmany_text=$howmany&where_ddtext=$where&howlong_ddtext=$howlong&whatbudget_ddtext=$whatbudget\"> <<  הבא </A>"; 
+					         echo"</div>";
 					         } 
 					      } 
 					   }   
-												  	                
-								                
-					   ?>	
-			                   	  
-			               </ul> 
-               		   </div>  
+	
+		?>
 		
 		
 		
-		</div>
+		
+		
+		
+		
 		
 		
 	
-	</div>
-		
 
-	</div>
 	
 	
 
