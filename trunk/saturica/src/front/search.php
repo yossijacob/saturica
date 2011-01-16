@@ -61,9 +61,13 @@ connect();   //connect to mysql DB
 
     $lowval = null;
     $highval = null;
+    
+    $Per_Page = 5;  // number of results per page.
   
-  	
+  	$Result_Set = $_GET['Result_Set'];  // start display input from the 'result_set' workshop.
+  	$Result_Set = CleanText($Result_Set);
  
+  	$Total = 0;
   	
 	 
   	$i = 0; //for the foreach , and the boxA or boxB
@@ -115,10 +119,15 @@ connect();   //connect to mysql DB
   			}
 
  	}
-                    
-          
-     $result = SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$howmany);
 
+ 	//just for counting the number of results
+ 	$result = SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$howmany,0,500);
+ 	foreach ($result as $print_workshop)
+ 		$Total++;
+ 	
+          
+     $result = SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$howmany,$Result_Set,$Per_Page);
+	  
      
 
 
@@ -179,9 +188,29 @@ connect();   //connect to mysql DB
 			                         $i++; 
 									echo "</li>";       
 							      }
-							  ?>		                
-			                
-  
+							 
+							  
+							  //maybe need  to be under the li div div......
+							 // Create Next / Prev Links and $Result_Set Value 
+					if ($Total>0) 
+					   { 
+					   if ($Result_Set<$Total && $Result_Set>0) 
+					      { 
+					      $Res1=$Result_Set-$Per_Page; 
+					      echo "<A HREF=\"search.php?Result_Set=$Res1&whatodo_ddtext=$whattodo&howmany_text=$howmany&where_ddtext=$where&howlong_ddtext=$howlong&whatbudget_ddtext=$whatbudget\"><< Previous Page</A>&nbsp;"; 
+					      } 
+					   if ($Result_Set>=0 && $Result_Set<$Total) 
+					      { 
+					      $Res1=$Result_Set+$Per_Page; 
+					      if ($Res1<$Total) 
+					         { 
+					         echo "&nbsp;<A HREF=\"search.php?Result_Set=$Res1&whatodo_ddtext=$whattodo&howmany_text=$howmany&where_ddtext=$where&howlong_ddtext=$howlong&whatbudget_ddtext=$whatbudget\">Next Page >></A>"; 
+					         } 
+					      } 
+					   }   
+												  	                
+								                
+					   ?>	
 			                   	  
 			               </ul> 
                		   </div>  
