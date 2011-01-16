@@ -155,21 +155,26 @@ connect();   //connect to mysql DB
 	                                </div>
                                 </div>
                              </div>
+                             </form>
                        </div>
 
 		
-				       <div>  
-				           <ul id="results_boxes">
-				        	<div id="search_harder_button" onclick="location.href='index.php'"></div>
+				      
+				       
+				       <div id="search_harder_button" onclick="location.href='index.php'"> </div>
 				           
-				             <li> 
-					                <div id="results_title">
-				                        :אלה הפעילויות המתאימות לבחירה שלך
-				                        <div id="results_title_small">
-				                        </br> </br> ?רוצה למקד את החיפוש עוד יותר
-				                        </div> 
-				                     </div>
-			                 </li> 
+				        	
+				        	
+				           
+				             
+		                <div id="results_title">
+	                        :אלה הפעילויות המתאימות לבחירה שלך
+	                        <div id="results_title_small">
+	                        <br/> <br/> ?רוצה למקד את החיפוש עוד יותר
+	                        </div> 
+	                     </div>
+	                     
+			                <ul id="results_boxes">
 				                
 			                <?php
 			                if ($result != null)
@@ -198,10 +203,10 @@ connect();   //connect to mysql DB
 					   ?>	
 			                   	  
 			               </ul> 
-               		   </div>   
+               		      
               </div> 
             
-              	<div id='NextPrevious'> &nbsp </div>
+              	<div id='NextPrevious'> &nbsp; </div>
               		
           </div>
       </div>
@@ -253,7 +258,7 @@ connect();   //connect to mysql DB
 	</div>
 	<div id="buttom_search">
 	<div id="buttom_search_content">
-	</br>
+	<br/>
 	?לא מצאת את מה שחיפשת
 	<div id="buttom_search_button" onclick="location.href='index.php'"></div>
 	<div id="buttom_contact_button" onclick="location.href='contact.php'"></div>
