@@ -389,7 +389,15 @@ right: 1px;
 
 #search_harder_button:hover
 {
-	
+	background:url("images/additional_search_button_hover.jpg") no-repeat;
+	height:23px;
+	width:100px;
+	position:absolute;
+	top:105px;
+	left:220px;
+	cursor:pointer;
+
+
 }
 	
 
