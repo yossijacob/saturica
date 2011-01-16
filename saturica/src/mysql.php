@@ -195,10 +195,11 @@ function SearchWorkshopPrice($column,$lowval,$highval)
 
 //*********************************************************************
 // search at 'workshop' table all the rows that has the given values 
-function SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$howmany)
+function SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$howmany,$Result_Set,$Per_Page)
 {
 	$index = 0;
 	$res="";
+	$unique_res="";
 
 	
 	$query = "SELECT id FROM workshops WHERE ";
@@ -216,9 +217,16 @@ function SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$ho
 	
 	if ($howmany != null) $query .= "minimum_size <= $howmany AND maximum_size >= $howmany  ";
 	else $query .= "minimum_size LIKE '%' "; 
-	
-	
-	
+
+		
+	if (!$Result_Set) 
+	   { 
+	   $Result_Set=0; 
+	   $query.=" LIMIT $Result_Set, $Per_Page"; 
+	   }else 
+	   { 
+	   $query.=" LIMIT $Result_Set, $Per_Page"; 
+	   } 
 	
 	
 	$result = mysql_query($query) or die(mysql_error());
