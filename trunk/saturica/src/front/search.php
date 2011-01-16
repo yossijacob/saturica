@@ -168,9 +168,13 @@ connect();   //connect to mysql DB
 				           
 				             
 		                <div id="results_title">
+		                    <div id="results_title_text_A">
 	                        :אלה הפעילויות המתאימות לבחירה שלך
+	                        </div>
 	                        <div id="results_title_small">
+	                        <div id="results_title_text_B">
 	                        <br/> <br/> ?רוצה למקד את החיפוש עוד יותר
+	                        </div> 
 	                        </div> 
 	                     </div>
 	                     
