@@ -514,7 +514,321 @@ right: 1px;
 	text-align:right;
 }
 
+/*------------ CONTACT US -------------------*/
 
+
+#contact_us_main
+{
+	height:620px;
+	background-color: #B8A47F;
+
+}
+
+
+#contact_us_main_title
+{	
+	
+	height:149px;
+	position:relative;
+	
+	width:959px;
+	margin-left:auto;
+	margin-right:auto;
+
+	background:url("images/header_bg.jpg") no-repeat;
+}
+
+#contact_us_title
+{
+	position:absolute;
+	top:35px;
+	right:35px;
+	color:#514E47;
+	font-size:22px;
+	font-family:Tahoma;
+}
+
+
+#contact_us_title_B
+{
+	position:absolute;
+	top:95px;
+	right:50px;
+	color:#514E47;
+	font-size:16px;
+	font-family:Tahoma;
+	text-align:right;
+}
+
+
+#contact_us_details
+{
+	
+	background:url("images/main_bg.jpg") no-repeat;
+	
+	height:470px;
+	position:relative;
+	
+	width:959px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#contact_us_text
+{
+	
+	position:absolute;
+	top:65px;
+	right:75px;
+	color:white;
+	font-size:14px;
+	font-family:Tahoma;
+
+}
+
+
+
+#text_must_insert
+{
+	position:absolute;
+	width:60px;
+	right:15px;
+	text-align:right;
+	color:white;
+	font-size:14px;
+	font-family:Tahoma;
+	
+}
+	
+
+#client_name
+{
+	position:absolute;
+	width:150px;
+	right:15px;
+	text-align:right;
+	color:white;
+	font-size:14px;
+	font-family:Tahoma;
+	font-weight:bold;
+
+}
+
+#client_name_A
+{
+	position:absolute;
+	right:110px;
+	
+}
+
+.client_name_box
+{
+	background:url(images/text_box_small.jpg) no-repeat;
+	height:31px;
+	width:265px;
+	border:none;
+	direction:rtl;
+	color:#514E47;
+}
+	
+
+
+#company_name
+{
+	position:absolute;
+	width:150px;
+	right:15px;
+	top:45px;
+	text-align:right;
+	color:white;
+	font-size:14px;
+	font-family:Tahoma;
+	font-weight:bold;
+
+}
+
+#company_name_A
+{
+	position:absolute;
+	right:110px;
+	top:45px;
+	
+}
+
+.company_name_box
+{
+	background:url(images/text_box_small.jpg) no-repeat;
+	height:31px;
+	width:265px;
+	border:none;
+	direction:rtl;
+	color:#514E47;
+	top:45px;
+}	
+	
+	
+
+#e_mail_contact
+{
+	position:absolute;
+	width:150px;
+	right:15px;
+	top:90px;
+	text-align:right;
+	color:white;
+	font-size:14px;
+	font-family:Tahoma;
+	font-weight:bold;
+
+}
+
+#e_mail_contact_A
+{
+	position:absolute;
+	right:110px;
+	top:90px;
+	
+}
+
+.e_mail_contact_box
+{
+	background:url(images/text_box_small.jpg) no-repeat;
+	height:31px;
+	width:265px;
+	border:none;
+	direction:rtl;
+	color:#514E47;
+	top:90px;
+}	
+	
+	
+#text_must_insert_email
+{
+	position:absolute;
+	top:92px;
+	width:60px;
+	right:15px;
+	text-align:right;
+	color:white;
+	font-size:14px;
+	font-family:Tahoma;
+	
+}
+	
+
+
+#subject_contact
+{
+	position:absolute;
+	width:150px;
+	right:15px;
+	top:135px;
+	text-align:right;
+	color:white;
+	font-size:14px;
+	font-family:Tahoma;
+	font-weight:bold;
+
+}
+
+#subject_contact_A
+{
+	position:absolute;
+	right:110px;
+	top:135px;
+	
+}
+
+.subject_contact_box
+{
+	background:url(images/text_box_small.jpg) no-repeat;
+	height:31px;
+	width:265px;
+	border:none;
+	direction:rtl;
+	color:#514E47;
+	top:135px;
+}		
+	
+	
+
+
+#msg_contact
+{
+	position:absolute;
+	width:150px;
+	right:15px;
+	top:180px;
+	text-align:right;
+	color:white;
+	font-size:14px;
+	font-family:Tahoma;
+	font-weight:bold;
+
+}
+
+#msg_contact_A
+{
+	position:absolute;
+	right:110px;
+	top:180px;
+	
+}
+
+.msg_contact_box
+{
+	align:top;
+	background:url(images/text_box_large.jpg) no-repeat;
+	height:130px;
+	width:265px;
+	border:none;
+	direction:rtl;
+	color:#514E47;
+	top:180px;
+}
+
+#text_must_insert_msg
+{
+	position:absolute;
+	top:182px;
+	width:60px;
+	right:15px;
+	text-align:right;
+	color:white;
+	font-size:14px;
+	font-family:Tahoma;
+	
+}
+	
+	
+	
+	
+#approval_contact
+{
+	position:absolute;
+	width:370px;
+	right:20px;
+	top:310px;
+	text-align:right;
+	color:white;
+	font-size:12px;
+	font-family:Tahoma;
+
+}
+
+
+
+.approval_contact_box
+{
+	height:30px;
+	border:none;
+	color:#514E47;
+	position:absolute;
+	right:0px;
+	top:310px;
+}
+	
+	
 /*------------ RECOMMENDEDS -------------------*/
 
 
@@ -1366,8 +1680,7 @@ z-index:1;
 
 #NextPrevious
 {
-	
-	hight:300px;
+
 	background:url(images/prev_next_bg.jpg);
 
 }
@@ -1377,7 +1690,7 @@ z-index:1;
 {
 
 	position:relative;
-	left:100px;
+	left:90px;
 	width:162px;
 	font-size:14px;
 	font-family:Tahoma;
@@ -1397,32 +1710,25 @@ z-index:1;
 }
 
 
-#NextStyle A:hover
-{
-	position:relative;
-	width:162px;
-	left:100px;
-	text-decoration:underline;
-}
 
 #PrevStyle
 {
 	position:relative;
 	width:162px;
-	left:500px;
+	left:120px;
 	font-size:14px;
 	font-family:Tahoma;
 	text-align:right ;
 	color:white;
-	line-height:20px;
+	
 	
 }
 
-#PrevStyle A
+#PrevStyle a
 {
 	width:162px;
 	position:relative;
-	left:500px;
+	left:120px;
 	color:white;
 	text-decoration:none;
 }
