@@ -261,6 +261,7 @@ include_once 'getposts.php';
             </li>
             <li>
                 <div id="recomended">
+                
                 </div>
                 <div id="dictionery">
                 </div>
