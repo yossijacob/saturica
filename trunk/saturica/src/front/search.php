@@ -226,7 +226,7 @@ connect();   //connect to mysql DB
 					   { 
 					   if ($Result_Set<$Total && $Result_Set>0) 
 					      { 
-					      echo "<div id='PrevStyle' >";
+					      echo "<div id='PrevStyle'>";
 					      $Res1=$Result_Set-$Per_Page;  
 					      echo "<A HREF=\"search.php?Result_Set=$Res1&whatodo_ddtext=$whattodo&howmany_text=$howmany&where_ddtext=$where&howlong_ddtext=$howlong&whatbudget_ddtext=$whatbudget\"> קודם >> </A>&nbsp;"; 
 					      echo"</div>";
@@ -236,7 +236,7 @@ connect();   //connect to mysql DB
 					      $Res1=$Result_Set+$Per_Page; 
 					      if ($Res1<$Total) 
 					         { 
-					         echo "<div id='NextStyle' >";  	
+					         echo "<div id='NextStyle'>";  	
 					         echo "&nbsp;<A HREF=\"search.php?Result_Set=$Res1&whatodo_ddtext=$whattodo&howmany_text=$howmany&where_ddtext=$where&howlong_ddtext=$howlong&whatbudget_ddtext=$whatbudget\"> <<  הבא </A>"; 
 					         echo"</div>";
 					         } 
