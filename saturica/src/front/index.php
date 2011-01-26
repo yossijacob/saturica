@@ -8,6 +8,14 @@ include_once 'getposts.php';
 <meta charset="utf-8"/>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" type="text/css" href="style.css" />
+<?php 
+if(CheckIfIE()) 
+	{
+		?>
+		<link rel="stylesheet" href="IEstyle.css" type="text/css" />
+		<?php 
+	}
+?>
 <script type="text/javascript" language="javascript">
     var hide = false;
     function show_dropdown(id) 
@@ -113,7 +121,7 @@ include_once 'getposts.php';
                             ? כמה משתתפים
                         </span>
 			            <div id="howmany">
-                            <input class="howmany_text" name="howmany_text" type="text" value=""  size="10"/>
+                            <input class="howmany_text" name="howmany_text" type="text" value="" size="10"/>
                         </div>    
                         
                       
