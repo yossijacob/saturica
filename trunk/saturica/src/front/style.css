@@ -988,6 +988,11 @@ right: 1px;
 
 
 /*------------ SEARCH WIZARD -------------------*/
+#wizard input
+{
+	font-weight: bold;
+}
+
 #search_wizard
 {
 	height:336px;
@@ -1150,7 +1155,7 @@ padding-left:-12px;
 overflow:hidden;
 visibility:hidden;
 direction:rtl;
-margin-right:0px;
+margin-right:5px;
 cursor:pointer;
 color:#514E47;
 z-index:1;
@@ -1246,17 +1251,23 @@ z-index:1;
 	position:absolute;
 	top:144px;
 	right:253px;
-}
-
-.howmany_text
-{
 	background:url(images/wizard_textbox.jpg) no-repeat;
 	height:31px;
 	width:197px;
+}
+
+.howmany_text 
+{
+	background:transparent;
+	margin-top:0px;
+	height:31px;
+	width:190px;
 	border:none;
 	direction:rtl;
 	color:#514E47;
+	text-align: center;
 }
+
 
 /*-----------------------------------------*/
 #black_strip
