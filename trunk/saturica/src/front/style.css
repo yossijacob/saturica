@@ -57,17 +57,38 @@ width:1238px;
 	float:left;
 }
 
-#header_content_search .textInput
+#search_form
+{
+	height:38px;
+	width:212px;
+}
+
+#textInput_div
 {
 	background:url("images/search_text_box_idle.jpg") no-repeat;
 	border:none;
+	/*height:38px;*/
 	height:38px;
 	width:212px;
-	color:#CEBDAD;
 	font-size:12px;
 	font-family:Tahoma;
 	position:absolute;
 	right:0px;
+	top:0px;
+	
+}
+
+#header_content_search .textInput
+{
+	border:none;
+	position:relative;
+	margin-top:auto;
+	margin-bottom:auto;
+	height:34px;
+	width:212px;
+	background-color: transparent;
+	text-align: center;
+	color:#CEBDAD;
 }
 
 #search_icon
@@ -1877,6 +1898,15 @@ z-index:1;
 }
 /******** for customized page*/
 
+
+/************************* BLOG ******/
+
+#blog_div
+{
+	width:960px;
+	margin-left: auto;
+	margin-right: auto;	
+}
 
 
 
