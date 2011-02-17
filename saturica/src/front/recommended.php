@@ -27,6 +27,15 @@ $third_workshop = GetRecord('workshops',$third_workshop_id[1]); //get the worksh
 <meta charset="utf-8"/>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" type="text/css" href="style.css" />
+<?php 
+if(CheckIfIE()) 
+	{
+		?>
+		<link rel="stylesheet" href="IEstyle.css" type="text/css" />
+		<?php 
+	}
+SetupSearchInputRest();
+?>
 
 <?php 
 SetupJquery();
