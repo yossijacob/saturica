@@ -15,6 +15,7 @@ if(CheckIfIE())
 		<link rel="stylesheet" href="IEstyle.css" type="text/css" />
 		<?php 
 	}
+SetupSearchInputRest();
 ?>
 <script type="text/javascript" language="javascript">
     var hide = false;
