@@ -19,14 +19,14 @@ body
 #header
 {
 	/*width:1300px;*/
-	height:171px;
+	height:157px;
 	background-color:#473B2F;
 	position:relative;
 }
 
 #header ul
 {
-height:171px;
+height:157px;
 list-style-type: none;
 position:relative;
 margin-left:auto;
@@ -43,14 +43,14 @@ width:1238px;
 {
 	width:977px;
 	background:url("images/top_strip_main_bg.jpg") no-repeat;
-	height:171px;
+	height:157px;
 	position:relative;
 }
 
 #header_content_search
 {
 	position:relative;
-	margin-top:80px;
+	margin-top:70px;
 	margin-left:6px;
 	height:30px;
 	width:250px;
@@ -103,14 +103,14 @@ width:1238px;
 {
 	width:130px;
 	background:url("images/top_strip_right_side.jpg") no-repeat;
-	height:171px;
+	height:157px;
 }
 
 #header_left
 {
 	/*width:122px;*/
 	width:130px;
-	height:171px;
+	height:157px;
 }
 
 #navigation
@@ -479,7 +479,7 @@ right: 1px;
 
 #about_wizard
 {
-	height:750px;
+	height:744px;
 	background-color: #B8A47F;
 
 }
@@ -487,7 +487,7 @@ right: 1px;
 #about_main_title
 {	
 	
-	height:375px;
+	height:369px;
 	position:relative;
 	
 	width:960px;
@@ -1016,7 +1016,7 @@ right: 1px;
 
 #search_wizard
 {
-	height:336px;
+	height:316px;
 	background-color: #B8A47F;
 }
 
@@ -1030,7 +1030,7 @@ right: 1px;
 
 #search_wizard_content ul
 {
-height:336px;
+height:316px;
 list-style-type: none;
 /*width:977px;*/
 width:960px;
@@ -1045,14 +1045,14 @@ width:960px;
 #wizard_slogen
 {
 	background:url("images/wizard_slogan_image.jpg") no-repeat;
-	height:336px;
+	height:316px;
 	width:257px;
 }
 
 #wizard
 {
 	background:url("images/wizard_bg.jpg") no-repeat;
-	height:336px;
+	height:316px;
 	width:702px;
 	position:relative;
 }
@@ -1097,7 +1097,7 @@ width:960px;
 #wizard_title
 {
 	position:absolute;
-	top:35px;
+	top:15px;
 	right:25px;
 	color:#514E47;
 	font-size:22px;
@@ -1202,53 +1202,53 @@ z-index:1;
 /*****************/
 #whattodo_Question
 {
-	top:125px;
+	top:105px;
 	right:35px;
 }
 
 #whattodo
 {
 	position:absolute;
-	top:144px;
+	top:124px;
 	right:33px;
 }
 /*****************/
 #where_Question
 {
-	top:125px;
+	top:105px;
 	right:475px;
 }
 
 #where
 {
 	position:absolute;
-	top:144px;
+	top:124px;
 	right:473px;
 }
 /*****************/
 #howlong_Question
 {
-	top:245px;
+	top:225px;
 	right:35px;
 }
 
 #howlong
 {
 	position:absolute;
-	top:263px;
+	top:243px;
 	right:33px;
 }
 /*****************/
 #whatbudget_Question
 {
-	top:245px;
+	top:225px;
 	right:254px;
 }
 
 #whatbudget
 {
 	position:absolute;
-	top:263px;
+	top:243px;
 	right:253px;
 }
 
@@ -1257,20 +1257,20 @@ z-index:1;
 	color:#DBCAA7;
 	font-size: 12px;
 	position:absolute;
-	top:293px;
+	top:273px;
 	right:255px;
 }
 /*****************/
 #howmany_Question
 {
-	top:125px;
+	top:105px;
 	right:254px;
 }
 
 #howmany
 {
 	position:absolute;
-	top:144px;
+	top:124px;
 	right:253px;
 	background:url(images/wizard_textbox.jpg) no-repeat;
 	height:31px;
