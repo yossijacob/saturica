@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <?php 
-
 include_once 'backoffice/mysql.php';	
 include_once 'backoffice/connect.php';
 include_once 'functions.php';
-		
 ?>
 <html>
 <head>
 <meta charset="utf-8"/>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="stylesheet" type="text/css" href="style.css" />.
+<link rel="stylesheet" type="text/css" href="style.css" />
 <?php 
 if(CheckIfIE()) 
 	{
@@ -20,11 +18,9 @@ if(CheckIfIE())
 	}
 SetupSearchInputRest();
 ?>
-
 <title>סטוריקה - אודות</title>
 </head>
 <body>
-	
 	<?php HeaderFunc("whatwedo");?>
 	<div id="about_wizard">
 	
