@@ -112,8 +112,8 @@ SetupSearchInputRest();
 		                                הרצאות</a></div>
 		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','פעילות מיוחדת למורים');">
 		                                פעילות מיוחדת למורים</a></div>
-		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','מפגשים חברתיים');">
-		                                מפגשים חברתיים</a></div>
+		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','מפגש העשרה חוויתי');">
+		                                מפגש העשרה חוויתי</a></div>
 	                                </div>
                                 </div>
                             </div>
@@ -142,16 +142,16 @@ SetupSearchInputRest();
 	                                <div class="my_ul">
 		                                <div class="my_li"><a onclick="setText('where_ddtext','where_ddlist','במבנה ממוזג\מחומם');">
 		                                 במבנה ממוזג\מחומם</a></div>
-		                                <div class="my_li"><a onclick="setText('where_ddtext','where_ddlist','אצלכם בארגון');">
-		                                אצלכם בארגון</a></div>
-		                                <div class="my_li"><a onclick="setText('where_ddtext','where_ddlist','בחוץ במקום מיוחד');">
-		                                בחוץ במקום מיוחד</a></div>
-		                                <div class="my_li"><a onclick="setText('where_ddtext','where_ddlist','על שפת הבריכה');">
-		                                על שפת הבריכה</a></div>
+		                                <div class="my_li"><a onclick="setText('where_ddtext','where_ddlist','אצלנו בארגון');">
+		                                אצלנו בארגון</a></div>
+		                                <div class="my_li"><a onclick="setText('where_ddtext','where_ddlist','מחוץ לעבודה, במקום מיוחד');">
+		                                מחוץ לעבודה, במקום מיוחד</a></div>
+		                                <div class="my_li"><a onclick="setText('where_ddtext','where_ddlist','ליד הבריכה');">
+		                                ליד הבריכה</a></div>
 		                                <div class="my_li"><a onclick="setText('where_ddtext','where_ddlist','על חוף הים');">
 		                                על חוף הים</a></div>
-		                                <div class="my_li"><a onclick="setText('where_ddtext','where_ddlist','רוצים לנוע ממקום למקום');">
-		                                רוצים לנוע ממקום למקום</a></div>
+		                                <div class="my_li"><a onclick="setText('where_ddtext','where_ddlist','נעבור ממקום למקום');">
+		                                נעבור ממקום למקום</a></div>
 	                                </div>
                                 </div>
                             </div>
@@ -164,13 +164,13 @@ SetupSearchInputRest();
                                 <div id="howlong_ddlist" class="dd_list" onmousemove="show_dropdown('howlong_ddlist')" onmouseout="hide_list('howlong_ddlist')" >
 	                                <div class="my_ul">
 		                                <div class="my_li"><a onclick="setText('howlong_ddtext','howlong_ddlist','קצר, מקסימום 3 שעות');">
-		                                קצר, מקסימום 3 שעות</a></div>
+		                                פעילות קצרה, מקסימום 3 שעות</a></div>
 		                                <div class="my_li"><a onclick="setText('howlong_ddtext','howlong_ddlist','חצי יום');">
 		                                חצי יום</a></div>
 		                                <div class="my_li"><a onclick="setText('howlong_ddtext','howlong_ddlist','יום מלא');">
 		                                יום מלא</a></div>
-		                                <div class="my_li"><a onclick="setText('howlong_ddtext','howlong_ddlist','ערב');">
-		                                ערב</a></div>
+		                                <!-- <div class="my_li"><a onclick="setText('howlong_ddtext','howlong_ddlist','ערב');">
+		                                ערב</a></div> -->
 		                                <div class="my_li"><a onclick="setText('howlong_ddtext','howlong_ddlist','יותר מיום אחד');">
 		                                יותר מיום אחד</a></div>
 	                                </div>
@@ -184,14 +184,16 @@ SetupSearchInputRest();
                                 <input id="whatbudget_ddtext" class="dd_text" name="whatbudget_ddtext" type="text" value=""  size="10"  readonly="readonly"  />
                                 <div id="whatbudget_ddlist" class="dd_list" onmousemove="show_dropdown('whatbudget_ddlist')" onmouseout="hide_list('whatbudget_ddlist')" >
 	                                <div class="my_ul">
-		                                <div class="my_li"><a onclick="setText('whatbudget_ddtext','whatbudget_ddlist','מעל 300');">
-		                                מעל 300 ש"ח</a></div>
-		                                <div class="my_li"><a onclick="setText('whatbudget_ddtext','whatbudget_ddlist','200 - 300');">
-		                                200 - 300 ש"ח</a></div>
-		                                <div class="my_li"><a onclick="setText('whatbudget_ddtext','whatbudget_ddlist','100 - 200');">
-		                                100 - 200 ש"ח</a></div>
-		                                <div class="my_li"><a onclick="setText('whatbudget_ddtext','whatbudget_ddlist','50 -100');">
-		                                50 -100 ש"ח</a></div>
+		                                <div class="my_li"><a onclick="setText('whatbudget_ddtext','whatbudget_ddlist','מעל 500');">
+		                                מעל 500 ש"ח</a></div>
+		                                <div class="my_li"><a onclick="setText('whatbudget_ddtext','whatbudget_ddlist','350 - 500');">
+		                                350 - 500 ש"ח</a></div>
+		                                <div class="my_li"><a onclick="setText('whatbudget_ddtext','whatbudget_ddlist','250 - 350');">
+		                                250 - 350 ש"ח</a></div>
+		                                <div class="my_li"><a onclick="setText('whatbudget_ddtext','whatbudget_ddlist','150 - 250');">
+		                                150 - 250 ש"ח</a></div>
+		                                <div class="my_li"><a onclick="setText('whatbudget_ddtext','whatbudget_ddlist','50 -150');">
+		                                50 -150 ש"ח</a></div>
 		                                <div class="my_li"><a onclick="setText('whatbudget_ddtext','whatbudget_ddlist','פחות מ 50');">
 		                                פחות מ 50 ש"ח</a></div>
 	                                </div>
