@@ -150,7 +150,7 @@ echo '<div id="menu">';
     echo   	"<li class=".$sel['workshops']."><a href='workshops.php' title='workshops'>סדנאות</a></li>";    
     echo   	"<li class=".$sel['newsletter']."><a href='newsletter.php' title='newsletter'>ניוזלטר</a></li>";    
     echo   	"<li class=".$sel['preferences']."><a href='preferences.php' title='preferences'>הגדרות</a></li>";   
-    echo   	"<li class=".$sel['blog']."><a href='blog.php' title='blog'>בלוג</a></li>";    
+    echo   	"<li class=".$sel['blog']."><a href='../blog/wp-login.php' title='blog'>בלוג</a></li>";    
 	echo 	"</ul>";	
 	echo 	"</div>";	
 
