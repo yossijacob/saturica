@@ -267,7 +267,7 @@ function SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$ho
 			}
 
 		
-		$query .= "( ((personal_price + $place_price)*$howmany) + fixed_price) BETWEEN $lowval AND $highval AND ";
+		$query .= "( ((personal_price + $place_price)*$howmany) + fixed_price) BETWEEN ($lowval*$howmany )AND ($highval*$howmany) AND ";
 		 
 	}
 	
