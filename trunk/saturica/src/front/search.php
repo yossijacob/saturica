@@ -85,11 +85,11 @@ SetupSearchInputRest();
      if ($whatbudget != null)
      {
           $prices[0] = "פחות מ 50";		// for the places dropdown boxes
-		  $prices[1] = "50 -100";
-		  $prices[2] = "100 - 200";
-		  $prices[3] = "200 - 300";
-		  //$prices[4] = "350-500";
-		  $prices[4] = "מעל 300";
+		  $prices[1] = "50 -150";
+		  $prices[2] = "150 - 250";
+		  $prices[3] = "250 - 350";
+		  $prices[4] = '350-500';
+		  $prices[5] = "מעל 500";
 					
 		  $col="personal_price";
 		  $result='';
@@ -105,26 +105,29 @@ SetupSearchInputRest();
   			if ($whatbudget == $prices[1])
   			{
   				$lowval = 50;
-  				$highval = 100;
-  				
-  				
+  				$highval = 150;
   			}
   			
   		  	if ($whatbudget == $prices[2])
   			{
-  				$lowval= 100;
-  				$highval = 200;
+  				$lowval= 150;
+  				$highval = 250;
   			}
   		  	
   			if ($whatbudget == $prices[3])
   			{
-  				$lowval = 200;
-  				$highval = 300;		
+  				$lowval = 250;
+  				$highval = 350;		
   			}
   			
   		  	if ($whatbudget == $prices[4])
   			{
-  				$lowval = 300;
+  				$lowval = 350;
+  				$highval = 500;
+  			}
+       		if ($whatbudget == $prices[5])
+  			{
+  				$lowval = 500;
   				$highval = 5000000;
   			}
 
