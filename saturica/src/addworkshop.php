@@ -111,7 +111,7 @@ session_start();
 	$workshopsubjects[5] = "מפגש העשרה חוויתי";	
 	
 	$workshoplocations[0] = "במבנה ממוזג\מחומם";		// for the places dropdown boxes
-	$workshoplocations[1] = "אצלכם בארגון";
+	$workshoplocations[1] = "אצלנו בארגון";
 	$workshoplocations[2] = "בחוץ במקום מיוחד";
 	$workshoplocations[3] = "ליד הבריכה";
 	$workshoplocations[4] = "על חוף הים";
