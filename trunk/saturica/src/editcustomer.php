@@ -111,8 +111,14 @@ if (!is_authenticated())
   			$data[7] = $sent_feedback;  // sent feedback
   			
   			EditRecord("customers",$id, $data);     			// add the customer
-
-  			header('Location:customers.php');
+			
+  			?>
+			<script type="text/javascript" language="javascript">
+   			window.location = 'http://satorika.co.il/backoffice/customers.php';
+   			</script>
+   			<?php 
+  			
+  			//header('Location:customers.php');
   		}
   	
   	}  // close if submitted 
