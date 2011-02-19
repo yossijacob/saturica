@@ -200,9 +200,14 @@ function SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$ho
 	$index = 0;
 	$res="";
 	$unique_res="";
-
+	
+	//$table = array("במבנה ממוזג\מחומם" => array( '  פחות מ 50 ש"ח'     =>20  ,   '50 -100 ש"ח' =>35 ));
+	//echo $table['במבנה ממוזג\מחומם'][ '50 -100 ש"ח'];
 	
 	$query = "SELECT id FROM workshops WHERE ";
+	
+	$query .= "active = 'כן' AND ";
+	
 	if ($whattodo != null) $query .= "subject = '$whattodo' AND "; 
 	else $query .= "subject LIKE '%' AND "; 
 	
@@ -212,8 +217,61 @@ function SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$ho
 	if ($howlong != null) $query .= "time_frame = '$howlong' AND "; 
 	else $query .= "time_frame LIKE '%' AND "; 
 	
-	if ($lowval != null) $query .= "personal_price BETWEEN $lowval AND $highval AND ";
-	else $query .= "personal_price LIKE '%' AND "; 
+	//the customer filled price range and how many people are participating
+	if ( ($lowval != null) && ($howmany != null) )
+	{
+		//get the place price
+		if ($where == null ) $place_price = 0 ;
+		else 
+			{
+				if ($where = "במבנה ממוזג\מחומם")
+					{
+						if ($lowval == 0) $place_price = 20;
+						if ($lowval == 50) $place_price = 35;
+						if ($lowval == 150) $place_price = 50;
+						if ($lowval == 250) $place_price = 75;
+						if ($lowval == 350) $place_price = 100;
+						if ($lowval == 500) $place_price = 150;
+					}
+					
+				if ($where = "אצלנו בארגון") $place_price = 0;
+				if ($where = "מחוץ לעבודה, במקום מיוחד")
+					{
+						if ($lowval == 0) $place_price = 10;
+						if ($lowval == 50) $place_price = 20;
+						if ($lowval == 150) $place_price = 40;
+						if ($lowval == 250) $place_price = 70;
+						if ($lowval == 350) $place_price = 90;
+						if ($lowval == 500) $place_price = 100;
+					}
+				if ($where = "ליד הבריכה")
+					{
+						if ($lowval == 0) $place_price = 20;
+						if ($lowval == 50) $place_price = 35;
+						if ($lowval == 150) $place_price = 50;
+						if ($lowval == 250) $place_price = 70;
+						if ($lowval == 350) $place_price = 90;
+						if ($lowval == 500) $place_price = 100;
+					}
+				if ($where = "על חוף הים")	
+					{
+						if ($lowval == 0) $place_price = 10;
+						if ($lowval == 50) $place_price = 25;
+						if ($lowval == 150) $place_price = 35;
+						if ($lowval == 250) $place_price = 55;
+						if ($lowval == 350) $place_price = 85;
+						if ($lowval == 500) $place_price = 120;
+					}
+				if ($where = "נעבור ממקום למקום") $place_price = 0;	
+				
+			}
+
+		
+		$query .= "( ((personal_price + $place_price)*$howmany) + fixed_price) BETWEEN $lowval AND $highval AND ";
+		 
+	}
+	
+	
 	
 	if ($howmany != null) $query .= "minimum_size <= $howmany AND maximum_size >= $howmany  ";
 	else $query .= "minimum_size LIKE '%' "; 
