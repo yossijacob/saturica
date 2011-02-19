@@ -21,6 +21,7 @@ if(CheckIfIE())
 		<?php 
 	}
 SetupSearchInputRest();
+
 ?>
 <script type="text/javascript" language="javascript">
     var hide = false;
@@ -47,9 +48,36 @@ SetupSearchInputRest();
         document.getElementById(id).style.visibility = "hidden";  // dd_list
     }
 </script>
+<?php 
+SetupJquery();
+SetupJqueryContactDialog();
+?>
 <title>סטוריקה</title>
 </head>
 <body>
+
+<div id="dialog-form" title="קבל הצעה" dir="rtl"> 
+	<p class="validateTips">כל השדות הם חובה</p> 
+ 
+	<form id="get_offer" name="get_offer" method="post" action="getoffer.php"> 
+	<fieldset> 
+		<label for="name">שם</label> 
+		<input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all" /> 
+		<label for="email">דוא"ל</label> 
+		<input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all" /> 
+		<label for="password">טלפון</label> 
+		<input type="text" name="phone" id="phone" value="" class="text ui-widget-content ui-corner-all" />
+		<label for="password">תוכן</label> 
+		<textarea rows="4" cols="48" name="content" id="content" value="" class="text ui-widget-content ui-corner-all"></textarea>
+	</fieldset> 
+	<!--  <input type='submit' style=display:none>-->
+	<!-- <input type="submit" value="קבל הצעה"/> -->
+	</form> 
+</div> 
+
+
+
+
 	<?php
 	HeaderFunc('empty');
 	
@@ -211,7 +239,7 @@ SetupSearchInputRest();
 									echo "<div id='results_workshop_text_box'>";
 							     	Print_Single_Workshop($print_workshop);
 							     	echo "</div>";
-							     	echo "<div id='get_details_button' onclick='location.href='index.php''></div>";
+							     	echo "<div id='get_details_button' class='get_offer' onclick='location.href='index.php''></div>";
 			                        echo "</div>";
 			                         $i++; 
 									echo "</li>";       
