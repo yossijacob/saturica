@@ -162,9 +162,10 @@ SetupJqueryContactDialog();
 		</div>
 		
 		
-		
-		
-		
+		<?php 
+		// button with send , do requrired functions
+		//<div id="wizard_find_button" onclick="document.forms['contact_form'].submit();">
+		?>
 		
 	</div>
 	
