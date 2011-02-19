@@ -205,7 +205,7 @@ function SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$ho
 	//echo $table['במבנה ממוזג\מחומם'][ '50 -100 ש"ח'];
 	
 	$query = "SELECT id FROM workshops WHERE ";
-	
+
 	$query .= "active = 'כן' AND ";
 	
 	if ($whattodo != null) $query .= "subject = '$whattodo' AND "; 
@@ -275,6 +275,7 @@ function SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$ho
 	
 	if ($howmany != null) $query .= "minimum_size <= $howmany AND maximum_size >= $howmany  ";
 	else $query .= "minimum_size LIKE '%' "; 
+	$query .= "	ORDER BY rank DESC ";
 
 		
 	if (!$Result_Set) 
