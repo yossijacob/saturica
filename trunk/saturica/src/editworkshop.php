@@ -117,20 +117,20 @@ if (!is_authenticated())
 	$workshopsubjects[2] = "פיתוח עובדים";
 	$workshopsubjects[3] = "הרצאות";
 	$workshopsubjects[4] = "פעילות מיוחדת למורים";
-	$workshopsubjects[5] = "מפגשים חברתיים";	
+	$workshopsubjects[5] = "מפגש העשרה חוויתי";	
 	
 	$workshoplocations[0] = "במבנה ממוזג\מחומם";		// for the places dropdown boxes
 	$workshoplocations[1] = "אצלכם בארגון";
 	$workshoplocations[2] = "בחוץ במקום מיוחד";
-	$workshoplocations[3] = "על שפת הבריכה";
+	$workshoplocations[3] = "ליד הבריכה";
 	$workshoplocations[4] = "על חוף הים";
-	$workshoplocations[5] = "רוצים לנוע ממקום למקום";
+	$workshoplocations[5] = "נעבור ממקום למקום";
 	
-	$workshoptimeframes[0] = "קצר, מקסימום 3 שעות";		// for the places dropdown boxes
+	$workshoptimeframes[0] = "פעילות קצרה, מקסימום 3 שעות";		// for the places dropdown boxes
 	$workshoptimeframes[1] = "חצי יום";
 	$workshoptimeframes[2] = "יום מלא";
-	$workshoptimeframes[3] = "ערב";
-	$workshoptimeframes[4] = "יותר מיום אחד";
+	//$workshoptimeframes[3] = "ערב";
+	$workshoptimeframes[3] = "יותר מיום אחד";
 	
   	
   	
