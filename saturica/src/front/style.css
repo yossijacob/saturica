@@ -1485,7 +1485,6 @@ z-index:1;
 	border-bottom-width: 1px;
 	max-height: 60px;
 	overflow:hidden;
-	
 }
 
 #blog li a
@@ -1510,6 +1509,53 @@ z-index:1;
 	position:absolute;
 	top:25px;
 	right:315px;
+}
+
+#recomended ul
+{
+	margin-top: 60px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align: center;
+	padding: 5px;
+	width: 250px;
+}
+	
+#recomended li
+{
+	list-style-type: none;
+	float: none;
+	border-bottom-color: #AF674E;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	max-height: 60px;
+	overflow:hidden;
+}
+
+#recomended_last
+{
+	list-style-type: none;
+	float: none;
+	border:none;
+	/*border-bottom-color: #AF674E;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;*/
+	max-height: 60px;
+	overflow:hidden;
+}
+
+#recomended li a
+{
+	line-height:60px;
+	text-decoration: none;
+	color : #403e32;
+	font-size: 12px;
+	font-family:Tahoma;
+}
+
+#recomended li a:hover
+{
+	color: #AF674E;
 }
 
 #dictionery
