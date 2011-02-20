@@ -103,7 +103,14 @@ session_start();
   			//$dont_show_form = true;
 	  		//echo "<h3>Broker Have Been Added</h3>";
   			//echo "<br/>";
-  			header('Location:customers.php');
+  			
+  			?>
+			<script type="text/javascript" language="javascript">
+   			window.location = 'http://satorika.co.il/backoffice/customers.php';
+   			</script>
+   			<?php 
+   			
+  			//header('Location:customers.php');
   		}
   	
   	}  // close if submitted 
