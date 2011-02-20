@@ -89,7 +89,7 @@ SetupJqueryContactDialog();
 		//echo "<img src='recommended_pic/$first_workshop[3]' border=0 width=240>";
 		
 		//for testing at home - different folders. the path is below : 
-		echo "<img src='../recommended_pic/$first_pic_workshop_recommended' border=0 width=240>";
+		echo "<img src='../recommended_pic/$first_pic_workshop_recommended' border=0 height=220 width=240>";
 		?>
 		</div>
 
@@ -97,7 +97,7 @@ SetupJqueryContactDialog();
 		<?php
 		//echo "<img src='recommended_pic/$second_workshop[3]' border=0 width=240>";
 		//below is path at home 
-		echo "<img src='../recommended_pic/$second_pic_workshop_recommended' border=0 width=240>";
+		echo "<img src='../recommended_pic/$second_pic_workshop_recommended' border=0 height=220 width=240>";
 		
 		?>
 		</div>
@@ -106,7 +106,7 @@ SetupJqueryContactDialog();
 		<?php
 		//echo "<img src='recommended_pic/$third_workshop[3]' border=0 width=240>";
 		//below is path at home 
-		echo "<img src='../recommended_pic/$third_pic_workshop_recommended' border=0 width=240>";
+		echo "<img src='../recommended_pic/$third_pic_workshop_recommended' border=0 height=220 width=240>";
 		
 		?>
 		</div>
