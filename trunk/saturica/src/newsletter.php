@@ -13,6 +13,7 @@
 		$emails = "";
 		$emailmsg = "";
 		$file_saved_bool = false;
+		$upload_result = "";
 
 		// exporting newsletter file
 		if ((isset($_GET['pending'])) && ($_GET['pending'] =="export" ))
@@ -30,7 +31,8 @@
 		else if ((isset($_GET['pending'])) && ($_GET['pending'] =="import" ))
 		{   // import newsletter file
 			$target_path = $fileName;
-			UploadFile( $_FILES['picture']['name'],$_FILES['picture']['tmp_name'],$target_path);
+			$upload_result = UploadFile( $_FILES['picture']['name'],$_FILES['picture']['tmp_name'],$target_path);
+			$upload_result .="<br/>";
 		}
 		else 
 		{	//send newsletter to all customers
@@ -72,6 +74,7 @@
 				$index++;
 			}
 			$emailmsg ="לקוחות ".$count ."הניוזלטר נשלח בהצלחה ל";
+			$emailmsg .="<br/>";
 		}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">	    
@@ -102,9 +105,11 @@
 	    <br/>
 	    <br/>
 	    <?php 
+	    	echo $upload_result;    	
+	    	echo $emailmsg;
 	    	if ($file_saved_bool == true)
 				echo "הקובץ נשמר בהצלחה";
-	    	echo $emailmsg;
+	    	
 	    ?>
 	    <br/>
 	   
