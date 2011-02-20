@@ -26,16 +26,16 @@
 			$fileHandle = fopen($fileName, 'w+') or die("can't open file"); // open file
 			fwrite($fileHandle,$_POST['editor1']); // write
 			$file_saved_bool = true;
-
+			
 		}
 		else if ((isset($_GET['pending'])) && ($_GET['pending'] =="import" ))
 		{   // import newsletter file
 			$target_path = $fileName;
-			$upload_result = UploadFile( $_FILES['picture']['name'],$_FILES['picture']['tmp_name'],$target_path);
+			$upload_result = UploadFile( $_FILES['loadnewsletter']['name'],$_FILES['loadnewsletter']['tmp_name'],$target_path);
 			$upload_result .="<br/>";
 		}
-		else 
-		{	//send newsletter to all customers
+		//else 
+		//{	//send newsletter to all customers
 			$fileHandle = fopen($fileName, 'r+') or die("can't open file");
 			$filesize = filesize($fileName);
 			if ($filesize)
@@ -46,8 +46,9 @@
 				{
 				$filedata = "";
 				}
-		}
-		fclose($fileHandle);
+			fclose($fileHandle);
+		//}
+		
 		
 		// send mails
 		if ((isset($_POST['send'])) && ($_POST['send'] =="true" ))
