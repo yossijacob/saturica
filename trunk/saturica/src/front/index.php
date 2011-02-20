@@ -287,8 +287,8 @@ SetupSearchInputRest();
             <li>
                 <div id="recomended">
                 	<ul>
-                	<li><a href ="recommended.php"><?php echo $first_workshop[2] ?></a></li>
-                	<li><a href ="recommended.php"><?php echo $second_workshop[2] ?></a></li>
+                	<li class="recomended_li"><a href ="recommended.php"><?php echo $first_workshop[2] ?></a></li>
+                	<li class="recomended_li"><a href ="recommended.php"><?php echo $second_workshop[2] ?></a></li>
                 	<li><a href ="recommended.php"><?php echo $third_workshop[2] ?></a></li>
                 	</ul>
                 </div>
