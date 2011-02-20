@@ -1525,23 +1525,20 @@ z-index:1;
 {
 	list-style-type: none;
 	float: none;
-	border-bottom-color: #AF674E;
-	border-bottom-style: solid;
-	border-bottom-width: 1px;
+	
 	max-height: 60px;
 	overflow:hidden;
 }
 
-#recomended_last
+.recomended_li
 {
-	list-style-type: none;
-	float: none;
-	border:none;
-	/*border-bottom-color: #AF674E;
+/*	list-style-type: none;
+	float: none;*/
+	border-bottom-color: #AF674E;
 	border-bottom-style: solid;
-	border-bottom-width: 1px;*/
-	max-height: 60px;
-	overflow:hidden;
+	border-bottom-width: 1px;
+	/*max-height: 60px;
+	overflow:hidden;*/
 }
 
 #recomended li a
