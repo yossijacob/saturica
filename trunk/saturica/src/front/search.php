@@ -184,7 +184,7 @@ SetupJqueryContactDialog();
 			            <span class="questions" id="filter_Subjects">
                             : סנן נושאי פעילות
                         </span>
-			                <div id="filter" class="dropdown"  onclick="show_dropdown('whattodo_ddlist')" >
+			                <div id="filter" class="search_wizard_dropdown"  onclick="show_dropdown('whattodo_ddlist')" >
                                 <input id="whattodo_ddtext" class="dd_text" name="whatodo_ddtext" type="text" value=""  size="10"  readonly="readonly"  />
                                 <div id="whattodo_ddlist" class="dd_list" onmousemove="show_dropdown('whattodo_ddlist')" onmouseout="hide_list('whattodo_ddlist')" >
 	                                <div class="my_ul">
