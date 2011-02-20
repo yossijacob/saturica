@@ -185,7 +185,7 @@ SetupJqueryContactDialog();
                             : סנן נושאי פעילות
                         </span>
 			                <div id="filter" class="search_wizard_dropdown"  onclick="show_dropdown('whattodo_ddlist')" >
-                                <input id="whattodo_ddtext" class="dd_text" name="whatodo_ddtext" type="text" value=""  size="10"  readonly="readonly"  />
+                                <input id="whattodo_ddtext" class="dd_text" name="whatodo_ddtext" type="text" value=""  size="10"  readonly="readonly" style="margin-right:1cm;" />
                                 <div id="whattodo_ddlist" class="dd_list" onmousemove="show_dropdown('whattodo_ddlist')" onmouseout="hide_list('whattodo_ddlist')" >
 	                                <div class="my_ul">
 		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','sekar 1');">Sekar 1</a></div>
@@ -194,6 +194,7 @@ SetupJqueryContactDialog();
 		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','sekar 4');">Sekar 4</a></div>
 	                                </div>
                                 </div>
+                                
                              </div>
                              </form>
                        </div>
