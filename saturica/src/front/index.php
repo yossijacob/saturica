@@ -286,7 +286,11 @@ SetupSearchInputRest();
             </li>
             <li>
                 <div id="recomended">
-                
+                	<ul>
+                	<li><?php echo $first_workshop[2] ?></li>
+                	<li><?php echo $second_workshop[2] ?></li>
+                	<li><?php echo $third_workshop[2] ?></li>
+                	</ul>
                 </div>
                 <div id="dictionery">
                 </div>
