@@ -2,6 +2,20 @@
 <?php 
 include_once 'functions.php';
 include_once 'getposts.php';
+include_once 'backoffice/connect.php';
+include_once 'backoffice/mysql.php';
+
+connect();   //connect to mysql DB
+
+$first_workshop_id = GetRecord('recommendeds',1);	//get id of the recommended workshop 
+$first_workshop = GetRecord('workshops',$first_workshop_id[1]); //get the workshop
+
+$second_workshop_id = GetRecord('recommendeds',2); 
+$second_workshop = GetRecord('workshops',$second_workshop_id[1]); //get the workshop
+
+$third_workshop_id = GetRecord('recommendeds',3); 
+$third_workshop = GetRecord('workshops',$third_workshop_id[1]); //get the workshop
+
 ?>
 <html>
 <head>
