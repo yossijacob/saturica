@@ -794,6 +794,7 @@ right: 1px;
 	position:absolute;
 	right:110px;
 	top:180px;
+
 	
 }
 
@@ -807,6 +808,7 @@ right: 1px;
 	direction:rtl;
 	color:#514E47;
 	top:180px;
+
 }
 
 #text_must_insert_msg
@@ -819,6 +821,7 @@ right: 1px;
 	color:white;
 	font-size:14px;
 	font-family:Tahoma;
+	
 	
 }
 	
@@ -1160,6 +1163,22 @@ width:197px;
 height:31px;
 /*background:url(images/select_font.gif) no-repeat;*/
 background:url(images/wizard_dropdown.jpg) no-repeat;
+direction:rtl;
+cursor:pointer;
+font-size:14px;
+font-family:Tahoma;
+color:#514E47;
+}
+
+
+
+.search_wizard_dropdown
+{
+/*padding:1px;*/
+width:197px;
+height:31px;
+/*background:url(images/select_font.gif) no-repeat;*/
+background:url(images/search_wizard_dropdown.jpg) no-repeat;
 direction:rtl;
 cursor:pointer;
 font-size:14px;
