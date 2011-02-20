@@ -12,18 +12,20 @@
 		$fileName = "letter.html";
 		$emails = "";
 		$emailmsg = "";
+		$file_saved_bool = false;
 
 		// exporting newsletter file
 		if ((isset($_GET['pending'])) && ($_GET['pending'] =="export" ))
 		{					// exporiting the newsletter file
 			header("Location:saveas.php?filename=$fileName");
 		}
-		else if ((isset($_GET['pending'])) && ($_GET['pending'] =="savenewsletter" ))
+		else if ( (isset($_GET['pending'])) && ($_GET['pending'] =="savenewsletter") )				 
 		{   // save changes to current newletter
 			$filedata = $_POST['editor1']; // get data from editor
 			$fileHandle = fopen($fileName, 'w+') or die("can't open file"); // open file
 			fwrite($fileHandle,$_POST['editor1']); // write
-			echo "הקובץ נשמר בהצלחה";
+			$file_saved_bool = true;
+
 		}
 		else if ((isset($_GET['pending'])) && ($_GET['pending'] =="import" ))
 		{   // import newsletter file
@@ -54,7 +56,7 @@
 			
 			$headers  = 'MIME-Version: 1.0' . "\r\n";
 			$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-			$headers .= 'From: Dispatch@ufaservices.com' . "\r\n" .'Reply-To: Dispatch@ufaservices.com' . "\r\n" .'X-Mailer: PHP/' . phpversion();
+			$headers .= 'From: satorika@satorika.com' . "\r\n" .'Reply-To: satorika@satorika.com' . "\r\n" .'X-Mailer: PHP/' . phpversion();
 			
 			$emails = GetColumn("customers",4);
 			$names = GetColumn("customers",1);
@@ -100,6 +102,8 @@
 	    <br/>
 	    <br/>
 	    <?php 
+	    	if ($file_saved_bool == true)
+				echo "הקובץ נשמר בהצלחה";
 	    	echo $emailmsg;
 	    ?>
 	    <br/>
@@ -136,6 +140,9 @@
 	    <tr>
 	    <td>נושא הדואר</td>
 	    <td><input type="text" size='120' name="subject" value=""/></td>
+	    </tr>
+	    <tr>
+	    אם בוצעו שינוים בניוזלטר יש לבצע שמירה לפני השליחה
 	    </tr>
 	    </table>
 	    <div class="centered_button_div"> 
