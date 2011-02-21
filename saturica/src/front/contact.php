@@ -21,11 +21,8 @@ if(CheckIfIE())
 		?>
 		<link rel="stylesheet" href="IEstyle.css" type="text/css" />
 		<?php 
-	}
-
-?>
-
-<?php 
+	} 
+SetupJqueryContactDialogCss();
 SetupJquery();
 SetupSearchInputRest();
 SetupJqueryContactDialog();
@@ -35,26 +32,6 @@ SetupJqueryContactDialog();
 <?php flush();?>
 <body>
 
-<div id="dialog-form" title="קבל הצעה" dir="rtl"> 
-	<p class="validateTips">כל השדות הם חובה</p> 
- 
-	<form id="get_offer" name="get_offer" method="post" action="getoffer.php"> 
-	<fieldset> 
-		<label for="name">שם</label> 
-		<input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all" /> 
-		<label for="email">דוא"ל</label> 
-		<input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all" /> 
-		<label for="password">טלפון</label> 
-		<input type="text" name="phone" id="phone" value="" class="text ui-widget-content ui-corner-all" />
-		<label for="password">תוכן</label> 
-		<textarea rows="4" cols="48" name="content" id="content" value="" class="text ui-widget-content ui-corner-all"></textarea>
-	</fieldset> 
-	<!--  <input type='submit' style=display:none>-->
-	<!-- <input type="submit" value="קבל הצעה"/> -->
-	</form> 
-</div> 
-
-	
 	<?php HeaderFunc("contact");?>
 	<div id="contact_us_main">
 	
@@ -71,13 +48,9 @@ SetupJqueryContactDialog();
 		
 		<div id="contact_us_details">
 		
-			<div id="contact_us_text">
-			
-			
-			
-			
+		<div id="contact_us_text">
+					
 		   <form action="search.php" method="get" id="contact_form">
-			
 			<div id="client_name_A">
 			<input class="client_name_box" name="client_name_box" type="text" value="  " size="10"/>
 			</div>
@@ -91,16 +64,13 @@ SetupJqueryContactDialog();
 	                    חובה
 	                    ) 
              </span>
-                        
-                        
+                                              
             <div id="company_name_A">
 			<input class="company_name_box" name="company_name_box" type="text" value="  " size="10"/>
 			</div>
 			<span id="company_name">
             שם החברה
             </span>           
-			
-
 
 		    <div id="e_mail_contact_A">
 			<input class="e_mail_contact_box" name="e_mail_contact_box" type="text" value="  " size="10"/>
@@ -114,9 +84,7 @@ SetupJqueryContactDialog();
 	         חובה
 	         ) 
            </span>
-           
-           
-           
+      
            
             <div id="subject_contact_A">
 			<input class="subject_contact_box" name="subject_contact_box" type="text" value="  " size="10"/>
@@ -140,41 +108,22 @@ SetupJqueryContactDialog();
 	         חובה
 	         ) 
            </span>
-
-
-
-
-
-
-			
+		
 			<input class="approval_contact_box" name="approval_contact_box" type="checkbox" value="" size="20"/>
 			
 			<span id="approval_contact">
             מאשר את הצטרפותי למועדון הלקוחות של סאטוריקה וקבלת
              עידכונים תקופתיים
-            </span> 
-
-
-
-
-			</div>
-			
-			
-			
-			
-
-		</div>
-		
-		
+            </span>
+            </form>
+			</div>	
+		</div>		
 		<?php 
 		// button with send , do requrired functions
 		//<div id="wizard_find_button" onclick="document.forms['contact_form'].submit();">
-		?>
-		
+		?>	
 	</div>
-	
-	
-	
+
 
 	<div id="bottom">
 	</div>
@@ -182,5 +131,25 @@ SetupJqueryContactDialog();
 	<?php
 	FooterFunc();
 	?>
+	
+	
+	<div id="dialog-form" title="קבל הצעה" dir="rtl"> 
+	<p class="validateTips">כל השדות הם חובה</p> 
+ 
+	<form id="get_offer" name="get_offer" method="post" action="getoffer.php"> 
+	<fieldset> 
+		<label for="name">שם</label> 
+		<input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all" /> 
+		<label for="email">דוא"ל</label> 
+		<input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all" /> 
+		<label for="phone">טלפון</label> 
+		<input type="text" name="phone" id="phone" value="" class="text ui-widget-content ui-corner-all" />
+		<label for="content">תוכן</label> 
+		<textarea rows="4" cols="48" name="content" id="content" value="" class="text ui-widget-content ui-corner-all"></textarea>
+	</fieldset> 
+	<!--  <input type='submit' style=display:none>-->
+	<!-- <input type="submit" value="קבל הצעה"/> -->
+	</form> 
+	</div> 
 </body>
 </html>
