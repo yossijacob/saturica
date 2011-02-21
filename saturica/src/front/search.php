@@ -272,19 +272,10 @@ SetupJqueryContactDialog();
 					   }   
 	
 		?>
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	
 
-	
-	
+
+
+
 
 	<div id="bottom">
 	</div>
