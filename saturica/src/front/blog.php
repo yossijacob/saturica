@@ -18,6 +18,7 @@ SetupSearchInputRest();
 ?>
 <title>סטוריקה</title>
 </head>
+<?php flush();?>
 <body>
 	<?php  HeaderFunc("blog"); ?>
 	<div id="blog_div">
