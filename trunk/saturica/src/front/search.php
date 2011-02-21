@@ -223,7 +223,9 @@ SetupJqueryContactDialog();
 									echo "<div id='results_workshop_text_box'>";
 							     	Print_Single_Workshop($print_workshop);
 							     	echo "</div>";
-							     	echo "<div id='get_details_button' class='get_offer' onclick='location.href='index.php'' alt='<?php echo $recommended_workshop[2];?>'></div>";
+							     	?>
+							     	<div id='get_details_button' class='get_offer' alt="<?php echo $print_workshop[2];?>"> </div>
+			                        <?php 
 			                        echo "</div>";
 			                         $i++; 
 									echo "</li>";       
