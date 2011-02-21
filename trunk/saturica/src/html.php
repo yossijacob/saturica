@@ -61,7 +61,7 @@ function UploadFile($file,$tmp_name,$target)
 	if (move_uploaded_file($tmp_name, $target) ) 
 		{ return "The file ".$file." has been uploaded"; } 
 	else{
-   		 return "There was an error uploading the file, please try again!";
+   		 return "There was an error uploading the file, please try again! ";
 		}
 }
 //***********************************************************************
