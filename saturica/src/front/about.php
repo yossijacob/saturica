@@ -20,6 +20,7 @@ SetupSearchInputRest();
 ?>
 <title>סטוריקה - אודות</title>
 </head>
+<?php flush();?>
 <body>
 	<?php HeaderFunc("whatwedo");?>
 	<div id="about_wizard">
