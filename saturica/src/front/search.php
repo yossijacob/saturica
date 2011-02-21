@@ -200,10 +200,10 @@ SetupJqueryContactDialog();
                              </div>
                             
                             <!-- sending the right parameters with the new subject , to search page  --> 
-                            <input class="howmany_text" name="howmany_text" type="hidden" value=<?php $_GET['whatbudget_ddtext'] ?> >  
-                            <input id="where_ddtext" class="dd_text" name="where_ddtext" type="hidden" value=<?php echo $where ?>   >
-                            <input id="howlong_ddtext" class="dd_text" name="howlong_ddtext" type="hidden" value=<?php echo $howlong ?>   >
-                        	<input id="whatbudget_ddtext" class="dd_text" name="whatbudget_ddtext" type="hidden" value=<?php echo $whatbudget ?>    >
+                            <input class="howmany_text" name="howmany_text" type="hidden" value="<?php echo $howmany ?>" >  
+                            <input id="where_ddtext" class="dd_text" name="where_ddtext" type="hidden" value="<?php echo $where ?>"   >
+                            <input id="howlong_ddtext" class="dd_text" name="howlong_ddtext" type="hidden" value="<?php echo $howlong?>"   >
+                        	<input id="whatbudget_ddtext" class="dd_text" name="whatbudget_ddtext" type="hidden" value="<?php echo $whatbudget ?>"    >
                             <input class="Result_Set" name="Result_Set" type="hidden" value="0" />
                              
                             <div id="search_harder_button" onclick="document.forms['search_subject_form'].submit();">
