@@ -30,10 +30,20 @@
 		}
 		else if ((isset($_GET['pending'])) && ($_GET['pending'] =="import" ))
 		{   // import newsletter file
-			$target_path = $fileName;
+			$target_path =  basename( $_FILES['loadnewsletter']['name']); 
 			$upload_result = UploadFile( $_FILES['loadnewsletter']['name'],$_FILES['loadnewsletter']['tmp_name'],$target_path);
+			
+			/*$upload_result .="<br/>";
+			$upload_result .=$_FILES['loadnewsletter']['name'];
 			$upload_result .="<br/>";
+			$upload_result .=$_FILES['loadnewsletter']['tmp_name'];
+			$upload_result .="<br/>";
+			$upload_result .=$target_path;
+			$upload_result .="<br/>";
+			$upload_result .="<br/> Error Code: " . $_FILES["loadnewsletter"]["error"];*/
+		
 		}
+		
 		//else 
 		//{	//send newsletter to all customers
 			$fileHandle = fopen($fileName, 'r+') or die("can't open file");
@@ -161,25 +171,26 @@
 		<h2>יצוא הניוזלטר</h2>
 		<hr></hr>
 		<div class="centered_button_div">
-	    <div id="shiny-demo-blue" class="demo-button" onclick="javascript:document.export_newsletter_form.submit();">שמור ניוזלטר למחשבך<span/></div>
-	    </form>
-	    <br/>
-	    ייצא את הקובץ למחשבך
+		    <div id="shiny-demo-blue" class="demo-button" onclick="javascript:document.export_newsletter_form.submit();">שמור ניוזלטר למחשבך<span/></div>
+		    <br/>
+		    ייצא את הקובץ למחשבך
 	    </div>
+	    </form>
 	    <br/>
 	    <br/>
 	    
-	    <form name="import_newsletter_form" id="import_newsletter_form" method="post" action="newsletter.php?pending=import">
-	    <h2>יבוא ניוזלטר</h2>
-	    <hr></hr>
-	    לחץ על 
-	    choose file לבחירת קובץ
-	    ואז לחץ על "טען ניוזלטר ממחשבך" על מנת לבצע 
-	    <div class="framed_centered_button_div"> 
-	  	<div id="shiny-demo-red" class="demo-button" onclick="javascript:document.import_newsletter_form.submit();">טען ניוזלטר ממחשבך<span/></div>
-	  	&nbsp &nbsp &nbsp &nbsp
-	  	<input type="file"  name="loadnewsletter"/>
-	    </div>
+	    <form enctype="multipart/form-data" name="import_newsletter_form" id="import_newsletter_form" method="post" action="newsletter.php?pending=import">
+		    <h2>יבוא ניוזלטר</h2>
+		    <hr></hr>
+		    לחץ על 
+		    choose file לבחירת קובץ
+		    ואז לחץ על "טען ניוזלטר ממחשבך" על מנת לבצע 
+		    <div class="framed_centered_button_div"> 
+		  	<div id="shiny-demo-red" class="demo-button" onclick="javascript:document.import_newsletter_form.submit();">טען ניוזלטר ממחשבך<span/></div>
+		  	&nbsp &nbsp &nbsp &nbsp
+		  	<input type="file"  name="loadnewsletter"/>
+		    </div>
+	    </form>
 	    
 </div>   <!--  end of content -->
 <?php 
