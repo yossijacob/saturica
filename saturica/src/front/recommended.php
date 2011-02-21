@@ -112,25 +112,9 @@ SetupJqueryContactDialog();
 	
 	<?php
 	FooterFunc();
+	DialogBoxHtml();
 	?>
 	
-	<div id="dialog-form" title="קבל הצעה" dir="rtl"> 
-	<p class="validateTips">כל השדות הם חובה</p> 
- 
-	<form id="get_offer" name="get_offer" method="post" action="getoffer.php"> 
-	<fieldset> 
-		<label for="name">שם</label> 
-		<input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all" /> 
-		<label for="email">דוא"ל</label> 
-		<input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all" /> 
-		<label for="phone">טלפון</label> 
-		<input type="text" name="phone" id="phone" value="" class="text ui-widget-content ui-corner-all" />
-		<label for="content">תוכן</label> 
-		<textarea rows="4" cols="48" name="content" id="content" value="" class="text ui-widget-content ui-corner-all"></textarea>
-	</fieldset> 
-	<!--  <input type='submit' style=display:none>-->
-	<!-- <input type="submit" value="קבל הצעה"/> -->
-	</form> 
-</div> 
+	
 </body>
 </html>
