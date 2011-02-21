@@ -22,15 +22,17 @@ if(CheckIfIE())
 		<link rel="stylesheet" href="IEstyle.css" type="text/css" />
 		<?php 
 	}
-SetupSearchInputRest();
+
 ?>
 
 <?php 
 SetupJquery();
+SetupSearchInputRest();
 SetupJqueryContactDialog();
 ?>
 <title>סטוריקה - צור קשר</title>
 </head>
+<?php flush();?>
 <body>
 
 <div id="dialog-form" title="קבל הצעה" dir="rtl"> 
