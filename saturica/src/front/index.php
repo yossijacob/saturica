@@ -58,6 +58,7 @@ SetupSearchInputRest();
 </script>
 <title>סטוריקה</title>
 </head>
+<?php flush();?>
 <body>
 	<?php  HeaderFunc("home"); ?>
 	<!-- 
