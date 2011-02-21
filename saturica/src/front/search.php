@@ -56,28 +56,6 @@ SetupJqueryContactDialog();
 </head>
 <body>
 
-<div id="dialog-form" title="קבל הצעה" dir="rtl"> 
-	<p class="validateTips">כל השדות הם חובה</p> 
- 
-	<form id="get_offer" name="get_offer" method="post" action="getoffer.php"> 
-	<fieldset> 
-		<label for="name">שם</label> 
-		<input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all" /> 
-		<label for="email">דוא"ל</label> 
-		<input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all" /> 
-		<label for="password">טלפון</label> 
-		<input type="text" name="phone" id="phone" value="" class="text ui-widget-content ui-corner-all" />
-		<label for="password">תוכן</label> 
-		<textarea rows="4" cols="48" name="content" id="content" value="" class="text ui-widget-content ui-corner-all"></textarea>
-	</fieldset> 
-	<!--  <input type='submit' style=display:none>-->
-	<!-- <input type="submit" value="קבל הצעה"/> -->
-	</form> 
-</div> 
-
-
-
-
 	<?php
 	HeaderFunc('empty');
 	
@@ -206,7 +184,7 @@ SetupJqueryContactDialog();
                         	<input id="whatbudget_ddtext" class="dd_text" name="whatbudget_ddtext" type="hidden" value="<?php echo $whatbudget ?>"    >
                             <input class="Result_Set" name="Result_Set" type="hidden" value="0" />
                              
-                            <div id="search_harder_button" onclick="document.forms['search_subject_form'].submit();">
+                            <div id="search_harder_button" onclick="document.forms['search_subject_form'].submit();">  </div>
                              
                              </form>
                        </div>
@@ -245,7 +223,7 @@ SetupJqueryContactDialog();
 									echo "<div id='results_workshop_text_box'>";
 							     	Print_Single_Workshop($print_workshop);
 							     	echo "</div>";
-							     	echo "<div id='get_details_button' class='get_offer' onclick='location.href='index.php''></div>";
+							     	echo "<div id='get_details_button' class='get_offer' onclick='location.href='index.php'' alt='<?php echo $recommended_workshop[2];?>'></div>";
 			                        echo "</div>";
 			                         $i++; 
 									echo "</li>";       
@@ -272,9 +250,11 @@ SetupJqueryContactDialog();
 					   { 
 					   if ($Result_Set<$Total && $Result_Set>0) 
 					      { 
+					      echo "<div id='Prev_next_Style'>";	
 					      echo "<div id='PrevStyle'>";
 					      $Res1=$Result_Set-$Per_Page;  
 					      echo "<A HREF=\"search.php?Result_Set=$Res1&whatodo_ddtext=$whattodo&howmany_text=$howmany&where_ddtext=$where&howlong_ddtext=$howlong&whatbudget_ddtext=$whatbudget\"> קודם >> </A>&nbsp;"; 
+					      echo"</div>";
 					      echo"</div>";
 					      } 
 					   if ($Result_Set>=0 && $Result_Set<$Total) 
@@ -316,6 +296,7 @@ SetupJqueryContactDialog();
 	</div>
 	<?php
 	FooterFunc();
+	DialogBoxHtml();
 	?>
 </body>
 </html>
