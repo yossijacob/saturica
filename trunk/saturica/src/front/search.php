@@ -180,33 +180,38 @@ SetupJqueryContactDialog();
 	 
 		<div id="results">
 				       <div id="search_results_content">
-                       <form action="index.html" method="set">
+                       <form action="search.php" method="get" id="search_subject_form">
 			            <span class="questions" id="filter_Subjects">
                             : סנן נושאי פעילות
                         </span>
 			                <div id="filter" class="search_wizard_dropdown"  onclick="show_dropdown('whattodo_ddlist')" >
-                                <input id="whattodo_ddtext" class="dd_text" name="whatodo_ddtext" type="text" value=""  size="10"  readonly="readonly" style="margin-right:1cm;" />
+                                <input id="whattodo_ddtext" class="dd_text" name="whatodo_ddtext" type="text" value=""  size="10"  readonly="readonly" style="margin-right:0.5cm;" />
                                 <div id="whattodo_ddlist" class="dd_list" onmousemove="show_dropdown('whattodo_ddlist')" onmouseout="hide_list('whattodo_ddlist')" >
 	                                <div class="my_ul">
-		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','sekar 1');">Sekar 1</a></div>
-		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','sekar 2');">Sekar 2</a></div>
-		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','sekar 3');">Sekar 3</a></div>
-		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','sekar 4');">Sekar 4</a></div>
+		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','גיבוש ועבודת צוות');">גיבוש ועבודת צוות</a></div>
+		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','פיתוח מנהלים');">פיתוח מנהלים</a></div>
+		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','פיתוח עובדים');">פיתוח עובדים</a></div>
+		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','הרצאות');">הרצאות</a></div>
+		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','פעילות מיוחדת למורים');">פעילות מיוחדת למורים</a></div>
+	                               		<div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','מפגש העשרה חוויתי');">מפגש העשרה חוויתי</a></div>
 	                                </div>
                                 </div>
                                 
                              </div>
+                            
+                            <!-- sending the right parameters with the new subject , to search page  --> 
+                            <input class="howmany_text" name="howmany_text" type="hidden" value=<?php $_GET['whatbudget_ddtext'] ?> >  
+                            <input id="where_ddtext" class="dd_text" name="where_ddtext" type="hidden" value=<?php echo $where ?>   >
+                            <input id="howlong_ddtext" class="dd_text" name="howlong_ddtext" type="hidden" value=<?php echo $howlong ?>   >
+                        	<input id="whatbudget_ddtext" class="dd_text" name="whatbudget_ddtext" type="hidden" value=<?php echo $whatbudget ?>    >
+                            <input class="Result_Set" name="Result_Set" type="hidden" value="0" />
+                             
+                            <div id="search_harder_button" onclick="document.forms['search_subject_form'].submit();">
+                             
                              </form>
                        </div>
 
-		
-				      
-				       
-				       <div id="search_harder_button" onclick="location.href='index.php'"> </div>
-				           
-				        	
-				        	
-				           
+				          
 				             
 		                <div id="results_title">
 		                    <div id="results_title_text_A">
