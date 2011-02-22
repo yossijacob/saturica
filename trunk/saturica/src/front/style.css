@@ -655,6 +655,9 @@ right: 1px;
 	border:none;
 	direction:rtl;
 	color:#514E47;
+	text-align:center;
+	padding-top:0.2cm;
+	
 }
 	
 
@@ -690,6 +693,8 @@ right: 1px;
 	direction:rtl;
 	color:#514E47;
 	top:45px;
+	text-align:center;
+	padding-top:0.2cm;
 }	
 	
 	
@@ -725,6 +730,8 @@ right: 1px;
 	direction:rtl;
 	color:#514E47;
 	top:90px;
+	text-align:center;
+	padding-top:0.2cm;
 }	
 	
 	
@@ -774,6 +781,8 @@ right: 1px;
 	direction:rtl;
 	color:#514E47;
 	top:135px;
+	text-align:center;
+	padding-top:0.2cm;
 }		
 	
 	
@@ -812,6 +821,8 @@ right: 1px;
 	direction:rtl;
 	color:#514E47;
 	top:180px;
+	text-align:center;
+	
 
 }
 
