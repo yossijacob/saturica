@@ -1787,8 +1787,10 @@ z-index:1;
 #NextStyle
 {
 
+	margin-left:auto;
+	margin-right:auto;
 	position:relative;
-	left:90px;
+	left:0px;
 	width:162px;
 	font-size:14px;
 	font-family:Tahoma;
@@ -1800,9 +1802,11 @@ z-index:1;
 	
 #NextStyle a
 {
+	margin-left:auto;
+	margin-right:auto;
 	position:relative;
 	width:162px;
-	left:100px;
+	left:0px;
 	color:white;
 	text-decoration:none;
 }
@@ -1811,9 +1815,11 @@ z-index:1;
 
 #PrevStyle
 {
+	margin-left:auto;
+	margin-right:auto;
 	position:relative;
 	width:162px;
-	left:120px;
+	left:20px;
 	font-size:14px;
 	font-family:Tahoma;
 	text-align:right ;
@@ -1824,9 +1830,11 @@ z-index:1;
 
 #PrevStyle a
 {
+	margin-left:auto;
+	margin-right:auto;
 	width:162px;
 	position:relative;
-	left:120px;
+	left:20px;
 	color:white;
 	text-decoration:none;
 }
