@@ -206,6 +206,7 @@ SetupJqueryContactDialog();
 			                <ul id="results_boxes">
 				                
 			                <?php
+			                $j=0; //for printing empty boxes
 			                if ($result != null)
 			                     foreach ($result as $print_workshop)
 							     {
@@ -228,9 +229,25 @@ SetupJqueryContactDialog();
 							     	<div id='get_details_button' class='get_offer' alt="<?php echo $print_workshop[2];?>"> </div>
 			                        <?php 
 			                        echo "</div>";
-			                         $i++; 
+			                         $i++;
+			                         if ($j == 5) $j=0;
+			                         $j++;	//for printing empty boxes  
 									echo "</li>";       
-							      }				      			  	                					                
+							      }	
+			                
+
+							      while ($j <5)
+							      {
+							      	echo "<li>";
+							      	if ( ($i % 2) == 0)
+							     		echo "<div id='results_box_A'>";
+							     	else echo "<div id='results_box_B'>";
+							     	
+							     	echo "</div>";
+							      	$i++;
+							      	$j++;
+							      	echo "</li>";
+							      }
 					   ?>	
 			                   	  
 			               </ul> 
