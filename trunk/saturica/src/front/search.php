@@ -60,6 +60,18 @@ SetupJqueryContactDialog();
 	<?php
 	HeaderFunc('empty');
 	
+	$Free_search = $_GET['Free_search'];  // start display input from the 'result_set' workshop.
+  	$Free_search = CleanText($Free_search);
+  	
+  	if ($Free_search == 1)	// we here through free search so get the right var from the url
+  	{
+  		$searchString = $_GET['searchString'];
+  		$searchString = CleanText($searchString);	
+  	}		
+  	
+  	else
+  	{
+	
 	//get the input to search at the DB 
 	$whattodo = $_GET['whatodo_ddtext'];
   	$whattodo = CleanText($whattodo);
@@ -77,7 +89,9 @@ SetupJqueryContactDialog();
   	$whatbudget = CleanText($whatbudget);
 
     $lowval = null;
-    $highval = null;
+    $highval = null; 
+    
+  	}
     
     $Per_Page = 5;  // number of results per page.
   
@@ -89,7 +103,7 @@ SetupJqueryContactDialog();
 	 
   	$i = 0; //for the foreach , and the boxA or boxB
   	
-     if ($whatbudget != null)
+     if ( ($Free_search == 0) && ($whatbudget != null) )
      {
           $prices[0] = "פחות מ 50";		// for the places dropdown boxes
 		  $prices[1] = "50 -150";
@@ -141,14 +155,19 @@ SetupJqueryContactDialog();
  	}
 
  	//just for counting the number of results
- 	$result = SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$howmany,0,500);
+ 	if ($Free_search == 0)	// regular search 	
+ 		$result = SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$howmany,0,500);
+ 	else // free search function 
+ 		$result = SearchFreeText("description_text","name","subject",$searchString,0,500);
+ 		
  	if ($result != null)
  	foreach ($result as $print_workshop)
  		$Total++;
  	
-          
-     $result = SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$howmany,$Result_Set,$Per_Page);
-	  
+     if ($Free_search == 0)	// regular search      
+     	$result = SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$howmany,$Result_Set,$Per_Page);
+	 else // free search function 
+ 		$result = SearchFreeText("description_text","name","subject",$searchString,$Result_Set,$Per_Page); 
      
 
 
@@ -164,7 +183,7 @@ SetupJqueryContactDialog();
                             : סנן נושאי פעילות
                         </span>
 			                <div id="filter" class="search_wizard_dropdown"  onclick="show_dropdown('whattodo_ddlist')" >
-                                <input id="whattodo_ddtext" class="dd_text" name="whatodo_ddtext" type="text" value=""  size="10"  readonly="readonly" style="margin-right:0.5cm;" />
+                                <input id="whattodo_ddtext" class="dd_text" name="whatodo_ddtext" type="text" value=""  size="10"  readonly="readonly" style="margin-right:0.8cm;" />
                                 <div id="whattodo_ddlist" class="dd_list" onmousemove="show_dropdown('whattodo_ddlist')" onmouseout="hide_list('whattodo_ddlist')" >
 	                                <div class="my_ul">
 		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','גיבוש ועבודת צוות');">גיבוש ועבודת צוות</a></div>
@@ -184,6 +203,7 @@ SetupJqueryContactDialog();
                             <input id="howlong_ddtext" class="dd_text" name="howlong_ddtext" type="hidden" value="<?php echo $howlong?>"   >
                         	<input id="whatbudget_ddtext" class="dd_text" name="whatbudget_ddtext" type="hidden" value="<?php echo $whatbudget ?>"    >
                             <input class="Result_Set" name="Result_Set" type="hidden" value="0" />
+                            <input class="Free_search" name="Free_search" type="hidden" value="0" />
                              
                             <div id="search_harder_button" onclick="document.forms['search_subject_form'].submit();">  </div>
                              
@@ -272,9 +292,12 @@ SetupJqueryContactDialog();
 					      { 
 					      echo "<div id='Prev_next_Style'>";	
 					      echo "<div id='PrevStyle'>";
-					      $Res1=$Result_Set-$Per_Page;  
-					      echo "<A HREF=\"search.php?Result_Set=$Res1&whatodo_ddtext=$whattodo&howmany_text=$howmany&where_ddtext=$where&howlong_ddtext=$howlong&whatbudget_ddtext=$whatbudget\"> קודם >> </A>"; 
-					      echo"</div>";
+					      $Res1=$Result_Set-$Per_Page;
+					      if ($Free_search == 0)  
+					      	echo "<A HREF=\"search.php?Result_Set=$Res1&whatodo_ddtext=$whattodo&howmany_text=$howmany&where_ddtext=$where&howlong_ddtext=$howlong&Free_search=$Free_search&whatbudget_ddtext=$whatbudget\"> קודם >> </A>"; 
+					      else 
+					      	echo "<A HREF=\"search.php?Result_Set=$Res1&Free_search=$Free_search&searchString=$searchString\"> קודם >> </A>";
+					      	echo"</div>";
 					      echo"</div>";
 					      } 
 					   if ($Result_Set>=0 && $Result_Set<$Total) 
@@ -282,9 +305,12 @@ SetupJqueryContactDialog();
 					      $Res1=$Result_Set+$Per_Page; 
 					      if ($Res1<$Total) 
 					         { 
-					         echo "<div id='NextStyle'>";  	
-					         echo "<A HREF=\"search.php?Result_Set=$Res1&whatodo_ddtext=$whattodo&howmany_text=$howmany&where_ddtext=$where&howlong_ddtext=$howlong&whatbudget_ddtext=$whatbudget\"> <<  הבא </A>"; 
-					         echo"</div>";
+					         echo "<div id='NextStyle'>";
+					         if ($Free_search == 0)  	
+					         	echo "<A HREF=\"search.php?Result_Set=$Res1&whatodo_ddtext=$whattodo&howmany_text=$howmany&where_ddtext=$where&howlong_ddtext=$howlong&Free_search=$Free_search&whatbudget_ddtext=$whatbudget\"> <<  הבא </A>"; 
+					         else 
+					         	echo "<A HREF=\"search.php?Result_Set=$Res1&Free_search=$Free_search&searchString=$searchString\"> <<  הבא </A>";
+					         	echo"</div>";
 					         } 
 					      } 
 					   }   
