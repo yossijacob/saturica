@@ -319,6 +319,8 @@ right: 1px;
 #results_wizard
 {
 	background-color: #B8A47F;
+	height:883px;
+	
 
 }
 
@@ -446,6 +448,7 @@ right: 1px;
 	right:260px;
 	width:500px;
 	float:right;	
+	height:147px;
 }
 
 #results_workshop_img_box
