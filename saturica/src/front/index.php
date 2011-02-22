@@ -144,7 +144,7 @@ SetupSearchInputRest();
 			            <div id="resset">
                             <input class="Result_Set" name="Result_Set" type="text" value="0" style="display:none;"/>
                         </div>  
-                        
+                        	<input class="Free_search" name="Free_search" type="hidden" value="0" />
                         
                                                      
                          
