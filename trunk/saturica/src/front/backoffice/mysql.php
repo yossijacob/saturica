@@ -125,12 +125,13 @@ function SearchWorkshop($column,$val)
 }
 
 //*********************************************************************
-function SearchFreeText($column1,$column2,$column3,$val)
+function SearchFreeText($column1,$column2,$column3,$val,$Result_Set,$Per_Page)
 {
 	//search each word that appears at $val in the columns 1,2,3 
 	$index = 0;
 	$res="";
 	$unique_res="";
+	$new_arr="";
 	$words = explode(" ", $val);
 	
 	// get the id of the workshops that needs to be return
@@ -162,7 +163,7 @@ function SearchFreeText($column1,$column2,$column3,$val)
 		//get the workshope by their id that we found.
 		foreach ($res as $selectedworkshop)
 		{	
-			$query = "SELECT * FROM workshops WHERE $col=$selectedworkshop ";
+			$query = "SELECT * FROM workshops WHERE $col=$selectedworkshop ";	
 			$result = mysql_query($query) or die(mysql_error());
 			while ($row = mysql_fetch_row($result))
 			{
@@ -170,8 +171,20 @@ function SearchFreeText($column1,$column2,$column3,$val)
 			}
 		}
 	}
+	
+	
+	if (!$Result_Set) $Result_Set=0;
+	for ($k=0; $k<$Per_Page ; $k++)
+	{
+		if ($index > $Result_Set+$k)
+		{
+			$new_arr[$k] = $unique_res[$Result_Set+$k];
+		}
+	}
+		
 
-	return $unique_res;
+
+	return $new_arr;
 
 }
 
