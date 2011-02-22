@@ -49,6 +49,7 @@ SetupSearchInputRest();
     }
 </script>
 <?php 
+SetupJqueryContactDialogCss();
 SetupJquery();
 SetupJqueryContactDialog();
 ?>
