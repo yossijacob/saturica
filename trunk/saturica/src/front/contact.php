@@ -52,7 +52,7 @@ SetupJqueryContactDialog();
 					
 		   <form action="search.php" method="get" id="contact_form">
 			<div id="client_name_A">
-			<input class="client_name_box" name="client_name_box" type="text" value="  " size="10"/>
+			<input class="client_name_box" name="client_name_box" type="text" value="  " size="10" />
 			</div>
 			<span id="client_name">
             שם הפונה
@@ -95,7 +95,7 @@ SetupJqueryContactDialog();
            
 
 			<div id="msg_contact_A">
-			<textarea class="msg_contact_box" name="msg_contact_box" type="text" value="  " size="30">
+			<textarea class="msg_contact_box" name="msg_contact_box" rows="2" cols="20"> 
 			 </textarea>
 			 
 			</div>
