@@ -237,7 +237,7 @@ SetupJqueryContactDialog();
                		      
               </div> 
             
-              	<div id='NextPrevious'> &nbsp; </div>
+              	
               		
           </div>
       </div>
