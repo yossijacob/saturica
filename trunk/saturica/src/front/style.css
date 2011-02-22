@@ -1828,7 +1828,7 @@ z-index:1;
 	margin-right:auto;
 	position:relative;
 	width:959px;
-	left:20px;
+	left:0px;
 	font-size:14px;
 	font-family:Tahoma;
 	text-align:right ;
@@ -1844,7 +1844,7 @@ z-index:1;
 	margin-right:auto;
 	width:959px;
 	position:relative;
-	left:20px;
+	left:0px;
 	color:white;
 	text-decoration:none;
 }
