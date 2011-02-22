@@ -212,33 +212,34 @@ function PrintWorkshops($result)
 //************************************************************************
 function Print_Single_Workshop($value)
 {
-	
+	?>
 					
-					echo "<div style='text-align:right; height:147px; font-size:13px;'>";
- 					echo "<br/>";
- 					echo "<span style='font-size:22px; color:rgb(81,78,71); font-family:'Tahoma'; '>$value[2]</span> "; 
- 					echo "<br/>";
- 					echo "<span style='font-size:13px; color:red; font-family:'Tahoma'; '> נושא : </span> "; 
- 					echo " $value[4]  &nbsp &nbsp &nbsp &nbsp"; 
+					<div style="text-align:right; height:147px; font-size:13px;">
+ 					<br/>
+ 					
+ 					<span style="font-size:22px; color:rgb(81,78,71); font-family:'Tahoma'; ">  <?php echo $value[2] ?></span> 	
+ 					<br/>
+ 					<span style="font-size:13px; color:red; font-family:'Tahoma'; "> נושא : </span> 
+ 					<?php echo " $value[4]  &nbsp &nbsp &nbsp &nbsp"; ?>
 
- 					echo "<span style='font-size:13px; color:red; font-family:'Tahoma'; '> סגנון : </span> "; 
- 					echo "$value[5]  &nbsp &nbsp &nbsp &nbsp"; 
+ 					<span style="font-size:13px; color:red; font-family:'Tahoma'; "> סגנון : </span> 
+ 					<?php echo "$value[5]  &nbsp &nbsp &nbsp &nbsp";  ?>
  					
- 					echo "<span style='font-size:13px; color:red; font-family:'Tahoma'; '> מסגרת-זמן : </span> "; 
- 					echo "$value[18]  "; 
+ 					<span style="font-size:13px; color:red; font-family:'Tahoma'; "> מסגרת-זמן : </span>  
+ 					<?php echo "$value[18]  "; ?>
  					
  					
- 					echo "<br/><br/>";
- 					echo "<span style='font-size:15px; font-family:'Tahoma'; '> $value[8] </span> ";
- 					//echo "$value[8]  "; 	
- 					echo "<br/>";
- 					echo "</div>";
- 					echo "<br/>";
+ 					<br/><br/>
+ 					<span style="font-size:15px; font-family:'Tahoma'; "> <?php echo $value[8] ?> </span>
+ 					 	
+ 					<br/>
+ 					</div>
+ 					<br/>
  						
-
+<?php 
 }
 
-
+?>
 
 
 //************************************************************************
