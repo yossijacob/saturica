@@ -273,7 +273,7 @@ SetupJqueryContactDialog();
 					      echo "<div id='Prev_next_Style'>";	
 					      echo "<div id='PrevStyle'>";
 					      $Res1=$Result_Set-$Per_Page;  
-					      echo "<A HREF=\"search.php?Result_Set=$Res1&whatodo_ddtext=$whattodo&howmany_text=$howmany&where_ddtext=$where&howlong_ddtext=$howlong&whatbudget_ddtext=$whatbudget\"> קודם >> </A>&nbsp;"; 
+					      echo "<A HREF=\"search.php?Result_Set=$Res1&whatodo_ddtext=$whattodo&howmany_text=$howmany&where_ddtext=$where&howlong_ddtext=$howlong&whatbudget_ddtext=$whatbudget\"> קודם >> </A>"; 
 					      echo"</div>";
 					      echo"</div>";
 					      } 
@@ -283,7 +283,7 @@ SetupJqueryContactDialog();
 					      if ($Res1<$Total) 
 					         { 
 					         echo "<div id='NextStyle'>";  	
-					         echo "&nbsp;<A HREF=\"search.php?Result_Set=$Res1&whatodo_ddtext=$whattodo&howmany_text=$howmany&where_ddtext=$where&howlong_ddtext=$howlong&whatbudget_ddtext=$whatbudget\"> <<  הבא </A>"; 
+					         echo "<A HREF=\"search.php?Result_Set=$Res1&whatodo_ddtext=$whattodo&howmany_text=$howmany&where_ddtext=$where&howlong_ddtext=$howlong&whatbudget_ddtext=$whatbudget\"> <<  הבא </A>"; 
 					         echo"</div>";
 					         } 
 					      } 
