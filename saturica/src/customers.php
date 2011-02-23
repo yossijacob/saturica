@@ -69,6 +69,7 @@ function ShowCustomerTable()
 <link href="default.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="javascript/functions.js"></script>
 </head>
+<?php flush();?>
 <body>
 	<?php 
 
