@@ -16,6 +16,8 @@ body
 
 /* LAYOUT */
 
+
+
 /*------------ HEADER -------------------*/
 #header
 {
@@ -1038,12 +1040,21 @@ right: 1px;
 	background-color: #B8A47F;
 }
 
+#search_wizard_main
+{
+	width:1238px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
 #search_wizard_content
 {
 	/*width:977px;*/
 	width:960px;
-	margin-left:auto;
-	margin-right:auto;
+	/*margin-left:auto;
+	margin-right:auto;*/
+	margin-left:139px;
+	margin-right:139px;
 }
 
 #search_wizard_content ul
@@ -1358,10 +1369,22 @@ z-index:1;
 	background:url(images/icons_strip_sides_strech.jpg) repeat-x;
 }
 
-#buttons_strip
+#workshop_buttons_main
 {
+	background:url(images/icons_strip_sides_strech.jpg) repeat-x;
+	width: 1238px;
 	margin-left:auto;
 	margin-right:auto;
+	position: relative;
+	height:119px;
+}
+
+#buttons_strip
+{
+	/*margin-left:auto;
+	margin-right:auto;*/
+	margin-left:139px;
+	margin-right:139px;
 	width:960px;
 	position: relative;
 	height:116px;
@@ -1445,17 +1468,26 @@ z-index:1;
 #main_text
 {
 	height:232px;
-	background-color: #473B2F;	
+	
+}
+
+#main_text_main
+{
+	height:354px;
+	margin-left:auto;
+	margin-right:auto;
+	width: 1238px;
 }
 
 #main_text_content
 {
 	/*background:url(images/main_text.jpg) no-repeat;*/
-	width:945px;
+	background-color: #473B2F;
+	width:940px;
 	padding-right:20px;
 	height:354px;
-	margin-left:auto;
-	margin-right:auto;
+	margin-left:139px;
+	margin-right:139px;
 	font-family:Tahoma;
 }
 
@@ -1491,12 +1523,21 @@ z-index:1;
 	background-color: #b8a47f;
 }
 
+#bottom_main
+{
+	margin-left:auto;
+	margin-right:auto;
+	width:1238px;
+	height:428px;
+	position:relative;
+}
+
 #bottom_content
 {
 	background:url(images/bottom_bg.jpg) no-repeat;
-	margin-left:auto;
-	margin-right:auto;
-	width:959px;
+	margin-left:139px;
+	margin-right:139px;
+	width:960px;
 	height:428px;
 	position:relative;
 }
@@ -1882,22 +1923,51 @@ z-index:1;
 {
 	height:75px;
 	background:url(images/bottom_menu_bg02.jpg);
+	position:relative;
 	/*background-color: #1B1B1B;*/
+}
+
+#footer li
+{
+	list-style-type: none;
+	float:left;	
 }
 
 #footer_content
 {
 	margin-left:auto;
 	margin-right:auto;
+	/*width:959px;*/
+	width:1238px;
+	height:75px;
+	position:relative;
+}
+
+#footer_main_content
+{
+	background:url(images/bottom_menu_bg02.jpg);
 	width:959px;
 	height:75px;
 	position:relative;
 }
 
-#footer_content li
+/*#footer_content li
 {
 	list-style-type: none;
 	float:left;	
+}*/
+
+#footer_left
+{
+	width:130px;
+	height:75px;
+}
+
+#footer_right
+{
+	width:148px;
+	height:75px;
+	background:url(images/bottom_menu_bg02.jpg);
 }
 
 #links
@@ -1911,6 +1981,7 @@ z-index:1;
 	margin-top:20px;
 	position:absolute;
 	right:0px;
+	
 }
 
 #links a
