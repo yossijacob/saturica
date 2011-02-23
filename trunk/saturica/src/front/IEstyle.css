@@ -21,6 +21,22 @@
 	height:25px;
 }
 
+.dd_text_search  /* for the refine search dropdown */
+{
+ width:190px;
+ height:25px;
+ border:0px none;
+ background:none;
+/* margin-left:20px;
+ margin-right:5px;*/
+ margin-top:3px;
+ direction:rtl;
+ cursor:default;
+ font-size:14px;
+ font-family:Tahoma;
+ color:#514E47;
+}
+
 
 .dd_text
 {
