@@ -74,6 +74,7 @@ function footer()
 		  <img src='http://www.w3.org/Icons/valid-xhtml10'
           alt='Valid XHTML 1.0!' height='31'' width='88'' /></a>";
 	echo "</div>";
+	echo "<p><a href='login.php'>התנתק</a></p>";
 	echo "<p>best viewed using <a href='http://www.google.com/chrome/' target='_blank'>google chrome</a></p>";
 	echo "<br/>";
 	echo "<p id='legal'>Copyright &copy; 2010 by <a href='http://yossijacob.comli.com/'>Yossi Jacob</a> & Roee Minster. All Rights Reserved.</p>";
@@ -127,6 +128,7 @@ echo <<<TT
 </div>
 TT;
 }
+
 //************************************************************************
 function MenuBar($selected)
 {
@@ -141,16 +143,15 @@ function MenuBar($selected)
 	$sel[$selected]= "active";
 echo '<div id="menu">';
 	Logo();
-	
 	echo	"<ul>";	
-    echo   	"<li class=".$sel["statistics"]."><a href='statistics.php'  title='statistics'>סטטיסטיקה</a></li>";    
-    echo    "<li class=".$sel['customers']."><a href='customers.php' title=''>לקוחות</a></li>";  
-    echo    "<li class=".$sel['locations']."><a href='locations.php' title='locations'>מיקומים</a></li>";   
-    echo   	"<li class=".$sel['recommended']."><a href='recommended.php' title='recommended'>מומלצים</a></li>";    
-    echo   	"<li class=".$sel['workshops']."><a href='workshops.php' title='workshops'>סדנאות</a></li>";    
-    echo   	"<li class=".$sel['newsletter']."><a href='newsletter.php' title='newsletter'>ניוזלטר</a></li>";    
-    echo   	"<li class=".$sel['preferences']."><a href='preferences.php' title='preferences'>הגדרות</a></li>";   
-    echo   	"<li class=".$sel['blog']."><a href='../blog/wp-login.php' title='blog'>בלוג</a></li>";    
+    echo   	"<li class='".$sel["statistics"]."'><a href='statistics.php'  title='statistics'>סטטיסטיקה</a></li>";    
+    echo    "<li class='".$sel['customers']."'><a href='customers.php' title=''>לקוחות</a></li>";  
+    echo    "<li class='".$sel['locations']."'><a href='locations.php' title='locations'>מיקומים</a></li>";   
+    echo   	"<li class='".$sel['recommended']."'><a href='recommended.php' title='recommended'>מומלצים</a></li>";    
+    echo   	"<li class='".$sel['workshops']."'><a href='workshops.php' title='workshops'>סדנאות</a></li>";    
+    echo   	"<li class='".$sel['newsletter']."'><a href='newsletter.php' title='newsletter'>ניוזלטר</a></li>";    
+    echo   	"<li class='".$sel['preferences']."'><a href='preferences.php' title='preferences'>הגדרות</a></li>";   
+    echo   	"<li class='".$sel['blog']."'><a href='../blog/wp-login.php' title='blog'>בלוג</a></li>";    
 	echo 	"</ul>";	
 	echo 	"</div>";	
 
