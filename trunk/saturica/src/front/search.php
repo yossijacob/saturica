@@ -52,9 +52,9 @@ SetupSearchInputRest();
 </script>
 <title>סטוריקה</title>
 </head>
+<?php flush();?>
 <body>
-
-	<?php
+<?php
 	HeaderFunc('empty');
 	
 	$Free_search = $_GET['Free_search'];  // start display input from the 'result_set' workshop.
@@ -65,10 +65,8 @@ SetupSearchInputRest();
   		$searchString = $_GET['searchString'];
   		$searchString = CleanText($searchString);	
   	}		
-  	
   	else
   	{
-	
 	//get the input to search at the DB 
 	$whattodo = $_GET['whatodo_ddtext'];
   	$whattodo = CleanText($whattodo);
@@ -90,13 +88,10 @@ SetupSearchInputRest();
   	}
     
     $Per_Page = 5;  // number of results per page.
-  
   	$Result_Set = $_GET['Result_Set'];  // start display input from the 'result_set' workshop.
   	$Result_Set = CleanText($Result_Set);
  
   	$Total = 0;
-  	
-	 
   	$i = 0; //for the foreach , and the boxA or boxB
   	
      if ( ($Free_search == 0) && ($whatbudget != null) )
@@ -111,7 +106,6 @@ SetupSearchInputRest();
 		  $col="personal_price";
 		  $result='';
 
-					
            	if ($whatbudget == $prices[0])
   			{
   				$lowval = 0;
@@ -161,12 +155,11 @@ SetupSearchInputRest();
      if ($Free_search == 0)	// regular search      
      	$result = SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$howmany,$Result_Set,$Per_Page);
 	 else // free search function 
- 		$result = SearchFreeText("description_text","name","subject",$searchString,$Result_Set,$Per_Page); 
-     
+ 		$result = SearchFreeText("description_text","name","subject",$searchString,$Result_Set,$Per_Page);      
 	?>
+	
 	<div id="results_wizard">
-	 <div id="results_wizard_content">
-	 
+	 <div id="results_wizard_content"> 
 		<div id="results">
 			<div id="search_results_content">
             	<form action="search.php" method="get" id="search_subject_form">
@@ -186,9 +179,7 @@ SetupSearchInputRest();
 	                               		<div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','מפגש העשרה חוויתי');">מפגש העשרה חוויתי</a></div>
 	                                </div>
                             </div>
-                                
                        </div>                           
-
                             <!-- sending the right parameters with the new subject , to search page  --> 
                             <input class="howmany_text" name="howmany_text" type="hidden" value="<?php echo $howmany ?>" >  
                             <input id="where_ddtext" class="dd_text" name="where_ddtext" type="hidden" value="<?php echo $where ?>"   >
@@ -213,7 +204,6 @@ SetupSearchInputRest();
 	                     </div>
 	                     
 			                <ul id="results_boxes">
-				                
 			                <?php
 			                $j=0; //for printing empty boxes
 			                if ($result != null)
@@ -260,11 +250,9 @@ SetupSearchInputRest();
 					   ?>	 
 			               </ul>      
               </div>           	
-              		
           </div>
       </div>
 			
-		
 		<?php 
 				//	echo "<div id='NextPrevious' >vsdvdvd   </div>";
 		
