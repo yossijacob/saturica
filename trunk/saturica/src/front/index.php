@@ -61,43 +61,7 @@ SetupSearchInputRest();
 <?php flush();?>
 <body>
 	<?php  HeaderFunc("home"); ?>
-	<!-- 
-	<div id="header">
-	    <ul>
-            <li >
-                <div id="header_left">
-                </div>
-            </li>
-            <li >
-                <div id="header_content">
-                    <div id="header_content_search">
-                        <form method="get" action="index.html">
-                        <input type="image" src="images/search_icon.jpg" alt="Search button" id="search_icon"/>
-                        &nbsp;
-                        <input type="text" name="searchString" class="textInput" dir="rtl"/>
-                        </form>
-                    </div>
-                    <div id="navigation">
-                        <ul>
-                            <li id="menu_contact" onclick="location.href='contact.php'"></li>
-			                <li id="menu_blog" onclick="location.href='/blog'"></li>
-                            <li id="menu_gallery" onclick="location.href='gallery.php'"></li>
-                            <li id="menu_locations" onclick="location.href='locations.php'"></li>
-                            <li id="menu_customized" onclick="location.href='customized.php'"></li>
-			                <li id="menu_recommended" onclick="location.href='recommendeds.php'"></li>
-			                <li id="menu_whatwedo" onclick="location.href='whatwedo.php'"></li>
-                            <li id="menu_home_pushed" onclick="location.href='index.php'"></li>
-                        </ul>
-                    </div>
-                </div>
-            </li>
-            <li >
-                <div id="header_right">
-                </div>
-            </li>
-        </ul>  
-	</div>
-	 -->
+	
 	<div id="search_wizard">
         <div id="search_wizard_content">
             <ul>
@@ -139,15 +103,13 @@ SetupSearchInputRest();
 			            <div id="howmany">
                             <input class="howmany_text" name="howmany_text" type="text" value="" size="10"/>
                         </div>    
-                        
-                      
+                   
 			            <div id="resset">
                             <input class="Result_Set" name="Result_Set" type="text" value="0" style="display:none;"/>
                         </div>  
+
                         	<input class="Free_search" name="Free_search" type="hidden" value="0" />
                         
-                                                     
-                         
                         <span class="questions" id="where_Question">
                             ? היכן רוצים את הפעילות
                         </span>
@@ -155,7 +117,7 @@ SetupSearchInputRest();
                                 <input id="where_ddtext" class="dd_text" name="where_ddtext" type="text" value=""  size="10"  readonly="readonly"  />
                                 <div id="where_ddlist" class="dd_list" onmousemove="show_dropdown('where_ddlist')" onmouseout="hide_list('where_ddlist')" >
 	                                <div class="my_ul">
-		                                <div class="my_li"><a onclick="setText('where_ddtext','where_ddlist','במבנה ממוזג\מחומם');">
+		                                <div class="my_li"><a onclick="setText('where_ddtext','where_ddlist','במבנה ממוזג\\מחומם');">
 		                                 במבנה ממוזג\מחומם</a></div>
 		                                <div class="my_li"><a onclick="setText('where_ddtext','where_ddlist','אצלנו בארגון');">
 		                                אצלנו בארגון</a></div>
@@ -235,11 +197,7 @@ SetupSearchInputRest();
             </ul>
         </div>
 	</div>
-	
-	<!-- <div id="black_strip">
-	</div> -->
-	
-	
+		
 	<div id="workshop_buttons">
 	    <ul id="buttons_strip">
             <li id="contact_button" onclick="location.href='contact.html'" style="width: 163px;"></li>
@@ -314,37 +272,6 @@ SetupSearchInputRest();
         </ul>
     </div>
 	<?php FooterFunc();?>
-	<!-- 
-	<div id="footer">
-        <ul id="footer_content">
-            
-             
-            <li id="midigital_logo">
-            site by <a href="http://www.midigital.co.il/"><b>MIDigital</b></a>
-            </li>
-            <li id="small_logo">
-            </li>
-            <li id="links">
-                <a href="index.html">דף הבית</a>
-                &nbsp;|&nbsp;&nbsp;<a href="index.html">מה אנחנו עושים?</a>
-                &nbsp;|&nbsp;&nbsp;<a href="recommendeds.php">המומלצים שלנו</a>
-                &nbsp;|&nbsp;&nbsp;<a href="index.html">סדנאות בהתאמה אישית</a>
-                &nbsp;|&nbsp;&nbsp;<a href="index.html">לוקיישנים</a>
-                &nbsp;|&nbsp;&nbsp;<a href="index.html">גלריה</a>
-                &nbsp;|&nbsp;&nbsp;<a href="index.html">בלוג</a>
-                &nbsp;|&nbsp;&nbsp;<a href="index.html">צור קשר</a>
-                <br />
-                <a href="index.html">גיבוש ועבודת צוות</a>
-                &nbsp;|&nbsp;&nbsp;<a href="index.html">סדנאות מנהלים</a>
-                &nbsp;|&nbsp;&nbsp;<a href="index.html">סדנאות עובדים</a>
-                &nbsp;|&nbsp;&nbsp;<a href="index.html">הרצאות</a>
-                &nbsp;|&nbsp;&nbsp;<a href="index.html">מפגשי העשרה</a>
-                &nbsp;|&nbsp;&nbsp;<a href="index.html">ספקים</a>
-                
-            </li>
-           
-        </ul>
-	</div>
-	 -->
+	
 </body>
 </html>
