@@ -65,5 +65,5 @@ connect();   //connect to mysql DB
 	$mailcontent  .= "תוכן: ".$content ;
 	mail($manager_email, $subject, $mailcontent,$headers);
   
-
+	header('Location:thankyou.php');
 ?>
