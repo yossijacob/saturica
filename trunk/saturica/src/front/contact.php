@@ -51,7 +51,7 @@ SetupJqueryContactDialog();
 		
 		<div id="contact_us_text">
 					
-		   <form action="search.php" method="get" id="contact_form">
+		   <form action="getoffercontact.php" method="get" id="contact_form">
 			<div id="client_name_A">
 			<input class="client_name_box" name="client_name_box" type="text" value="  " size="10" />
 			</div>
@@ -117,7 +117,7 @@ SetupJqueryContactDialog();
              עידכונים תקופתיים
             </span>
             
-            <div id="approval_contact_button" onclick="document.forms['wizard_form'].submit();">
+            <div id="approval_contact_button" onclick="document.forms['contact_form'].submit();">
             
             
             
