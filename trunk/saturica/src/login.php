@@ -59,29 +59,33 @@ if (isset($_POST['submitted']))
 	<?php if ($wrong_pass == true) echo "<b><FONT COLOR='RED'>שם משתמש או ססמא אינם נכונים</FONT></b>";?>
 	<br/>
 	<div id="login_div" dir="rtl">
-	<form name="login_form" id="login_form" method="post" action="login.php">
-	<input type="hidden" name="submitted" value="true"/>
-	<table cellspacing="10">
-	 <tr>
-	 	<td><b>שם משתמש</b></td>
-	 <?php echo "<td><input type='text' name='username' value='$username' title='username'/></td>";?>
-	 </tr>
-	 <tr>
-	 	<td><b>ססמא</b></td>
-	 <?php
-	 echo "<td><input type='password' name='entered_pass' value='$entered_pass' title='entered_pass'/></td>";
-	 ?>
-	 </tr>
-	 
-	 <tr><td></td></tr>
-	 <tr><td></td></tr>
-	 </table>
-	<br/>
-	
-  	<div class="centered_button_div"> 
-		<div id="shiny-demo-green" class="demo-button" onclick="javascript:document.login_form.submit();">התחבר<span/></div>
-  		<div id="shiny-demo-blue" class="demo-button" onclick="javascript:ResetPassword();">שכחתי ססמא<span/></div>
-  	</div>
+	<!-- <form name="login_form" id="login_form" method="post" action="login.php"> -->
+	<form id="login_form" method="post" action="login.php">
+		<fieldset>
+		<input type="hidden" name="submitted" value="true"/>
+		<table cellspacing="10">
+		 <tr>
+		 	<td><b>שם משתמש</b></td>
+		 <?php echo "<td><input type='text' name='username' value='$username' title='username'/></td>";?>
+		 </tr>
+		 <tr>
+		 	<td><b>ססמא</b></td>
+		 <?php
+		 echo "<td><input type='password' name='entered_pass' value='$entered_pass' title='entered_pass'/></td>";
+		 ?>
+		 </tr>
+		 
+		 <tr><td></td></tr>
+		 <tr><td></td></tr>
+		</table>
+		<br/>
+		
+	  	<div class="centered_button_div"> 
+			<!-- <div id="shiny-demo-green" class="demo-button" onclick="javascript:document.login_form.submit();">התחבר<span/></div> -->
+			<div id="shiny-demo-green" class="demo-button" onclick="javascript:document.forms['login_form'].submit();">התחבר<span/></div>
+	  		<div id="shiny-demo-blue" class="demo-button" onclick="javascript:ResetPassword();">שכחתי ססמא<span/></div>
+	  	</div>
+	  	</fieldset>
 	</form>
 	</div>
 	
