@@ -62,7 +62,10 @@ SetupSearchInputRest();
 <body>
 	<?php  HeaderFunc("home"); ?>
 	
+	
 	<div id="search_wizard">
+        <div id="search_wizard_main">
+        
         <div id="search_wizard_content">
             <ul>
                 <li>
@@ -196,20 +199,24 @@ SetupSearchInputRest();
                 </li>
             </ul>
         </div>
+        </div>
 	</div>
 		
 	<div id="workshop_buttons">
-	    <ul id="buttons_strip">
-            <li id="contact_button" onclick="location.href='contact.html'" style="width: 163px;"></li>
-            <li id="enrichment_button" onclick="location.href='customized.html'"></li>
-            <li id="lectures_button" onclick="location.href='locations.html'"></li>
-            <li id="workers_button" onclick="location.href='gallery.html'"></li>
-            <li id="managers_button" onclick="location.href='blog.html'" ></li>
-            <li id="team_button" onclick="location.href='contact.html'" style="width: 160px;"></li>
-        </ul>
+		<div id="workshop_buttons_main">
+		<ul id="buttons_strip">
+	            <li id="contact_button" onclick="location.href='contact.html'" style="width: 163px;"></li>
+	            <li id="enrichment_button" onclick="location.href='customized.html'"></li>
+	            <li id="lectures_button" onclick="location.href='locations.html'"></li>
+	            <li id="workers_button" onclick="location.href='gallery.html'"></li>
+	            <li id="managers_button" onclick="location.href='blog.html'" ></li>
+	            <li id="team_button" onclick="location.href='contact.html'" style="width: 160px;"></li>
+	   </ul>
+	   </div> 
     </div>
 	
 	<div id="main_text">
+        <div id="main_text_main">
         <div id="main_text_content" dir="rtl">
 			<br/>
         	<div id="main_text_head">
@@ -234,9 +241,11 @@ SetupSearchInputRest();
         	<span class="white_text">פעילות בהתאמה אישית - </span> בניית פעילות מקורית עם קונספט ייחודי לכם או התאמת פעילות קיימת לערכי החברה, למטרות האירוע ולאופי המשתתפים.  
         	</div>
         </div>
+        </div>
 	</div>
 	
 	<div id="bottom">
+	<div id="bottom_main">
 	    <ul id="bottom_content">
             <li>
                 <div id="blog">
@@ -271,6 +280,9 @@ SetupSearchInputRest();
             </li>
         </ul>
     </div>
+    </div>
+    
+   
 	<?php FooterFunc();?>
 	
 </body>
