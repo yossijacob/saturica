@@ -487,7 +487,15 @@ right: 1px;
 {
 	height:744px;
 	background-color: #B8A47F;
+}
 
+#about_wizard_main
+{
+	position:relative;
+	height:744px;
+	width:1238px;
+	margin-left:auto;
+	margin-right:auto;
 }
 
 #about_main_title
@@ -497,12 +505,11 @@ right: 1px;
 	position:relative;
 	
 	width:960px;
-	margin-left:auto;
-	margin-right:auto;
+	margin-left:139px;
+	margin-right:139px;
 
 	background:url("images/about_header_bg.jpg") no-repeat;
 }
-
 
 
 #about_title
@@ -524,8 +531,8 @@ right: 1px;
 	position:relative;
 	
 	width:960px;
-	margin-left:auto;
-	margin-right:auto;
+	margin-left:139px;
+	margin-right:139px;
 
 	background:url("images/about_limor_bg.jpg") no-repeat;
 }
