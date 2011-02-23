@@ -36,11 +36,12 @@ if ($row==null)  // if null then put header
 	else
 	{
 		$id = $row[0];  // get the id
+		$joinDate = date("d/m/Y", $row[6]);
 		echo "<tr>";
 		echo "<td><a title='מחק רשומה' href='javascript:DeleteRecord(\"deletecustomer.php\",\"$id\",\"$row[1]\")'><img src='images/delete.gif' class='small_icon_button' /></a></td>";
 		echo "<td>$row[8]</td>"; // sent feedback
 		echo "<td>$row[7]</td>"; // active ?
-		echo "<td>$row[6]</td>"; // join date
+		echo "<td>$joinDate</td>"; // join date
 		echo "<td>$row[5]</td>"; // comments
 		echo "<td>$row[4]</td>"; // eamil
 		echo "<td>$row[3]</td>"; // phone
