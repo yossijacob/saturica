@@ -464,14 +464,14 @@ right: 1px;
 /*****************/
 #filter_Subjects
 {
-	top:105px;
-	right:342px;
+	top:107px;
+	right:330px;
 	font-size:12px;
 }
 
 #filter
 {
-	width:170px;
+	width:190px;
 	position:absolute;
 	top:99px;
 	right:462px;
@@ -1156,6 +1156,22 @@ width:960px;
 
 /* dropdown section*/
 
+.dd_text_search  /* for the refine search dropdown */
+{
+ width:190px;
+ height:31px;
+ border:0px none;
+ background:none;
+ margin-left:20px;
+ margin-right:5px;
+ direction:rtl;
+ cursor:default;
+ font-size:14px;
+ font-family:Tahoma;
+ color:#514E47;
+}
+	
+	
 .dd_text
 {
  width:173px;
@@ -1190,8 +1206,8 @@ color:#514E47;
 .search_wizard_dropdown
 {
 /*padding:1px;*/
-width:197px;
-height:31px;
+width:190px;
+height:25px;
 /*background:url(images/select_font.gif) no-repeat;*/
 background:url(images/search_wizard_dropdown.jpg) no-repeat;
 direction:rtl;
