@@ -626,7 +626,7 @@ right: 1px;
 {
 	
 	position:absolute;
-	top:65px;
+	top:50px;
 	right:75px;
 	color:white;
 	font-size:14px;
@@ -678,7 +678,7 @@ right: 1px;
 	direction:rtl;
 	color:#514E47;
 	text-align:center;
-	padding-top:0.2cm;
+	padding-top:0.1cm;
 	
 }
 	
@@ -716,7 +716,7 @@ right: 1px;
 	color:#514E47;
 	top:45px;
 	text-align:center;
-	padding-top:0.2cm;
+	padding-top:0.1cm;
 }	
 	
 	
@@ -753,7 +753,7 @@ right: 1px;
 	color:#514E47;
 	top:90px;
 	text-align:center;
-	padding-top:0.2cm;
+	padding-top:0.1cm;
 }	
 	
 	
@@ -804,7 +804,7 @@ right: 1px;
 	color:#514E47;
 	top:135px;
 	text-align:center;
-	padding-top:0.2cm;
+	padding-top:0.1cm;
 }		
 	
 	
@@ -838,12 +838,12 @@ right: 1px;
 	align:top;
 	background:url(images/text_box_large.jpg) no-repeat;
 	height:130px;
-	width:265px;
+	width:262px;
 	border:none;
 	direction:rtl;
 	color:#514E47;
-	top:180px;
-	text-align:center;
+	top:150px;
+	text-align:right;
 	
 
 }
@@ -868,12 +868,12 @@ right: 1px;
 #approval_contact
 {
 	position:absolute;
-	width:370px;
+	width:250px;
 	right:20px;
-	top:310px;
+	top:322px;
 	text-align:right;
 	color:white;
-	font-size:12px;
+	font-size:11px;
 	font-family:Tahoma;
 
 }
@@ -882,12 +882,35 @@ right: 1px;
 
 .approval_contact_box
 {
-	height:30px;
+	height:25px;
 	border:none;
 	color:#514E47;
 	position:absolute;
 	right:0px;
-	top:310px;
+	top:322px;
+}
+
+
+#approval_contact_button
+{
+	background:url("images/send_button_idle.jpg") no-repeat;
+	height:38px;
+	width:100px;
+	right:270px;
+	top:318px;
+	position:absolute;
+	cursor:pointer;
+}
+
+#approval_contact_button:hover
+{
+	background:url("images/send_button_hover.jpg") no-repeat;
+	height:38px;
+	width:100px;
+	right:270px;
+	top:318px;
+	position:absolute;
+	cursor:pointer;
 }
 	
 	
