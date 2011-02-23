@@ -27,7 +27,7 @@ SetupSearchInputRest();
 <body>
 	<?php  HeaderFunc("gallery"); ?>
 <div id="gallery_page">	
-
+	<div id = "gallery_page_main">
 	<div id="gallery_head" dir="rtl">
 		<div id = "gallery_head_content">
 			גלריה:
@@ -57,7 +57,7 @@ SetupSearchInputRest();
 		</div>
 	</div>
 	
-	
+	</div>
 	
 </div>
 	<?php FooterFunc();?>
