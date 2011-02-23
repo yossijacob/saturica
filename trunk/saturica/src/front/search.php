@@ -75,6 +75,7 @@ SetupSearchInputRest();
   	$howmany = CleanText($howmany);
   	
   	$where = $_GET['where_ddtext'];
+  	$where_for_resend = $_GET['where_ddtext'];
   	$where = CleanText($where);
   	
   	$howlong = $_GET['howlong_ddtext'];
@@ -182,7 +183,7 @@ SetupSearchInputRest();
                        </div>                           
                             <!-- sending the right parameters with the new subject , to search page  --> 
                             <input class="howmany_text" name="howmany_text" type="hidden" value="<?php echo $howmany ?>" >  
-                            <input id="where_ddtext" class="dd_text" name="where_ddtext" type="hidden" value="<?php echo $where ?>"   >
+                            <input id="where_ddtext" class="dd_text" name="where_ddtext" type="hidden" value="<?php echo $where_for_resend ?>"   >
                             <input id="howlong_ddtext" class="dd_text" name="howlong_ddtext" type="hidden" value="<?php echo $howlong?>"   >
                         	<input id="whatbudget_ddtext" class="dd_text" name="whatbudget_ddtext" type="hidden" value="<?php echo $whatbudget ?>"    >
                             <input class="Result_Set" name="Result_Set" type="hidden" value="0" />
@@ -266,7 +267,7 @@ SetupSearchInputRest();
 					      echo "<div id='PrevStyle'>";
 					      $Res1=$Result_Set-$Per_Page;
 					      if ($Free_search == 0)  
-					      	echo "<A HREF=\"search.php?Result_Set=$Res1&whatodo_ddtext=$whattodo&howmany_text=$howmany&where_ddtext=$where&howlong_ddtext=$howlong&Free_search=$Free_search&whatbudget_ddtext=$whatbudget\"> קודם >> </A>"; 
+					      	echo "<A HREF=\"search.php?Result_Set=$Res1&whatodo_ddtext=$whattodo&howmany_text=$howmany&where_ddtext=$where_for_resend&howlong_ddtext=$howlong&Free_search=$Free_search&whatbudget_ddtext=$whatbudget\"> קודם >> </A>"; 
 					      else 
 					      	echo "<A HREF=\"search.php?Result_Set=$Res1&Free_search=$Free_search&searchString=$searchString\"> קודם >> </A>";
 					      	echo"</div>";
@@ -279,7 +280,7 @@ SetupSearchInputRest();
 					         { 
 					         echo "<div id='NextStyle'>";
 					         if ($Free_search == 0)  	
-					         	echo "<A HREF=\"search.php?Result_Set=$Res1&whatodo_ddtext=$whattodo&howmany_text=$howmany&where_ddtext=$where&howlong_ddtext=$howlong&Free_search=$Free_search&whatbudget_ddtext=$whatbudget\"> <<  הבא </A>"; 
+					         	echo "<A HREF=\"search.php?Result_Set=$Res1&whatodo_ddtext=$whattodo&howmany_text=$howmany&where_ddtext=$where_for_resend&howlong_ddtext=$howlong&Free_search=$Free_search&whatbudget_ddtext=$whatbudget\"> <<  הבא </A>"; 
 					         else 
 					         	echo "<A HREF=\"search.php?Result_Set=$Res1&Free_search=$Free_search&searchString=$searchString\"> <<  הבא </A>";
 					         	echo"</div>";
