@@ -2043,14 +2043,22 @@ z-index:1;
 	font-family:Tahoma;
 }
 
+#customized_content_main
+{
+	width: 1238px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 #customized_head
 {
 	background:url(images/customized_header_bg.jpg) no-repeat;
 	height: 212px;
-	width: 959px;
+	width: 960px;
 	position: relative;
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: 139px;
+	margin-right: 139px;
 	
 }
 
@@ -2058,10 +2066,10 @@ z-index:1;
 {
 	background:url(images/customized_main_bg_with_images.jpg) no-repeat;
 	height: 570px;
-	width: 959px;
+	width: 960px;
 	position: relative;
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: 139px;
+	margin-right: 139px;
 }
 
 #customized_footer
