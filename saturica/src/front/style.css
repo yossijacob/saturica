@@ -888,7 +888,13 @@ right: 1px;
 
 }
 
-
+#recommendeds_wizard_main
+{
+	height:750px;
+	width:1238px;
+	margin-left:auto;
+	margin-right:auto;
+}
 
 #recommendeds_main_title
 {	
@@ -896,9 +902,9 @@ right: 1px;
 	height:149px;
 	position:relative;
 	
-	width:959px;
-	margin-left:auto;
-	margin-right:auto;
+	width:960px;
+	margin-left:139px;
+	margin-right:139px;
 
 	background:url("images/recommended_header_bg.jpg") no-repeat;
 }
@@ -912,9 +918,9 @@ right: 1px;
 	height:700px;
 	position:relative;
 	
-	width:959px;
-	margin-left:auto;
-	margin-right:auto;
+	width:960px;
+	margin-left:139px;
+	margin-right:139px;
 }
 
 
