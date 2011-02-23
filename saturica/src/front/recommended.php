@@ -46,7 +46,7 @@ SetupJqueryContactDialog();
 
 	<?php HeaderFunc("recommended");?>
 	<div id="recommendeds_wizard">
-	
+	<div id="recommendeds_wizard_main">
 		<div id="recommendeds_main_title"> 
 			<div id="recommended_title">
                     המומלצים שלנו
@@ -105,10 +105,9 @@ SetupJqueryContactDialog();
 			?>     
 		</div>	
 		</div>		
+	</div>
 	</div>	
 
-	<div id="bottom">
-	</div>
 	
 	<?php
 	FooterFunc();
