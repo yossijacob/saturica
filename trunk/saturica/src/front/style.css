@@ -559,6 +559,14 @@ right: 1px;
 
 }
 
+#contact_us_main_main
+{
+	
+	position:relative;
+	width:1238px;
+	margin-left:auto;
+	margin-right:auto;
+}
 
 #contact_us_main_title
 {	
@@ -566,9 +574,9 @@ right: 1px;
 	height:149px;
 	position:relative;
 	
-	width:959px;
-	margin-left:auto;
-	margin-right:auto;
+	width:960px;
+	margin-left:139px;
+	margin-right:139px;
 
 	background:url("images/header_bg.jpg") no-repeat;
 }
@@ -604,9 +612,9 @@ right: 1px;
 	height:470px;
 	position:relative;
 	
-	width:959px;
-	margin-left:auto;
-	margin-right:auto;
+	width:960px;
+	margin-left:139px;
+	margin-right:139px;
 }
 
 #contact_us_text
@@ -2104,9 +2112,16 @@ z-index:1;
 
 #blog_div
 {
-	width:960px;
+	width:1238px;
 	margin-left: auto;
 	margin-right: auto;	
+}
+
+#blog_div_main
+{
+	/*width:960px;*/
+	margin-left: 139px;
+	margin-right: 139px;	
 }
 
 
@@ -2119,13 +2134,21 @@ z-index:1;
 	background-color: #b8a47f;
 }
 
+#gallery_page_main
+{
+	width: 1238px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 #gallery_head
 {
 	width: 959px;
 	height:149px;
 	position: relative;
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: 139px;
+	margin-right: 139px;
 	background:url(images/gallery_header_bg.jpg) no-repeat;
 }
 
@@ -2154,8 +2177,8 @@ z-index:1;
 	width: 959px;
 	padding-top:20px;
 	position: relative;
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: 139px;
+	margin-right:139px;
 	background:url(images/gallery_main_bg.jpg) no-repeat;
 }
 
