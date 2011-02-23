@@ -22,7 +22,7 @@ SetupSearchInputRest();
 <body>
 	<?php HeaderFunc("contact");?>
 	<div id="about_wizard">
-	
+	<div id="about_wizard_main">
 		<div id="about_main_title" dir="rtl"> 
         	<div id="about_title">
         	<br/>
@@ -36,8 +36,6 @@ SetupSearchInputRest();
 			</div>
 		</div>
 	</div>
-	
-	<div id="bottom">
 	</div>
 	
 	<?php
