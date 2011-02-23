@@ -175,16 +175,16 @@ SetupJqueryContactDialog();
 	<div id="results_wizard">
 	 <div id="results_wizard_content">
 	 
-	 
 		<div id="results">
-				       <div id="search_results_content">
-                       <form action="search.php" method="get" id="search_subject_form">
+			<div id="search_results_content">
+            	<form action="search.php" method="get" id="search_subject_form">
 			            <span class="questions" id="filter_Subjects">
                             : סנן נושאי פעילות
                         </span>
-			                <div id="filter" class="search_wizard_dropdown"  onclick="show_dropdown('whattodo_ddlist')" >
-                                <input id="whattodo_ddtext" class="dd_text" name="whatodo_ddtext" type="text" value=""  size="10"  readonly="readonly" style="margin-right:0.8cm;" />
-                                <div id="whattodo_ddlist" class="dd_list" onmousemove="show_dropdown('whattodo_ddlist')" onmouseout="hide_list('whattodo_ddlist')" >
+			            <div id="filter" class="search_wizard_dropdown"  onclick="show_dropdown('whattodo_ddlist')" >
+                        	<input id="whattodo_ddtext" class="dd_text_search" name="whatodo_ddtext" type="text" value=""  size="10"  readonly="readonly" style="margin-right:0.5cm;" />
+                        	<div id="whattodo_ddlist" class="dd_list" onmousemove="show_dropdown('whattodo_ddlist')" onmouseout="hide_list('whattodo_ddlist')" >
+
 	                                <div class="my_ul">
 		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','גיבוש ועבודת צוות');">גיבוש ועבודת צוות</a></div>
 		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','פיתוח מנהלים');">פיתוח מנהלים</a></div>
@@ -193,10 +193,11 @@ SetupJqueryContactDialog();
 		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','פעילות מיוחדת למורים');">פעילות מיוחדת למורים</a></div>
 	                               		<div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','מפגש העשרה חוויתי');">מפגש העשרה חוויתי</a></div>
 	                                </div>
-                                </div>
+                            </div>
                                 
-                             </div>
+                       </div>
                             
+
                             <!-- sending the right parameters with the new subject , to search page  --> 
                             <input class="howmany_text" name="howmany_text" type="hidden" value="<?php echo $howmany ?>" >  
                             <input id="where_ddtext" class="dd_text" name="where_ddtext" type="hidden" value="<?php echo $where ?>"   >
@@ -207,8 +208,8 @@ SetupJqueryContactDialog();
                              
                             <div id="search_harder_button" onclick="document.forms['search_subject_form'].submit();">  </div>
                              
-                             </form>
-                       </div>
+                 </form>
+           </div>
 
 				          
 				             
