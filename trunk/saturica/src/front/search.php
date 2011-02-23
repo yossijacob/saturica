@@ -160,6 +160,7 @@ SetupSearchInputRest();
 	?>
 	
 	<div id="results_wizard">
+	<div id="results_wizard_main">
 	 <div id="results_wizard_content"> 
 		<div id="results">
 			<div id="search_results_content">
@@ -252,6 +253,7 @@ SetupSearchInputRest();
 			               </ul>      
               </div>           	
           </div>
+          </div>
       </div>
 			
 		<?php 
@@ -263,14 +265,18 @@ SetupSearchInputRest();
 					   { 
 					   if ($Result_Set<$Total && $Result_Set>0) 
 					      { 
-					      echo "<div id='Prev_next_Style'>";	
+					      echo "<div id='Prev_next_Style'>";
+					       echo "<div id='Prev_next_Style_main'>";		
 					      echo "<div id='PrevStyle'>";
 					      $Res1=$Result_Set-$Per_Page;
 					      if ($Free_search == 0)  
-					      	echo "<A HREF=\"search.php?Result_Set=$Res1&whatodo_ddtext=$whattodo&howmany_text=$howmany&where_ddtext=$where_for_resend&howlong_ddtext=$howlong&Free_search=$Free_search&whatbudget_ddtext=$whatbudget\"> קודם >> </A>"; 
+
+					      	echo "<a HREF=\"search.php?Result_Set=$Res1&whatodo_ddtext=$whattodo&howmany_text=$howmany&where_ddtext=$where&howlong_ddtext=$howlong&Free_search=$Free_search&whatbudget_ddtext=$whatbudget\"> קודם >> </a>"; 
+
 					      else 
-					      	echo "<A HREF=\"search.php?Result_Set=$Res1&Free_search=$Free_search&searchString=$searchString\"> קודם >> </A>";
+					      	echo "<a HREF=\"search.php?Result_Set=$Res1&Free_search=$Free_search&searchString=$searchString\"> קודם >> </a>";
 					      	echo"</div>";
+					      echo"</div>";
 					      echo"</div>";
 					      } 
 					   if ($Result_Set>=0 && $Result_Set<$Total) 
@@ -278,25 +284,29 @@ SetupSearchInputRest();
 					      $Res1=$Result_Set+$Per_Page; 
 					      if ($Res1<$Total) 
 					         { 
+					         echo "<div id='Prev_next_Style_main'>";	
 					         echo "<div id='NextStyle'>";
 					         if ($Free_search == 0)  	
-					         	echo "<A HREF=\"search.php?Result_Set=$Res1&whatodo_ddtext=$whattodo&howmany_text=$howmany&where_ddtext=$where_for_resend&howlong_ddtext=$howlong&Free_search=$Free_search&whatbudget_ddtext=$whatbudget\"> <<  הבא </A>"; 
+
+					         	echo "<a HREF=\"search.php?Result_Set=$Res1&whatodo_ddtext=$whattodo&howmany_text=$howmany&where_ddtext=$where&howlong_ddtext=$howlong&Free_search=$Free_search&whatbudget_ddtext=$whatbudget\"> <<  הבא </a>"; 
+
 					         else 
-					         	echo "<A HREF=\"search.php?Result_Set=$Res1&Free_search=$Free_search&searchString=$searchString\"> <<  הבא </A>";
+					         	echo "<a HREF=\"search.php?Result_Set=$Res1&Free_search=$Free_search&searchString=$searchString\"> <<  הבא </a>";
+					         	echo"</div>";
 					         	echo"</div>";
 					         } 
 					      } 
 					   }   	
 		?>
 
-	<div id="bottom">
-	</div>
 	<div id="buttom_search">
-	<div id="buttom_search_content">
-	<br/>
-	?לא מצאת את מה שחיפשת
-	<div id="buttom_search_button" onclick="location.href='index.php'"></div>
-	<div id="buttom_contact_button" onclick="location.href='contact.php'"></div>
+	<div id="buttom_search_main">
+		<div id="buttom_search_content">
+			<br/>
+			?לא מצאת את מה שחיפשת
+			<div id="buttom_search_button" onclick="location.href='index.php'"></div>
+			<div id="buttom_contact_button" onclick="location.href='contact.php'"></div>
+		</div>
 	</div>
 	</div>
 	<?php
