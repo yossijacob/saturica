@@ -96,7 +96,7 @@ SetupJqueryContactDialog();
            
 
 			<div id="msg_contact_A">
-			<textarea class="msg_contact_box" name="msg_contact_box" rows="2" cols="20"> 
+			<textarea class="msg_contact_box" name="msg_contact_box" rows="5" cols="5"> 
 			 </textarea>
 			 
 			</div>
@@ -116,6 +116,11 @@ SetupJqueryContactDialog();
             מאשר את הצטרפותי למועדון הלקוחות של סאטוריקה וקבלת
              עידכונים תקופתיים
             </span>
+            
+            <div id="approval_contact_button" onclick="document.forms['wizard_form'].submit();">
+            
+            
+            
             </form>
 			</div>	
 		</div>		
