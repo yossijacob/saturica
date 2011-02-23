@@ -20,8 +20,10 @@ if(CheckIfIE())
 		<link rel="stylesheet" href="IEstyle.css" type="text/css" />
 		<?php 
 	}
+SetupJqueryContactDialogCss();
+SetupJquery();
+SetupJqueryContactDialog();
 SetupSearchInputRest();
-
 ?>
 <script type="text/javascript" language="javascript">
     var hide = false;
@@ -48,11 +50,6 @@ SetupSearchInputRest();
         document.getElementById(id).style.visibility = "hidden";  // dd_list
     }
 </script>
-<?php 
-SetupJqueryContactDialogCss();
-SetupJquery();
-SetupJqueryContactDialog();
-?>
 <title>סטוריקה</title>
 </head>
 <body>
@@ -89,8 +86,7 @@ SetupJqueryContactDialog();
   	$whatbudget = CleanText($whatbudget);
 
     $lowval = null;
-    $highval = null; 
-    
+    $highval = null;   
   	}
     
     $Per_Page = 5;  // number of results per page.
@@ -119,8 +115,7 @@ SetupJqueryContactDialog();
            	if ($whatbudget == $prices[0])
   			{
   				$lowval = 0;
-  				$highval = 50;
-  				
+  				$highval = 50;				
   			}
   			
   			if ($whatbudget == $prices[1])
@@ -151,7 +146,6 @@ SetupJqueryContactDialog();
   				$lowval = 500;
   				$highval = 5000000;
   			}
-
  	}
 
  	//just for counting the number of results
@@ -169,8 +163,6 @@ SetupJqueryContactDialog();
 	 else // free search function 
  		$result = SearchFreeText("description_text","name","subject",$searchString,$Result_Set,$Per_Page); 
      
-
-
 	?>
 	<div id="results_wizard">
 	 <div id="results_wizard_content">
@@ -195,8 +187,7 @@ SetupJqueryContactDialog();
 	                                </div>
                             </div>
                                 
-                       </div>
-                            
+                       </div>                           
 
                             <!-- sending the right parameters with the new subject , to search page  --> 
                             <input class="howmany_text" name="howmany_text" type="hidden" value="<?php echo $howmany ?>" >  
@@ -206,12 +197,9 @@ SetupJqueryContactDialog();
                             <input class="Result_Set" name="Result_Set" type="hidden" value="0" />
                             <input class="Free_search" name="Free_search" type="hidden" value="0" />
                              
-                            <div id="search_harder_button" onclick="document.forms['search_subject_form'].submit();">  </div>
-                             
+                            <div id="search_harder_button" onclick="document.forms['search_subject_form'].submit();">  </div>            
                  </form>
-           </div>
-
-				          
+           </div>			          
 				             
 		                <div id="results_title">
 		                    <div id="results_title_text_A">
@@ -269,18 +257,13 @@ SetupJqueryContactDialog();
 							      	$j++;
 							      	echo "</li>";
 							      }
-					   ?>	
-			                   	  
-			               </ul> 
-               		      
-              </div> 
-            
-              	
+					   ?>	 
+			               </ul>      
+              </div>           	
               		
           </div>
       </div>
-	
-		
+			
 		
 		<?php 
 				//	echo "<div id='NextPrevious' >vsdvdvd   </div>";
@@ -314,13 +297,8 @@ SetupJqueryContactDialog();
 					         	echo"</div>";
 					         } 
 					      } 
-					   }   
-	
+					   }   	
 		?>
-
-
-
-
 
 	<div id="bottom">
 	</div>
