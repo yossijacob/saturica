@@ -22,6 +22,7 @@ SetupSearchInputRest();
 	<?php  HeaderFunc("customized"); ?>
 	
 	<div id="customized_content">
+	<div id="customized_content_main">
 	    <div id="customized_head" dir="rtl">
 	    	<div class="customized_header" style="position: absolute;top: 30px;right:20px;" dir="rtl">
 	    	סדנאות בהתאמה אישית
@@ -97,9 +98,9 @@ SetupSearchInputRest();
 	    	</div>
 	    	
 	    </div>
-	    
-	    
+	        
 	    <div id="customized_footer">
+	    </div>
 	    </div>
     </div>
 	
