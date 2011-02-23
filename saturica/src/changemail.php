@@ -100,7 +100,7 @@ session_start();
   			EditRecord("preferences",1, $data);     			// edit the email
   			?>
   			<script type="text/javascript" language="javascript">
-   			window.location = 'preferences.php';
+   			window.location = 'changemail.php';
    			</script>
  			<?php 	//header('Location:preferences.php');
 	
