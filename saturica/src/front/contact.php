@@ -33,8 +33,9 @@ SetupJqueryContactDialog();
 <body>
 
 	<?php HeaderFunc("contact");?>
-	<div id="contact_us_main">
 	
+	<div id="contact_us_main">
+	<div id = "contact_us_main_main">
 		<div id="contact_us_main_title"> 
 			<div id="contact_us_title">
                     צור קשר
@@ -123,10 +124,8 @@ SetupJqueryContactDialog();
 		//<div id="wizard_find_button" onclick="document.forms['contact_form'].submit();">
 		?>	
 	</div>
-
-
-	<div id="bottom">
 	</div>
+
 	
 	<?php
 	FooterFunc();
