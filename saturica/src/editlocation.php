@@ -134,18 +134,14 @@ if (!is_authenticated())
 			UploadFile( $_FILES['picture']['name'],$_FILES['picture']['tmp_name'],$target_path);
   			
 		/*	$_FILES['picture']['name'] - name contains the original path of the user uploaded file.
-		 *  $_FILES['picture']['tmp_name'] - tmp_name contains the path to the temporary file that is on the server.  */
-			
-	
-			$data[5] = $target_path.$picture;
-  			
+		 *  $_FILES['picture']['tmp_name'] - tmp_name contains the path to the temporary file that is on the server.  */	
+			$data[5] = $target_path.$picture;			
 			EditRecord("locations",$id, $data);     			// edit the location
-
-			
+	
 			?>
 		
 			<script type="text/javascript" language="javascript">
-   			window.location = 'locations.php';
+   			//window.location = 'locations.php';
    			</script>
    			<?php 
   			//header('Location:locations.php');
@@ -199,7 +195,7 @@ if (!is_authenticated())
 	 </tr>
 	 <tr>
 	 	<td><b>תמונה</b></td>
-	 <?php 	echo "<td><input type='file' name='picture' value='$picture' title='picture'/></td>";?>
+	 <?php 	echo "<td>$picture <input type='file' name='picture' value='$picture' title='picture'/> </td>";?>
 	 </tr>
 	 <tr>
 	 <td><b>דירוג פנימי</b></td>
