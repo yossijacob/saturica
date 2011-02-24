@@ -568,9 +568,9 @@ right: 1px;
 
 #search_locations_content
 {
-	width:960px;
-	margin-left:139px;
-	margin-right:139px;
+	width:900px;
+	margin-left:109px;
+	margin-right:109px;
 }
 
 #locations_boxes ul
@@ -656,15 +656,15 @@ right: 1px;
 {
 	top:115px;
 	right:570px;
-	font-size:11px;
+	font-size:12px;
 }
 
 #locations_filter
 {
-	width:190px;
+	width:140px;
 	position:absolute;
-	top:108px;
-	right:650px;
+	top:110px;
+	right:670px;
 }
 
 
@@ -1468,6 +1468,30 @@ color:#514E47;
 margin-top:3px;
 
 }
+
+
+.location_wizard_dropdown
+{
+/*padding:1px;*/
+width:40px;
+height:25px;
+/*background:url(images/select_font.gif) no-repeat;*/
+background:url(images/loc_area_filter_dropdown.jpg) no-repeat;
+direction:rtl;
+cursor:pointer;
+font-size:11px;
+font-family:Tahoma;
+color:#514E47;
+/*margin-right:-15px;*/
+margin-top:3px;
+
+}
+
+
+
+
+
+
 
 .dd_list
 {
