@@ -71,7 +71,7 @@ function EditRecord($table,$id,$data)
 	}
 	
 	$query = "UPDATE $table $data_msg WHERE id='$id'";
-	//echo $query;
+	echo $query;
 	$result = mysql_query($query) or die(mysql_error());
 }
 
@@ -125,12 +125,13 @@ function SearchWorkshop($column,$val)
 }
 
 //*********************************************************************
-function SearchFreeText($column1,$column2,$column3,$val)
+function SearchFreeText($column1,$column2,$column3,$val,$Result_Set,$Per_Page)
 {
 	//search each word that appears at $val in the columns 1,2,3 
 	$index = 0;
 	$res="";
 	$unique_res="";
+	$new_arr="";
 	$words = explode(" ", $val);
 	
 	// get the id of the workshops that needs to be return
@@ -162,7 +163,7 @@ function SearchFreeText($column1,$column2,$column3,$val)
 		//get the workshope by their id that we found.
 		foreach ($res as $selectedworkshop)
 		{	
-			$query = "SELECT * FROM workshops WHERE $col=$selectedworkshop ";
+			$query = "SELECT * FROM workshops WHERE $col=$selectedworkshop ";	
 			$result = mysql_query($query) or die(mysql_error());
 			while ($row = mysql_fetch_row($result))
 			{
@@ -170,8 +171,20 @@ function SearchFreeText($column1,$column2,$column3,$val)
 			}
 		}
 	}
+	
+	
+	if (!$Result_Set) $Result_Set=0;
+	for ($k=0; $k<$Per_Page ; $k++)
+	{
+		if ($index > $Result_Set+$k)
+		{
+			$new_arr[$k] = $unique_res[$Result_Set+$k];
+		}
+	}
+		
 
-	return $unique_res;
+
+	return $new_arr;
 
 }
 
@@ -193,6 +206,64 @@ function SearchWorkshopPrice($column,$lowval,$highval)
 
 
 
+
+
+//*********************************************************************
+// search at 'workshop' table all the workshops at location=where (or all locations if empty string) and order by rank and place 
+function SearchWorkshopPlace($where,$Result_Set,$Per_Page)
+{
+	$index = 0;
+	$res="";
+	$unique_res="";
+	
+	
+	$query = "SELECT id FROM locations WHERE ";
+	if ($where != "") $query .= "location = '$where' "; 
+	else $query .= "location LIKE '%' "; 
+	$query .= "	ORDER BY rank DESC ";
+	
+	if (!$Result_Set) 
+	   { 
+	   $Result_Set=0; 
+	   $query.=" LIMIT $Result_Set, $Per_Page"; 
+	   }
+	else
+		 { $query.=" LIMIT $Result_Set, $Per_Page"; } 
+	
+	$result = mysql_query($query) or die(mysql_error());
+	while ($row = mysql_fetch_row($result))
+	{
+		$temp = $row[0];
+		$res[$index++] = $temp; // get the current field
+	}
+	
+	if ($res != "")	//we found requested workshops
+	{
+		$res = array_unique($res); 	//remove duplicate workshops (so we wont show the same workshop more then one time) 
+		$index = 0;
+		$col = "id";
+		
+		//get the workshope by their id that we found.
+		foreach ($res as $selectedworkshop)
+		{	
+			$query = "SELECT * FROM locations WHERE $col=$selectedworkshop ";
+			$result = mysql_query($query) or die(mysql_error());
+			while ($row = mysql_fetch_row($result))
+			{
+				$unique_res[$index++] = $row; // get the current field
+			}
+		}
+	}
+
+	return $unique_res;
+	
+	
+	
+}
+
+
+
+
 //*********************************************************************
 // search at 'workshop' table all the rows that has the given values 
 function SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$howmany,$Result_Set,$Per_Page)
@@ -205,7 +276,7 @@ function SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$ho
 	//echo $table['במבנה ממוזג\מחומם'][ '50 -100 ש"ח'];
 	
 	$query = "SELECT id FROM workshops WHERE ";
-	
+
 	$query .= "active = 'כן' AND ";
 	
 	if ($whattodo != null) $query .= "subject = '$whattodo' AND "; 
@@ -267,7 +338,7 @@ function SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$ho
 			}
 
 		
-		$query .= "( ((personal_price + $place_price)*$howmany) + fixed_price) BETWEEN $lowval AND $highval AND ";
+		$query .= "( ((personal_price + $place_price)*$howmany) + fixed_price) BETWEEN ($lowval*$howmany )AND ($highval*$howmany) AND ";
 		 
 	}
 	
@@ -275,6 +346,7 @@ function SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$ho
 	
 	if ($howmany != null) $query .= "minimum_size <= $howmany AND maximum_size >= $howmany  ";
 	else $query .= "minimum_size LIKE '%' "; 
+	$query .= "	ORDER BY rank DESC ";
 
 		
 	if (!$Result_Set) 
