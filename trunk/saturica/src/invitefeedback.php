@@ -19,9 +19,9 @@ $id = CleanText($id);
 		
   	$subject = "סאטוריקה";		
 	$mailcontent .="<h1>שלום</h1>";
-  	$mailcontent .="<br/>";
+  	$mailcontent .="<br/><h2>";
   	$mailcontent  .= "אנו ב satorika מקפידים על איכות הפעילויות המוצעות ללקוחותינו. נודה לך באם תקדיש/י מעט מזמנך לספר לנו עד כמה היית מרוצה מהפעילות שהזמנת דרכנו. מילוי המשוב יעזור לנו לשמור על איכות הפעילויות גם בעתיד.";
-	$mailcontent .="<br/>";
+	$mailcontent .="</h2><br/>";
 	$mailcontent .="<h2><a href='www.satorika.co.il/survey.php'>השאלון<a><h2>";
 	mail($email, $subject, $mailcontent,$headers);
 	
