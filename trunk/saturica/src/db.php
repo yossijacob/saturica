@@ -51,7 +51,6 @@ function GetWorkshopSurveyTableName($workshop_id)
 function CreateWorkshopSurveyTable($workshop_id)
 {
 	$table_name = GetWorkshopSurveyTableName($workshop_id);
-	Debug("Creating Table for broker : $workshop_id , table name= $table_name <br/>");
 	$result = mysql_query("CREATE TABLE `satorika_db`.`$table_name` (
 	`id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY ,
 	`overall` TEXT NOT NULL ,
