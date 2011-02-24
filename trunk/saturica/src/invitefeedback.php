@@ -1,8 +1,8 @@
 <?php
-include_once 'backoffice/html.php';
-include_once 'backoffice/mysql.php';
-include_once 'backoffice/db.php';
-include_once 'backoffice/connect.php';
+include_once 'html.php';
+include_once 'mysql.php';
+include_once 'db.php';
+include_once 'connect.php';
 
 connect();   //connect to mysql DB
 
