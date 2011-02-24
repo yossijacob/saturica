@@ -287,10 +287,7 @@ if (!is_authenticated())
 	 <td><b>מחיר למשתתף</b></td>
 	 <?php 	echo "<td><input type='text' name='workshoppersonprice' value='$workshoppersonprice' title='workshoppersonprice'/></td>"; ?>
 	 </tr>
-	 <tr>
-	 	<td><b>תאור סדנא</b></td>
-	 <?php echo "<td><input type='text' name='workshopdesc' value='$workshopdesc' title='workshopdesc'/></td>";?>
-	 </tr>
+	 
 	 <tr>
 	 	<td><b>הערות סדנא</b></td>
 	 <?php echo "<td><input type='text' name='workshopcomments' value='$workshopcomments' title='workshopcomments'/></td>";?>
@@ -344,6 +341,11 @@ if (!is_authenticated())
 	 	?>
 	 	</td>
 	 </tr>
+	 
+		 <tr>
+		 	<td><b>תאור סדנא</b></td>
+		 <?php echo "<td><textarea  name='workshopdesc' value='$workshopdesc' title='workshopdesc' rows='8' cols='25' > </textarea> </td>";?>
+		 </tr>
 
 	 <tr><td></td></tr>
 	 <tr><td></td></tr>
