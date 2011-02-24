@@ -51,9 +51,9 @@ SetupJqueryContactDialog();
 		
 		<div id="contact_us_text">
 					
-		   <form action="getoffercontact.php" method="get" id="contact_form">
+		   <form action="getoffer.php" method="get" id="contact_form">
 			<div id="client_name_A">
-			<input class="client_name_box" name="client_name_box" type="text" value="  " size="10" />
+			<input class="client_name_box" name="name" type="text" value="  " size="10" />
 			</div>
 			<span id="client_name">
             שם הפונה
@@ -67,14 +67,14 @@ SetupJqueryContactDialog();
              </span>
                                               
             <div id="company_name_A">
-			<input class="company_name_box" name="company_name_box" type="text" value="  " size="10"/>
+			<input class="company_name_box" name="company" type="text" value="  " size="10"/>
 			</div>
 			<span id="company_name">
             שם החברה
             </span>           
 
 		    <div id="e_mail_contact_A">
-			<input class="e_mail_contact_box" name="e_mail_contact_box" type="text" value="  " size="10"/>
+			<input class="e_mail_contact_box" name="email" type="text" value="  " size="10"/>
 			</div>
 			<span id="e_mail_contact">
             כתובת דוא"ל
@@ -88,7 +88,7 @@ SetupJqueryContactDialog();
       
            
             <div id="subject_contact_A">
-			<input class="subject_contact_box" name="subject_contact_box" type="text" value="  " size="10"/>
+			<input class="subject_contact_box" name="subject" type="text" value="  " size="10"/>
 			</div>
 			<span id="subject_contact">
             נושא הפנייה
@@ -96,7 +96,7 @@ SetupJqueryContactDialog();
            
 
 			<div id="msg_contact_A">
-			<textarea class="msg_contact_box" name="msg_contact_box" rows="5" cols="5"> 
+			<textarea class="msg_contact_box" name="content" rows="5" cols="5"> 
 			 </textarea>
 			 
 			</div>
