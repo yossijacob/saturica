@@ -18,7 +18,7 @@ $id = CleanText($id);
 	$headers .= 'From: satorika@satorika.co.il' . "\r\n" .'Reply-To: satorika@satorika.co.il' . "\r\n" .'X-Mailer: PHP/' . phpversion();
 		
   	$subject = "סאטוריקה";		
-	$mailcontent .="<h1>שלום<h1>";
+	$mailcontent .="<h1>שלום</h1>";
   	$mailcontent .="<br/>";
   	$mailcontent  .= "אנו ב satorika מקפידים על איכות הפעילויות המוצעות ללקוחותינו. נודה לך באם תקדיש/י מעט מזמנך לספר לנו עד כמה היית מרוצה מהפעילות שהזמנת דרכנו. מילוי המשוב יעזור לנו לשמור על איכות הפעילויות גם בעתיד.";
 	$mailcontent .="<br/>";
