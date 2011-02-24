@@ -26,7 +26,9 @@ $id = CleanText($id);
 	mail($email, $subject, $mailcontent,$headers);
 	
 	echo "<br/><br/>";
+	echo "<div id='centerdiv'>";
 	echo "<h2>הזמנת משוב נשלחה בהצלחה</h2>";
 	echo "<a href='customers.php'>חזור לעמוד הלקוחות</a>";
+	echo "</div>";
 	
 ?>
