@@ -69,7 +69,7 @@
 			
 			$headers  = 'MIME-Version: 1.0' . "\r\n";
 			$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-			$headers .= 'From: satorika@satorika.com' . "\r\n" .'Reply-To: satorika@satorika.com' . "\r\n" .'X-Mailer: PHP/' . phpversion();
+			$headers .= 'From: satorika@satorika.co.il' . "\r\n" .'Reply-To: satorika@satorika.co.il' . "\r\n" .'X-Mailer: PHP/' . phpversion();
 			
 			$emails = GetColumn("customers",4);
 			$names = GetColumn("customers",1);
