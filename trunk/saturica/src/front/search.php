@@ -182,7 +182,16 @@ SetupSearchInputRest();
 	                                </div>
                             </div>
                        </div>                           
-                            <!-- sending the right parameters with the new subject , to search page  --> 
+                            <!-- sending the right parameters with the new subject , to search page  -->
+                            <?php 
+                            if ($Free_search == 1) // we here through free search so we dont have all those fields at the url so we put null at them
+                            {
+                            	$howmany = null;
+                            	$where_for_resend = null;
+                            	$howlong = null;
+                            	$whatbudget = null;
+                            }
+                            ?>
                             <input class="howmany_text" name="howmany_text" type="hidden" value="<?php echo $howmany ?>" >  
                             <input id="where_ddtext" class="dd_text" name="where_ddtext" type="hidden" value="<?php echo $where_for_resend ?>"   >
                             <input id="howlong_ddtext" class="dd_text" name="howlong_ddtext" type="hidden" value="<?php echo $howlong?>"   >
@@ -190,6 +199,7 @@ SetupSearchInputRest();
                             <input class="Result_Set" name="Result_Set" type="hidden" value="0" />
                             <input class="Free_search" name="Free_search" type="hidden" value="0" />
                              
+                            
                             <div id="search_harder_button" onclick="document.forms['search_subject_form'].submit();">  </div>            
                  </form>
            </div>			          
