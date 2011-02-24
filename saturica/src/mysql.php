@@ -71,7 +71,7 @@ function EditRecord($table,$id,$data)
 	}
 	
 	$query = "UPDATE $table $data_msg WHERE id='$id'";
-	echo $query;
+	//echo $query;
 	$result = mysql_query($query) or die(mysql_error());
 }
 
