@@ -192,7 +192,8 @@ session_start();
   			$data[14] = $workshoprank; 
   			$data[15] = $workshoptype; 
 			$data[16] = $workshoplocation; 
-			$data[17] = $workshoptimeframe; 
+			$data[17] = $workshoptimeframe;
+			$data[18] = 0;   // votes in feedback  
   			
   			$target_path = "workshop_pic/";	//upload the picture to 'workshop_pic' folder
 			$target_path = $target_path . basename( $_FILES['workshoppic']['name']); 
