@@ -566,6 +566,7 @@ img.small_icon_button{
     -o-transition: all 1s ease-in-out;
 	padding:2px;
 	margin-top:3px;
+	border: none;
 }
 img:hover.small_icon_button
 {
