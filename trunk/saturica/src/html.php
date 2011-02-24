@@ -59,9 +59,9 @@ function UploadFile($file,$tmp_name,$target)
 {
 	//	upload a file to $target. the target needs to be an existing folder.
 	if (move_uploaded_file($tmp_name, $target) ) 
-		{ echo "The file ".$file." has been uploaded"; } 
+		{ return "The file ".$file." has been uploaded"; } 
 	else{
-   		 echo "There was an error uploading the file, please try again!";
+   		 return "There was an error uploading the file, please try again!";
 		}
 }
 //***********************************************************************
