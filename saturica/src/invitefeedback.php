@@ -24,11 +24,20 @@ $id = CleanText($id);
 	$mailcontent .="</h2><br/>";
 	$mailcontent .="<h2><a href='www.satorika.co.il/survey.php'>השאלון<a><h2>";
 	mail($email, $subject, $mailcontent,$headers);
-	
-	echo "<br/><br/>";
-	echo "<div id='centerdiv'>";
-	echo "<h2>הזמנת משוב נשלחה בהצלחה</h2>";
-	echo "<a href='customers.php'>חזור לעמוד הלקוחות</a>";
-	echo "</div>";
-	
-?>
+	?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>ערוך מיקום</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<br/><br/>
+	<div id='centerdiv'>
+	<h2>הזמנת משוב נשלחה בהצלחה</h2>
+	<a href='customers.php'>חזור לעמוד הלקוחות</a>
+	</div>
+</body>	
