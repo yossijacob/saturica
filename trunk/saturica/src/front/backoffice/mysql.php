@@ -206,6 +206,64 @@ function SearchWorkshopPrice($column,$lowval,$highval)
 
 
 
+
+
+//*********************************************************************
+// search at 'workshop' table all the workshops at location=where (or all locations if empty string) and order by rank and place 
+function SearchWorkshopPlace($where,$Result_Set,$Per_Page)
+{
+	$index = 0;
+	$res="";
+	$unique_res="";
+	
+	
+	$query = "SELECT id FROM locations WHERE ";
+	if ($where != "") $query .= "location = '$where' "; 
+	else $query .= "location LIKE '%' "; 
+	$query .= "	ORDER BY rank DESC ";
+	
+	if (!$Result_Set) 
+	   { 
+	   $Result_Set=0; 
+	   $query.=" LIMIT $Result_Set, $Per_Page"; 
+	   }
+	else
+		 { $query.=" LIMIT $Result_Set, $Per_Page"; } 
+	
+	$result = mysql_query($query) or die(mysql_error());
+	while ($row = mysql_fetch_row($result))
+	{
+		$temp = $row[0];
+		$res[$index++] = $temp; // get the current field
+	}
+	
+	if ($res != "")	//we found requested workshops
+	{
+		$res = array_unique($res); 	//remove duplicate workshops (so we wont show the same workshop more then one time) 
+		$index = 0;
+		$col = "id";
+		
+		//get the workshope by their id that we found.
+		foreach ($res as $selectedworkshop)
+		{	
+			$query = "SELECT * FROM locations WHERE $col=$selectedworkshop ";
+			$result = mysql_query($query) or die(mysql_error());
+			while ($row = mysql_fetch_row($result))
+			{
+				$unique_res[$index++] = $row; // get the current field
+			}
+		}
+	}
+
+	return $unique_res;
+	
+	
+	
+}
+
+
+
+
 //*********************************************************************
 // search at 'workshop' table all the rows that has the given values 
 function SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$howmany,$Result_Set,$Per_Page)
