@@ -728,4 +728,12 @@ img:hover.small_icon_button
 		box-shadow:rgba(128,256,128,0.6) 0px 8px 24px;
 	}
 	
+#centerdiv
+{
+	width: 200px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;	
+}
+	
 	
