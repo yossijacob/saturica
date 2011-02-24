@@ -95,7 +95,14 @@ function ShowBrokerTable()
 	echo "</table>";
 } 
 //**************************************************************************
+function GetTableActiveSize($table)
+{
+	$result = mysql_query("SELECT * FROM $table Where active='כן'") or die(mysql_error());
+	$res = mysql_num_rows($result);
+	return $res;
+}
 
+//********************************************************************
 function is_authenticated() 
 {
 return ( isset($_SESSION['authenticated']) && ($_SESSION['authenticated'] == "yes"));
