@@ -145,7 +145,7 @@ if (!is_authenticated())
 			?>
 		
 			<script type="text/javascript" language="javascript">
-   			window.location = 'http://satorika.co.il/backoffice/locations.php';
+   			window.location = 'locations.php';
    			</script>
    			<?php 
   			//header('Location:locations.php');
