@@ -204,8 +204,7 @@ if (!is_authenticated())
   			
   			$target_path = "workshop_pic/";	//upload the picture to 'workshop_pic' folder
 			$target_path = $target_path . basename( $_FILES['workshoppic']['name']); 
-			if (UploadFile( $_FILES['workshoppic']['name'],$_FILES['workshoppic']['tmp_name'],$target_path))
-				echo "file uploaded successfulluy";
+			UploadFile( $_FILES['workshoppic']['name'],$_FILES['workshoppic']['tmp_name'],$target_path);
 			
   			
 			
@@ -217,7 +216,7 @@ if (!is_authenticated())
   			?>
 		
 			<script type="text/javascript" language="javascript">
-   			//window.location = 'http://satorika.co.il/backoffice/workshops.php';
+   			window.location = 'http://satorika.co.il/backoffice/workshops.php';
    			</script>
    			<?php 
   			//header('Location:workshops.php');
