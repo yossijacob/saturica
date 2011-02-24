@@ -101,9 +101,14 @@ function GetColumn($table,$col_number)
 	return $col;
 }
 
-
-
 //*********************************************************************
+function DropTable($table)
+{	// delete a table
+	$query = "DROP TABLE $table";
+	$result = mysql_query($query)
+	or die(mysql_error());
+}
+
 /*
 function db_createlist($linkID,$default,$query,$blank)
 {
