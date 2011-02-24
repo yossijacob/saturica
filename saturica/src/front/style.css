@@ -591,11 +591,11 @@ right: 1px;
 #location_harder_button
 {
 	background:url("images/area_filter_button_idle.jpg") no-repeat;
-	height:23px;
-	width:96px;
+	height:26px;
+	width:80px;
 	position:absolute;
-	top:103px;
-	left:210px;
+	top:110px;
+	left:30px;
 	cursor:pointer;
 
 }
@@ -604,11 +604,11 @@ right: 1px;
 #location_harder_button:hover
 {
 	background:url("images/area_filter_button_hover.jpg") no-repeat;
-	height:23px;
-	width:96px;
+	height:26px;
+	width:80px;
 	position:absolute;
-	top:103px;
-	left:210px;
+	top:110px;
+	left:30px;
 	cursor:pointer;
 
 
@@ -651,7 +651,21 @@ right: 1px;
 }
 
 
+/*****************/
+#locations_filter_Subjects
+{
+	top:115px;
+	right:570px;
+	font-size:11px;
+}
 
+#locations_filter
+{
+	width:190px;
+	position:absolute;
+	top:108px;
+	right:650px;
+}
 
 
 
@@ -2065,6 +2079,47 @@ z-index:1;
 	
 	cursor:pointer;
 }
+
+
+
+
+
+
+#buttom_contact_location_button
+{
+	background:url(images/bottom_contact_button_idle.jpg) no-repeat;
+	height:43px;
+	width:162px;
+	position:absolute;
+
+	right:410px;
+	bottom:13px;
+	
+	cursor:pointer;
+}
+
+
+#buttom_contact_location_button:hover
+{
+	background:url(images/bottom_contact_button_hover.jpg) no-repeat;
+	height:43px;
+	width:162px;
+	position:absolute;
+
+	right:410px;
+	bottom:13px;
+	
+	cursor:pointer;
+}
+
+
+
+
+
+
+
+
+
 
 
 #buttom_contact_button:pushed
