@@ -485,6 +485,182 @@ right: 1px;
 }
 
 
+
+
+
+
+
+/*------------ LOCATIONS -------------------*/
+
+#locations
+{
+	position:relative;
+	width:959px;
+	
+	background:url("images/location_page_header_bg.jpg") no-repeat;
+}
+
+
+#locations_wizard
+{
+	background-color: #B8A47F;
+	height:883px;
+}
+
+#locations_wizard_main
+{
+	width:1238px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#locations_wizard_content
+{
+	width:960px;
+	margin-left:139px;
+	margin-right:139px;
+}
+
+#locations_title
+{
+	height:147px;
+	top:35px;
+	right:50px;
+	color:#514E47;
+	font-size:22px;
+	font-family:Tahoma;
+}
+
+#locations_title_small
+{
+	height:147px;
+	top:35px;
+	right:0px;
+	color:#514E47;
+	font-size:16px;
+	font-family:Tahoma;
+}
+
+#locations_title_text_A
+{
+	position:absolute;
+	top:25px;
+	right:22px;
+	color:#514E47;
+	font-size:22px;
+	font-family:Tahoma;
+	text-align:right;	
+	
+}
+
+
+#locations_title_text_B
+{
+	position:absolute;
+	top:65px;
+	right:55px;
+	color:#514E47;
+	font-size:15px;
+	font-family:Tahoma;
+	text-align:right;	
+	
+}
+
+#search_locations_content
+{
+	width:960px;
+	margin-left:139px;
+	margin-right:139px;
+}
+
+#locations_boxes ul
+{
+
+}
+
+#locations_boxes li
+{	
+	height:147px;
+	width:959px;
+	list-style-type: none;
+	float:left;
+	
+}
+
+
+#location_harder_button
+{
+	background:url("images/area_filter_button_idle.jpg") no-repeat;
+	height:23px;
+	width:96px;
+	position:absolute;
+	top:103px;
+	left:210px;
+	cursor:pointer;
+
+}
+
+
+#location_harder_button:hover
+{
+	background:url("images/area_filter_button_hover.jpg") no-repeat;
+	height:23px;
+	width:96px;
+	position:absolute;
+	top:103px;
+	left:210px;
+	cursor:pointer;
+
+
+}
+	
+
+#locations_box_A
+{
+	
+	height:147px;
+	width:959px;
+	
+	background:url("images/search_results_bright_bg.jpg") no-repeat;
+}
+#locations_box_B
+{
+	
+	height:147px;
+	width:959px;
+	
+	background:url("images/search_results_dark_bg.jpg") no-repeat;
+}
+
+#locations_workshop_text_box
+{
+	position:absolute;
+	right:260px;
+	width:500px;
+	float:right;	
+	height:147px;
+}
+
+#locations_workshop_img_box
+{
+	position:absolute;
+	height:147px;
+	right:0px;
+	width:249px;
+	float:right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /*------------ ABOUT WHAT WE DO -------------------*/
 
 
