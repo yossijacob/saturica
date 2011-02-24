@@ -22,7 +22,7 @@ $id = CleanText($id);
   	$mailcontent .="<br/><h2>";
   	$mailcontent  .= "אנו ב satorika מקפידים על איכות הפעילויות המוצעות ללקוחותינו.";
 	$mailcontent .="<br/>";
-	$mailcontent .=" נודה לך באם תקדיש/י מעט מזמנך לספר לנו עד כמה היית מרוצה מהפעילות שהזמנת דרכנו. מילוי המשוב יעזור לנו לשמור על איכות הפעילויות גם בעתיד";
+	$mailcontent .=" נודה לך באם תקדיש/י מעט מזמנך לספר לנו עד כמה היית מרוצה מהפעילות שהזמנת דרכנו. מילוי המשוב יעזור לנו לשמור על איכות הפעילויות גם בעתיד.";
   	$mailcontent .="</h2><br/>";
 	$mailcontent .="<h2><a href='www.satorika.co.il/survey.php'>השאלון<a><h2>";
 	mail($email, $subject, $mailcontent,$headers);
