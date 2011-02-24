@@ -42,4 +42,5 @@ $id = CleanText($id);
 	<h2>הזמנת משוב נשלחה בהצלחה</h2>
 	<a href='customers.php'>חזור לעמוד הלקוחות</a>
 	</div>
-</body>	
+</body>
+</html>
