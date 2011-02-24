@@ -229,7 +229,9 @@ SetupSearchInputRest();
 							     	 		if ($print_workshop[3] !="")
 							     	 		{
 							     	 			echo "<br/>";
- 												echo "<img src='../workshop_pic/$print_workshop[3]' border=0 height=115px width=210px;>";
+ 												echo "<img src='backoffice/workshop_pic/$print_workshop[3]' border=0 height=115px width=210px;>";
+							     	 			//for home the path is 
+ 												//echo "<img src='../workshop_pic/$print_workshop[3]' border=0 height=115px width=210px;>";
 							     	 		}
 							     	echo "</div>";
 							     	
