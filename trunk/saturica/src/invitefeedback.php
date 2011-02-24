@@ -25,5 +25,8 @@ $id = CleanText($id);
 	$mailcontent .="<h2><a href='www.satorika.co.il/survey.php'>השאלון<a><h2>";
 	mail($email, $subject, $mailcontent,$headers);
 	
-	header('Location:customers.php');
+	echo "<br/><br/>";
+	echo "<h2>הזמנת משוב נשלחה בהצלחה</h2>";
+	echo "<a href='customers.php'>חזור לעמוד הלקוחות</a>";
+	
 ?>
