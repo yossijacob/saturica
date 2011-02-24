@@ -93,7 +93,11 @@ SetupSearchInputRest();
                             : בחר איזור בארץ
                         </span>
 			            <div id="locations_filter" class="location_wizard_dropdown"  onclick="show_dropdown('whattodo_ddlist')" >
-                        	<input id="whattodo_ddtext" class="dd_text_search" name="whatodo_ddtext" type="text" value=""  size="10"  readonly="readonly" style="margin-right:0.5cm; margin-top:-0.1cm;" />
+                        	<?php 
+                        	if(CheckIfIE()) 
+                        	echo '<input id="whattodo_ddtext" class="dd_text_search" name="whatodo_ddtext" type="text" value=""  size="10"  readonly="readonly" style="margin-right:0.5cm;" />';
+                        	else echo '<input id="whattodo_ddtext" class="dd_text_search" name="whatodo_ddtext" type="text" value=""  size="10"  readonly="readonly" style="margin-right:0.5cm; margin-top:-0.1cm;" />';
+                        	?>
                         	<div id="whattodo_ddlist" class="dd_list" onmousemove="show_dropdown('whattodo_ddlist')" onmouseout="hide_list('whattodo_ddlist')" >
 
 	                                <div class="my_ul">
