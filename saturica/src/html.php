@@ -59,9 +59,9 @@ function UploadFile($file,$tmp_name,$target)
 {
 	//	upload a file to $target. the target needs to be an existing folder.
 	if (move_uploaded_file($tmp_name, $target) ) 
-		{ return "The file ".$file." has been uploaded"; } 
+		{ echo "The file ".$file." has been uploaded"; } 
 	else{
-   		 return "There was an error uploading the file, please try again! ";
+   		 echo "There was an error uploading the file, please try again!";
 		}
 }
 //***********************************************************************
@@ -74,7 +74,6 @@ function footer()
 		  <img src='http://www.w3.org/Icons/valid-xhtml10'
           alt='Valid XHTML 1.0!' height='31'' width='88'' /></a>";
 	echo "</div>";
-	echo "<p><a href='login.php'>התנתק</a></p>";
 	echo "<p>best viewed using <a href='http://www.google.com/chrome/' target='_blank'>google chrome</a></p>";
 	echo "<br/>";
 	echo "<p id='legal'>Copyright &copy; 2010 by <a href='http://yossijacob.comli.com/'>Yossi Jacob</a> & Roee Minster. All Rights Reserved.</p>";
@@ -128,7 +127,6 @@ echo <<<TT
 </div>
 TT;
 }
-
 //************************************************************************
 function MenuBar($selected)
 {
@@ -143,15 +141,16 @@ function MenuBar($selected)
 	$sel[$selected]= "active";
 echo '<div id="menu">';
 	Logo();
+	
 	echo	"<ul>";	
-    echo   	"<li class='".$sel["statistics"]."'><a href='statistics.php'  title='statistics'>סטטיסטיקה</a></li>";    
-    echo    "<li class='".$sel['customers']."'><a href='customers.php' title=''>לקוחות</a></li>";  
-    echo    "<li class='".$sel['locations']."'><a href='locations.php' title='locations'>מיקומים</a></li>";   
-    echo   	"<li class='".$sel['recommended']."'><a href='recommended.php' title='recommended'>מומלצים</a></li>";    
-    echo   	"<li class='".$sel['workshops']."'><a href='workshops.php' title='workshops'>סדנאות</a></li>";    
-    echo   	"<li class='".$sel['newsletter']."'><a href='newsletter.php' title='newsletter'>ניוזלטר</a></li>";    
-    echo   	"<li class='".$sel['preferences']."'><a href='preferences.php' title='preferences'>הגדרות</a></li>";   
-    echo   	"<li class='".$sel['blog']."'><a href='../blog/wp-login.php' title='blog'>בלוג</a></li>";    
+    echo   	"<li class=".$sel["statistics"]."><a href='statistics.php'  title='statistics'>סטטיסטיקה</a></li>";    
+    echo    "<li class=".$sel['customers']."><a href='customers.php' title=''>לקוחות</a></li>";  
+    echo    "<li class=".$sel['locations']."><a href='locations.php' title='locations'>מיקומים</a></li>";   
+    echo   	"<li class=".$sel['recommended']."><a href='recommended.php' title='recommended'>מומלצים</a></li>";    
+    echo   	"<li class=".$sel['workshops']."><a href='workshops.php' title='workshops'>סדנאות</a></li>";    
+    echo   	"<li class=".$sel['newsletter']."><a href='newsletter.php' title='newsletter'>ניוזלטר</a></li>";    
+    echo   	"<li class=".$sel['preferences']."><a href='preferences.php' title='preferences'>הגדרות</a></li>";   
+    echo   	"<li class=".$sel['blog']."><a href='blog.php' title='blog'>בלוג</a></li>";    
 	echo 	"</ul>";	
 	echo 	"</div>";	
 
@@ -213,32 +212,54 @@ function PrintWorkshops($result)
 //************************************************************************
 function Print_Single_Workshop($value)
 {
-	
+	?>
 					
-					echo "<div style='text-align:right; height:147px; font-size:13px;'>";
- 					echo "<br/>";
- 					echo "<span style='font-size:22px; color:rgb(81,78,71); font-family:'Tahoma'; '>$value[2]</span> "; 
- 					echo "<br/>";
- 					echo "<span style='font-size:13px; color:red; font-family:'Tahoma'; '> נושא : </span> "; 
- 					echo " $value[4]  &nbsp &nbsp &nbsp &nbsp"; 
+					<div style="text-align:right; height:147px; font-size:13px;">
+ 					<br/>
+ 					
+ 					<span style="font-size:22px; color:rgb(81,78,71); font-family:'Tahoma'; ">  <?php echo $value[2] ?></span> 	
+ 					<br/>
+ 					<span style="font-size:13px; color:red; font-family:'Tahoma'; "> נושא : </span> 
+ 					<?php echo " $value[4]  &nbsp &nbsp &nbsp &nbsp"; ?>
 
- 					echo "<span style='font-size:13px; color:red; font-family:'Tahoma'; '> סגנון : </span> "; 
- 					echo "$value[5]  &nbsp &nbsp &nbsp &nbsp"; 
+ 					<span style="font-size:13px; color:red; font-family:'Tahoma'; "> סגנון : </span> 
+ 					<?php echo "$value[5]  &nbsp &nbsp &nbsp &nbsp";  ?>
  					
- 					echo "<span style='font-size:13px; color:red; font-family:'Tahoma'; '> מסגרת-זמן : </span> "; 
- 					echo "$value[18]  "; 
+ 					<span style="font-size:13px; color:red; font-family:'Tahoma'; "> מסגרת-זמן : </span>  
+ 					<?php echo "$value[18]  "; ?>
  					
  					
- 					echo "<br/><br/>";
- 					echo "<span style='font-size:15px; font-family:'Tahoma'; '> $value[8] </span> ";
- 					//echo "$value[8]  "; 	
- 					echo "<br/>";
- 					echo "</div>";
- 					echo "<br/>";
+ 					<br/><br/>
+ 					<span style="font-size:15px; font-family:'Tahoma'; "> <?php echo $value[8] ?> </span>
+ 					 	
+ 					<br/>
+ 					</div>
+ 					<br/>
  						
-
+<?php 
 }
 
+
+//************************************************************************
+
+
+function Print_Single_Location($value)
+{
+	?>
+					
+					<div style="text-align:right; height:147px; font-size:13px;">
+ 					<br/>
+ 					
+ 					<span style="font-size:22px; color:rgb(81,78,71); font-family:'Tahoma'; ">  <?php echo $value[2] ?></span> 	
+ 					<br/>
+ 					
+ 					<?php echo " $value[4]  &nbsp &nbsp &nbsp &nbsp"; ?>
+ 					
+ 					</div>
+ 					<br/>
+ 						
+<?php 
+}
 
 
 
