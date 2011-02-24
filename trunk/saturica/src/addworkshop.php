@@ -202,7 +202,8 @@ session_start();
 		 *  $_FILES['picture']['tmp_name'] - tmp_name contains the path to the temporary file that is on the server.  */
 			
 	
-  			$location_id = AddRecord("workshops", $data);     			// add the workshop
+  			$workshop_id = AddRecord("workshops", $data);     			// add the workshop
+  			CreateWorkshopSurveyTable($workshop_id);					// create a table for this workshop survey
 
   			//$dont_show_form = true;
 	  		//echo "<h3>Broker Have Been Added</h3>";
