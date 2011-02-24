@@ -177,10 +177,7 @@ session_start();
 	 	<td><b>שם אמיתי</b></td>
 	 <?php echo "<td><input type='text' name='real_name' value='$real_name' title='real_name'/></td>";?>
 	 </tr>
-	 <tr>
-	 	<td><b>תיאור</b></td>
-	 <?php 	echo "<td><input type='text' name='description' value='$description' title='description'/></td>"; ?>
-	 </tr>
+	 
 	 
 	 <tr>
 	 	<td><b>מקום</b></td>
@@ -199,6 +196,12 @@ session_start();
 	 <td><b>דירוג פנימי</b></td>
 	 <?php 	echo "<td><input type='text' name='rank' value='$rank' title='rank'/></td>"; ?>
 	 </tr>
+	 
+	 <tr>
+	 	<td><b>תיאור</b></td>
+	 <?php 	echo "<td><textarea type='text' name='description' value='$description' title='description' rows='8' cols='25' > </textarea> </td>"; ?>
+	 </tr>
+	 
 	
 	 <tr><td></td></tr>
 	 <tr><td></td></tr>
