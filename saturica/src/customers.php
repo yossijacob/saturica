@@ -21,6 +21,7 @@ if ($row==null)  // if null then put header
 		echo "<thead>";
 		echo "<tr>";
 		echo "<th></th>";
+		echo "<th></th>";
 		echo "<th>משוב</th>";
 		echo "<th>פעיל</th>";
 		echo "<th>תאריך הצטרפות</th>";
@@ -39,6 +40,7 @@ if ($row==null)  // if null then put header
 		$joinDate = date("d/m/Y", $row[6]);
 		echo "<tr>";
 		echo "<td><a title='מחק רשומה' href='javascript:DeleteRecord(\"deletecustomer.php\",\"$id\",\"$row[1]\")'><img src='images/delete.gif' class='small_icon_button' /></a></td>";
+		echo "<td><a title='הזמן משוב' href='javascript:OpenPageWithId(\"invitefeedback.php\",\"$id\")'><img src='images/msg.gif' class='small_icon_button' /></a></td>";
 		echo "<td>$row[8]</td>"; // sent feedback
 		echo "<td>$row[7]</td>"; // active ?
 		echo "<td>$joinDate</td>"; // join date
