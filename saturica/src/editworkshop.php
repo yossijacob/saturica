@@ -266,7 +266,7 @@ if (!is_authenticated())
 	 </tr>
 	 <tr>
 	 	<td><b>תמונה</b></td>
-	 <?php 	echo "<td><input type='file' name='workshoppic' value='$workshoppic' title='workshoppic'/></td>";?>	 </tr>
+	 <?php 	echo "<td>$workshoppic<input type='file' name='workshoppic' value='$workshoppic' title='workshoppic'/></td>";?>	 </tr>
 	 <tr>
 	 	<td><b>נושא סדנא </b></td>
 	 	<td>
