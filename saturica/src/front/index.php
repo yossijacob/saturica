@@ -205,12 +205,12 @@ SetupSearchInputRest();
 	<div id="workshop_buttons">
 		<div id="workshop_buttons_main">
 		<ul id="buttons_strip">
-	            <li id="contact_button" onclick="location.href='contact.html'" style="width: 163px;"></li>
-	            <li id="enrichment_button" onclick="location.href='customized.html'"></li>
-	            <li id="lectures_button" onclick="location.href='locations.html'"></li>
-	            <li id="workers_button" onclick="location.href='gallery.html'"></li>
-	            <li id="managers_button" onclick="location.href='blog.html'" ></li>
-	            <li id="team_button" onclick="location.href='contact.html'" style="width: 160px;"></li>
+	            <li id="contact_button" onclick="location.href='contact.php'" style="width: 163px;"></li>
+	            <li id="enrichment_button" onclick="location.href='search.php?whatodo_ddtext=מפגש+העשרה+חוויתי&howmany_text=&Result_Set=0&Free_search=0&where_ddtext=&howlong_ddtext=&whatbudget_ddtext='"></li>
+	            <li id="lectures_button" onclick="location.href='search.php?whatodo_ddtext=הרצאות&howmany_text=&Result_Set=0&Free_search=0&where_ddtext=&howlong_ddtext=&whatbudget_ddtext='"></li>
+	            <li id="workers_button" onclick="location.href='search.php?whatodo_ddtext=פיתוח+עובדים&howmany_text=&Result_Set=0&Free_search=0&where_ddtext=&howlong_ddtext=&whatbudget_ddtext='"></li>
+	            <li id="managers_button" onclick="location.href='search.php?whatodo_ddtext=פיתוח+מנהלים&howmany_text=&Result_Set=0&Free_search=0&where_ddtext=&howlong_ddtext=&whatbudget_ddtext='" ></li>
+	            <li id="team_button" onclick="location.href='search.php?whatodo_ddtext=גיבוש+ועבודת+צוות&howmany_text=&Result_Set=0&Free_search=0&where_ddtext=&howlong_ddtext=&whatbudget_ddtext='" style="width: 160px;"></li>
 	   </ul>
 	   </div> 
     </div>
