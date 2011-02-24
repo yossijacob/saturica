@@ -101,6 +101,24 @@ function GetColumn($table,$col_number)
 	return $col;
 }
 
+//------------------------------------------------------------------------------------*/
+function ShowColumnDropDown($table,$val_col_num,$text_col_num,$name,$deafult,$deafult_text,$selected)
+/**
+ * Enter description here ...
+ *  $table - the table from which to take data
+ * $val_col_num - the number of column to get values from
+ * $text_col_num - the number of columns to get text from
+ * $name - the name of the select box
+ * $deafult - deafult value
+ * $deafult_text - deafult text
+ * $selected - selected value  (-1 for none)
+ */
+{
+	$data_val = GetColumn($table, $val_col_num);
+	$data_text = GetColumn($table, $text_col_num);
+	ShowDropDown($name, $data_val,$data_text, $deafult,$deafult_text,$selected);
+}
+
 //*********************************************************************
 function DropTable($table)
 {	// delete a table
