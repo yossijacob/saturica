@@ -43,28 +43,29 @@ function SetDailyCap($table_id,$cap)
 	$result = mysql_query("UPDATE brokers_queue SET cap='$cap' WHERE id=$table_id");
 }
 //***********************************************************************
-function CreateBrokerLeadTable($broker_id)
+function GetWorkshopSurveyTableName($workshop_id)
 {
-	$table_name = GetBrokerTableName($broker_id);
-	Debug("Creating Table for broker : $broker_id , table name= $table_name <br/>");
-	$result = mysql_query("CREATE TABLE `brokerdb`.`$table_name` (
+	return $workshop_id.'_survey';
+}
+//***********************************************************************
+function CreateWorkshopSurveyTable($workshop_id)
+{
+	$table_name = GetWorkshopSurveyTableName($workshop_id);
+	Debug("Creating Table for broker : $workshop_id , table name= $table_name <br/>");
+	$result = mysql_query("CREATE TABLE `satorika_db`.`$table_name` (
 	`id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY ,
-	`from_city` TEXT NOT NULL ,
-	`from_state` TEXT NOT NULL ,
-	`from_zip` TEXT NOT NULL ,
-	`to_city` TEXT NOT NULL ,
-	`to_state` TEXT NOT NULL ,
-	`to_zip` TEXT NOT NULL ,
-	`shipingdate` INT UNSIGNED NOT NULL ,
-	`carriertype` TEXT NOT NULL ,
-	`year` TEXT NOT NULL ,
-	`make` TEXT NOT NULL ,
-	`model` TEXT NOT NULL ,
-	`condition` TEXT NOT NULL ,
-	`name` TEXT NOT NULL ,
-	`phone` TEXT NOT NULL ,
-	`email` TEXT NOT NULL ,
-	`ip` TEXT NOT NULL ,
+	`overall` TEXT NOT NULL ,
+	`overall_text` TEXT NOT NULL ,
+	`host` TEXT NOT NULL ,
+	`host_text` TEXT NOT NULL ,
+	`personal` TEXT NOT NULL ,
+	`presonal_text` TEXT NOT NULL ,
+	`location` TEXT NOT NULL ,
+	`location_text` TEXT NOT NULL ,
+	`food` TEXT NOT NULL ,
+	`food_text` TEXT NOT NULL ,
+	`comments` TEXT NOT NULL ,
+	`average` DOUBLE NOT NULL ,
 	`date_entered` INT UNSIGNED NOT NULL) ENGINE = MYISAM;")
 	or die(mysql_error());
 }
