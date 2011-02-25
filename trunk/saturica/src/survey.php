@@ -217,7 +217,7 @@ connect();   //connect to mysql DB
 			?>
 		
 			<script type="text/javascript" language="javascript">
-   			window.location = 'thankyou.php';
+   			window.location = '../thankyou.php';
    			</script>
    			<?php 
   		
