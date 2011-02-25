@@ -19,6 +19,11 @@ body
 
 div#preload { display: none; }
 
+fieldset
+{
+	border: none;
+}
+
 /*------------ HEADER -------------------*/
 #header
 {
