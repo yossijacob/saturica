@@ -31,7 +31,7 @@ if(CheckIfIE())
 	}
 SetupSearchInputRest();
 ?>
-<script type="text/javascript" language="javascript">
+<script type="text/javascript">
     var hide = false;
     function show_dropdown(id) 
     {
@@ -206,11 +206,11 @@ SetupSearchInputRest();
 		<div id="workshop_buttons_main">
 		<ul id="buttons_strip">
 	            <li id="contact_button" onclick="location.href='contact.php'" style="width: 163px;"></li>
-	            <li id="enrichment_button" onclick="location.href='search.php?whatodo_ddtext=מפגש+העשרה+חוויתי&howmany_text=&Result_Set=0&Free_search=0&where_ddtext=&howlong_ddtext=&whatbudget_ddtext='"></li>
-	            <li id="lectures_button" onclick="location.href='search.php?whatodo_ddtext=הרצאות&howmany_text=&Result_Set=0&Free_search=0&where_ddtext=&howlong_ddtext=&whatbudget_ddtext='"></li>
-	            <li id="workers_button" onclick="location.href='search.php?whatodo_ddtext=פיתוח+עובדים&howmany_text=&Result_Set=0&Free_search=0&where_ddtext=&howlong_ddtext=&whatbudget_ddtext='"></li>
-	            <li id="managers_button" onclick="location.href='search.php?whatodo_ddtext=פיתוח+מנהלים&howmany_text=&Result_Set=0&Free_search=0&where_ddtext=&howlong_ddtext=&whatbudget_ddtext='" ></li>
-	            <li id="team_button" onclick="location.href='search.php?whatodo_ddtext=גיבוש+ועבודת+צוות&howmany_text=&Result_Set=0&Free_search=0&where_ddtext=&howlong_ddtext=&whatbudget_ddtext='" style="width: 160px;"></li>
+	            <li id="enrichment_button" onclick="location.href='search.php?whatodo_ddtext=מפגש+העשרה+חוויתי&amp;howmany_text=&amp;Result_Set=0&amp;Free_search=0&amp;where_ddtext=&amp;howlong_ddtext=&amp;whatbudget_ddtext='"></li>
+	            <li id="lectures_button" onclick="location.href='search.php?whatodo_ddtext=הרצאות&amp;howmany_text=&amp;Result_Set=0&amp;Free_search=0&amp;where_ddtext=&amp;howlong_ddtext=&amp;whatbudget_ddtext='"></li>
+	            <li id="workers_button" onclick="location.href='search.php?whatodo_ddtext=פיתוח+עובדים&amp;howmany_text=&amp;Result_Set=0&amp;Free_search=0&amp;where_ddtext=&amp;howlong_ddtext=&amp;whatbudget_ddtext='"></li>
+	            <li id="managers_button" onclick="location.href='search.php?whatodo_ddtext=פיתוח+מנהלים&amp;howmany_text=&amp;Result_Set=0&amp;Free_search=0&amp;where_ddtext=&amp;howlong_ddtext=&amp;whatbudget_ddtext='" ></li>
+	            <li id="team_button" onclick="location.href='search.php?whatodo_ddtext=גיבוש+ועבודת+צוות&amp;howmany_text=&amp;Result_Set=0&amp;Free_search=0&amp;where_ddtext=&amp;howlong_ddtext=&amp;whatbudget_ddtext='" style="width: 160px;"></li>
 	   </ul>
 	   </div> 
     </div>
@@ -265,17 +265,16 @@ SetupSearchInputRest();
             </li>
             <li>
                 <div id="video">       
-                <object width="325" height="375">
-                    <param name="movie" value="http://www.youtube.com/v/axCT1a_M0lc?rel=1&color1=0xAF674E&color2=0xAF674E&border=1&fs=1"></param>
-                    <param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param>
-                    <embed src="http://www.youtube.com/v/axCT1a_M0lc?rel=1&color1=0xAF674E&color2=0xAF674E&border=1&fs=1" 
+                <object width="325" height="375" type="application/x-shockwave-flash">
+                    <param name="movie" value="http://www.youtube.com/v/axCT1a_M0lc?rel=1&amp;color1=0xAF674E&amp;color2=0xAF674E&amp;border=1&amp;fs=1"/>
+                    <param name="allowFullScreen" value="true"/><param name="allowscriptaccess" value="always"/>
+                    <embed src="http://www.youtube.com/v/axCT1a_M0lc?rel=1&amp;color1=0xAF674E&amp;color2=0xAF674E&amp;border=1&amp;fs=1" 
                     type="application/x-shockwave-flash" 
                     allowscriptaccess="always" 
                     allowfullscreen="true" 
                     width="325" 
-                    height="375">
-                    </embed>
-                    </object>
+                    height="375"/>
+                </object>
                 </div>
             </li>
         </ul>
