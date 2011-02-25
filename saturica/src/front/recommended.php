@@ -114,7 +114,7 @@ SetupJqueryContactDialog();
 	DialogBoxHtml();
 	?>
 	
-	<div id="preload">
+	<div id="preload" style="display:none;">
 	   <img src="images/main_menu_homepage_hover.jpg" width="1" height="1" alt="Image 01" />
 	   <img src="images/main_menu_whatwedo_hover.jpg" width="1" height="1" alt="Image 02" />
 	   <img src="images/main_menu_recommended_hover.jpg" width="1" height="1" alt="Image 03" />

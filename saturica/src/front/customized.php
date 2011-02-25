@@ -106,14 +106,14 @@ SetupSearchInputRest();
 	
 	<?php FooterFunc();?>
 	
-	<div id="preload">
+	<div id="preload" style="display:none;">
 	   <img src="images/main_menu_homepage_hover.jpg" width="1" height="1" alt="Image 01" />
 	   <img src="images/main_menu_whatwedo_hover.jpg" width="1" height="1" alt="Image 02" />
 	   <img src="images/main_menu_recommended_hover.jpg" width="1" height="1" alt="Image 03" />
 	   <img src="images/main_menu_customized_hover.jpg" width="1" height="1" alt="Image 04" />
 	   <img src="images/main_menu_locations_hover.jpg" width="1" height="1" alt="Image 05" />
 	   <img src="images/main_menu_gallery_hover.jpg" width="1" height="1" alt="Image 06" />
-	   <img src="images/images/main_menu_blog_hover.jpg" width="1" height="1" alt="Image 07" />
+	   <img src="images/main_menu_blog_hover.jpg" width="1" height="1" alt="Image 07" />
 	   <img src="images/main_menu_contact_hover.jpg" width="1" height="1" alt="Image 08" />
 	</div>
 </body>
