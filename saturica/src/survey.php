@@ -238,7 +238,7 @@ connect();   //connect to mysql DB
 	 	<td><b>שם הסדנא  </b>
 		<?php 
 	 	//ShowDropDown("answer6",$ans6,$ans6,"","",$answer6);
-	 	ShowColumnDropDown("workshops",0,2,$answer6,"","",-1);
+	 	ShowColumnDropDown("workshops",0,2,'answer6',"","",-1);
 	 	?>
 	 	</td>
 	</tr>
