@@ -19,7 +19,9 @@ connect();   //connect to mysql DB
 
 </head>
 <body>
-
+<?php 
+  MenuBar(''); 
+ ?>
 	
 <div id="content">
     <br/>
