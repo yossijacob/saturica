@@ -5,9 +5,7 @@ include_once 'functions.php';
 include_once 'backoffice/connect.php';
 include_once 'backoffice/mysql.php';		//change to the correct location ! 
 
-
 connect();   //connect to mysql DB
-
 
 $first_workshop_id = GetRecord('recommendeds',1);	//get id of the recommended workshop
 $first_pic_workshop_recommended = $first_workshop_id[2];	//the picture from recommendeds table 
@@ -28,16 +26,16 @@ $third_workshop = GetRecord('workshops',$third_workshop_id[1]); //get the worksh
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" type="text/css" href="style.css" />
 <?php 
+SetupJqueryContactDialogCss();
 if(CheckIfIE()) 
 	{
 		?>
 		<link rel="stylesheet" href="IEstyle.css" type="text/css" />
 		<?php 
 	}
-SetupJqueryContactDialogCss();
 SetupJquery();
-SetupSearchInputRest();
 SetupJqueryContactDialog();
+SetupSearchInputRest();
 ?>
 <title>סטוריקה - מומלצים</title>
 </head>
@@ -106,14 +104,10 @@ SetupJqueryContactDialog();
 		</div>	
 		</div>		
 	</div>
-	</div>	
-
-	
+	</div>		
 	<?php
 	FooterFunc();
 	DialogBoxHtml();
 	?>
-	
-	
 </body>
 </html>
