@@ -23,7 +23,7 @@ SetupSearchInputRest();
 	<?php  HeaderFunc("blog"); ?>
 	<div id="blog_div">
 		<div id = "blog_div_main">
-		<iframe height="2000" width="960px" frameborder="0" src="../blog/"></iframe>
+			<iframe height="1800" width="960px" frameborder="0" src="../blog/" seamless></iframe>
 		</div>
 	</div>
 	<?php FooterFunc();?>
