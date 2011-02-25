@@ -189,28 +189,28 @@ connect();   //connect to mysql DB
 
   		
   			
-  			$data[0] = $answer6;	// id
   			
-  			$data[1] = $answer1;	//overall
-  			$data[2] = $answer1_text;	//overall text 
   			
-  			$data[3] = $answer2; 	//host
-  			$data[4] = $answer2_text;	//host text
+  			$data[0] = $answer1;	//overall
+  			$data[1] = $answer1_text;	//overall text 
   			
-  			$data[5] = $answer3;  //personal
-  			$data[6] = $answer3_text;	//  personal text 
+  			$data[2] = $answer2; 	//host
+  			$data[3] = $answer2_text;	//host text
   			
-  			$data[7] = $answer4;  //location
-  			$data[8] = $answer4_text;	//  location text 
+  			$data[4] = $answer3;  //personal
+  			$data[5] = $answer3_text;	//  personal text 
   			
-  			$data[9] = $answer5;  //food
-  			$data[10] = $answer5_text;	//  food text 
+  			$data[6] = $answer4;  //location
+  			$data[7] = $answer4_text;	//  location text 
   			
-  			$data[11] = $answer7;  //comments
-  			$data[12] = $rank;  //rank (avarage)
-  			$data[13] = time();	//time ,date
+  			$data[8] = $answer5;  //food
+  			$data[9] = $answer5_text;	//  food text 
   			
-			AddRecord("satorika_db", $data);     			// add the location
+  			$data[10] = $answer7;  //comments
+  			$data[11] = $rank;  //rank (avarage)
+  			$data[12] = time();	//time ,date
+  			
+			AddRecord(GetWorkshopSurveyTableName($answer6), $data);     			// add the location
   			
 			?>
 		
