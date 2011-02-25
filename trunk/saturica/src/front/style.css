@@ -191,8 +191,7 @@ right: 1px;
 
 #menu_recommended:hover
 {
-	width:144px;
-	height:45px;
+	
 	background:url("images/main_menu_recommended_hover.jpg") no-repeat;
 }
 
@@ -212,8 +211,7 @@ right: 1px;
 
 #menu_customized:hover
 {
-	width:196px;
-	height:45px;
+	
 	background:url("images/main_menu_customized_hover.jpg") no-repeat;
 }
 
@@ -233,8 +231,7 @@ right: 1px;
 
 #menu_locations:hover
 {
-	width:107px;
-	height:45px;
+	
 	background:url("images/main_menu_locations_hover.jpg") no-repeat;
 }
 
@@ -254,8 +251,7 @@ right: 1px;
 
 #menu_gallery:hover
 {
-	width:85px;
-	height:45px;
+	
 	background:url("images/main_menu_gallery_hover.jpg") no-repeat;
 }
 
@@ -275,8 +271,7 @@ right: 1px;
 
 #menu_blog:hover
 {
-	width:78px;
-	height:45px;
+	
 	background:url("images/main_menu_blog_hover.jpg") no-repeat;
 }
 
@@ -296,8 +291,7 @@ right: 1px;
 
 #menu_contact:hover
 {
-	width:99px;
-	height:45px;
+	
 	background:url("images/main_menu_contact_hover.jpg") no-repeat;
 }
 
