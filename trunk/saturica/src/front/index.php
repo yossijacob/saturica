@@ -294,6 +294,15 @@ SetupSearchInputRest();
 	   <img src="images/main_menu_gallery_hover.jpg" width="1" height="1" alt="Image 06" />
 	   <img src="images/images/main_menu_blog_hover.jpg" width="1" height="1" alt="Image 07" />
 	   <img src="images/main_menu_contact_hover.jpg" width="1" height="1" alt="Image 08" />
+	   
+	   <img src="images/wizard_find_button_hover.jpg" width="1" height="1" alt="Image 09" />
+	   
+	   <img src="images/main_icon_contact_hover.jpg" width="1" height="1" alt="Image 11" />
+	   <img src="images/main_icon_enrichment_hover.jpg" width="1" height="1" alt="Image 12" />
+	   <img src="images/main_icon_lectures_hover.jpg" width="1" height="1" alt="Image 13" />
+	   <img src="images/main_icon_workers_hover.jpg" width="1" height="1" alt="Image 14" />
+	   <img src="images/main_icon_managers_hover.jpg" width="1" height="1" alt="Image 15" />
+	   <img src="images/main_icon_team_hover.jpg" width="1" height="1" alt="Image 16" />
 	</div>
 </body>
 </html>
