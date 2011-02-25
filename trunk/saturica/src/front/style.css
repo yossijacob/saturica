@@ -17,7 +17,7 @@ body
 
 /* LAYOUT */
 
-
+div#preload { display: none; }
 
 /*------------ HEADER -------------------*/
 #header
