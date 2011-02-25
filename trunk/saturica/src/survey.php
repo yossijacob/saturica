@@ -202,8 +202,8 @@ connect();   //connect to mysql DB
 			$new_votes = $votes+1;	//including the last query answer
 			$new_rank = ((($old_rank * $old_votes) + ($rank))/$new_votes);	//the new rank
 			
-			$workshop_rank[19] = $new_votes;
-			$workshop_rank[15] = $new_rank;
+			$workshop_rank[18] = $new_votes;
+			$workshop_rank[14] = $new_rank;
 			
 			EditRecord("workshops",$answer6,$workshop_rank);
 			
