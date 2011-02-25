@@ -141,7 +141,8 @@ function MenuBar($selected)
 	$sel[$selected]= "active";
 echo '<div id="menu">';
 	Logo();
-	
+if ($selected != '')
+	{	
 	echo	"<ul>";	
     echo   	"<li class=".$sel["statistics"]."><a href='statistics.php'  title='statistics'>סטטיסטיקה</a></li>";    
     echo    "<li class=".$sel['customers']."><a href='customers.php' title=''>לקוחות</a></li>";  
@@ -151,7 +152,8 @@ echo '<div id="menu">';
     echo   	"<li class=".$sel['newsletter']."><a href='newsletter.php' title='newsletter'>ניוזלטר</a></li>";    
     echo   	"<li class=".$sel['preferences']."><a href='preferences.php' title='preferences'>הגדרות</a></li>";   
     echo   	"<li class=".$sel['blog']."><a href='blog.php' title='blog'>בלוג</a></li>";    
-	echo 	"</ul>";	
+	echo 	"</ul>";
+	}	
 	echo 	"</div>";	
 
 }
