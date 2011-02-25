@@ -155,8 +155,6 @@ right: 1px;
 
 #menu_home:hover
 {
-	/*width:99px;
-	height:45px;*/
 	background:url("images/main_menu_homepage_hover.jpg") no-repeat;
 }
 
@@ -169,8 +167,6 @@ right: 1px;
 
 #menu_whatwedo:hover
 {
-	/*width:154px;
-	height:45px;*/
 	background:url("images/main_menu_whatwedo_hover.jpg") no-repeat;
 }
 
@@ -231,7 +227,6 @@ right: 1px;
 
 #menu_locations:hover
 {
-	
 	background:url("images/main_menu_locations_hover.jpg") no-repeat;
 }
 
@@ -251,7 +246,6 @@ right: 1px;
 
 #menu_gallery:hover
 {
-	
 	background:url("images/main_menu_gallery_hover.jpg") no-repeat;
 }
 
@@ -271,7 +265,6 @@ right: 1px;
 
 #menu_blog:hover
 {
-	
 	background:url("images/main_menu_blog_hover.jpg") no-repeat;
 }
 
@@ -409,23 +402,13 @@ right: 1px;
 	top:103px;
 	left:210px;
 	cursor:pointer;
-
 }
 
 
 #search_harder_button:hover
 {
 	background:url("images/additional_search_button_hover.jpg") no-repeat;
-	height:23px;
-	width:96px;
-	position:absolute;
-	top:103px;
-	left:210px;
-	cursor:pointer;
-
-
 }
-	
 
 #results_box_A
 {
@@ -598,14 +581,6 @@ right: 1px;
 #location_harder_button:hover
 {
 	background:url("images/area_filter_button_hover.jpg") no-repeat;
-	height:26px;
-	width:80px;
-	position:absolute;
-	top:110px;
-	left:30px;
-	cursor:pointer;
-
-
 }
 	
 
@@ -991,8 +966,6 @@ right: 1px;
 	padding-top:0.1cm;
 }		
 	
-	
-
 
 #msg_contact
 {
@@ -1005,7 +978,6 @@ right: 1px;
 	font-size:14px;
 	font-family:Tahoma;
 	font-weight:bold;
-
 }
 
 #msg_contact_A
@@ -1013,8 +985,6 @@ right: 1px;
 	position:absolute;
 	right:110px;
 	top:180px;
-
-	
 }
 
 .msg_contact_box
@@ -1028,8 +998,6 @@ right: 1px;
 	color:#514E47;
 	top:150px;
 	text-align:right;
-	
-
 }
 
 #text_must_insert_msg
@@ -1045,9 +1013,6 @@ right: 1px;
 	
 	
 }
-	
-	
-	
 	
 #approval_contact
 {
@@ -1089,12 +1054,6 @@ right: 1px;
 #approval_contact_button:hover
 {
 	background:url("images/send_button_hover.jpg") no-repeat;
-	height:38px;
-	width:100px;
-	right:270px;
-	top:318px;
-	position:absolute;
-	cursor:pointer;
 }
 	
 	
@@ -1333,12 +1292,7 @@ width:960px;
 #wizard_find_button:hover
 {
 	background:url("images/wizard_find_button_hover.jpg") no-repeat;
-	height:53px;
-	width:172px;
-	position:absolute;
-	bottom:71px;
-	left:44px;
-	cursor:pointer;
+	
 }
 
 #need_help_button
@@ -1972,13 +1926,6 @@ z-index:1;
 #get_details_button:hover
 {
 	background:url(images/search_results_button_hover.png) no-repeat;
-	height:43px;
-	width:162px;
-	position:relative;
-
-	left:30px;
-	top:90px;		
-	cursor:pointer;
 }
 
 #get_details_button:pushed
@@ -2009,13 +1956,6 @@ z-index:1;
 #get_details_button_recommended:hover
 {
 	background:url(images/recommended_button_hover.png) no-repeat;
-	height:43px;
-	width:162px;
-	position:absolute;
-
-	left:75px;
-	top:280px;	
-	cursor:pointer;
 }
 
 #get_details_button_recommended:pushed
@@ -2048,14 +1988,6 @@ z-index:1;
 #buttom_search_button:hover
 {
 	background:url(images/bottom_search_button_hover.jpg) no-repeat;
-	height:43px;
-	width:162px;
-	position:absolute;
-
-	right:287px;
-	bottom:13px;
-	
-	cursor:pointer;
 }
 
 #buttom_search_button:pushed
@@ -2077,10 +2009,8 @@ z-index:1;
 	height:43px;
 	width:162px;
 	position:absolute;
-
 	right:473px;
 	bottom:13px;
-	
 	cursor:pointer;
 }
 
@@ -2088,19 +2018,7 @@ z-index:1;
 #buttom_contact_button:hover
 {
 	background:url(images/bottom_contact_button_hover.jpg) no-repeat;
-	height:43px;
-	width:162px;
-	position:absolute;
-
-	right:473px;
-	bottom:13px;
-	
-	cursor:pointer;
 }
-
-
-
-
 
 
 #buttom_contact_location_button
@@ -2109,10 +2027,8 @@ z-index:1;
 	height:43px;
 	width:162px;
 	position:absolute;
-
 	right:410px;
-	bottom:13px;
-	
+	bottom:13px;	
 	cursor:pointer;
 }
 
@@ -2120,24 +2036,7 @@ z-index:1;
 #buttom_contact_location_button:hover
 {
 	background:url(images/bottom_contact_button_hover.jpg) no-repeat;
-	height:43px;
-	width:162px;
-	position:absolute;
-
-	right:410px;
-	bottom:13px;
-	
-	cursor:pointer;
 }
-
-
-
-
-
-
-
-
-
 
 
 #buttom_contact_button:pushed
