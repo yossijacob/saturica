@@ -1,5 +1,9 @@
 @CHARSET "UTF-8";
 
+html 
+{
+  filter: expression(document.execCommand("BackgroundImageCache", false, true));
+}
 
 #header_content_search .textInput
 {
