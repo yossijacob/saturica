@@ -194,7 +194,21 @@ connect();   //connect to mysql DB
   			$data[12] = time();	//time ,date
   			
 			AddRecord(GetWorkshopSurveyTableName($answer6), $data);     			// add the location
-  			
+  			// compute the new workshop's rank and insert it . 
+			$workshop_rank = GetRecord("workshops",$answer6); 	// contains all fields of the right workshop
+			$old_votes = $workshop_rank[19];	//column 19 is num of votes
+			$old_rank = $workshop_rank[15];		//column 15 is rank
+			
+			$new_votes = $votes+1;	//including the last query answer
+			$new_rank = ((($old_rank * $old_votes) + ($rank))/$new_votes);	//the new rank
+			
+			$workshop_rank[19] = $new_votes;
+			$workshop_rank[15] = $new_rank;
+			
+			EditRecord("workshops",$answer6,$workshop_rank);
+			
+			
+			
 			?>
 		
 			<script type="text/javascript" language="javascript">
