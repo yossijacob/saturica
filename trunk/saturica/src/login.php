@@ -23,7 +23,7 @@ if (isset($_POST['submitted']))
 	  $userdetails = GetRecord("preferences",1);  // get user data
 	  $user_password = $userdetails[3];			//get the password of the user
 	  		
-	if ( ( $username == "yy") /*&& (hash('sha256',$entered_pass) == $user_password)*/ ) 	
+	if ( ( $username == $userdetails[2]) && (hash('sha256',$entered_pass) == $user_password) ) 	
 	{
 	  $_SESSION['authenticated'] = "yes";
 	  header("Location:statistics.php");
