@@ -16,7 +16,6 @@ connect();   //connect to mysql DB
 <meta name="description" content="" />
 <link href="default.css" rel="stylesheet" type="text/css" />
 
-
 </head>
 <body>
 <?php 
@@ -27,10 +26,8 @@ connect();   //connect to mysql DB
     <br/>
     <h1>משוב ללקוח</h1>
     <hr></hr>
-	
     
   <?php
-  
   function return_grade($stringa)
 	{
 		if ( $stringa == "במידה רבה מאוד" ) return 5;
@@ -38,14 +35,10 @@ connect();   //connect to mysql DB
 		if ( $stringa == "במידה בינונית" ) return 3;
 		if ( $stringa == "במידה מעטה" ) return 2;
 		if ( $stringa == "כלל לא" ) return 1;
-		if ( $stringa == "לא רלוונטי" ) return 6;
-		
-		
+		if ( $stringa == "לא רלוונטי" ) return 6;		
 		
 	}
   
-  
- 
   $answer1 = isset($_POST['answer1']) ? $_POST['answer1']: "";
   $answer1 = CleanText($answer1);
   $answer1_text = isset($_POST['answer1_text']) ? $_POST['answer1_text']: "";
@@ -79,10 +72,6 @@ connect();   //connect to mysql DB
   $answer7 = isset($_POST['answer7']) ? $_POST['answer7']: "";	//name 
   $answer7 = CleanText($answer7);
   
-  
-  
-  
-  
 
   //$rank  = isset($_POST['rank'])? $_POST['rank']: "";
   //$rank = CleanText($rank);
@@ -105,8 +94,6 @@ connect();   //connect to mysql DB
   		//$ans6[$i]=$names[$i];
   	
   	
-  		
-
     $ans1[0] = "במידה רבה מאוד";		// for the dropdown boxes
 	$ans1[1] = "במידה רבה";
 	$ans1[2] = "במידה בינונית";
@@ -143,14 +130,11 @@ connect();   //connect to mysql DB
 	$ans5[5] = "לא רלוונטי";	
 	
 	
-	
-	
   	$grade1 = return_grade($answer1);
   	$grade2 = return_grade($answer2);
   	$grade3 = return_grade($answer3);
   	$grade4 = return_grade($answer4);
   	$grade5 = return_grade($answer5);
-  	
   	
   	
   	if (isset($_POST['submitted']))
@@ -188,10 +172,7 @@ connect();   //connect to mysql DB
   		//get num of people answers and compute rank of workshop...
   		//....
   	}
-
-  		
-  			
-  			
+		  			
   			
   			$data[0] = $answer1;	//overall
   			$data[1] = $answer1_text;	//overall text 
@@ -219,9 +200,7 @@ connect();   //connect to mysql DB
 			<script type="text/javascript" language="javascript">
    			window.location = '../thankyou.php';
    			</script>
-   			<?php 
-  		
-  	
+   			<?php  	
   	}  // close if submitted 
 
 
@@ -235,7 +214,8 @@ connect();   //connect to mysql DB
 	<input type="hidden" name="submitted" value="true"/>
 	<table cellspacing="10">
 	 <tr>
-	 	<td><b>שם הסדנא  </b>
+	 	<td><b>שם הסדנא</b></td>
+		<td>
 		<?php 
 	 	//ShowDropDown("answer6",$ans6,$ans6,"","",$answer6);
 	 	ShowColumnDropDown("workshops",0,2,'answer6',"","",-1);
@@ -244,66 +224,62 @@ connect();   //connect to mysql DB
 	</tr>
 	
 	<tr>
-	 	<td><b>עד כמה היית שבע/ת רצון מהפעילות באופן כללי   </b>
-	 	<div id="query_questions"></div>
+	 	<td><b>עד כמה היית שבע/ת רצון מהפעילות באופן כללי   </b></td>
+	 	<td>
+	 	<!-- <div id="query_questions"></div> -->
 	 	<?php 
 	 	ShowDropDown("answer1",$ans1,$ans1,"","",$answer1);
-
-	 	echo "<td><input type='text' name='answer1_text' value='$answer1_text' title='answer1_text'/></td>";
+	 	echo "</td><td><input type='text' name='answer1_text' value='$answer1_text' title='answer1_text'/></td>";
 	 	?>
 	 	</td>
 	</tr>
 	 
 	<tr>
-	 	<td><b>עד כמה היית שבע/ת רצון מהמנחה </b>
+	 	<td><b>עד כמה היית שבע/ת רצון מהמנחה </b></td>
+	 	<td>
 	 	<?php 
 	 	ShowDropDown("answer2",$ans2,$ans2,"","",$answer2);
-
-	 	echo "<td><input type='text' name='answer2_text' value='$answer2_text' title='answer2_text'/></td>";
+	 	echo "</td><td><input type='text' name='answer2_text' value='$answer2_text' title='answer2_text'/></td>";
 	 	?>
 	 	</td>
 	</tr> 
 	
 	
 	<tr>
-	 	<td><b>עד כמה תכני הפעילות הוסיפו לך ברמה האישית </b>
+	 	<td><b>עד כמה תכני הפעילות הוסיפו לך ברמה האישית </b></td>
+	 	<td>
 	 	<?php 
 	 	ShowDropDown("answer3",$ans3,$ans3,"","",$answer3);
-
-	 	echo "<td><input type='text' name='answer3_text' value='$answer3_text' title='answer3_text'/></td>";
+	 	echo "</td><td><input type='text' name='answer3_text' value='$answer3_text' title='answer3_text'/></td>";
 	 	?>
 	 	</td>
 	</tr>
 	
-	
 	<tr>
-	 	<td><b>עד כמה היית שבע/ת רצון מהמקום בו נערכה הפעילות, והתנאים הסביבתיים </b>
+	 	<td><b>עד כמה היית שבע/ת רצון מהמקום בו נערכה הפעילות, והתנאים הסביבתיים </b></td>
+	 	<td>
 	 	<?php 
 	 	ShowDropDown("answer4",$ans4,$ans4,"","",$answer4);
-
-	 	echo "<td><input type='text' name='answer4_text' value='$answer4_text' title='answer4_text'/></td>";
+	 	echo "</td><td><input type='text' name='answer4_text' value='$answer4_text' title='answer4_text'/></td>";
 	 	?>
 	 	</td>
 	</tr>
 	
-	
 	<tr>
-	 	<td><b>עד כמה היית שבע/ת רצון מרמת האוכל והכיבוד </b>
+	 	<td><b>עד כמה היית שבע/ת רצון מרמת האוכל והכיבוד </b></td>
+	 	<td>
 	 	<?php 
 	 	ShowDropDown("answer5",$ans5,$ans5,"","",$answer5);
-
-	 	echo "<td><input type='text' name='answer5_text' value='$answer5_text' title='answer5_text'/></td>";
+	 	echo "</td><td><input type='text' name='answer5_text' value='$answer5_text' title='answer5_text'/></td>";
 	 	?>
 	 	</td>
 	</tr>
 	  
-
 	 <tr>
 	 	<td><b>הערות</b></td>
 	 <?php 	echo "<td><textarea type='text' name='answer7' value='$answer7' title='answer7' rows='8' cols='25' > </textarea> </td>"; ?>
 	 </tr>
 	  
-	
 	 <tr><td></td></tr>
 	 <tr><td></td></tr>
 	 </table>
