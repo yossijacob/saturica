@@ -282,10 +282,10 @@ SetupSearchInputRest();
     </div>
     </div>
     
-   
-	<?php FooterFunc();?>
 	
-	<div id="preload">
+    <?php FooterFunc();?>
+	
+	<div id="preload" style="display:none;">
 	   <img src="images/main_menu_homepage_hover.jpg" width="1" height="1" alt="Image 01" />
 	   <img src="images/main_menu_whatwedo_hover.jpg" width="1" height="1" alt="Image 02" />
 	   <img src="images/main_menu_recommended_hover.jpg" width="1" height="1" alt="Image 03" />
@@ -294,9 +294,8 @@ SetupSearchInputRest();
 	   <img src="images/main_menu_gallery_hover.jpg" width="1" height="1" alt="Image 06" />
 	   <img src="images/main_menu_blog_hover.jpg" width="1" height="1" alt="Image 07" />
 	   <img src="images/main_menu_contact_hover.jpg" width="1" height="1" alt="Image 08" />
-	   
+	  
 	   <img src="images/wizard_find_button_hover.jpg" width="1" height="1" alt="Image 09" />
-	   
 	   <img src="images/main_icon_contact_hover.jpg" width="1" height="1" alt="Image 11" />
 	   <img src="images/main_icon_enrichment_hover.jpg" width="1" height="1" alt="Image 12" />
 	   <img src="images/main_icon_lectures_hover.jpg" width="1" height="1" alt="Image 13" />
