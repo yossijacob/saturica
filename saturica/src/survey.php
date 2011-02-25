@@ -229,7 +229,7 @@ connect();   //connect to mysql DB
 	 	<!-- <div id="query_questions"></div> -->
 	 	<?php 
 	 	ShowDropDown("answer1",$ans1,$ans1,"","",$answer1);
-	 	echo "</td><td><input type='text' name='answer1_text' value='$answer1_text' title='answer1_text'/></td>";
+	 	echo "</td><td><b>הערות</b></td><td><input type='text' name='answer1_text' value='$answer1_text' size='60'/></td>";
 	 	?>
 	 	</td>
 	</tr>
@@ -239,7 +239,7 @@ connect();   //connect to mysql DB
 	 	<td>
 	 	<?php 
 	 	ShowDropDown("answer2",$ans2,$ans2,"","",$answer2);
-	 	echo "</td><td><input type='text' name='answer2_text' value='$answer2_text' title='answer2_text'/></td>";
+	 	echo "</td><td><b>הערות</b></td><td><input type='text' name='answer2_text' value='$answer2_text' size='60'/></td>";
 	 	?>
 	 	</td>
 	</tr> 
@@ -250,7 +250,7 @@ connect();   //connect to mysql DB
 	 	<td>
 	 	<?php 
 	 	ShowDropDown("answer3",$ans3,$ans3,"","",$answer3);
-	 	echo "</td><td><input type='text' name='answer3_text' value='$answer3_text' title='answer3_text'/></td>";
+	 	echo "</td><td><b>הערות</b></td><td><input type='text' name='answer3_text' value='$answer3_text' size='60'/></td>";
 	 	?>
 	 	</td>
 	</tr>
@@ -260,7 +260,7 @@ connect();   //connect to mysql DB
 	 	<td>
 	 	<?php 
 	 	ShowDropDown("answer4",$ans4,$ans4,"","",$answer4);
-	 	echo "</td><td><input type='text' name='answer4_text' value='$answer4_text' title='answer4_text'/></td>";
+	 	echo "</td><td><b>הערות</b></td><td><input type='text' name='answer4_text' value='$answer4_text' size='60'/></td>";
 	 	?>
 	 	</td>
 	</tr>
@@ -270,14 +270,16 @@ connect();   //connect to mysql DB
 	 	<td>
 	 	<?php 
 	 	ShowDropDown("answer5",$ans5,$ans5,"","",$answer5);
-	 	echo "</td><td><input type='text' name='answer5_text' value='$answer5_text' title='answer5_text'/></td>";
+	 	echo "</td><td><b>הערות</b></td><td><input type='text' name='answer5_text' value='$answer5_text'  size='60'/></td>";
 	 	?>
 	 	</td>
 	</tr>
-	  
+	</table>
+	
+	<table>
 	 <tr>
-	 	<td><b>הערות</b></td>
-	 <?php 	echo "<td><textarea type='text' name='answer7' value='$answer7' title='answer7' rows='8' cols='25' > </textarea> </td>"; ?>
+	 	<td><b>הערות כלליות</b></td>
+	 <?php 	echo "<td><textarea type='text' name='answer7' value='$answer7' title='answer7' rows='5' cols='57' > </textarea> </td>"; ?>
 	 </tr>
 	  
 	 <tr><td></td></tr>
