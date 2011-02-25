@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <?php 
-
 include_once 'functions.php';
-include_once 'backoffice/connect.php';
-include_once 'backoffice/mysql.php';		//change to the correct location ! 
-
-
-connect();   //connect to mysql DB
-
 
 ?>
 <html>
@@ -24,9 +17,10 @@ if(CheckIfIE())
 	} 
 SetupJqueryContactDialogCss();
 SetupJquery();
-SetupSearchInputRest();
 SetupJqueryContactDialog();
+SetupSearchInputRest();
 ?>
+
 <title>סטוריקה - צור קשר</title>
 </head>
 <?php flush();?>
@@ -98,8 +92,8 @@ SetupJqueryContactDialog();
 			<div id="msg_contact_A">
 			<textarea class="msg_contact_box" name="content" rows="5" cols="5"> 
 			 </textarea>
-			 
 			</div>
+			
 			<span id="msg_contact">
             תוכן הפנייה
             </span> 
@@ -117,24 +111,15 @@ SetupJqueryContactDialog();
              עידכונים תקופתיים
             </span>
             
-            <div id="approval_contact_button" onclick="document.forms['contact_form'].submit();">
-            
-            
-            
+            <div id="approval_contact_button" onclick="document.forms['contact_form'].submit();"></div>
             </form>
 			</div>	
 		</div>		
-		<?php 
-		// button with send , do requrired functions
-		//<div id="wizard_find_button" onclick="document.forms['contact_form'].submit();">
-		?>	
 	</div>
 	</div>
-
-	
 	<?php
+	//DialogBoxHtml();
 	FooterFunc();
-	DialogBoxHtml();
 	?>
 </body>
 </html>
