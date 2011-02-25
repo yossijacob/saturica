@@ -74,7 +74,7 @@ function footer()
 		  <img src='http://www.w3.org/Icons/valid-xhtml10'
           alt='Valid XHTML 1.0!' height='31'' width='88'' /></a>";
 	echo "</div>";
-	echo "<a href='login.php'>התנתק</a>";
+	echo "<p><a href='login.php'>התנתק</a></p>";
 	echo "<p>best viewed using <a href='http://www.google.com/chrome/' target='_blank'>google chrome</a></p>";
 	echo "<br/>";
 	echo "<p id='legal'>Copyright &copy; 2011 by <a href='http://yossijacob.comli.com/'>Yossi Jacob</a> & Roee Minster. All Rights Reserved.</p>";
