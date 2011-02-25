@@ -12,6 +12,11 @@ body {
 	text-align:right;
 }
 
+fieldset
+{
+	border: none;
+}
+
 h1, h2, h3 {
 	/*color: #AD3041;*/
 	color: #92bc3e;
