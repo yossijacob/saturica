@@ -85,15 +85,15 @@ SetupSearchInputRest();
 	FooterFunc();
 	?>
 	
-	<div id="preload">
-	   <img src="images/main_menu_homepage_hover.jpg" width="1" height="1" alt="Image 01" />
-	   <img src="images/main_menu_whatwedo_hover.jpg" width="1" height="1" alt="Image 02" />
-	   <img src="images/main_menu_recommended_hover.jpg" width="1" height="1" alt="Image 03" />
-	   <img src="images/main_menu_customized_hover.jpg" width="1" height="1" alt="Image 04" />
-	   <img src="images/main_menu_locations_hover.jpg" width="1" height="1" alt="Image 05" />
-	   <img src="images/main_menu_gallery_hover.jpg" width="1" height="1" alt="Image 06" />
-	   <img src="images/images/main_menu_blog_hover.jpg" width="1" height="1" alt="Image 07" />
-	   <img src="images/main_menu_contact_hover.jpg" width="1" height="1" alt="Image 08" />
+	<div id="preload" style="display:none;">
+	   <img src="images/main_menu_homepage_hover.jpg" width="1" height="1" alt="Image01"/>
+	   <img src="images/main_menu_whatwedo_hover.jpg" width="1" height="1" alt="Image02"/>
+	   <img src="images/main_menu_recommended_hover.jpg" width="1" height="1" alt="Image03"/>
+	   <img src="images/main_menu_customized_hover.jpg" width="1" height="1" alt="Image04"/>
+	   <img src="images/main_menu_locations_hover.jpg" width="1" height="1" alt="Image05"/>
+	   <img src="images/main_menu_gallery_hover.jpg" width="1" height="1" alt="Image06"/>
+	   <img src="images/main_menu_blog_hover.jpg" width="1" height="1" alt="Image07"/>
+	   <img src="images/main_menu_contact_hover.jpg" width="1" height="1" alt="Image08"/>
 	</div>
 </body>
 </html>
