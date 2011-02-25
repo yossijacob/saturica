@@ -114,7 +114,13 @@ session_start();
   			
   			
   			EditRecord("preferences",1, $data);     			// 
- 			header('Location:preferences.php');
+ 			
+  			?>
+  			<script type="text/javascript" language="javascript">
+   			window.location = 'preferences.php';
+   			</script>
+ 			<?php
+  			
 
   		}
   	
