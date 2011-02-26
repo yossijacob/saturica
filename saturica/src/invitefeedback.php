@@ -24,7 +24,7 @@ $id = CleanText($id);
 	$mailcontent .="<br/>";
 	$mailcontent .=" נודה לך באם תקדיש/י מעט מזמנך לספר לנו עד כמה היית מרוצה מהפעילות שהזמנת דרכנו. מילוי המשוב יעזור לנו לשמור על איכות הפעילויות גם בעתיד.";
   	$mailcontent .="</h2><br/>";
-	$mailcontent .="<h2><a href='www.satorika.co.il/survey.php'>השאלון<a><h2>";
+	$mailcontent .="<h2><a href='www.satorika.co.il/backoffice/survey.php'>השאלון<a><h2>";
 	mail($email, $subject, $mailcontent,$headers);
 	?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
