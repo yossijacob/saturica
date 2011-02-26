@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <?php 
-
 include_once 'functions.php';
 include_once 'backoffice/connect.php';
 include_once 'backoffice/mysql.php';		//change to the correct location ! 
