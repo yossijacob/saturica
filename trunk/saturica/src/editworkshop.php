@@ -52,9 +52,28 @@ if (!is_authenticated())
   
   $workshoppic  = isset($_FILES['workshoppic']['name'])? $_FILES['workshoppic']['name']: "";
   $workshoppic = CleanText($workshoppic);
+ 
+  $type_team_work  = isset($_POST['type_team_work'])? $_POST['type_team_work']: 0;
+  $type_team_work = CleanText($type_team_work);
   
-  $workshopsubject  = isset($_POST['workshopsubject'])? $_POST['workshopsubject']: "";
-  $workshopsubject = CleanText($workshopsubject);
+  $type_managers  = isset($_POST['type_managers'])? $_POST['type_managers']: "";
+  $type_managers = CleanText($type_managers);
+  
+  $type_workers  = isset($_POST['type_workers'])? $_POST['type_workers']: "";
+  $type_workers = CleanText($type_workers);
+  
+  $type_lectures  = isset($_POST['type_lectures'])? $_POST['type_lectures']: "";
+  $type_lectures = CleanText($type_lectures);
+  
+  $type_teachers  = isset($_POST['type_teachers'])? $_POST['type_teachers']: "";
+  $type_teachers = CleanText($type_teachers);
+  
+  $type_fun  = isset($_POST['type_fun'])? $_POST['type_fun']: "";
+  $type_fun = CleanText($type_fun);
+  
+  
+  //$workshopsubject  = isset($_POST['workshopsubject'])? $_POST['workshopsubject']: "";
+  //$workshopsubject = CleanText($workshopsubject);
   
   $workshopstyle  = isset($_POST['workshopstyle'])? $_POST['workshopstyle']: "";
   $workshopstyle = CleanText($workshopstyle);
@@ -92,8 +111,26 @@ if (!is_authenticated())
   $workshoptype  = isset($_POST['workshoptype'])? $_POST['workshoptype']: "";
   $workshoptype = CleanText($workshoptype);
   
-  $workshoplocation  = isset($_POST['workshoplocation'])? $_POST['workshoplocation']: "";
-  $workshoplocation = CleanText($workshoplocation);
+  //$workshoplocation  = isset($_POST['workshoplocation'])? $_POST['workshoplocation']: "";
+  //$workshoplocation = CleanText($workshoplocation);
+  
+  $loc_building  = isset($_POST['loc_building'])? $_POST['loc_building']: "";
+  $loc_building = CleanText($loc_building);
+  
+  $loc_our_place  = isset($_POST['loc_our_place'])? $_POST['loc_our_place']: "";
+  $loc_our_place = CleanText($loc_our_place);
+  
+  $loc_outside  = isset($_POST['loc_outside'])? $_POST['loc_outside']: "";
+  $loc_outside = CleanText($loc_outside);
+  
+  $loc_pool  = isset($_POST['loc_pool'])? $_POST['loc_pool']: "";
+  $loc_pool = CleanText($loc_pool);
+  
+  $loc_beatch  = isset($_POST['loc_beatch'])? $_POST['loc_beatch']: "";
+  $loc_beatchs = CleanText($loc_beatch);
+  
+  $loc_place_to_place  = isset($_POST['loc_place_to_place'])? $_POST['loc_place_to_place']: "";
+  $loc_place_to_place = CleanText($loc_place_to_place);
   
   $workshoptimeframe  = isset($_POST['workshoptimeframe'])? $_POST['workshoptimeframe']: "";
   $workshoptimeframe = CleanText($workshoptimeframe);
@@ -147,7 +184,7 @@ if (!is_authenticated())
   			$miss = true;
   			$missing['workshopname'] = "שם סדנא";
   		}
-  	if ($workshopsubject == "") 
+  	if ( ($type_team_work==0)&&($type_managers==0)&&($type_workers==0)&&($type_lectures==0)&&($type_teachers==0)&&($type_fun==0) ) 
   		{
   			$miss = true;
   			$missing['workshopsubject'] = "נושא סדנא";
@@ -186,7 +223,7 @@ if (!is_authenticated())
   			$data[0] = $workshopnum;
   			$data[1] = $workshopname;
   			$data[2] = $workshoppic;
-  			$data[3] = $workshopsubject;
+  			$data[3] = "";		// not use this. subject at the end of the table. just for the indexes of the columns
   			$data[4] = $workshopstyle;
   			$data[5] = $workshopfixprice;  
   			$data[6] = $workshoppersonprice;  
@@ -199,8 +236,27 @@ if (!is_authenticated())
   			$data[13] = $workshopmaxsize; 
   			$data[14] = $workshoprank; 
   			$data[15] = $workshoptype; 
-			$data[16] = $workshoplocation; 
-			$data[17] = $workshoptimeframe; 
+			$data[16] = ""; 		// not use this. location at the end of the table. just for the indexes of the columns
+  			$data[17] = $workshoptimeframe; 
+  			//$data[18] = 0;   // votes in feedback 
+			$data[19] = $type_team_work;
+			$data[20] = $type_managers;
+			$data[21] = $type_workers;
+			$data[22] = $type_lectures;
+			$data[23] = $type_teachers;
+			$data[24] = $type_fun;
+			$data[25] = $loc_building;     
+			$data[26] = $loc_our_place;
+			$data[28] = $loc_outside;
+			$data[29] = $loc_pool;
+			$data[30] = $loc_beatch;
+			$data[31] = $loc_place_to_place;
+  			
+  			
+  			
+  			
+  			
+  			
   			
   			$target_path = "workshop_pic/";	//upload the picture to 'workshop_pic' folder
 			$target_path = $target_path . basename( $_FILES['workshoppic']['name']); 
@@ -268,15 +324,21 @@ if (!is_authenticated())
 	 	<td><b>תמונה</b></td>
 	 <?php 	echo "<td>$workshoppic<input type='file' name='workshoppic' value='$workshoppic' title='workshoppic'/></td>";?>	 </tr>
 	 <tr>
-	 	<td><b>נושא סדנא </b></td>
+	 	<td><b>סוג הפעילות </b></td>
 	 	<td>
-	 	<?php 
-	 	ShowDropDown("workshopsubject",$workshopsubjects,$workshopsubjects,"","",$workshopsubject);
+	 	<input class="approval_contact_box" name="type_team_work" type="checkbox" value="1" size="20"/> גיבוש ועבודת צוות <br />
+	 	<input class="approval_contact_box" name="type_managers" type="checkbox" value="1" size="20"/> פיתוח מנהלים <br />
+	 	<input class="approval_contact_box" name="type_workers" type="checkbox" value="1" size="20"/> פיתוח עובדים <br />
+	 	<input class="approval_contact_box" name="type_lectures" type="checkbox" value="1" size="20"/> הרצאות <br />
+	 	<input class="approval_contact_box" name="type_teachers" type="checkbox" value="1" size="20"/> פעילות מיוחדת למורים <br />
+	 	<input class="approval_contact_box" name="type_fun" type="checkbox" value="1" size="20"/> מפגש העשרה חוויתי <br />
+	 	 <?php 
+	 	//ShowDropDown("workshopsubject",$workshopsubjects,$workshopsubjects,"","",$workshopsubject);
 	 	?>
 	 	</td>
 	</tr>
 	 <tr>
-	 	<td><b>סגנון סדנא</b></td>
+	 	<td><b>סגנון פעילות</b></td>
 	 <?php 	echo "<td><input type='text' name='workshopstyle' value='$workshopstyle' title='workshopstyle'/></td>"; ?>
 	 </tr>
 	 <tr>
@@ -288,13 +350,20 @@ if (!is_authenticated())
 	 <?php 	echo "<td><input type='text' name='workshoppersonprice' value='$workshoppersonprice' title='workshoppersonprice'/></td>"; ?>
 	 </tr>
 	 
+	 
+	 <tr>
+	 <td><b>תאור סדנא</b></td>
+	 <?php // echo "<td><textarea  name='workshopdesc' value='$workshopdesc' title='workshopdesc' rows='8' cols='25' > </textarea> </td>";?> 
+	<?php echo "<td><input type='text' size='52' maxlength='50'  name='workshopdesc' value='$workshopdesc' title='workshopdesc' rows='8' cols='25' > </textarea> </td>";?>
+	 </tr>
+	 
 	 <tr>
 	 	<td><b>הערות סדנא</b></td>
-	 <?php echo "<td><input type='text' name='workshopcomments' value='$workshopcomments' title='workshopcomments'/></td>";?>
+	 <?php echo "<td><textarea  name='workshopcomments' value='$workshopcomments' title='workshopcomments' rows='8' cols='25' > </textarea> </td>";?>	 	
 	 </tr>
 	 <tr>
 	 	<td><b>פרטים חשובים בסדנא</b></td>
-	 <?php echo "<td><input type='text' name='workshopdetails' value='$workshopdetails' title='workshopdetails'/></td>";?>
+	 	<?php echo "<td><textarea  name='workshopdetails' value='$workshopdetails' title='workshopdetails' rows='8' cols='25' > </textarea> </td>";?>
 	 </tr>
 	 <tr>
 	 	<td><b>שם הספק</b></td>
@@ -322,14 +391,20 @@ if (!is_authenticated())
 	 <?php echo "<td><input type='text' name='workshoprank' value='$workshoprank' title='workshoprank'/></td>";?>
 	 </tr>
 	 	 <tr>
-	 	<td><b>סוג סדנא</b></td>
-	 <?php echo "<td><input type='text' name='workshoptype' value='$workshoptype' title='workshoptype'/></td>";?>
+	 	<td><b>נושא סדנא</b></td>
+	 <?php echo "<td><input type='text' size='52' name='workshoptype' value='$workshoptype' title='workshoptype'/></td>";?>
 	 </tr>
 	 	 <tr>
 	 	<td><b>מיקום סדנא</b></td>
 		 	<td>
+		<input class="approval_contact_box" name="loc_building" type="checkbox" value="1" size="20"/> במבנה ממוזג\מחומם <br />
+	 	<input class="approval_contact_box" name="loc_our_place" type="checkbox" value="1" size="20"/> אצלנו בארגון <br />
+	 	<input class="approval_contact_box" name="loc_outside" type="checkbox" value="1" size="20"/> בחוץ במקום מיוחד <br />
+	 	<input class="approval_contact_box" name="loc_pool" type="checkbox" value="1" size="20"/> ליד הבריכה <br />
+	 	<input class="approval_contact_box" name="loc_beatch" type="checkbox" value="1" size="20"/> על חוף הים <br />
+	 	<input class="approval_contact_box" name="loc_place_to_place" type="checkbox" value="1" size="20"/> נעבור ממקום למקום <br />
 	 	<?php 
-	 	ShowDropDown("workshoplocation",$workshoplocations,$workshoplocations,"","",$workshoplocation);
+	 	//ShowDropDown("workshoplocation",$workshoplocations,$workshoplocations,"","",$workshoplocation);
 	 	?>
 	 	</td>
 	 </tr>
@@ -342,11 +417,6 @@ if (!is_authenticated())
 	 	</td>
 	 </tr>
 	 
-		 <tr>
-		 	<td><b>תאור סדנא</b></td>
-		 <?php echo "<td><textarea  name='workshopdesc' value='$workshopdesc' title='workshopdesc' rows='8' cols='25' > </textarea> </td>";?>
-		 </tr>
-
 	 <tr><td></td></tr>
 	 <tr><td></td></tr>
 	 </table>
