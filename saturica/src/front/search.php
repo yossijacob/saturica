@@ -3,8 +3,8 @@
  
 include_once 'functions.php';
 include_once 'backoffice/connect.php';
-include_once 'backoffice/mysql.php';
-include_once 'backoffice/db.php';		//change to the correct location ! 
+include_once 'backoffice/mysql.php'; 
+include_once 'backoffice/db.php';		//change to the correct location !
 include_once 'backoffice/html.php';			//for the printworkshop function. maybe would be better to place the func at functions.php
 
 connect();   //connect to mysql DB
@@ -72,12 +72,46 @@ SetupSearchInputRest();
 	$whattodo = $_GET['whatodo_ddtext'];
   	$whattodo = CleanText($whattodo);
   	
+  	if ($whattodo != "" )
+  	{
+  		if ($whattodo == "גיבוש ועבודת צוות" )
+  			$whattodo = "type_team_work";
+  		if ($whattodo == "פיתוח מנהלים" )
+  			$whattodo = "type_managers";
+  		if ($whattodo == "פיתוח עובדים" )
+  			$whattodo = "type_workers";
+  		if ($whattodo == "הרצאות" )
+  			$whattodo = "type_lectures";	
+  		if ($whattodo == "פעילות מיוחדת למורים" )
+  			$whattodo = "type_teachers";
+  		if ($whattodo == "מפגש העשרה חוויתי" )
+  			$whattodo = "type_fun";		
+  	}
+  	
   	$howmany = $_GET['howmany_text'];
   	$howmany = CleanText($howmany);
   	
   	$where = $_GET['where_ddtext'];
   	$where_for_resend = $_GET['where_ddtext'];
   	$where = CleanText($where);
+  	
+  	
+  	if ($where != "" )
+  	{
+  		if ($where_for_resend == "במבנה ממוזג\\מחומם" )
+  			$where = "loc_building";
+  		if ($where == "אצלנו בארגון" )
+  			$where = "loc_our_place";
+  		if ($where == "מחוץ לעבודה, במקום מיוחד" )
+  			$where = "loc_outside";
+  		if ($where == "ליד הבריכה" )
+  			$where = "loc_pool";	
+  		if ($where == "על חוף הים" )
+  			$where = "loc_beatch";
+  		if ($where == "נעבור ממקום למקום" )
+  			$where = "loc_place_to_place";		
+  	}
+  	
   	
   	$howlong = $_GET['howlong_ddtext'];
   	$howlong = CleanText($howlong);
