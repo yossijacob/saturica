@@ -298,11 +298,11 @@ function SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$ho
 
 	$query .= "active = 'כן' AND ";
 	
-	if ($whattodo != null) $query .= "subject = '$whattodo' AND "; 
-	else $query .= "subject LIKE '%' AND "; 
+	if ($whattodo != null) $query .= "$whattodo = 1 AND "; 
+	else $query .= "subject LIKE '%' AND "; // meaningless, ignore the subject at this search
 	
-	if ($where != null) $query .= "location = '$where' AND "; 
-	else $query .= "location LIKE '%' AND "; 
+	if ($where != null) $query .= "$where = 1 AND "; 
+	else $query .= "location LIKE '%' AND "; // meaningless, ignore the location at this search
 	
 	if ($howlong != null) $query .= "time_frame = '$howlong' AND "; 
 	else $query .= "time_frame LIKE '%' AND "; 
