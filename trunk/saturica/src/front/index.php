@@ -120,8 +120,8 @@ SetupSearchInputRest();
                                 <input id="where_ddtext" class="dd_text" name="where_ddtext" type="text" value=""  size="10"  readonly="readonly" onmouseout="hide_list('where_ddlist')" />
                                 <div id="where_ddlist" class="dd_list" onmousemove="show_dropdown('where_ddlist')" onmouseout="hide_list('where_ddlist')" >
 	                                <div class="my_ul">
-		                                <div class="my_li"><a onclick="setText('where_ddtext','where_ddlist','במבנה ממוזג\\מחומם');">
-		                                 במבנה ממוזג\מחומם</a></div>
+		                                <div class="my_li"><a onclick="setText('where_ddtext','where_ddlist','במבנה ממוזג/מחומם');">
+		                                 במבנה ממוזג/מחומם</a></div>
 		                                <div class="my_li"><a onclick="setText('where_ddtext','where_ddlist','אצלנו בארגון');">
 		                                אצלנו בארגון</a></div>
 		                                <div class="my_li"><a onclick="setText('where_ddtext','where_ddlist','מחוץ לעבודה, במקום מיוחד');">
