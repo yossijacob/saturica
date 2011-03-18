@@ -223,7 +223,7 @@ function Print_Single_Workshop($value)
  					<span style="font-size:22px; color:rgb(81,78,71); font-family:'Tahoma'; ">  <?php echo $value[2] ?></span> 	
  					<br/>
  					<span style="font-size:13px; color:red; font-family:'Tahoma'; "> נושא : </span> 
- 					<?php echo " $value[4]  &nbsp &nbsp &nbsp &nbsp"; ?>
+ 					<?php echo " $value[16]  &nbsp &nbsp &nbsp &nbsp"; ?>
 
  					<span style="font-size:13px; color:red; font-family:'Tahoma'; "> סגנון : </span> 
  					<?php echo "$value[5]  &nbsp &nbsp &nbsp &nbsp";  ?>
