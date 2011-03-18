@@ -98,7 +98,7 @@ SetupSearchInputRest();
   	
   	if ($where != "" )
   	{
-  		if ($where_for_resend == "במבנה ממוזג\\מחומם" )
+  		if ($where_for_resend == "במבנה ממוזג/מחומם" )
   			$where = "loc_building";
   		if ($where == "אצלנו בארגון" )
   			$where = "loc_our_place";
