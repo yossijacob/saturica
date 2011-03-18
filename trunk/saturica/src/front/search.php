@@ -182,7 +182,7 @@ SetupSearchInputRest();
  	if ($Free_search == 0)	// regular search 	
  		$result = SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$howmany,0,500);
  	else // free search function 
- 		$result = SearchFreeText("description_text","name","subject",$searchString,0,500);
+ 		$result = SearchFreeText("description_text","name","type",$searchString,0,500);
  		
  	if ($result != null)
  	foreach ($result as $print_workshop)
@@ -191,7 +191,7 @@ SetupSearchInputRest();
      if ($Free_search == 0)	// regular search      
      	$result = SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$howmany,$Result_Set,$Per_Page);
 	 else // free search function 
- 		$result = SearchFreeText("description_text","name","subject",$searchString,$Result_Set,$Per_Page);      
+ 		$result = SearchFreeText("description_text","name","type",$searchString,$Result_Set,$Per_Page);      
 	?>
 	
 	<div id="results_wizard">
