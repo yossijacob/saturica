@@ -285,7 +285,7 @@ function SearchWorkshopPlace($where,$Result_Set,$Per_Page)
 
 //*********************************************************************
 // search at 'workshop' table all the rows that has the given values 
-function SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$howmany,$Result_Set,$Per_Page)
+function SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$howmany,$Result_Set,$Per_Page,$filter_text)
 {
 	$index = 0;
 	$res="";
@@ -300,6 +300,12 @@ function SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$ho
 	
 	if ($whattodo != null) $query .= "$whattodo = 1 AND "; 
 	else $query .= "subject LIKE '%' AND "; // meaningless, ignore the subject at this search
+	
+	
+	
+	//if ($filter_text != null) $query .= "CONTAINS(type, '@$filter_text') AND "; 
+	if ($filter_text != null) $query .= "type LIKE '%$filter_text%' AND "; 
+	
 	
 	if ($where != null) $query .= "$where = 1 AND "; 
 	else $query .= "location LIKE '%' AND "; // meaningless, ignore the location at this search
