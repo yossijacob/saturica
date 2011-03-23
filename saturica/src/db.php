@@ -304,7 +304,7 @@ function SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$ho
 	
 	
 	//if ($filter_text != null) $query .= "CONTAINS(type, '@$filter_text') AND "; 
-	if ($filter_text != null) $query .= "type LIKE '%$filter_text%' AND "; 
+	if ($filter_text != null) $query .= "type = '$filter_text' AND "; 
 	
 	
 	if ($where != null) $query .= "$where = 1 AND "; 
@@ -410,6 +410,198 @@ function SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$ho
 
 }
 
+
+
+
+
+
+//*********************************************************************
+// get the subjects of all workshops that we got at the serach results
+function GetSubjects($whattodo,$where,$howlong,$lowval,$highval,$howmany)
+{
+	$index = 0;
+	$res="";
+	$unique_res="";
+	
+	$query = "SELECT DISTINCT type FROM workshops WHERE ";
+
+	$query .= "active = 'כן' AND ";
+	
+	if ($whattodo != null) $query .= "$whattodo = 1 AND "; 
+	else $query .= "subject LIKE '%' AND "; // meaningless, ignore the subject at this search
+	
+	if ($where != null) $query .= "$where = 1 AND "; 
+	else $query .= "location LIKE '%' AND "; // meaningless, ignore the location at this search
+	
+	if ($howlong != null) $query .= "time_frame = '$howlong' AND "; 
+	else $query .= "time_frame LIKE '%' AND "; 
+	
+	//the customer filled price range and how many people are participating
+	if ( ($lowval != null) && ($howmany != null) )
+	{
+		//get the place price
+		if ($where == null ) $place_price = 0 ;
+		else 
+			{
+				if ($where = "במבנה ממוזג\מחומם")
+					{
+						if ($lowval == 0) $place_price = 20;
+						if ($lowval == 50) $place_price = 35;
+						if ($lowval == 150) $place_price = 50;
+						if ($lowval == 250) $place_price = 75;
+						if ($lowval == 350) $place_price = 100;
+						if ($lowval == 500) $place_price = 150;
+					}
+					
+				if ($where = "אצלנו בארגון") $place_price = 0;
+				if ($where = "מחוץ לעבודה, במקום מיוחד")
+					{
+						if ($lowval == 0) $place_price = 10;
+						if ($lowval == 50) $place_price = 20;
+						if ($lowval == 150) $place_price = 40;
+						if ($lowval == 250) $place_price = 70;
+						if ($lowval == 350) $place_price = 90;
+						if ($lowval == 500) $place_price = 100;
+					}
+				if ($where = "ליד הבריכה")
+					{
+						if ($lowval == 0) $place_price = 20;
+						if ($lowval == 50) $place_price = 35;
+						if ($lowval == 150) $place_price = 50;
+						if ($lowval == 250) $place_price = 70;
+						if ($lowval == 350) $place_price = 90;
+						if ($lowval == 500) $place_price = 100;
+					}
+				if ($where = "על חוף הים")	
+					{
+						if ($lowval == 0) $place_price = 10;
+						if ($lowval == 50) $place_price = 25;
+						if ($lowval == 150) $place_price = 35;
+						if ($lowval == 250) $place_price = 55;
+						if ($lowval == 350) $place_price = 85;
+						if ($lowval == 500) $place_price = 120;
+					}
+				if ($where = "נעבור ממקום למקום") $place_price = 0;	
+				
+			}
+
+		
+		$query .= "( ((personal_price + $place_price)*$howmany) + fixed_price) BETWEEN ($lowval*$howmany )AND ($highval*$howmany) AND ";	 
+	}
+	
+	if ($howmany != null) $query .= "minimum_size <= $howmany AND maximum_size >= $howmany  ";
+	else $query .= "minimum_size LIKE '%' "; 
+	//$query .= "	ORDER BY type ";
+		
+	
+	
+	
+	$result = mysql_query($query) or die(mysql_error());
+	while ($row = mysql_fetch_row($result))
+	{
+		$temp = $row[0];
+		$res[$index++] = $temp; // get the current field
+	}
+	
+	return $res;
+	
+	/*
+	if ($res != "")	//we found requested workshops
+	{
+		$res = array_unique($res); 	//remove duplicate workshops (so we wont show the same workshop more then one time) 
+		$index = 0;
+		$col = "id";
+		
+		//get the workshope by their id that we found.
+		foreach ($res as $selectedworkshop)
+		{	
+			$query = "SELECT * FROM workshops WHERE $col=$selectedworkshop ";
+			$result = mysql_query($query) or die(mysql_error());
+			while ($row = mysql_fetch_row($result))
+			{
+				$unique_res[$index++] = $row; // get the current field
+			}
+		}
+	}
+
+	return $unique_res;
+
+
+	*/
+	
+	
+}
+
+
+//*********************************************************************
+//get the subjects of all workshops that we got at the serach results
+function GetSubjectsFreeText($column1,$column2,$column3,$val)
+{
+	//search each word that appears at $val in the columns 1,2,3 
+	$index = 0;
+	$res="";
+	$unique_res="";
+	$new_arr="";
+	$words = explode(" ", $val);
+	
+	// get the id of the workshops that needs to be return
+	foreach ($words as $singleword)
+	{	
+		//ignore all of the following common words  (search only  uncommon words)
+		if ( ($singleword !="ו") && ($singleword !="סדנא") && ($singleword !="סדנאות") && ($singleword !="או") && ($singleword !="על") && ($singleword !="בסדנא")
+			&& ($singleword !="בסדנאות") && ($singleword !="וגם") && ($singleword !="עם") && ($singleword !="ה") && ($singleword !="הסדנא") && ($singleword !="הסדנאות")
+			 && ($singleword !="")) 
+		{
+		
+			$query = "SELECT DISTINCT type FROM workshops WHERE $column1 LIKE '%$singleword%' OR $column2 LIKE '%$singleword%' OR $column3 LIKE '%$singleword%' ";
+			//OR CONTAINS($column1, '$singleword') OR CONTAINS($column2, '$singleword') OR CONTAINS($column3, '$singleword')
+			//OR CONTAINS('$singleword',$column1) OR CONTAINS('$singleword',$column2) OR CONTAINS('$singleword',$column3)";
+			$result = mysql_query($query) or die(mysql_error());
+			while ($row = mysql_fetch_row($result))
+			{
+				$res[$index++] = $row[0]; // get the workshop id 
+			}
+		}
+	}
+	
+	return $res;
+	
+	/*
+
+	if ($res != "")	//we found requested workshops
+	{
+		$res = array_unique($res); 	//remove duplicate workshops (so we wont show the same workshop more then one time) 
+		$index = 0;
+		$col = "id";
+		
+		//get the workshope by their id that we found.
+		foreach ($res as $selectedworkshop)
+		{	
+			$query = "SELECT * FROM workshops WHERE $col=$selectedworkshop ";	
+			$result = mysql_query($query) or die(mysql_error());
+			while ($row = mysql_fetch_row($result))
+			{
+				$unique_res[$index++] = $row; // get the current field
+			}
+		}
+	}
+	
+	
+	if (!$Result_Set) $Result_Set=0;
+	for ($k=0; $k<$Per_Page ; $k++)
+	{
+		if ($index > $Result_Set+$k)
+		{
+			$new_arr[$k] = $unique_res[$Result_Set+$k];
+		}
+	}
+	return $new_arr;
+	
+	*/
+
+}
+
+//*********************************************************************
 
 
 ?>
