@@ -33,12 +33,16 @@ SetupSearchInputRest();
 ?>
 <script type="text/javascript">
     var hide = false;
+	
     function show_dropdown(id) 
     {
         if (!hide) document.getElementById(id).style.visibility = "visible";  // dd_list
         hide = false;
         //document.getElementById("dd_text").value=121;
     }
+
+	 
+    
     function downkey()
     {
 
@@ -73,32 +77,36 @@ SetupSearchInputRest();
                     </div>
                 </li>
                 <li>
-                    <div id="wizard">
+                    <div id="wizard" >
                         
                        <form action="search.php" method="get" id="wizard_form">
-			            <span class="questions" id="whattodo_Question">
-                            ? מה רוצים לעשות
-                        </span>
-			               <div id="whattodo" class="dropdown"  onclick="show_dropdown('whattodo_ddlist')" >
-                                <input id="whattodo_ddtext" class="dd_text" name="whatodo_ddtext" type="text" value=""  size="10"  readonly="readonly" onmouseout="hide_list('whattodo_ddlist')" />
-                                <div id="whattodo_ddlist" class="dd_list" onmousemove="show_dropdown('whattodo_ddlist')" onmouseout="hide_list('whattodo_ddlist')" >
-	                                <div class="my_ul">
-		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','גיבוש ועבודת צוות');">
-		                                גיבוש ועבודת צוות</a>
+			            
+			           
+				            <span class="questions" id="whattodo_Question">
+	                            ? מה רוצים לעשות
+	                        </span>
+				               <div id="whattodo" class="dropdown"  onclick="show_dropdown('whattodo_ddlist')" onmouseout="hide_list('whattodo_ddlist')" >
+				               			               
+	                                <input id="whattodo_ddtext" class="dd_text" name="whatodo_ddtext" type="text" value=""  size="10"  readonly="readonly"  />
+	                                <div id="whattodo_ddlist" class="dd_list" onmousemove="show_dropdown('whattodo_ddlist')" onmouseout="hide_list('whattodo_ddlist')" >
+		                                <div class="my_ul">
+			                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','גיבוש ועבודת צוות');">
+			                                גיבוש ועבודת צוות</a>
+			                                </div>
+			                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','פיתוח מנהלים');">
+			                                פיתוח מנהלים</a></div>
+			                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','פיתוח עובדים');">
+			                                פיתוח עובדים</a></div>
+			                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','הרצאות');">
+			                                הרצאות</a></div>
+			                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','פעילות מיוחדת למורים');">
+			                                פעילות מיוחדת למורים</a></div>
+			                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','מפגש העשרה חוויתי');">
+			                                מפגש העשרה חוויתי</a></div>
 		                                </div>
-		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','פיתוח מנהלים');">
-		                                פיתוח מנהלים</a></div>
-		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','פיתוח עובדים');">
-		                                פיתוח עובדים</a></div>
-		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','הרצאות');">
-		                                הרצאות</a></div>
-		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','פעילות מיוחדת למורים');">
-		                                פעילות מיוחדת למורים</a></div>
-		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','מפגש העשרה חוויתי');">
-		                                מפגש העשרה חוויתי</a></div>
 	                                </div>
-                                </div>
-                            </div>
+	                          
+                        </div>
 
                         <span class="questions" id="howmany_Question">
                             ? כמה משתתפים
@@ -116,8 +124,8 @@ SetupSearchInputRest();
                         <span class="questions" id="where_Question">
                             ? היכן רוצים את הפעילות
                         </span>
-			               <div id="where" class="dropdown"  onclick="show_dropdown('where_ddlist')" >
-                                <input id="where_ddtext" class="dd_text" name="where_ddtext" type="text" value=""  size="10"  readonly="readonly" onmouseout="hide_list('where_ddlist')" />
+			               <div id="where" class="dropdown"  onclick="show_dropdown('where_ddlist')" onmouseout="hide_list('where_ddlist')">
+                                <input id="where_ddtext" class="dd_text" name="where_ddtext" type="text" value=""  size="10"  readonly="readonly"  />
                                 <div id="where_ddlist" class="dd_list" onmousemove="show_dropdown('where_ddlist')" onmouseout="hide_list('where_ddlist')" >
 	                                <div class="my_ul">
 		                                <div class="my_li"><a onclick="setText('where_ddtext','where_ddlist','במבנה ממוזג/מחומם');">
@@ -139,8 +147,8 @@ SetupSearchInputRest();
                         <span class="questions" id="howlong_Question">
                             ? כמה זמן
                         </span>
-			               <div id="howlong" class="dropdown"  onclick="show_dropdown('howlong_ddlist')" >
-                                <input id="howlong_ddtext" class="dd_text" name="howlong_ddtext" type="text" value=""  size="10"  readonly="readonly" onmouseout="hide_list('howlong_ddlist')" />
+			               <div id="howlong" class="dropdown"  onclick="show_dropdown('howlong_ddlist')" onmouseout="hide_list('howlong_ddlist')">
+                                <input id="howlong_ddtext" class="dd_text" name="howlong_ddtext" type="text" value=""  size="10"  readonly="readonly"  />
                                 <div id="howlong_ddlist" class="dd_list" onmousemove="show_dropdown('howlong_ddlist')" onmouseout="hide_list('howlong_ddlist')" >
 	                                <div class="my_ul">
 		                                <div class="my_li"><a onclick="setText('howlong_ddtext','howlong_ddlist','קצר, מקסימום 3 שעות');">
@@ -160,8 +168,8 @@ SetupSearchInputRest();
                         <span class="questions" id="whatbudget_Question">
                             ? מה התקציב למשתתף
                         </span> 
-			               <div id="whatbudget" class="dropdown"  onclick="show_dropdown('whatbudget_ddlist')" >
-                                <input id="whatbudget_ddtext" class="dd_text" name="whatbudget_ddtext" type="text" value=""  size="10"  readonly="readonly"  onmouseout="hide_list('whatbudget_ddlist')" />
+			               <div id="whatbudget" class="dropdown"  onclick="show_dropdown('whatbudget_ddlist')" onmouseout="hide_list('whatbudget_ddlist')">
+                                <input id="whatbudget_ddtext" class="dd_text" name="whatbudget_ddtext" type="text" value=""  size="10"  readonly="readonly"   />
                                 <div id="whatbudget_ddlist" class="dd_list" onmousemove="show_dropdown('whatbudget_ddlist')" onmouseout="hide_list('whatbudget_ddlist')" >
 	                                <div class="my_ul">
 		                                <div class="my_li"><a onclick="setText('whatbudget_ddtext','whatbudget_ddlist','מעל 500');">
