@@ -61,6 +61,11 @@ SetupSearchInputRest();
 	$Free_search = $_GET['Free_search'];  // start display input from the 'result_set' workshop.
   	$Free_search = CleanText($Free_search);
   	
+  	
+  	$filter_text  = isset($_GET['filter_text'])? $_GET['filter_text']: "";
+  	$filter_text = CleanText($filter_text);
+  	
+  	
   	if ($Free_search == 1)	// we here through free search so get the right var from the url
   	{
   		$searchString = $_GET['searchString'];
@@ -180,7 +185,7 @@ SetupSearchInputRest();
 
  	//just for counting the number of results
  	if ($Free_search == 0)	// regular search 	
- 		$result = SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$howmany,0,500);
+ 		$result = SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$howmany,0,500,$filter_text);
  	else // free search function 
  		$result = SearchFreeText("description_text","name","type",$searchString,0,500);
  		
@@ -189,10 +194,16 @@ SetupSearchInputRest();
  		$Total++;
  	
      if ($Free_search == 0)	// regular search      
-     	$result = SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$howmany,$Result_Set,$Per_Page);
+     {
+     	$result = SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$howmany,$Result_Set,$Per_Page,$filter_text);
+     	$filter_subjects = GetSubjects($whattodo,$where,$howlong,$lowval,$highval,$howmany);
+     }
 	 else // free search function 
- 		$result = SearchFreeText("description_text","name","type",$searchString,$Result_Set,$Per_Page);      
-	?>
+	 {
+	 	$result = SearchFreeText("description_text","name","type",$searchString,$Result_Set,$Per_Page);      
+		$filter_subjects = GetSubjectsFreeText("description_text","name","type",$searchString); 
+	 }
+	 ?>
 	
 	<div id="results_wizard">
 	<div id="results_wizard_main">
@@ -203,20 +214,44 @@ SetupSearchInputRest();
 			            <span class="questions" id="filter_Subjects">
                             : סנן נושאי פעילות
                         </span>
-			            <div id="filter" class="search_wizard_dropdown"  onclick="show_dropdown('whattodo_ddlist')" >
-                        	<input id="whattodo_ddtext" class="dd_text_search" name="whatodo_ddtext" type="text" value=""  size="10"  readonly="readonly" style="margin-right:0.5cm;" />
-                        	<div id="whattodo_ddlist" class="dd_list" onmousemove="show_dropdown('whattodo_ddlist')" onmouseout="hide_list('whattodo_ddlist')" >
+                        
+                        
+                    <?php     
+			         /*   
+			            <div id="filter">
+                            <input class="dd_text_search" name="filter_text" type="text" value="" size="10"/>
+                        </div>
+                       */
+                    ?> 
+			          
+                    <?php   //  ShowDropDown("filter_text",$filter_subjects,$filter_subjects,-1,"בחר נושא",-1);  ?>
 
-	                                <div class="my_ul">
-		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','גיבוש ועבודת צוות');">גיבוש ועבודת צוות</a></div>
-		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','פיתוח מנהלים');">פיתוח מנהלים</a></div>
-		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','פיתוח עובדים');">פיתוח עובדים</a></div>
-		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','הרצאות');">הרצאות</a></div>
-		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','פעילות מיוחדת למורים');">פעילות מיוחדת למורים</a></div>
-	                               		<div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','מפגש העשרה חוויתי');">מפגש העשרה חוויתי</a></div>
-	                                </div>
-                            </div>
-                       </div>                           
+			           
+			            <div id="filter" class="search_wizard_dropdown"  onclick="show_dropdown('filter_list')" onmouseout="hide_list('whattodo_ddlist')" >
+						
+						
+							<input id="filter_text" class="dd_text" name="filter_text" type="text" value=""  size="10"  readonly="readonly" style="margin-right:0.5cm;" />
+	                        	<div id="filter_list" class="dd_list" onmousemove="show_dropdown('filter_list')" onmouseout="hide_list('filter_list')" >
+	                            	<?php  foreach ($filter_subjects as $curr)
+	                            	{ ?>
+	                            	<div class="my_ul">
+			                                <div class="my_li"><a onclick="setText('filter_text','filter_list','<?php echo $curr ?>' );">
+			                                <?php echo $curr ?> </a>
+			                        		</div>
+	                            	</div>
+	                            	<?php 
+	                            	} ?>
+	                            	
+	                            
+	                            
+	                            </div>
+                            
+                            
+                        </div> 
+                      
+                   
+                       
+                                                
                             <!-- sending the right parameters with the new subject , to search page  -->
                             <?php 
                             if ($Free_search == 1) // we here through free search so we dont have all those fields at the url so we put null at them
@@ -227,6 +262,8 @@ SetupSearchInputRest();
                             	$whatbudget = null;
                             }
                             ?>
+                            
+                            <input class="whattodo_ddtext" name="whattodo_ddtext" type="hidden" value="<?php echo $whattodo ?>" >
                             <input class="howmany_text" name="howmany_text" type="hidden" value="<?php echo $howmany ?>" >  
                             <input id="where_ddtext" class="dd_text" name="where_ddtext" type="hidden" value="<?php echo $where_for_resend ?>"   >
                             <input id="howlong_ddtext" class="dd_text" name="howlong_ddtext" type="hidden" value="<?php echo $howlong?>"   >
