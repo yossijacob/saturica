@@ -290,8 +290,7 @@ session_start();
 	 <tr>
 	 	<td><b>מספר סדנא</b></td>
 	 <?php 	
-	 echo "<td><input type='text' name='workshopnum' value='$workshopnum' title='workshopnumber'/></td>";
-	 echo "<td>$workshopnum</td>"; 
+	 echo "<td><input type='text' name='workshopnum' value='$workshopnum' title='workshopnumber'/></td>"; 
 	 ?>
 	 </tr>
 	 <tr>
@@ -305,13 +304,34 @@ session_start();
 	 <tr>
 	 	<td><b>סוג הפעילות </b></td>
 	 	<td>
-	 	<input class="approval_contact_box" name="type_team_work" type="checkbox" value="1" size="20"/> גיבוש ועבודת צוות <br />
-	 	<input class="approval_contact_box" name="type_managers" type="checkbox" value="1" size="20"/> פיתוח מנהלים <br />
-	 	<input class="approval_contact_box" name="type_workers" type="checkbox" value="1" size="20"/> פיתוח עובדים <br />
-	 	<input class="approval_contact_box" name="type_lectures" type="checkbox" value="1" size="20"/> הרצאות <br />
-	 	<input class="approval_contact_box" name="type_teachers" type="checkbox" value="1" size="20"/> פעילות מיוחדת למורים <br />
-	 	<input class="approval_contact_box" name="type_fun" type="checkbox" value="1" size="20"/> מפגש העשרה חוויתי <br />
-	 	 <?php 
+	 	<?php 
+	 	if ($type_team_work == 1)
+	 		echo '<input class="approval_contact_box" name="type_team_work" type="checkbox" value="1"  size="20" checked/> גיבוש ועבודת צוות <br />';
+	 	else echo '<input class="approval_contact_box" name="type_team_work" type="checkbox" value="1" size="20"/> גיבוש ועבודת צוות <br />';
+	 	
+	 	if ($type_managers == 1 )
+	 		echo '<input class="approval_contact_box" name="type_managers" type="checkbox" value="1" size="20" checked/> פיתוח מנהלים <br />';
+	 	else echo '<input class="approval_contact_box" name="type_managers" type="checkbox" value="1" size="20"/> פיתוח מנהלים <br />';
+	 	
+	 	if ($type_workers == 1 ) 
+	 		echo '<input class="approval_contact_box" name="type_workers" type="checkbox" value="1" size="20" checked/> פיתוח עובדים <br />';
+	 	else echo '<input class="approval_contact_box" name="type_workers" type="checkbox" value="1" size="20"/> פיתוח עובדים <br />';
+	 	
+	 	if ($type_lectures == 1 )
+	 		echo '<input class="approval_contact_box" name="type_lectures" type="checkbox" value="1" size="20" checked/> הרצאות <br />';
+	 	else echo '<input class="approval_contact_box" name="type_lectures" type="checkbox" value="1" size="20"/> הרצאות <br />';
+	 	 
+	 	if ($type_teachers == 1 )
+	 		echo '<input class="approval_contact_box" name="type_teachers" type="checkbox" value="1" size="20" checked/> פעילות מיוחדת למורים <br />';
+	 	else echo '<input class="approval_contact_box" name="type_teachers" type="checkbox" value="1" size="20"/> פעילות מיוחדת למורים <br />';	
+	 	
+	 	if ($type_fun == 1 )
+	 		echo '<input class="approval_contact_box" name="type_fun" type="checkbox" value="1" size="20" checked/> מפגש העשרה חוויתי <br />';
+	 	else echo '<input class="approval_contact_box" name="type_fun" type="checkbox" value="1" size="20"/> מפגש העשרה חוויתי <br />';
+	 	
+	 	?>
+	 	
+		<?php 
 	 	//ShowDropDown("workshopsubject",$workshopsubjects,$workshopsubjects,"","",$workshopsubject);
 	 	?>
 	 	</td>
@@ -334,7 +354,7 @@ session_start();
 	 <tr>
 	 <td><b>תאור סדנא</b></td>
 	 <?php // echo "<td><textarea  name='workshopdesc' value='$workshopdesc' title='workshopdesc' rows='8' cols='25' > </textarea> </td>";?> 
-	<?php echo "<td><input type='text' size='52' maxlength='50'  name='workshopdesc' value='$workshopdesc' title='workshopdesc' rows='8' cols='25' > </textarea> </td>";?>
+	<?php echo "<td><input type='text' size='302' maxlength='300'  name='workshopdesc' value='$workshopdesc' title='workshopdesc' rows='8' cols='25' > </textarea> </td>";?>
 	 </tr>
 	 
 	 <tr>
@@ -372,13 +392,34 @@ session_start();
 	 	 <tr>
 	 	<td><b>מיקום סדנא</b></td>
 		 	<td>
-		<input class="approval_contact_box" name="loc_building" type="checkbox" value="1" size="20"/> במבנה ממוזג\מחומם <br />
-	 	<input class="approval_contact_box" name="loc_our_place" type="checkbox" value="1" size="20"/> אצלנו בארגון <br />
-	 	<input class="approval_contact_box" name="loc_outside" type="checkbox" value="1" size="20"/> בחוץ במקום מיוחד <br />
-	 	<input class="approval_contact_box" name="loc_pool" type="checkbox" value="1" size="20"/> ליד הבריכה <br />
-	 	<input class="approval_contact_box" name="loc_beatch" type="checkbox" value="1" size="20"/> על חוף הים <br />
-	 	<input class="approval_contact_box" name="loc_place_to_place" type="checkbox" value="1" size="20"/> נעבור ממקום למקום <br />
-	 	<?php 
+		<?php 
+		if ($loc_building == 1)
+			echo '<input class="approval_contact_box" name="loc_building" type="checkbox" value="1" size="20" checked/> במבנה ממוזג\מחומם <br />';
+		else echo '<input class="approval_contact_box" name="loc_building" type="checkbox" value="1" size="20"/> במבנה ממוזג\מחומם <br />';
+		
+		if ($loc_our_place == 1)	
+			echo '<input class="approval_contact_box" name="loc_our_place" type="checkbox" value="1" size="20" checked/> אצלנו בארגון <br />';
+		else echo '<input class="approval_contact_box" name="loc_our_place" type="checkbox" value="1" size="20"/> אצלנו בארגון <br />';
+		
+		if ($loc_outside == 1)	
+			echo '<input class="approval_contact_box" name="loc_outside" type="checkbox" value="1" size="20" checked/> בחוץ במקום מיוחד <br />';
+		else echo '<input class="approval_contact_box" name="loc_outside" type="checkbox" value="1" size="20"/> בחוץ במקום מיוחד <br />';
+		
+		if ($loc_pool == 1)	
+			echo '<input class="approval_contact_box" name="loc_pool" type="checkbox" value="1" size="20" checked/> ליד הבריכה <br />';
+		else echo '<input class="approval_contact_box" name="loc_pool" type="checkbox" value="1" size="20"/> ליד הבריכה <br />';
+			
+		if ($loc_beatch == 1)
+			echo '<input class="approval_contact_box" name="loc_beatch" type="checkbox" value="1" size="20" checked/> על חוף הים <br />';
+		else echo '<input class="approval_contact_box" name="loc_beatch" type="checkbox" value="1" size="20"/> על חוף הים <br />';
+		
+		if ($loc_place_to_place == 1)
+			echo '<input class="approval_contact_box" name="loc_place_to_place" type="checkbox" value="1" size="20" checked/> נעבור ממקום למקום <br />';
+		else echo '<input class="approval_contact_box" name="loc_place_to_place" type="checkbox" value="1" size="20"/> נעבור ממקום למקום <br />';
+	 			
+	 ?>	
+	 
+	 <?php 
 	 	//ShowDropDown("workshoplocation",$workshoplocations,$workshoplocations,"","",$workshoplocation);
 	 	?>
 	 	</td>
