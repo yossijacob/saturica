@@ -1379,11 +1379,13 @@ width:960px;
 	
 .dd_text
 {
+ /*width:173px;*/
  width:173px;
  height:31px;
  border:0px none;
  background:none;
- margin-left:20px;
+ /*margin-left:20px;*/
+ padding-left:20px;
  margin-right:5px;
  direction:rtl;
  cursor:default;
@@ -1443,15 +1445,16 @@ margin-top:3px;
 }
 
 
-
-
-
-
+.drop_down_frame
+{
+	width:205px;
+ 	height:35px; 
+}
 
 .dd_list
 {
 border:1px #CCCCCC solid;
-width:180px;
+width:185px;
 position:relative;
 padding-left:-12px;
 overflow:hidden;
@@ -1460,7 +1463,7 @@ direction:rtl;
 margin-right:5px;
 cursor:pointer;
 color:#514E47;
-z-index:1;
+z-index:2;
 }
 
 .my_ul
