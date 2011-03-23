@@ -389,7 +389,7 @@ if (!is_authenticated())
 	 <tr>
 	 <td><b>תאור סדנא</b></td>
 	 <?php // echo "<td><textarea  name='workshopdesc' value='$workshopdesc' title='workshopdesc' rows='8' cols='25' > </textarea> </td>";?> 
-	<?php echo "<td><input type='text' size='52' maxlength='50'  name='workshopdesc' value='$workshopdesc' title='workshopdesc' rows='8' cols='25' > </textarea> </td>";?>
+	<?php echo "<td><input type='text' size='302' maxlength='300'  name='workshopdesc' value='$workshopdesc' title='workshopdesc' rows='8' cols='25' > </textarea> </td>";?>
 	 </tr>
 	 
 	 <tr>
