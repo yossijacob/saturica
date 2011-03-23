@@ -1389,7 +1389,7 @@ width:960px;
  margin-right:5px;
  direction:rtl;
  cursor:default;
- font-size:14px;
+ font-size:12px;
 font-family:Tahoma;
 color:#514E47;
 }
@@ -2221,7 +2221,6 @@ z-index:2;
 	height:50px;
 	margin-top:20px;
 	/*margin-left:85px;*/
-	margin-left:45px;
 }
 
 #midigital_logo
