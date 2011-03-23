@@ -388,17 +388,17 @@ if (!is_authenticated())
 	 
 	 <tr>
 	 <td><b>תאור סדנא</b></td>
-	 <?php // echo "<td><textarea  name='workshopdesc' value='$workshopdesc' title='workshopdesc' rows='8' cols='25' > </textarea> </td>";?> 
-	<?php echo "<td><input type='text' size='302' maxlength='300'  name='workshopdesc' value='$workshopdesc' title='workshopdesc' rows='8' cols='25' > </textarea> </td>";?>
+	 <?php  echo "<td><textarea  name='workshopdesc'  title='workshopdesc' rows='8' cols='25' > $workshopdesc </textarea> </td>";?> 
+	<?php // echo "<td><input type='text' size='302' maxlength='300'  name='workshopdesc' value='$workshopdesc' title='workshopdesc' rows='8' cols='25' > </textarea> </td>";?>
 	 </tr>
 	 
 	 <tr>
 	 	<td><b>הערות סדנא</b></td>
-	 <?php echo "<td><textarea  name='workshopcomments' value='$workshopcomments' title='workshopcomments' rows='8' cols='25' > </textarea> </td>";?>	 	
+	 <?php echo "<td><textarea  name='workshopcomments'  title='workshopcomments' rows='8' cols='25' > $workshopcomments </textarea> </td>";?>	 	
 	 </tr>
 	 <tr>
 	 	<td><b>פרטים חשובים בסדנא</b></td>
-	 	<?php echo "<td><textarea  name='workshopdetails' value='$workshopdetails' title='workshopdetails' rows='8' cols='25' > </textarea> </td>";?>
+	 	<?php echo "<td><textarea  name='workshopdetails'  title='workshopdetails' rows='8' cols='25' > $workshopdetails </textarea> </td>";?>
 	 </tr>
 	 <tr>
 	 	<td><b>שם הספק</b></td>
