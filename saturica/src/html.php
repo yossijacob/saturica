@@ -222,7 +222,7 @@ function Print_Single_Workshop($value)
 
  					<br/>
  					
- 					<span dir="rtl" style="font-size:22px; color:rgb(81,78,71); font-family:'Tahoma';">  <?php echo $value[2] ?></span> 	
+ 					<span dir="rtl" style="font-size:22px; color:rgb(81,78,71); font-family:'Tahoma';">  <?php echo $value[2] ?> </span> 	
  					<br/>
  					<span dir="rtl" style="font-size:13px; color:red; font-family:'Tahoma'; "> נושא : </span>
  					<span dir="rtl" > <?php echo " $value[16]  &nbsp &nbsp &nbsp &nbsp"; ?>  </span> 
