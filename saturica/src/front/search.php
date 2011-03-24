@@ -232,15 +232,17 @@ SetupSearchInputRest();
 						
 							<input id="filter_text" class="dd_text" name="filter_text" type="text" value=""  size="10"  readonly="readonly" style="margin-right:0.5cm;" />
 	                        	<div id="filter_list" class="dd_list" onmousemove="show_dropdown('filter_list')" onmouseout="hide_list('filter_list')" >
-	                            	<?php  foreach ($filter_subjects as $curr)
-	                            	{ ?>
-	                            	<div class="my_ul">
-			                                <div class="my_li"><a onclick="setText('filter_text','filter_list','<?php echo $curr ?>' );">
-			                                <?php echo $curr ?> </a>
-			                        		</div>
-	                            	</div>
 	                            	<?php 
-	                            	} ?>
+									if ($filter_subjects != null)
+	                            		foreach ($filter_subjects as $curr)
+		                            	{ ?>
+		                            	<div class="my_ul">
+				                                <div class="my_li"><a onclick="setText('filter_text','filter_list','<?php echo $curr ?>' );">
+				                                <?php echo $curr ?> </a>
+				                        		</div>
+		                            	</div>
+		                            	<?php 
+		                            	} ?>
 	                            	
 	                            
 	                            
