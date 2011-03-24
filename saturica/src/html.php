@@ -218,7 +218,7 @@ function Print_Single_Workshop($value)
 	?>
 					
 
-					<div style="text-align:right; height:140px; font-size:13px;">
+					<div style="text-align:right; height:140px; font-size:13px; overflow:hidden;">
 
  					<br/>
  					
