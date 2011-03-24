@@ -218,13 +218,13 @@ function Print_Single_Workshop($value)
 	?>
 					
 
-					<div style="text-align:right; height:140px; font-size:13px; overflow:hidden;">
+					<div dir="rtl" style="text-align:right; height:140px; font-size:13px; overflow:hidden;">
 
  					<br/>
  					
  					<span dir="rtl" style="font-size:22px; color:rgb(81,78,71); font-family:'Tahoma';">  <?php echo $value[2] ?></span> 	
  					<br/>
- 					<span dir="rtl" style="font-size:13px; color:red; font-family:'Tahoma';"> נושא : </span>
+ 					<span dir="rtl" style="font-size:13px; color:red; font-family:'Tahoma'; "> נושא : </span>
  					<span dir="rtl" > <?php echo " $value[16]  &nbsp &nbsp &nbsp &nbsp"; ?>  </span> 
 
  					<span dir="rtl" style="font-size:13px; color:red; font-family:'Tahoma'; "> סגנון : </span>
