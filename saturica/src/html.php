@@ -233,7 +233,7 @@ function Print_Single_Workshop($value)
  					
  					
  					<br/><br/>
- 					<span style="font-size:15px; font-family:'Tahoma'; "> <?php echo $value[8] ?> </span>
+ 					<span dir="rtl" style="font-size:15px; font-family:'Tahoma'; "> <?php echo $value[8] ?> </span>
  					 	
  					<br/>
  					</div>
