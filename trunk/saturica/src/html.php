@@ -217,7 +217,7 @@ function Print_Single_Workshop($value)
 {
 	?>
 					
-					<div style="text-align:right; height:147px; font-size:13px;">
+					<div style="text-align:right; height:140px; font-size:13px;">
  					<br/>
  					
  					<span style="font-size:22px; color:rgb(81,78,71); font-family:'Tahoma'; ">  <?php echo $value[2] ?></span> 	
@@ -233,7 +233,7 @@ function Print_Single_Workshop($value)
  					
  					
  					<br/><br/>
- 					<span dir="rtl" style="font-size:15px; font-family:'Tahoma'; "> <?php echo $value[8] ?> </span>
+ 					<span dir="rtl" style="font-size:13px; font-family:'Tahoma'; "> <?php echo $value[8] ?> </span>
  					 	
  					<br/>
  					</div>
