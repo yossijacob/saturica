@@ -24,6 +24,7 @@ fieldset
 	border: none;
 }
 
+
 /*------------ HEADER -------------------*/
 #header
 {
@@ -31,6 +32,18 @@ fieldset
 	height:157px;
 	background-color:#473B2F;
 	position:relative;
+}
+
+#main_logo
+{
+	float:right;
+	width:180px;
+	height:120px;
+}
+
+#main_logo : hover
+{
+	cursor: pointer;
 }
 
 #header ul
