@@ -41,7 +41,7 @@ fieldset
 	height:120px;
 }
 
-#main_logo : hover
+#main_logo:hover
 {
 	cursor: pointer;
 }
