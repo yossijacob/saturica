@@ -1293,6 +1293,7 @@ width:960px;
 	bottom:71px;
 	left:44px;
 	cursor:pointer;
+	z-index: 0;
 }
 
 #wizard_find_button:hover
