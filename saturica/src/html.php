@@ -252,13 +252,13 @@ function Print_Single_Location($value)
 {
 	?>
 					
-					<div style="text-align:right; height:147px; font-size:13px;">
+					<div dir="rtl" style="text-align:right; height:147px; font-size:13px;">
  					<br/>
  					
- 					<span style="font-size:22px; color:rgb(81,78,71); font-family:'Tahoma'; ">  <?php echo $value[2] ?></span> 	
+ 					<span dir="rtl" style="font-size:22px; color:rgb(81,78,71); font-family:'Tahoma'; ">  <?php echo $value[2] ?></span> 	
  					<br/>
  					
- 					<?php echo " $value[4]  &nbsp &nbsp &nbsp &nbsp"; ?>
+ 					<span dir="rtl" > <?php echo " $value[4]  &nbsp &nbsp &nbsp &nbsp"; ?> </span>
  					
  					</div>
  					<br/>
