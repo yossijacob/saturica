@@ -157,7 +157,7 @@ if (!is_authenticated())
 	$workshopsubjects[5] = "מפגש העשרה חוויתי";	
 	
 	$workshoplocations[0] = "במבנה ממוזג\מחומם";		// for the places dropdown boxes
-	$workshoplocations[1] = "אצלנו בארגון";
+	$workshoplocations[1] = "אצלכם בארגון";
 	$workshoplocations[2] = "בחוץ במקום מיוחד";
 	$workshoplocations[3] = "ליד הבריכה";
 	$workshoplocations[4] = "על חוף הים";
@@ -438,8 +438,8 @@ if (!is_authenticated())
 		else echo '<input class="approval_contact_box" name="loc_building" type="checkbox" value="1" size="20"/> במבנה ממוזג\מחומם <br />';
 		
 		if ($loc_our_place == 1)	
-			echo '<input class="approval_contact_box" name="loc_our_place" type="checkbox" value="1" size="20" checked/> אצלנו בארגון <br />';
-		else echo '<input class="approval_contact_box" name="loc_our_place" type="checkbox" value="1" size="20"/> אצלנו בארגון <br />';
+			echo '<input class="approval_contact_box" name="loc_our_place" type="checkbox" value="1" size="20" checked/> אצלכם בארגון <br />';
+		else echo '<input class="approval_contact_box" name="loc_our_place" type="checkbox" value="1" size="20"/> אצלכם בארגון <br />';
 		
 		if ($loc_outside == 1)	
 			echo '<input class="approval_contact_box" name="loc_outside" type="checkbox" value="1" size="20" checked/> בחוץ במקום מיוחד <br />';
