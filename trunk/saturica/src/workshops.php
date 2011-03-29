@@ -29,6 +29,7 @@ if ($row==null)  // if null then put header
 		echo "<th>מחיר קבוע</th>";
 		echo "<th>נושא</th>";
 		echo "<th>שם</th>";
+		echo "<th>מספר סדנא</th>";
 		echo "<th></th>";
 		echo "</tr>";
 		echo "</thead>";
@@ -45,6 +46,7 @@ if ($row==null)  // if null then put header
 		echo "<td>$row[6]</td>"; // מחיר קבוע
 		echo "<td>$row[4]</td>"; // נושא
 		echo "<td>$row[2]</td>"; // שם
+		echo "<td>$row[1]</td>"; // מספר סדנא
 		echo "<td><a title='ערוך רשומה' href='javascript:OpenPageWithId(\"editworkshop.php\",\"$id\")'><img src='images/edit_small.png' class='small_icon_button'/></a></td>";
 		echo "</tr>";
 	}
