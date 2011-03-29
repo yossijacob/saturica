@@ -145,25 +145,25 @@ if (!is_authenticated())
 	 <tr>
 	 	<td><b>שם</b></td>
 	 <?php 	
-	 echo "<td><input type='text' name='name' value='$name' title='name of customer'/></td>";
+	 echo "<td><input type='text' name='name' value='$name' title='name of customer' size='40'/></td>";
 	 ?>
 	 </tr>
 	 <tr>
 	 	<td><b>טלפון</b></td>
-	 <?php echo "<td><input type='text' name='phone' value='$phone' title='phone'/></td>";?>
+	 <?php echo "<td><input type='text' name='phone' value='$phone' title='phone' size='40'/></td>";?>
 	 </tr>
 	 <tr>
 	 	<td><b>דואר אלקטרוני</b></td>
-	 <?php echo "<td><input type='text' name='email' value='$email' title='email for contacting customer'/></td>";?>
+	 <?php echo "<td><input type='text' name='email' value='$email' title='email for contacting customer' size='40'/></td>";?>
 	 </tr>
 	 <tr>
 	 	<td><b>חברה</b></td>
-	 <?php 	echo "<td><input type='text' name='company' value='$company' title='company'/></td>"; ?>
+	 <?php 	echo "<td><input type='text' name='company' value='$company' title='company' size='40'/></td>"; ?>
 	 	
 	 </tr>
 	 <tr>
 	 	<td><b>הערות</b></td>
-	 <?php echo "<td><input type='text' name='comments' value='$comments' /></td>";?>
+	 <?php echo "<td><input type='text' name='comments' value='$comments' size='40'/></td>";?>
 	 </tr>
 	 <tr>
 	 	<td>האם פעיל</td>
