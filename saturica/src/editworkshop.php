@@ -135,6 +135,9 @@ if (!is_authenticated())
   $workshoptimeframe  = isset($_POST['workshoptimeframe'])? $_POST['workshoptimeframe']: "";
   $workshoptimeframe = CleanText($workshoptimeframe);
   
+  $workshoprealtime = isset($_POST['workshoprealtime'])? $_POST['workshoprealtime']: "";
+  $workshoprealtime = CleanText($workshoprealtime);
+  
   
   $id  = isset($_POST['id'])? $_POST['id']: "";
   $id = CleanText($id);
@@ -251,6 +254,7 @@ if (!is_authenticated())
 			$data[29] = $loc_pool;
 			$data[30] = $loc_beatch;
 			$data[31] = $loc_place_to_place;
+			$data[32] = $workshoprealtime;	//real time
   			
   			
   			
@@ -298,6 +302,7 @@ if (!is_authenticated())
   		$workshoptype = $workshop[16]; 
 		$workshoplocation = $workshop[17]; 
 		$workshoptimeframe = $workshop[18];
+		//[19] is votes number
  		
 		$yesno[0] = "כן";		// for the active dropdown box
 		$yesno[1] = "לא";
@@ -315,6 +320,7 @@ if (!is_authenticated())
 		$loc_pool = $workshop[29];
 		$loc_beatch = $workshop[30];
 		$loc_place_to_place = $workshop[31];
+		$workshoprealtime = $workshop[32]; //real time
 		
  			
 ?>
@@ -472,6 +478,15 @@ if (!is_authenticated())
 	 	?>
 	 	</td>
 	 </tr>
+	
+	
+	 <!-- 
+	  <tr>
+	 	<td><b>אורך מדויק </b></td>
+	 <?php echo "<td><input type='text' name='workshoprealtime' value='$workshoprealtime' title='$workshoprealtime'/></td>";?>
+	 </tr>
+	 
+	  -->
 	 
 	 <tr><td></td></tr>
 	 <tr><td></td></tr>
