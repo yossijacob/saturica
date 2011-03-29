@@ -128,7 +128,7 @@ SetupSearchInputRest();
     $highval = null;   
   	}
     
-    $Per_Page = 5;  // number of results per page.
+    $Per_Page = 10;  // number of results per page.
   	$Result_Set = $_GET['Result_Set'];  // start display input from the 'result_set' workshop.
   	$Result_Set = CleanText($Result_Set);
  
@@ -317,13 +317,13 @@ SetupSearchInputRest();
 			                        <?php 
 			                        echo "</div>";
 			                         $i++;
-			                         if ($j == 5) $j=0;
+			                         if ($j == 10) $j=0;
 			                         $j++;	//for printing empty boxes  
 									echo "</li>";       
 							      }	
 			                
 
-							      while ($j <5)
+							      while ($j <10)
 							      {
 							      	echo "<li>";
 							      	if ( ($i % 2) == 0)
@@ -373,9 +373,7 @@ SetupSearchInputRest();
 					         echo "<div id='Prev_next_Style_main'>";	
 					         echo "<div id='NextStyle'>";
 					         if ($Free_search == 0)  	
-
 					         	echo "<a HREF=\"search.php?Result_Set=$Res1&whatodo_ddtext=$whattodo&howmany_text=$howmany&where_ddtext=$where&howlong_ddtext=$howlong&Free_search=$Free_search&whatbudget_ddtext=$whatbudget\"> <<  הבא </a>"; 
-
 					         else 
 					         	echo "<a HREF=\"search.php?Result_Set=$Res1&Free_search=$Free_search&searchString=$searchString\"> <<  הבא </a>";
 					         	echo"</div>";
