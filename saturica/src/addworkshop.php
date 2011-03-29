@@ -135,8 +135,8 @@ session_start();
   $workshopactive  = isset($_POST['workshopactive'])? $_POST['workshopactive']: "";
   $workshopactive = CleanText($workshopactive);
   
-  $workshoprealtime = isset($_POST['workshoprealtime'])? $_POST['workshoprealtime']: "";
-  $workshoprealtime = CleanText($workshoprealtime);
+  //$workshoprealtime = isset($_POST['workshoprealtime'])? $_POST['workshoprealtime']: "";
+  //$workshoprealtime = CleanText($workshoprealtime);
 
   	$dont_show_form = false;
   	$miss = false;
@@ -252,7 +252,7 @@ session_start();
 			$data[29] = $loc_pool;
 			$data[30] = $loc_beatch;
 			$data[31] = $loc_place_to_place;
-			$data[32] = $workshoprealtime;	//real time
+		//	$data[32] = $workshoprealtime;	//real time
 			
   			
   			$target_path = "workshop_pic/";	//upload the picture to 'workshop_pic' folder
