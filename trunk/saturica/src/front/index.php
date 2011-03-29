@@ -130,8 +130,8 @@ SetupSearchInputRest();
 	                                <div class="my_ul">
 		                                <div class="my_li"><a onclick="setText('where_ddtext','where_ddlist','במבנה ממוזג/מחומם');">
 		                                 במבנה ממוזג/מחומם</a></div>
-		                                <div class="my_li"><a onclick="setText('where_ddtext','where_ddlist','אצלנו בארגון');">
-		                                אצלנו בארגון</a></div>
+		                                <div class="my_li"><a onclick="setText('where_ddtext','where_ddlist','אצלכם בארגון');">
+		                                אצלכם בארגון</a></div>
 		                                <div class="my_li"><a onclick="setText('where_ddtext','where_ddlist','מחוץ לעבודה, במקום מיוחד');">
 		                                מחוץ לעבודה, במקום מיוחד</a></div>
 		                                <div class="my_li"><a onclick="setText('where_ddtext','where_ddlist','ליד הבריכה');">
