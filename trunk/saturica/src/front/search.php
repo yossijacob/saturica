@@ -28,17 +28,21 @@ SetupSearchInputRest();
 ?>
 <script type="text/javascript" language="javascript">
     var hide = false;
+
     function show_dropdown(id) 
     {
-        if (!hide) document.getElementById(id).style.visibility = "visible";  // dd_list
-        hide = false;
-        //document.getElementById("dd_text").value=121;
+    	elem = document.getElementById(id);
+		if ((elem.style.visibility == "hidden") && (hide == false))
+		{
+			elem.style.visibility = "visible";  // dd_list
+		}
+		else
+		{
+			elem.style.visibility = "hidden";  // dd_list
+		}
+		hide = false;
     }
-    function downkey()
-    {
-
-    }
-
+    
     function setText(text_id,list_id, val) 
     {
         hide = true;
@@ -227,11 +231,11 @@ SetupSearchInputRest();
                     <?php   //  ShowDropDown("filter_text",$filter_subjects,$filter_subjects,-1,"בחר נושא",-1);  ?>
 
 			           
-			            <div id="filter" class="search_wizard_dropdown"  onclick="show_dropdown('filter_list')" onmouseout="hide_list('whattodo_ddlist')" >
+			            <div id="filter" class="search_wizard_dropdown"  onclick="show_dropdown('filter_list')"  >
 						
 						
 							<input id="filter_text" class="dd_text" name="filter_text" type="text" value=""  size="10"  readonly="readonly" style="margin-right:0.5cm;" />
-	                        	<div id="filter_list" class="dd_list" onmousemove="show_dropdown('filter_list')" onmouseout="hide_list('filter_list')" >
+	                        	<div id="filter_list" class="dd_list"   >
 	                            	<?php 
 									if ($filter_subjects != null)
 	                            		foreach ($filter_subjects as $curr)
