@@ -135,8 +135,8 @@ if (!is_authenticated())
   $workshoptimeframe  = isset($_POST['workshoptimeframe'])? $_POST['workshoptimeframe']: "";
   $workshoptimeframe = CleanText($workshoptimeframe);
   
-  $workshoprealtime = isset($_POST['workshoprealtime'])? $_POST['workshoprealtime']: "";
-  $workshoprealtime = CleanText($workshoprealtime);
+//  $workshoprealtime = isset($_POST['workshoprealtime'])? $_POST['workshoprealtime']: "";
+//  $workshoprealtime = CleanText($workshoprealtime);
   
   
   $id  = isset($_POST['id'])? $_POST['id']: "";
@@ -254,7 +254,7 @@ if (!is_authenticated())
 			$data[29] = $loc_pool;
 			$data[30] = $loc_beatch;
 			$data[31] = $loc_place_to_place;
-			$data[32] = $workshoprealtime;	//real time
+		//	$data[32] = $workshoprealtime;	//real time
   			
   			
   			
@@ -320,7 +320,7 @@ if (!is_authenticated())
 		$loc_pool = $workshop[29];
 		$loc_beatch = $workshop[30];
 		$loc_place_to_place = $workshop[31];
-		$workshoprealtime = $workshop[32]; //real time
+	//	$workshoprealtime = $workshop[32]; //real time
 		
  			
 ?>
