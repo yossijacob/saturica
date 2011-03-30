@@ -41,99 +41,99 @@ session_start();
   
   
   $workshopnum = isset($_POST['workshopnum']) ? $_POST['workshopnum']: "";
-  $workshopnum = CleanText($workshopnum);
+ // $workshopnum = CleanText($workshopnum);
   
   $workshopname  = isset($_POST['workshopname'])? $_POST['workshopname']: "";
-  $workshopname = CleanText($workshopname);
+ // $workshopname = CleanText($workshopname);
   
   $workshoppic  = isset($_FILES['workshoppic']['name'])? $_FILES['workshoppic']['name']: "";
-  $workshoppic = CleanText($workshoppic);
+//  $workshoppic = CleanText($workshoppic);
   
   $type_team_work  = isset($_POST['type_team_work'])? $_POST['type_team_work']: 0;
-  $type_team_work = CleanText($type_team_work);
+//  $type_team_work = CleanText($type_team_work);
   
   $type_managers  = isset($_POST['type_managers'])? $_POST['type_managers']: "";
-  $type_managers = CleanText($type_managers);
+//  $type_managers = CleanText($type_managers);
   
   $type_workers  = isset($_POST['type_workers'])? $_POST['type_workers']: "";
-  $type_workers = CleanText($type_workers);
+//  $type_workers = CleanText($type_workers);
   
   $type_lectures  = isset($_POST['type_lectures'])? $_POST['type_lectures']: "";
-  $type_lectures = CleanText($type_lectures);
+ // $type_lectures = CleanText($type_lectures);
   
   $type_teachers  = isset($_POST['type_teachers'])? $_POST['type_teachers']: "";
-  $type_teachers = CleanText($type_teachers);
+ // $type_teachers = CleanText($type_teachers);
   
   $type_fun  = isset($_POST['type_fun'])? $_POST['type_fun']: "";
-  $type_fun = CleanText($type_fun);
+ // $type_fun = CleanText($type_fun);
   
   
   //$workshopsubject  = isset($_POST['workshopsubject'])? $_POST['workshopsubject']: "";
   //$workshopsubject = CleanText($workshopsubject);
   
   $workshopstyle  = isset($_POST['workshopstyle'])? $_POST['workshopstyle']: "";
-  $workshopstyle = CleanText($workshopstyle);
+ // $workshopstyle = CleanText($workshopstyle);
   
   $workshopfixprice  = isset($_POST['workshopfixprice'])? $_POST['workshopfixprice']: "";
-  $workshopfixprice = CleanText($workshopfixprice);
+ // $workshopfixprice = CleanText($workshopfixprice);
   
   $workshoppersonprice  = isset($_POST['workshoppersonprice'])? $_POST['workshoppersonprice']: "";
-  $workshoppersonprice = CleanText($workshoppersonprice);
+ // $workshoppersonprice = CleanText($workshoppersonprice);
   
   $workshopdesc = isset($_POST['workshopdesc'])? $_POST['workshopdesc']: "";
-  $workshopdesc = CleanText($workshopdesc);
+ // $workshopdesc = CleanText($workshopdesc);
 
   $workshopcomments  = isset($_POST['workshopcomments'])? $_POST['workshopcomments']: "";
-  $workshopcomments = CleanText($workshopcomments);
+ // $workshopcomments = CleanText($workshopcomments);
   
   $workshopdetails = isset($_POST['workshopdetails']) ? $_POST['workshopdetails']: "";
-  $workshopdetails = CleanText($workshopdetails);
+ // $workshopdetails = CleanText($workshopdetails);
   
   $workshopsupllier  = isset($_POST['workshopsupllier'])? $_POST['workshopsupllier']: "";
-  $workshopsupllier = CleanText($workshopsupllier);
+ // $workshopsupllier = CleanText($workshopsupllier);
   
   $workshopactive  = isset($_POST['workshopactive'])? $_POST['workshopactive']: "";
-  $workshopactive = CleanText($workshopactive);
+ // $workshopactive = CleanText($workshopactive);
   
   $workshopminsize = isset($_POST['workshopminsize']) ? $_POST['workshopminsize']: "";
-  $workshopminsize = CleanText($workshopminsize);
+ // $workshopminsize = CleanText($workshopminsize);
   $workshopmaxsize  = isset($_POST['workshopmaxsize'])? $_POST['workshopmaxsize']: "";
-  $workshopmaxsize = CleanText($workshopmaxsize);
+ // $workshopmaxsize = CleanText($workshopmaxsize);
   $workshoprank  = isset($_POST['workshoprank'])? $_POST['workshoprank']: "";
-  $workshoprank = CleanText($workshoprank);
+ // $workshoprank = CleanText($workshoprank);
   
   //more questions (expert / wiz questions )
 
   $workshoptype  = isset($_POST['workshoptype'])? $_POST['workshoptype']: "";
-  $workshoptype = CleanText($workshoptype);
+ // $workshoptype = CleanText($workshoptype);
   
   //$workshoplocation  = isset($_POST['workshoplocation'])? $_POST['workshoplocation']: "";
   //$workshoplocation = CleanText($workshoplocation);
   
   $loc_building  = isset($_POST['loc_building'])? $_POST['loc_building']: "";
-  $loc_building = CleanText($loc_building);
+ // $loc_building = CleanText($loc_building);
   
   $loc_our_place  = isset($_POST['loc_our_place'])? $_POST['loc_our_place']: "";
-  $loc_our_place = CleanText($loc_our_place);
+//  $loc_our_place = CleanText($loc_our_place);
   
   $loc_outside  = isset($_POST['loc_outside'])? $_POST['loc_outside']: "";
-  $loc_outside = CleanText($loc_outside);
+ // $loc_outside = CleanText($loc_outside);
   
   $loc_pool  = isset($_POST['loc_pool'])? $_POST['loc_pool']: "";
-  $loc_pool = CleanText($loc_pool);
+//  $loc_pool = CleanText($loc_pool);
   
   $loc_beatch  = isset($_POST['loc_beatch'])? $_POST['loc_beatch']: "";
-  $loc_beatchs = CleanText($loc_beatch);
+ // $loc_beatchs = CleanText($loc_beatch);
   
   $loc_place_to_place  = isset($_POST['loc_place_to_place'])? $_POST['loc_place_to_place']: "";
-  $loc_place_to_place = CleanText($loc_place_to_place);
+ // $loc_place_to_place = CleanText($loc_place_to_place);
   
 
   $workshoptimeframe  = isset($_POST['workshoptimeframe'])? $_POST['workshoptimeframe']: "";
-  $workshoptimeframe = CleanText($workshoptimeframe);
+ // $workshoptimeframe = CleanText($workshoptimeframe);
   
   $workshopactive  = isset($_POST['workshopactive'])? $_POST['workshopactive']: "";
-  $workshopactive = CleanText($workshopactive);
+//  $workshopactive = CleanText($workshopactive);
   
   //$workshoprealtime = isset($_POST['workshoprealtime'])? $_POST['workshoprealtime']: "";
   //$workshoprealtime = CleanText($workshoprealtime);
