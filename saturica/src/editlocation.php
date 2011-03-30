@@ -42,19 +42,19 @@ if (!is_authenticated())
   
   
   $number = isset($_POST['number']) ? $_POST['number']: "";
-  $number = CleanText($number);
+//  $number = CleanText($number);
   $fake_name  = isset($_POST['fake_name'])? $_POST['fake_name']: "";
-  $fake_name = CleanText($fake_name);
+//  $fake_name = CleanText($fake_name);
   $real_name  = isset($_POST['real_name'])? $_POST['real_name']: "";
-  $real_name = CleanText($real_name);
+//  $real_name = CleanText($real_name);
   $description  = isset($_POST['description'])? $_POST['description']: "";
-  $description = CleanText($description);
+//  $description = CleanText($description);
   $place  = isset($_POST['place'])? $_POST['place']: "";
-  $place = CleanText($place);
+//  $place = CleanText($place);
   $picture  = isset($_POST['picture'])? $_POST['picture']: "";
-  $picture = CleanText($picture);
+//  $picture = CleanText($picture);
   $rank  = isset($_POST['rank'])? $_POST['rank']: "";
-  $rank = CleanText($rank);
+//  $rank = CleanText($rank);
   
   $id  = isset($_POST['id'])? $_POST['id']: "";
   $id = CleanText($id);
