@@ -199,7 +199,7 @@ session_start();
 	 
 	 <tr>
 	 	<td><b>תיאור</b></td>
-	 <?php 	echo "<td><textarea type='text' name='description' value='$description' title='description' rows='8' cols='25' > </textarea> </td>"; ?>
+	 <?php 	echo "<td><textarea type='text' name='description'  title='description' rows='8' cols='25' > $description </textarea> </td>"; ?>
 	 </tr>
 	 
 	
