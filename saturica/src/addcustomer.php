@@ -40,15 +40,15 @@ session_start();
   <?php
   
   $name  = isset($_POST['name'])? $_POST['name']: "";
-  $name = CleanText($name);
+//  $name = CleanText($name);
   $phone = isset($_POST['phone'])? $_POST['phone']: "";
-  $phone = CleanText($phone);
+ // $phone = CleanText($phone);
   $email = isset($_POST['email'])? $_POST['email']: "";
-  $email = CleanText($email);
+//  $email = CleanText($email);
   $company = isset($_POST['company'])? $_POST['company']: "";
-  $company = CleanText($company);
+ // $company = CleanText($company);
   $comments = isset($_POST['comments'])? $_POST['comments']: "";
-  $comments = CleanText($comments);
+ // $comments = CleanText($comments);
   
   
   	$dont_show_form = false;
