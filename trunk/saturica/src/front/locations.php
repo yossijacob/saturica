@@ -61,7 +61,6 @@ SetupSearchInputRest();
 <?php
 	HeaderFunc('locations');
 	
-	
 	$where  = isset($_GET['whatodo_ddtext'])? $_GET['whatodo_ddtext']: "";
 	$where = CleanText($where);
   	
@@ -82,8 +81,7 @@ SetupSearchInputRest();
  	if ($result != null)
  	foreach ($result as $print_workshop)
  		$Total++;
- 	
-          
+ 	  
      	$result = SearchWorkshopPlace($where,$Result_Set,$Per_Page);
 	?>
 	
@@ -127,10 +125,12 @@ SetupSearchInputRest();
 	                        :לוקיישנים
 	                        </div>
 	                        <div id="locations_title_small">
-	                        <div id="locations_title_text_B">
-	                        <br/> <br/> ?יש לכם פעילות פנים ארגונית ואתם רק צריכים מקום בשבילה
-	                        <br/>  :הנה מגוון אתרים המותאמים לקיום סדנאות, הרצאות ופעילויות תוכן
-	                        </div> 
+	                        	<div id="locations_title_text_B" dir="rtl">
+	                        		<br/> <br/> 
+	                        		יש לכם פעילות פנים ארגונית ואתם רק צריכים מקום בשבילה ?
+	                        		<br/>
+	                        		  הנה מגוון אתרים המותאמים לקיום סדנאות, הרצאות ופעילויות תוכן :
+	                        	</div> 
 	                        </div> 
 	                     </div>
 	                     
