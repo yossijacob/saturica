@@ -78,11 +78,16 @@ if (!is_authenticated())
   		 if (check_not_same($select_workshop1,$select_workshop2,$select_workshop3))
   		 {
   			
-  			if (!($select_workshop1 == -1)) // if we change the first recommended workshop
+  			if (!($select_workshop1 == -1) || ($workshoppic1 !="") ) // if we change the first recommended workshop
   			{
+  				if (($select_workshop1 == -1))
+  					$select_workshop1 = $workshop1_id; //didnt change the workshop, chagned only pic
+  						//so we will stay with same id as before
+  				
 	  			$select_workshop1 = GetRecord("workshops",$select_workshop1);
 	  			$data[0] = $select_workshop1[0]; //the id of the record at the original "workshops" table
-			
+
+				
 	  			if ($workshoppic1 != "") $data[1] = $workshoppic1;
 	  			else $data[1] = $workshop1_curr_pic;	
 				EditRecord("recommendeds","1",$data);
@@ -93,8 +98,13 @@ if (!is_authenticated())
 		
   			}
   			
-  			if (!($select_workshop2 == -1))	// if we change the second recommended workshop
+  			if (!($select_workshop2 == -1) || ($workshoppic2 !="") )	// if we change the second recommended workshop
   			{
+  				  	if (($select_workshop2 == -1))
+  						$select_workshop2 = $workshop2_id; //didnt change the workshop, chagned only pic
+  						//so we will stay with same id as before
+  				
+  				
 	  			$select_workshop2 = GetRecord("workshops",$select_workshop2);
 	  			$data[0] = $select_workshop2[0]; 
 	  			if ($workshoppic2 != "") $data[1] = $workshoppic2;
@@ -106,8 +116,12 @@ if (!is_authenticated())
 				UploadFile( $_FILES['workshoppic2']['name'],$_FILES['workshoppic2']['tmp_name'],$target_path);
   			}
   			
-  			if (!($select_workshop3 == -1))	// if we change the third recommended workshop
+  			if (!($select_workshop3 == -1) || ($workshoppic3 !="") )	// if we change the third recommended workshop
   			{
+  				  	if (($select_workshop1 == -1))
+  						$select_workshop3 = $workshop3_id; //didnt change the workshop, chagned only pic
+  						//so we will stay with same id as before
+  				
 	  			$select_workshop3 = GetRecord("workshops",$select_workshop3);
 	  			$data[0] = $select_workshop3[0];
 	  			if ($workshoppic3 != "") $data[1] = $workshoppic3; 
@@ -143,10 +157,8 @@ if (!is_authenticated())
 	
 	   <br/><br/> .
 	   <b> אם ברצונך לשנות את הסדנאות המומלצות,אנא בחר את הסדנא המומלצת החדשה
-	   <br/>
-	   "ניתן גם לבחור בסדנא מומלצת שכבר מומלצת כרגע, ולהחליף לה תמונה. לאחר בחירת הסדנאות והתמונות , אנא לחץ על "בחר כמומלצים</b>
-	   <br/>
-	   <br/>
+	   <br/><br/>
+	 
 	   <form enctype="multipart/form-data" name="choose_recommended_form" id="choose_recommended_form" method="post" action="recommended.php">
 		<input type="hidden" name="submitted" value="true"/>	
 	   <table dir="rtl" cellspacing='15' class='recommend_pick_table'>
