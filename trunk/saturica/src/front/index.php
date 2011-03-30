@@ -46,7 +46,7 @@ var hide = false;
     {
     	HideAll(id);
     	elem = document.getElementById(id);
-		if ((elem.style.visibility == "hidden") && (hide == false))
+		if ((elem.style.visibility != "visible") && (hide == false))
 		{
 			elem.style.visibility = "visible";  // dd_list
 		}
