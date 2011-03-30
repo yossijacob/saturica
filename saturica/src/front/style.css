@@ -1114,7 +1114,7 @@ right: 1px;
 	
 	background:url("images/recommended_main_bg.jpg") no-repeat;
 	
-	height:700px;
+	height:670px;
 	position:relative;
 	
 	width:960px;
@@ -1221,6 +1221,7 @@ right: 1px;
 	font-size:12px;
 	font-family:Tahoma;
 	top:135px;
+	right:0px;
 }
 
 
