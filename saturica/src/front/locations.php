@@ -27,11 +27,19 @@ SetupSearchInputRest();
 ?>
 <script type="text/javascript" language="javascript">
     var hide = false;
+    
     function show_dropdown(id) 
     {
-        if (!hide) document.getElementById(id).style.visibility = "visible";  // dd_list
-        hide = false;
-        //document.getElementById("dd_text").value=121;
+    	elem = document.getElementById(id);
+		if ((elem.style.visibility != "visible") && (hide == false))
+		{
+			elem.style.visibility = "visible";  // dd_list
+		}
+		else
+		{
+			elem.style.visibility = "hidden";  // dd_list
+		}
+		hide = false;
     }
     
     function setText(text_id,list_id, val) 
@@ -94,7 +102,7 @@ SetupSearchInputRest();
                         	echo '<input id="whattodo_ddtext" class="dd_text_search" name="whatodo_ddtext" type="text" value=""  size="10"  readonly="readonly" style="margin-right:0.5cm;" />';
                         	else echo '<input id="whattodo_ddtext" class="dd_text_search" name="whatodo_ddtext" type="text" value=""  size="10"  readonly="readonly" style="margin-right:0.5cm; margin-top:-0.1cm;" />';
                         	?>
-                        	<div id="whattodo_ddlist" class="dd_list" onmousemove="show_dropdown('whattodo_ddlist')" onmouseout="hide_list('whattodo_ddlist')" >
+                        	<div id="whattodo_ddlist" class="dd_list" >
 
 	                                <div class="my_ul">
 		                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','צפון');">צפון</a></div>
