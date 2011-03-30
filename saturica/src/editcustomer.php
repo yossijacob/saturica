@@ -40,19 +40,19 @@ if (!is_authenticated())
   <?php
   
   $name  = isset($_POST['name'])? $_POST['name']: "";
-  $name = CleanText($name);
+// $name = CleanText($name);
   $phone = isset($_POST['phone'])? $_POST['phone']: "";
-  $phone = CleanText($phone);
+//  $phone = CleanText($phone);
   $email = isset($_POST['email'])? $_POST['email']: "";
-  $email = CleanText($email);
+ // $email = CleanText($email);
   $company = isset($_POST['company'])? $_POST['company']: "";
-  $company = CleanText($company);
+ // $company = CleanText($company);
   $comments = isset($_POST['comments'])? $_POST['comments']: "";
-  $comments = CleanText($comments);
+//  $comments = CleanText($comments);
   $active = isset($_POST['active'])? $_POST['active']: "";
-  $active = CleanText($active);
+//  $active = CleanText($active);
   $sent_feedback = isset($_POST['sent_feedback'])? $_POST['sent_feedback']: "";
-  $sent_feedback = CleanText($sent_feedback);
+ // $sent_feedback = CleanText($sent_feedback);
   
   $id  = isset($_POST['id'])? $_POST['id']: "";
   $id = CleanText($id);
