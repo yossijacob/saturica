@@ -16,6 +16,22 @@ $second_workshop = GetRecord('workshops',$second_workshop_id[1]); //get the work
 $third_workshop_id = GetRecord('recommendeds',3); 
 $third_workshop = GetRecord('workshops',$third_workshop_id[1]); //get the workshop
 
+$whatodo_ddtext = isset($_GET['whatodo_ddtext']) ? $_GET['whatodo_ddtext']: "" ;
+$whatodo_ddtext = CleanText($whatodo_ddtext);
+
+$howmany_text = isset($_GET['howmany_text']) ? $_GET['howmany_text']: "" ;
+$howmany_text = CleanText($howmany_text);
+
+$where_ddtext = isset($_GET['where_ddtext']) ? $_GET['where_ddtext']: "" ;
+$where_ddtext = CleanText($where_ddtext);
+
+$howlong_ddtext = isset($_GET['howlong_ddtext']) ? $_GET['howlong_ddtext']: "" ;
+$howlong_ddtext = CleanText($howlong_ddtext);
+
+$whatbudget_ddtext = isset($_GET['whatbudget_ddtext']) ? $_GET['whatbudget_ddtext']: "" ;
+$whatbudget_ddtext = CleanText($whatbudget_ddtext);
+
+
 ?>
 <html>
 <head>
@@ -97,7 +113,7 @@ var hide = false;
 	                        </span>
 				               <div id="whattodo" class="dropdown"  onclick="show_dropdown('whattodo_ddlist')" >
 				               			               
-	                                <input id="whattodo_ddtext" class="dd_text" name="whatodo_ddtext" type="text" value=""  size="10"  readonly="readonly"  />
+	                                <input id="whattodo_ddtext" class="dd_text" name="whatodo_ddtext" type="text" value="<?php echo $whattodo_ddtext;?>"  size="10"  readonly="readonly"  />
 	                                <div id="whattodo_ddlist" class="dd_list"   >
 		                                <div class="my_ul">
 			                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','גיבוש ועבודת צוות');">
@@ -122,7 +138,7 @@ var hide = false;
                             ? כמה משתתפים
                         </span>
 			            <div id="howmany">
-                            <input class="howmany_text" name="howmany_text" type="text" value="" size="10"/>
+                            <input class="howmany_text" name="howmany_text" type="text" value="<?php echo $howmany_text;?>" size="10"/>
                         </div>    
                    
 			            <div id="resset">
@@ -135,7 +151,7 @@ var hide = false;
                             ? היכן רוצים את הפעילות
                         </span>
 			               <div id="where" class="dropdown"  onclick="show_dropdown('where_ddlist')" >
-                                <input id="where_ddtext" class="dd_text" name="where_ddtext" type="text" value=""  size="10"  readonly="readonly"  />
+                                <input id="where_ddtext" class="dd_text" name="where_ddtext" type="text" value="<?php echo $where_ddtext;?>"  size="10"  readonly="readonly"  />
                                 <div id="where_ddlist" class="dd_list"   >
 	                                <div class="my_ul">
 		                                <div class="my_li"><a onclick="setText('where_ddtext','where_ddlist','במבנה ממוזג/מחומם');">
@@ -158,7 +174,7 @@ var hide = false;
                             ? כמה זמן
                         </span>
 			               <div id="howlong" class="dropdown"  onclick="show_dropdown('howlong_ddlist')" >
-                                <input id="howlong_ddtext" class="dd_text" name="howlong_ddtext" type="text" value=""  size="10"  readonly="readonly"  />
+                                <input id="howlong_ddtext" class="dd_text" name="howlong_ddtext" type="text" value="<?php echo $howlong_ddtext;?>"  size="10"  readonly="readonly"  />
                                 <div id="howlong_ddlist" class="dd_list"  >
 	                                <div class="my_ul">
 		                                <div class="my_li"><a onclick="setText('howlong_ddtext','howlong_ddlist','קצר, מקסימום 3 שעות');">
@@ -179,7 +195,7 @@ var hide = false;
                             ? מה התקציב למשתתף
                         </span> 
 			               <div id="whatbudget" class="dropdown"  onclick="show_dropdown('whatbudget_ddlist')" >
-                                <input id="whatbudget_ddtext" class="dd_text" name="whatbudget_ddtext" type="text" value=""  size="10"  readonly="readonly"   />
+                                <input id="whatbudget_ddtext" class="dd_text" name="whatbudget_ddtext" type="text" value="<?php echo $whatbudget_ddtext;?>"  size="10"  readonly="readonly"   />
                                 <div id="whatbudget_ddlist" class="dd_list"   >
 	                                <div class="my_ul">
 		                                <div class="my_li"><a onclick="setText('whatbudget_ddtext','whatbudget_ddlist','מעל 500');">
