@@ -79,6 +79,7 @@ SetupSearchInputRest();
   	{
 	//get the input to search at the DB 
 	$whattodo = $_GET['whatodo_ddtext'];
+	$whattodo_for_resend = $_GET['whatodo_ddtext'];
   	$whattodo = CleanText($whattodo);
   	
   	if ($whattodo != "" )
@@ -98,6 +99,7 @@ SetupSearchInputRest();
   	}
   	
   	$howmany = $_GET['howmany_text'];
+  	$howmany_for_resend = $_GET['howmany_text'];
   	$howmany = CleanText($howmany);
   	
   	$where = $_GET['where_ddtext'];
@@ -123,9 +125,11 @@ SetupSearchInputRest();
   	
   	
   	$howlong = $_GET['howlong_ddtext'];
+  	$howlong_for_resend = $_GET['howlong_ddtext'];
   	$howlong = CleanText($howlong);
   	
     $whatbudget = $_GET['whatbudget_ddtext'];
+    $whatbudget_for_resend = $_GET['whatbudget_ddtext'];
   	$whatbudget = CleanText($whatbudget);
 
     $lowval = null;
@@ -214,12 +218,9 @@ SetupSearchInputRest();
 	 <div id="results_wizard_content"> 
 		<div id="results">
 			<div id="search_results_content">
-			<?php 
-			if ($Free_search == 1)	// we here through free search so get the right var from the url
-				echo '<form action="search.php?Free_search=$Free_search&searchString=$searchString\" method="get" id="search_subject_form">';
-			else echo '<form action="search.php?whatodo_ddtext=$whattodo&howmany_text=$howmany&where_ddtext=$where&howlong_ddtext=$howlong&Free_search=$Free_search&whatbudget_ddtext=$whatbudget\" method="get" id="search_subject_form">';
-			?>
-            	<form action="search.php" method="get" id="search_subject_form">
+			
+			<form action="search.php" method="get" id="search_subject_form">
+			
 			            <span class="questions" id="filter_Subjects">
                             : סנן נושאי פעילות
                         </span>
@@ -274,17 +275,18 @@ SetupSearchInputRest();
                             }
                             ?>
                             
-                            <input class="whattodo_ddtext" name="whattodo_ddtext" type="hidden" value="<?php echo $whattodo ?>" >
-                            <input class="howmany_text" name="howmany_text" type="hidden" value="<?php echo $howmany ?>" >  
+                            <input class="whatodo_ddtext" name="whatodo_ddtext" type="hidden" value="<?php echo $whattodo_for_resend ?>" >
+                            <input class="howmany_text" name="howmany_text" type="hidden" value="<?php echo $howmany_for_resend ?>" >  
                             <input id="where_ddtext" class="dd_text" name="where_ddtext" type="hidden" value="<?php echo $where_for_resend ?>"   >
-                            <input id="howlong_ddtext" class="dd_text" name="howlong_ddtext" type="hidden" value="<?php echo $howlong?>"   >
-                        	<input id="whatbudget_ddtext" class="dd_text" name="whatbudget_ddtext" type="hidden" value="<?php echo $whatbudget ?>"    >
+                            <input id="howlong_ddtext" class="dd_text" name="howlong_ddtext" type="hidden" value="<?php echo $howlong_for_resend?>"   >
+                        	<input id="whatbudget_ddtext" class="dd_text" name="whatbudget_ddtext" type="hidden" value="<?php echo $whatbudget_for_resend ?>"    >
                             <input class="Result_Set" name="Result_Set" type="hidden" value="0" />
                             <input class="Free_search" name="Free_search" type="hidden" value="0" />
                              
                             
                             <div id="search_harder_button" onclick="document.forms['search_subject_form'].submit();">  </div>            
-                 </form>
+              
+             </form>
            </div>			          
 				             
 		                <div id="results_title">
