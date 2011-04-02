@@ -250,11 +250,11 @@ if (!is_authenticated())
 			$data[24] = $type_fun;
 			$data[25] = $loc_building;     
 			$data[26] = $loc_our_place;
-			$data[28] = $loc_outside;
-			$data[29] = $loc_pool;
-			$data[30] = $loc_beatch;
-			$data[31] = $loc_place_to_place;
-		//	$data[32] = $workshoprealtime;	//real time
+			$data[27] = $loc_outside;
+			$data[28] = $loc_pool;
+			$data[29] = $loc_beatch;
+			$data[30] = $loc_place_to_place;
+		//	$data[31] = $workshoprealtime;	//real time
   			
   			
   			
