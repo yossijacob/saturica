@@ -392,7 +392,7 @@ SetupSearchInputRest();
 		<div id="buttom_search_content">
 			<br/>
 			?לא מצאת את מה שחיפשת
-			<div id="buttom_search_button" onclick="location.href='index.php'"></div>
+			<div id="buttom_search_button" onclick="location.href='index.php?&whatodo_ddtext=$whattodo&howmany_text=$howmany&where_ddtext=$where&howlong_ddtext=$howlong&&whatbudget_ddtext=$whatbudget'"></div>
 			<div id="buttom_contact_button" onclick="location.href='contact.php'"></div>
 		</div>
 	</div>
