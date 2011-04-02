@@ -214,6 +214,11 @@ SetupSearchInputRest();
 	 <div id="results_wizard_content"> 
 		<div id="results">
 			<div id="search_results_content">
+			<?php 
+			if ($Free_search == 1)	// we here through free search so get the right var from the url
+				echo '<form action="search.php?Free_search=$Free_search&searchString=$searchString\" method="get" id="search_subject_form">';
+			else echo '<form action="search.php?whatodo_ddtext=$whattodo&howmany_text=$howmany&where_ddtext=$where&howlong_ddtext=$howlong&Free_search=$Free_search&whatbudget_ddtext=$whatbudget\" method="get" id="search_subject_form">';
+			?>
             	<form action="search.php" method="get" id="search_subject_form">
 			            <span class="questions" id="filter_Subjects">
                             : סנן נושאי פעילות
@@ -391,8 +396,7 @@ SetupSearchInputRest();
 	<div id="buttom_search_main">
 		<div id="buttom_search_content">
 			<br/>
-			?לא מצאת את מה שחיפשת
-			<div id="buttom_search_button" onclick="location.href='index.php?&whatodo_ddtext=$whattodo&howmany_text=$howmany&where_ddtext=$where&howlong_ddtext=$howlong&&whatbudget_ddtext=$whatbudget'"></div>
+			<div id="buttom_search_button" onclick='location.href="index.php?whatodo_ddtext=<?php echo $whattodo ?>&howmany_text=<?php echo $howmany ?>&where_ddtext=<?php echo $where ?>&howlong_ddtext=<?php echo $howlong ?>&whatbudget_ddtext=<?php echo $whatbudget ?>" '></div>		
 			<div id="buttom_contact_button" onclick="location.href='contact.php'"></div>
 		</div>
 	</div>
