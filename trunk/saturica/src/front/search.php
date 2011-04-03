@@ -307,7 +307,17 @@ SetupSearchInputRest();
 			                <ul id="results_boxes">
 			                <?php
 			                $j=0; //for printing empty boxes
-			                if ($result != null)
+			                if ($result == null)
+			                {
+			                	echo "<div id='results_box_A'>";
+			                	echo "<div id='results_workshop_not_found'>";
+			                	echo "</br></br></br>";
+							    echo "לא נמצאו תוצאות רלוונטיות...  - חפש שוב";
+							    echo "</div>";
+							     echo "</div>";
+			                }
+			                
+			                else {
 			                     foreach ($result as $print_workshop)
 							     {
 							     	echo "<li>";
@@ -336,8 +346,11 @@ SetupSearchInputRest();
 			                         $j++;	//for printing empty boxes  
 									echo "</li>";       
 							      }	
+			                }
 			                
-
+								/*
+								 * for printing empty blank squares until we reach 10
+								 
 							      while ($j <10)
 							      {
 							      	echo "<li>";
@@ -350,6 +363,8 @@ SetupSearchInputRest();
 							      	$j++;
 							      	echo "</li>";
 							      }
+							      
+							      */
 					   ?>	 
 			               </ul>      
               </div>           	
