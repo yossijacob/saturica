@@ -113,7 +113,7 @@ var hide = false;
 	                        </span>
 				               <div id="whattodo" class="dropdown"  onclick="show_dropdown('whattodo_ddlist')" >
 				               			               
-	                                <input id="whattodo_ddtext" class="dd_text" name="whatodo_ddtext" type="text" value="<?php echo $whattodo_ddtext;?>"  size="10"  readonly="readonly"  />
+	                                <input id="whattodo_ddtext" class="dd_text" name="whatodo_ddtext" type="text" value="<?php echo $whatodo_ddtext;?>"  size="10"  readonly="readonly"  />
 	                                <div id="whattodo_ddlist" class="dd_list"   >
 		                                <div class="my_ul">
 			                                <div class="my_li"><a onclick="setText('whattodo_ddtext','whattodo_ddlist','גיבוש ועבודת צוות');">
