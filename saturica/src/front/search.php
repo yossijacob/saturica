@@ -273,9 +273,13 @@ SetupSearchInputRest();
                             	$howlong = null;
                             	$whatbudget = null;
                             }
+                            
+                            //change this to 
+                           // <input class="whatodo_ddtext" name="whatodo_ddtext" type="hidden" value="<? php echo $whattodo_for_resend ? >" >
+                           
                             ?>
                             
-                            <input class="whatodo_ddtext" name="whatodo_ddtext" type="hidden" value="<?php echo $whattodo_for_resend ?>" >
+                            <input class="whattodo_ddtext" name="whattodo_ddtext" type="hidden" value="<?php echo $whattodo_for_resend ?>" >
                             <input class="howmany_text" name="howmany_text" type="hidden" value="<?php echo $howmany_for_resend ?>" >  
                             <input id="where_ddtext" class="dd_text" name="where_ddtext" type="hidden" value="<?php echo $where_for_resend ?>"   >
                             <input id="howlong_ddtext" class="dd_text" name="howlong_ddtext" type="hidden" value="<?php echo $howlong_for_resend?>"   >
