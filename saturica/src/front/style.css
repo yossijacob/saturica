@@ -465,6 +465,15 @@ right: 1px;
 	float:right;
 }
 
+#results_workshop_not_found
+{
+	
+	text-align:center;
+	font-size:17px;
+	height:140px;
+	font-family:Tahoma;
+}
+
 /*****************/
 #filter_Subjects
 {
