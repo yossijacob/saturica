@@ -414,7 +414,7 @@ SetupSearchInputRest();
 	<div id="buttom_search_main">
 		<div id="buttom_search_content">
 			<br/>
-			<div id="buttom_search_button" onclick='location.href="index.php?whatodo_ddtext=<?php echo $whattodo ?>&howmany_text=<?php echo $howmany ?>&where_ddtext=<?php echo $where ?>&howlong_ddtext=<?php echo $howlong ?>&whatbudget_ddtext=<?php echo $whatbudget ?>" '></div>		
+			<div id="buttom_search_button" onclick='location.href="index.php?whatodo_ddtext=<?php echo $whattodo_for_resend ?>&howmany_text=<?php echo $howmany_for_resend ?>&where_ddtext=<?php echo $where_for_resend ?>&howlong_ddtext=<?php echo $howlong_for_resend ?>&whatbudget_ddtext=<?php echo $whatbudget_for_resend ?>" '></div>		
 			<div id="buttom_contact_button" onclick="location.href='contact.php'"></div>
 		</div>
 	</div>
