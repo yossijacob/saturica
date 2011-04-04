@@ -135,7 +135,7 @@ if (!is_authenticated())
   $workshoptimeframe  = isset($_POST['workshoptimeframe'])? $_POST['workshoptimeframe']: "";
  // $workshoptimeframe = CleanText($workshoptimeframe);
   
-//  $workshoprealtime = isset($_POST['workshoprealtime'])? $_POST['workshoprealtime']: "";
+  $workshoprealtime = isset($_POST['workshoprealtime'])? $_POST['workshoprealtime']: "";
 //  $workshoprealtime = CleanText($workshoprealtime);
   
   
@@ -254,7 +254,7 @@ if (!is_authenticated())
 			$data[28] = $loc_pool;
 			$data[29] = $loc_beatch;
 			$data[30] = $loc_place_to_place;
-		//	$data[31] = $workshoprealtime;	//real time
+			$data[31] = $workshoprealtime;	//real time
   			
   			
   			
@@ -320,7 +320,7 @@ if (!is_authenticated())
 		$loc_pool = $workshop[29];
 		$loc_beatch = $workshop[30];
 		$loc_place_to_place = $workshop[31];
-	//	$workshoprealtime = $workshop[32]; //real time
+		$workshoprealtime = $workshop[32]; //real time
 		
  			
 ?>
@@ -480,13 +480,13 @@ if (!is_authenticated())
 	 </tr>
 	
 	
-	 <!-- 
+	 
 	  <tr>
 	 	<td><b>אורך מדויק </b></td>
-	 <?php echo "<td><input type='text' name='workshoprealtime' value='$workshoprealtime' title='$workshoprealtime'/></td>";?>
+	 <?php echo "<td><input type='text' name='workshoprealtime' value='$workshoprealtime' title='workshoprealtime'/></td>";?>
 	 </tr>
 	 
-	  -->
+	 
 	 
 	 <tr><td></td></tr>
 	 <tr><td></td></tr>
