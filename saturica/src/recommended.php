@@ -118,7 +118,7 @@ if (!is_authenticated())
   			
   			if (!($select_workshop3 == -1) || ($workshoppic3 !="") )	// if we change the third recommended workshop
   			{
-  				  	if (($select_workshop1 == -1))
+  				  	if (($select_workshop3 == -1))
   						$select_workshop3 = $workshop3_id; //didnt change the workshop, chagned only pic
   						//so we will stay with same id as before
   				
