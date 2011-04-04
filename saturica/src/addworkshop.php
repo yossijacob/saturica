@@ -135,7 +135,7 @@ session_start();
   $workshopactive  = isset($_POST['workshopactive'])? $_POST['workshopactive']: "";
 //  $workshopactive = CleanText($workshopactive);
   
-  //$workshoprealtime = isset($_POST['workshoprealtime'])? $_POST['workshoprealtime']: "";
+  $workshoprealtime = isset($_POST['workshoprealtime'])? $_POST['workshoprealtime']: "";
   //$workshoprealtime = CleanText($workshoprealtime);
 
   	$dont_show_form = false;
@@ -252,7 +252,7 @@ session_start();
 			$data[28] = $loc_pool;
 			$data[29] = $loc_beatch;
 			$data[30] = $loc_place_to_place;
-		//	$data[31] = $workshoprealtime;	//real time
+			$data[31] = $workshoprealtime;	//real time
 			
   			
   			$target_path = "workshop_pic/";	//upload the picture to 'workshop_pic' folder
@@ -438,13 +438,13 @@ session_start();
 	 </tr>
 	 
 	 
-	 <!-- 
+	
 	 <tr>
 	 	<td><b>אורך מדויק </b></td>
 	 <?php echo "<td><input type='text' size='52' name='workshoprealtime' value='$workshoprealtime' title='workshoprealtime'/></td>";?>
 	 </tr>
 	 
-	  -->
+	  
 	 
 	 <tr>
 	 	<td>האם סדנא פעילה</td>
