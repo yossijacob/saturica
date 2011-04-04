@@ -232,7 +232,7 @@ function Print_Single_Workshop($value)
  					<span dir="rtl" > <?php echo "$value[5]  &nbsp &nbsp &nbsp &nbsp";  ?>  </span>
  					
  					<span dir="rtl" style="font-size:13px; color:red; font-family:'Tahoma'; "> מסגרת-זמן : </span>  
- 					<span dir="rtl" > <?php echo "$value[18]  "; ?> </span>
+ 					<span dir="rtl" > <?php echo "$value[32]  "; ?> </span>
  					
  					
  					<br/><br/>
