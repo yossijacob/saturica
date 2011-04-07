@@ -29,15 +29,15 @@ SetupSearchInputRest();
 	<?php HeaderFunc("contact");?>
 	
 	<div id="contact_us_main">
-	<div id = "contact_us_main_main">
+	<div id = "contact_us_main_main" dir="rtl">
 		<div id="contact_us_main_title"> 
 			<div id="contact_us_title">
                     צור קשר
         	</div>
         	<div id="contact_us_title_B">
-                     ,אנחנו עומדים לשירותך בכל דרך: במייל, בטלפון או בפגישה אישית
+                     אנחנו עומדים לשירותך בכל דרך: במייל, בטלפון או בפגישה אישית,
                      <br/>
-                     כדי לעזור לכם למצוא את הפעילות המתאימה ביותר עבורכם                    
+                      כדי לעזור לכם למצוא את הפעילות המתאימה ביותר עבורכם.                    
                       
         	</div>
 		</div>
