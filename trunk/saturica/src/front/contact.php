@@ -36,8 +36,9 @@ SetupSearchInputRest();
         	</div>
         	<div id="contact_us_title_B">
                      ,אנחנו עומדים לשירותך בכל דרך: במייל, בטלפון או בפגישה אישית
-                     <br/>.
-                     כדי לעזור לכם למצוא את הפעילות המתאימה ביותר עבורכם&nbsp;
+                     <br/>
+                     כדי לעזור לכם למצוא את הפעילות המתאימה ביותר עבורכם                    
+                      
         	</div>
 		</div>
 		
@@ -104,7 +105,7 @@ SetupSearchInputRest();
 	         ) 
            </span>
 		
-			<input class="approval_contact_box" name="approval_contact_box" type="checkbox" value="" size="20"/>
+			<input class="approval_contact_box" name="approval_contact_box" type="checkbox" value="" size="20" checked/>
 			
 			<span id="approval_contact">
             מאשר את הצטרפותי למועדון הלקוחות של סאטוריקה וקבלת
