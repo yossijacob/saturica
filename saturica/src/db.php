@@ -314,9 +314,12 @@ function SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$ho
 	else $query .= "time_frame LIKE '%' AND "; 
 	
 	//the customer filled price range and how many people are participating
-	if ( ($lowval != null) && ($howmany != null) )
+	if ( ($highval != null) && ($howmany != null) )
 	{
+		
 		//get the place price
+		$place_price = 0;		
+		/*
 		if ($where == null ) $place_price = 0 ;
 		else 
 			{
@@ -361,16 +364,19 @@ function SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$ho
 				if ($where = "נעבור ממקום למקום") $place_price = 0;	
 				
 			}
+			*/
+		$lowerbound = $lowval*$howmany;
+		$upperbound = $highval*$howmany;
 
 		
-		$query .= "( ((personal_price + $place_price)*$howmany) + fixed_price) BETWEEN ($lowval*$howmany )AND ($highval*$howmany) AND ";	 
+		$query .= "( (personal_price * '$howmany') + ('$place_price' * '$howmany') + fixed_price) <= '$upperbound' AND ";	 
 	}
 	
 	if ($howmany != null) $query .= "minimum_size <= $howmany AND maximum_size >= $howmany  ";
 	else $query .= "minimum_size LIKE '%' "; 
 	$query .= "	ORDER BY rank DESC ";
 		
-	if (!$Result_Set) 
+     if (!$Result_Set) 
 	   { 
 	   $Result_Set=0; 
 	   $query.=" LIMIT $Result_Set, $Per_Page"; 
@@ -393,6 +399,7 @@ function SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$ho
 		$res = array_unique($res); 	//remove duplicate workshops (so we wont show the same workshop more then one time) 
 		$index = 0;
 		$col = "id";
+		$uniq_names = "";	//array for uniq names
 		
 		//get the workshope by their id that we found.
 		foreach ($res as $selectedworkshop)
@@ -401,10 +408,41 @@ function SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$ho
 			$result = mysql_query($query) or die(mysql_error());
 			while ($row = mysql_fetch_row($result))
 			{
+				$name = $row[2];
+				if ($uniq_names[$name] != 1)
+				{
 				$unique_res[$index++] = $row; // get the current field
+				$uniq_names[$name] = 1;
+				}
 			}
 		}
 	}
+	
+	/*
+	if ($unique_res != null)
+	foreach ($unique_res as $selectedworkshop)
+		{	
+			$query = "SELECT * FROM workshops WHERE $col=$selectedworkshop[1] ";
+			$result = mysql_query($query) or die(mysql_error());
+			if (!$Result_Set) 
+		   { 
+		   $Result_Set=0; 
+		   $query.=" LIMIT $Result_Set, $Per_Page"; 
+		   }else 
+		   { 
+		   $query.=" LIMIT $Result_Set, $Per_Page"; 
+		   }
+			$result = mysql_query($query) or die(mysql_error());
+		}
+	
+		*/
+		
+	
+	
+	
+	
+	
+	
 
 	return $unique_res;
 
