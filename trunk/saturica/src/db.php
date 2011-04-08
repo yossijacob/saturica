@@ -374,7 +374,9 @@ function SearchAllParams_Workshop($whattodo,$where,$howlong,$lowval,$highval,$ho
 	
 	if ($howmany != null) $query .= "minimum_size <= $howmany AND maximum_size >= $howmany  ";
 	else $query .= "minimum_size LIKE '%' "; 
+	$query .= "	GROUP BY name ";
 	$query .= "	ORDER BY rank DESC ";
+	
 		
      if (!$Result_Set) 
 	   { 
