@@ -219,27 +219,29 @@ SetupSearchInputRest();
 		<div id="results">
 			<div id="search_results_content">
 			
-			<form action="search.php" method="get" id="search_subject_form">
+			
+           </div>		<!--  search_results_content -->	          
+			
+				             
+		           <div id="results_title">  
+		                    <div id="results_title_text_A">
+	                        :אלה הפעילויות המתאימות לבחירה שלך
+	                        </div>
+	                        <div id="results_title_small">
+	                        <div id="results_title_text_B">
+	                        <br/> <br/> ?רוצה למקד את החיפוש עוד יותר
+	                        </div> 
+	                        </div>
+	                        <form action="search.php" method="get" id="search_subject_form">
 			
 			            <span class="questions" id="filter_Subjects">
                             : סנן נושאי פעילות
-                        </span>
-                        
-                        
-                    <?php     
-			         /*   
-			            <div id="filter">
-                            <input class="dd_text_search" name="filter_text" type="text" value="" size="10"/>
-                        </div>
-                       */
-                    ?> 
+                        </span>                      
 			          
                     <?php   //  ShowDropDown("filter_text",$filter_subjects,$filter_subjects,-1,"בחר נושא",-1);  ?>
-
-			           
+	           
 			            <div id="filter" class="search_wizard_dropdown"  onclick="show_dropdown('filter_list')"  >
-						
-						
+											
 							<input id="filter_text" class="dd_text" name="filter_text" type="text" value=""  size="10"  readonly="readonly" style="margin-right:0.5cm;" />
 	                        	<div id="filter_list" class="dd_list"   >
 	                            	<?php 
@@ -252,18 +254,10 @@ SetupSearchInputRest();
 				                        		</div>
 		                            	</div>
 		                            	<?php 
-		                            	} ?>
-	                            	
-	                            
-	                            
-	                            </div>
-                            
-                            
+		                            	} ?>                                                                          
+	                            </div>                                                
                         </div> 
-                      
-                   
-                       
-                                                
+                                                                                                     
                             <!-- sending the right parameters with the new subject , to search page  -->
                             <?php 
                             if ($Free_search == 1) // we here through free search so we dont have all those fields at the url so we put null at them
@@ -272,8 +266,7 @@ SetupSearchInputRest();
                             	$where_for_resend = null;
                             	$howlong = null;
                             	$whatbudget = null;
-                            }
-                            
+                            }                           
                             ?>
                             
                             <input class="whatodo_ddtext" name="whatodo_ddtext" type="hidden" value="<?php echo $whattodo_for_resend ?>" >
@@ -283,23 +276,10 @@ SetupSearchInputRest();
                         	<input id="whatbudget_ddtext" class="dd_text" name="whatbudget_ddtext" type="hidden" value="<?php echo $whatbudget_for_resend ?>"    >
                             <input class="Result_Set" name="Result_Set" type="hidden" value="0" />
                             <input class="Free_search" name="Free_search" type="hidden" value="0" />
-                             
-                            
-                            <div id="search_harder_button" onclick="document.forms['search_subject_form'].submit();">  </div>            
-              
-             </form>
-           </div>			          
-				             
-		                <div id="results_title">
-		                    <div id="results_title_text_A">
-	                        :אלה הפעילויות המתאימות לבחירה שלך
-	                        </div>
-	                        <div id="results_title_small">
-	                        <div id="results_title_text_B">
-	                        <br/> <br/> ?רוצה למקד את החיפוש עוד יותר
-	                        </div> 
-	                        </div> 
-	                     </div>
+                                                        
+                            <div id="search_harder_button" onclick="document.forms['search_subject_form'].submit();">  </div>                     
+             			</form>         
+	              </div> <!--  results_title -->
 	                     
 			                <ul id="results_boxes">
 			                <?php
@@ -363,11 +343,11 @@ SetupSearchInputRest();
 							      
 							      */
 					   ?>	 
-			               </ul>      
-              </div>           	
-          </div>
-          </div>
-      </div>
+			               </ul>      <!--  results_boxes -->
+              	</div>         <!--  results -->  	
+          	</div> <!--  results_wizard_content -->
+          </div> <!--  results_wizard_main  -->
+     
 			
 		<?php 
 				//	echo "<div id='NextPrevious' >vsdvdvd   </div>";
@@ -400,9 +380,9 @@ SetupSearchInputRest();
 					         echo "<div id='Prev_next_Style_main'>";	
 					         echo "<div id='NextStyle'>";
 					         if ($Free_search == 0)  	
-					         	echo "<a HREF=\"search.php?Result_Set=$Res1&whatodo_ddtext=$whattodo&howmany_text=$howmany&where_ddtext=$where&howlong_ddtext=$howlong&Free_search=$Free_search&whatbudget_ddtext=$whatbudget\"> <<  הבא </a>"; 
+					         	echo "<a href=\"search.php?Result_Set=$Res1&whatodo_ddtext=$whattodo&howmany_text=$howmany&where_ddtext=$where&howlong_ddtext=$howlong&Free_search=$Free_search&whatbudget_ddtext=$whatbudget\"> <<  הבא </a>"; 
 					         else 
-					         	echo "<a HREF=\"search.php?Result_Set=$Res1&Free_search=$Free_search&searchString=$searchString\"> <<  הבא </a>";
+					         	echo "<a href=\"search.php?Result_Set=$Res1&Free_search=$Free_search&searchString=$searchString\"> <<  הבא </a>";
 					         	echo"</div>";
 					         	echo"</div>";
 					         } 
@@ -410,15 +390,18 @@ SetupSearchInputRest();
 					   }   	
 		?>
 
-	<div id="buttom_search">
-	<div id="buttom_search_main">
-		<div id="buttom_search_content">
-			<br/>
-			<div id="buttom_search_button" onclick='location.href="index.php?whatodo_ddtext=<?php echo $whattodo_for_resend ?>&howmany_text=<?php echo $howmany_for_resend ?>&where_ddtext=<?php echo $where_for_resend ?>&howlong_ddtext=<?php echo $howlong_for_resend ?>&whatbudget_ddtext=<?php echo $whatbudget_for_resend ?>" '></div>		
-			<div id="buttom_contact_button" onclick="location.href='contact.php'"></div>
+		
+		<div id="buttom_search">
+			<div id="buttom_search_main">
+				<div id="buttom_search_content">
+					<br/>
+					<div id="buttom_search_button" onclick='location.href="index.php?whatodo_ddtext=<?php echo $whattodo_for_resend ?>&howmany_text=<?php echo $howmany_for_resend ?>&where_ddtext=<?php echo $where_for_resend ?>&howlong_ddtext=<?php echo $howlong_for_resend ?>&whatbudget_ddtext=<?php echo $whatbudget_for_resend ?>" '></div>		
+					<div id="buttom_contact_button" onclick="location.href='contact.php'"></div>
+				</div>
+			</div>
 		</div>
-	</div>
-	</div>
+		
+	</div> <!--  results_wizard -->
 	<?php
 	FooterFunc();
 	DialogBoxHtml();
