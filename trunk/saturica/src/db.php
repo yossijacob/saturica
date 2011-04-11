@@ -195,10 +195,18 @@ function SearchFreeText($column1,$column2,$column3,$val,$Result_Set,$Per_Page)
 		{	
 			$query = "SELECT * FROM workshops WHERE $col=$selectedworkshop ";	
 			$result = mysql_query($query) or die(mysql_error());
+			
+			
 			while ($row = mysql_fetch_row($result))
-			{
-				$unique_res[$index++] = $row; // get the current field
-			}
+				{
+					$name = $row[2];
+					if ($uniq_names[$name] != 1)
+					{
+					$unique_res[$index++] = $row; // get the current field
+					$uniq_names[$name] = 1;
+					}
+				}
+			
 		}
 	}
 	
