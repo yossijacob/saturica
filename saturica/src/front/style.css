@@ -320,20 +320,21 @@ right: 1px;
 {
 	position:relative;
 	width:959px;
-	
 	background:url("images/page_header_bg.jpg") no-repeat;
 }
 
-
 #results_wizard
 {
+	position:relative;
 	background-color: #B8A47F;
+	height: auto;
 	/*height:883px;*/
-	height:1616px;
+	/*height:1616px;*/
 }
 
 #results_wizard_main
 {
+	position:relative;
 	width:1238px;
 	margin-left:auto;
 	margin-right:auto;
@@ -341,48 +342,51 @@ right: 1px;
 
 #results_wizard_content
 {
+	position:relative;
 	width:960px;
 	margin-left:139px;
 	margin-right:139px;
+	
 }
 
 #results_title
 {
 	height:147px;
-	top:35px;
-	right:50px;
+	top:0px;
+	right:0px;
 	color:#514E47;
 	font-size:22px;
 	font-family:Tahoma;
+	position:relative;
 }
 
 #results_title_small
 {
 	height:147px;
-	top:35px;
+	top:15px;
 	right:0px;
 	color:#514E47;
 	font-size:16px;
 	font-family:Tahoma;
+	position:absolute;
 }
 
 #results_title_text_A
 {
-	position:absolute;
 	top:25px;
 	right:22px;
 	color:#514E47;
 	font-size:22px;
 	font-family:Tahoma;
 	text-align:right;	
-	
+	position:absolute;
 }
 
 
 #results_title_text_B
 {
-	position:absolute;
-	top:65px;
+	position:relative;
+	top:45px;
 	right:55px;
 	color:#514E47;
 	font-size:15px;
@@ -396,6 +400,7 @@ right: 1px;
 	width:960px;
 	margin-left:139px;
 	margin-right:139px;
+	
 }
 
 #results_boxes ul
@@ -403,13 +408,19 @@ right: 1px;
 
 }
 
+#results_boxes
+{
+	/*position: relative;
+	height: 300px;*/
+}
+
 #results_boxes li
 {	
 	height:147px;
 	width:959px;
 	list-style-type: none;
-	float:left;
-	
+	/*float:left;*/
+	position: relative;	
 }
 
 
@@ -1936,6 +1947,7 @@ z-index:2;
 	height:75px;
 	background-color:#473B2F;
 	width:auto;
+	position: relative;
 }
 
 #buttom_search_main
@@ -2021,18 +2033,14 @@ z-index:2;
 	cursor:pointer;
 }
 
-
-
 #buttom_search_button
 {
 	background:url(images/bottom_search_button_idle.jpg) no-repeat;
 	height:43px;
 	width:162px;
 	position:absolute;
-
 	right:287px;
 	bottom:13px;
-	
 	cursor:pointer;
 }
 
@@ -2047,10 +2055,8 @@ z-index:2;
 	height:43px;
 	width:162px;
 	position:absolute;
-
 	right:287px;
-	bottom:13px;
-	
+	bottom:13px;	
 	cursor:pointer;
 }
 
@@ -2127,6 +2133,7 @@ z-index:2;
 	font-family:Tahoma;
 	text-align:left;
 	color:white;
+	height: 30px;
 }
 	
 #NextStyle a
@@ -2139,6 +2146,7 @@ z-index:2;
 	left:0px;
 	color:white;
 	text-decoration:none;
+	height: 30px;
 }
 
 #Prev_next_Style_main
@@ -2147,6 +2155,7 @@ z-index:2;
 	margin-left:auto;
 	margin-right:auto;
 	position:relative;
+	height: 30px;
 }
 
 #PrevStyle
@@ -2161,8 +2170,7 @@ z-index:2;
 	font-family:Tahoma;
 	text-align:right ;
 	color:white;
-	
-	
+	height: 30px;
 }
 
 #PrevStyle a
@@ -2175,6 +2183,7 @@ z-index:2;
 	left:0px;
 	color:white;
 	text-decoration:none;
+	height: 30px;
 }
 
 
