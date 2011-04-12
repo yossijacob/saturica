@@ -37,6 +37,7 @@ SetupJqueryContactDialog();
 SetupSearchInputRest();
 ?>
 <title>סטוריקה - מומלצים</title>
+<?php GoogleAnalytics();?>
 </head>
 <?php flush();?>
 <body>
