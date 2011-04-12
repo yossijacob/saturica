@@ -19,6 +19,8 @@ if(CheckIfIE())
 SetupSearchInputRest();
 ?>
 <title>סטוריקה - אודות</title>
+
+<?php GoogleAnalytics();?>
 </head>
 <?php flush();?>
 <body>

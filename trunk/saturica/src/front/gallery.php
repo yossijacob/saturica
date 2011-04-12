@@ -22,6 +22,7 @@ SetupSearchInputRest();
 ?>
 
 <title>סטוריקה</title>
+<?php GoogleAnalytics();?>
 </head>
 <?php flush();?>
 <body>
@@ -40,7 +41,7 @@ SetupSearchInputRest();
 	
 	<div id="gallery_main">	
 		<div id="gallery_div">
-			<?php ShowGallery("../blog/wp-content/gallery/satorika/", "*.jpg", "90", "60")  // folder,mask,thunb width , thumb height?>  
+			<?php ShowGallery("blog/wp-content/gallery/satorika/", "*.jpg", "90", "60")  // folder,mask,thunb width , thumb height?>  
 		</div>
 		
 		

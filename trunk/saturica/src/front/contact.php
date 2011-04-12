@@ -22,6 +22,7 @@ SetupSearchInputRest();
 ?>
 
 <title>סטוריקה - צור קשר</title>
+<?php GoogleAnalytics();?>
 </head>
 <?php flush();?>
 <body>

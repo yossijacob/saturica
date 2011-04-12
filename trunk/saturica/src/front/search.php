@@ -56,6 +56,7 @@ SetupSearchInputRest();
     }
 </script>
 <title>סטוריקה</title>
+<?php GoogleAnalytics();?>
 </head>
 <?php flush();?>
 <body>
