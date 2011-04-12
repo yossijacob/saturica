@@ -150,7 +150,7 @@ SetupSearchInputRest();
 							     	 		{
 							     	 			echo "<br/>";
 
-							     	 			echo "<img src='backoffice/$print_workshop[6]' border=0 height=115px width=210px;>";
+							     	 			echo "<img src='location_pic/$print_workshop[6]' border=0 height=115px width=210px;>";
 							     	 			//for home the path is 
  												//echo "<img src='../location_pic/$print_workshop[6]' border=0 height=115px width=210px;>";
 							     	 		}
