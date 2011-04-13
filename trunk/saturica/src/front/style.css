@@ -1508,7 +1508,7 @@ border:1px #CCCCCC solid;
 width:185px;
 position:relative;
 padding-left:-12px;
-/*overflow:scroll;*/
+overflow:hidden;
 overflow: -moz-scrollbars-vertical;
 overflow-x: hidden;
 overflow-y: scroll;
