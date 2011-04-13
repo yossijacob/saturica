@@ -29,6 +29,7 @@ SetupSearchInputRest();
 <script type="text/javascript" language="javascript">
     var hide = false;
 
+   
     function show_dropdown(id) 
     {
     	elem = document.getElementById(id);
