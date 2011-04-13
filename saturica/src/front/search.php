@@ -137,7 +137,7 @@ SetupSearchInputRest();
     $highval = null;   
   	}
     
-    $Per_Page = 10;  // number of results per page.
+    $Per_Page = 4;  // number of results + 1 per page.
   	$Result_Set = $_GET['Result_Set'];  // start display input from the 'result_set' workshop.
   	$Result_Set = CleanText($Result_Set);
  
@@ -222,8 +222,7 @@ SetupSearchInputRest();
 			
 			
            </div>		<!--  search_results_content -->	          
-			
-				             
+                        
 		           <div id="results_title">  
 		                    <div id="results_title_text_A">
 	                        :אלה הפעילויות המתאימות לבחירה שלך
@@ -284,6 +283,7 @@ SetupSearchInputRest();
 	                     
 			                <ul id="results_boxes">
 			                <?php
+			                
 			                $j=0; //for printing empty boxes
 			                if ($result == null)
 			                {
@@ -320,35 +320,32 @@ SetupSearchInputRest();
 			                        <?php 
 			                        echo "</div>";
 			                         $i++;
-			                         if ($j == 10) $j=0;
-			                         $j++;	//for printing empty boxes  
+			                         //if ($j == $Per_Page) $j=0;
+			                         //else $j++;	//for printing empty boxes  
 									echo "</li>";       
 							      }	
 			                }
 			                
 								/*
 								 * for printing empty blank squares until we reach 10
-								 
 							      while ($j <10)
 							      {
 							      	echo "<li>";
 							      	if ( ($i % 2) == 0)
-							     		echo "<div id='results_box_A'>";
+							     	echo "<div id='results_box_A'>";
 							     	else echo "<div id='results_box_B'>";
 							     	
 							     	echo "</div>";
 							      	$i++;
 							      	$j++;
 							      	echo "</li>";
-							      }
-							      
+							      }  
 							      */
 					   ?>	 
 			               </ul>      <!--  results_boxes -->
               	</div>         <!--  results -->  	
           	</div> <!--  results_wizard_content -->
           </div> <!--  results_wizard_main  -->
-     
 			
 		<?php 
 				//	echo "<div id='NextPrevious' >vsdvdvd   </div>";
@@ -365,7 +362,7 @@ SetupSearchInputRest();
 					      $Res1=$Result_Set-$Per_Page;
 					      if ($Free_search == 0)  
 
-					      	echo "<a HREF=\"search.php?Result_Set=$Res1&whatodo_ddtext=$whattodo&howmany_text=$howmany&where_ddtext=$where&howlong_ddtext=$howlong&Free_search=$Free_search&whatbudget_ddtext=$whatbudget\"> קודם >> </a>"; 
+					      echo "<a HREF=\"search.php?Result_Set=$Res1&whatodo_ddtext=$whattodo&howmany_text=$howmany&where_ddtext=$where&howlong_ddtext=$howlong&Free_search=$Free_search&whatbudget_ddtext=$whatbudget\"> קודם >> </a>"; 
 
 					      else 
 					      	echo "<a HREF=\"search.php?Result_Set=$Res1&Free_search=$Free_search&searchString=$searchString\"> קודם >> </a>";
@@ -388,10 +385,9 @@ SetupSearchInputRest();
 					         	echo"</div>";
 					         } 
 					      } 
-					   }   	
+					   }	
 		?>
-
-		
+	
 		<div id="buttom_search">
 			<div id="buttom_search_main">
 				<div id="buttom_search_content">
@@ -401,7 +397,7 @@ SetupSearchInputRest();
 				</div>
 			</div>
 		</div>
-		
+		 
 	</div> <!--  results_wizard -->
 	<?php
 	FooterFunc();
