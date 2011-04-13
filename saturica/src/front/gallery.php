@@ -47,7 +47,7 @@ SetupSearchInputRest();
 		
 		<div id="channel_div">
 			<div id="channel">
-				<script src="http://www.gmodules.com/ig/ifr?url=http://www.google.com/ig/modules/youtube.xml&amp;up_channel=idfnadesk&amp;synd=open&amp;w=695&amp;h=413&amp;title=&amp;border=%23ffffff%7C3px%2C1px+solid+%23999999&amp;output=js"></script>
+				<script src="http://www.gmodules.com/ig/ifr?url=http://www.google.com/ig/modules/youtube.xml&amp;up_channel=satorika2&amp;synd=open&amp;w=695&amp;h=413&amp;title=&amp;border=%23ffffff%7C3px%2C1px+solid+%23999999&amp;output=js"></script>
 									
 				<!-- <object width="746" height="413">
 					<param name="movie" value="http://www.youtube.com/cp/vjVQa1PpcFN1rfBq9dbk_nTWiCscyt1OqNNuV0rmsDo=">
