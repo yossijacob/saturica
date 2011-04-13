@@ -288,7 +288,7 @@ var hide = false;
                 </div>
             </li>
             <li>
-                <div id="recomended">
+                <div id="recomended" dir="rtl">
                 	<ul>
                 	<li class="recomended_li"><a href ="recommended.php"><?php echo $first_workshop[2] ?></a></li>
                 	<li class="recomended_li"><a href ="recommended.php"><?php echo $second_workshop[2] ?></a></li>
