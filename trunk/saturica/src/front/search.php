@@ -138,7 +138,7 @@ SetupSearchInputRest();
     $highval = null;   
   	}
     
-    $Per_Page = 4;  // number of results + 1 per page.
+    $Per_Page = 11;  // number of results + 1 per page.
   	$Result_Set = $_GET['Result_Set'];  // start display input from the 'result_set' workshop.
   	$Result_Set = CleanText($Result_Set);
  
