@@ -344,7 +344,7 @@ SetupSearchInputRest();
 							      	echo "</li>";
 							      }  
 							      */		                
-	/*		                
+		/* for checking we got the correct values from index.php                
 	echo "<br/> lwoval";
  	echo $lowval;
  	echo "<br/> highval";
@@ -358,7 +358,7 @@ SetupSearchInputRest();
     echo "<br/> howmany";
     echo $howmany;
     
-    */              
+    */            
 			                
 			                ?>	 
 			               </ul>      <!--  results_boxes -->
