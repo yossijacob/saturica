@@ -151,7 +151,7 @@ SetupSearchInputRest();
 		  $prices[1] = "50 -150";
 		  $prices[2] = "150 - 250";
 		  $prices[3] = "250 - 350";
-		  $prices[4] = '350-500';
+		  $prices[4] = '350 - 500';
 		  $prices[5] = "מעל 500";
 					
 		  $col="personal_price";
@@ -192,6 +192,8 @@ SetupSearchInputRest();
   				$highval = 5000000;
   			}
  	}
+ 	
+ 
 
  	//just for counting the number of results
  	if ($Free_search == 0)	// regular search 	
@@ -341,8 +343,24 @@ SetupSearchInputRest();
 							      	$j++;
 							      	echo "</li>";
 							      }  
-							      */
-					   ?>	 
+							      */		                
+	/*		                
+	echo "<br/> lwoval";
+ 	echo $lowval;
+ 	echo "<br/> highval";
+    echo $highval;	
+ 	echo "<br/> whattodo";
+    echo $whattodo;
+    echo "<br/> where";
+    echo $where;
+    echo "<br/> howlong";
+    echo $howlong;
+    echo "<br/> howmany";
+    echo $howmany;
+    
+    */              
+			                
+			                ?>	 
 			               </ul>      <!--  results_boxes -->
               	</div>         <!--  results -->  	
           	</div> <!--  results_wizard_content -->
