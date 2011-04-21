@@ -178,7 +178,7 @@ var hide = false;
                                 <input id="howlong_ddtext" class="dd_text" name="howlong_ddtext" type="text" value="<?php echo $howlong_ddtext;?>"  size="10"  readonly="readonly"  />
                                 <div id="howlong_ddlist" class="dd_list"  >
 	                                <div class="my_ul">
-		                                <div class="my_li"><a onclick="setText('howlong_ddtext','howlong_ddlist','קצר, מקסימום 3 שעות');">
+		                                <div class="my_li"><a onclick="setText('howlong_ddtext','howlong_ddlist','פעילות קצרה, מקסימום 3 שעות');">
 		                                פעילות קצרה, מקסימום 3 שעות</a></div>
 		                                <div class="my_li"><a onclick="setText('howlong_ddtext','howlong_ddlist','חצי יום');">
 		                                חצי יום</a></div>
