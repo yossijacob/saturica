@@ -227,7 +227,7 @@ var hide = false;
                         <div id="wizard_find_button" onclick="document.forms['wizard_form'].submit();">
                         </div>
                         <div id="need_help_button">
-                            <a href="index.html">? צריכים עזרה</a>
+                            <a href="blog.php?path=http://www.satorika.co.il/blog/?p=37">? צריכים עזרה</a>
                         </div>
                         </form>
                     </div>
