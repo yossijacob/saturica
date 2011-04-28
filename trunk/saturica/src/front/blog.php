@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <?php 
 include_once 'functions.php';
+$blog_path = isset($_GET['path']) ? $_GET['path'] : "../blog/";
+//$blog_path = "../blog/".$blog_path; 
 ?>
 <html>
 <head>
@@ -16,7 +18,7 @@ if(CheckIfIE())
 	}
 SetupSearchInputRest();
 ?>
-<title>סטוריקה</title>
+<title>בלוג</title>
 <?php GoogleAnalytics();?>
 </head>
 <?php flush();?>
@@ -24,7 +26,7 @@ SetupSearchInputRest();
 	<?php  HeaderFunc("blog"); ?>
 	<div id="blog_div">
 		<div id = "blog_div_main">
-			<iframe height="1800" width="960px" frameborder="0" src="../blog/" seamless></iframe>
+			<iframe height="1800" width="960px" frameborder="0" src="<?php echo $blog_path?>" seamless></iframe>
 		</div>
 	</div>
 	<?php FooterFunc();?>
