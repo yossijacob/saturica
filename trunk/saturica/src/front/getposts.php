@@ -34,7 +34,7 @@ function GetPosts($url)
 	foreach ( $items as $item ) 
 	{
 		$content = $item['title'] .' - '. $item['description'];
-		$html .= '<li><a href="' . $item['link'] . '">' . $content .'</a>';
+		$html .= '<li><a href="blog.php?path=' . $item['link'] . '">' . $content .'</a>';
 		/*if ($count == 3)
 		{
 			break; // limit max posts to 3
