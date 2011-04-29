@@ -21,7 +21,7 @@ if(CheckIfIE())
 SetupSearchInputRest();
 ?>
 
-<title>סטוריקה</title>
+<title>סאטוריקה</title>
 <?php GoogleAnalytics();?>
 </head>
 <?php flush();?>
