@@ -86,7 +86,7 @@ var hide = false;
         document.getElementById(id).style.visibility = "hidden";  // dd_list
     }
 </script>
-<title>סטוריקה</title>
+<title>סאטוריקה</title>
 <?php GoogleAnalytics();?>
 </head>
 <?php flush();?>

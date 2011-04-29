@@ -21,7 +21,7 @@ SetupJqueryContactDialog();
 SetupSearchInputRest();
 ?>
 
-<title>סטוריקה - צור קשר</title>
+<title>סאטוריקה - צור קשר</title>
 <?php GoogleAnalytics();?>
 </head>
 <?php flush();?>
