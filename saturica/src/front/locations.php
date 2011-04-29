@@ -91,15 +91,35 @@ SetupSearchInputRest();
 	 <div id="locations_wizard_content"> 
 		<div id="locations">
 			<div id="search_locations_content">
-            	<form action="locations.php" method="get" id="location_search_subject_form">
+			
+			</div>	<!--  search_locations_content -->
+			
+			
+			   <div id="locations_title">
+		                    <div id="locations_title_text_A">
+	                        :לוקיישנים
+	                        </div>
+	                        <div id="locations_title_small">
+	                        	<div id="locations_title_text_B" dir="rtl">
+	                        		<br/> <br/> 
+	                        		יש לכם פעילות פנים ארגונית ואתם רק צריכים מקום בשבילה ?
+	                        		<br/>
+	                        		  הנה מגוון אתרים המותאמים לקיום סדנאות, הרצאות ופעילויות תוכן :
+	                        	</div> 
+	                        </div> 
+	                        
+	                        
+					<form action="locations.php" method="get" id="location_search_subject_form">
 			            <span class="questions" id="locations_filter_Subjects">
                             : בחר איזור בארץ
                         </span>
+                        
 			            <div id="locations_filter" class="location_wizard_dropdown"  onclick="show_dropdown('whattodo_ddlist')" >
                         	<?php 
                         	if(CheckIfIE()) 
                         	echo '<input id="whattodo_ddtext" class="dd_text_search" name="whatodo_ddtext" type="text" value=""  size="10"  readonly="readonly" style="margin-right:0.5cm;" />';
                         	else echo '<input id="whattodo_ddtext" class="dd_text_search" name="whatodo_ddtext" type="text" value=""  size="10"  readonly="readonly" style="margin-right:0.5cm; margin-top:-0.1cm;" />';
+                        	
                         	?>
                         	<div id="whattodo_ddlist" class="dd_list" >
 
@@ -118,26 +138,17 @@ SetupSearchInputRest();
                             <input class="Result_Set" name="Result_Set" type="hidden" value="0" />  
                              
                             <div id="location_harder_button" onclick="document.forms['location_search_subject_form'].submit();">  </div>            
-                 </form>
-           </div>			          
-				             
-		                <div id="locations_title">
-		                    <div id="locations_title_text_A">
-	                        :לוקיישנים
-	                        </div>
-	                        <div id="locations_title_small">
-	                        	<div id="locations_title_text_B" dir="rtl">
-	                        		<br/> <br/> 
-	                        		יש לכם פעילות פנים ארגונית ואתם רק צריכים מקום בשבילה ?
-	                        		<br/>
-	                        		  הנה מגוון אתרים המותאמים לקיום סדנאות, הרצאות ופעילויות תוכן :
-	                        	</div> 
-	                        </div> 
-	                     </div>
-	                     
-			                <ul id="locations_boxes">
+                 </form>	             
+	                      
+	         </div> <!--  locations_title -->
+            	
+            	
+            	
+            	
+            	
+ 				 <ul id="locations_boxes">
 			                <?php
-			                $j=0; //for printing empty boxes
+			             //   $j=0; //for printing empty boxes
 			                if ($result != null)
 			                     foreach ($result as $print_workshop)
 							     {
@@ -164,13 +175,13 @@ SetupSearchInputRest();
 			                        <?php 
 			                        echo "</div>";
 			                         $i++;
-			                         if ($j == 5) $j=0;
-			                         $j++;	//for printing empty boxes  
+			               //          if ($j == 5) $j=0;
+			               //          $j++;	//for printing empty boxes  
 									echo "</li>";       
 							      }	
 			                
 
-							      while ($j <5)
+						/*	      while ($j <5)
 							      {
 							      	echo "<li>";
 							      	if ( ($i % 2) == 0)
@@ -182,12 +193,13 @@ SetupSearchInputRest();
 							      	$j++;
 							      	echo "</li>";
 							      }
+						*/
 					   ?>	 
-			               </ul>      
-              </div>           	
-          </div>
-          </div>
-      </div>
+			        </ul>      <!--  locations_boxes -->
+              </div>    <!--  locations -->        	
+          </div> <!--  locations_wizard_content --> 
+          </div> <!--  locations_wizard_main  -->
+      
 			
 		<?php 
 				//	echo "<div id='NextPrevious' >vsdvdvd   </div>";
@@ -226,15 +238,18 @@ SetupSearchInputRest();
 					   }   	
 		?>
 
-	<div id="buttom_search">
-	<div id="buttom_search_main">
-		<div id="buttom_search_content">
-			<br/>
-			?לא מצאת את מה שחיפשת
-			<div id="buttom_contact_location_button" onclick="location.href='contact.php'"></div>
+		<div id="buttom_search">
+			<div id="buttom_search_main">
+				<div id="buttom_search_content">
+					<br/>
+					?לא מצאת את מה שחיפשת
+					<div id="buttom_contact_location_button" onclick="location.href='contact.php'"></div>
+				</div>
+			</div>
 		</div>
-	</div>
-	</div>
+	
+	
+	</div> 	<!--  locations_wizard -->
 	<?php
 	FooterFunc();
 	DialogBoxHtml();
