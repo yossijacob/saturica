@@ -255,7 +255,7 @@ var hide = false;
         <div id="main_text_content" dir="rtl">
 			<br/>
         	<div id="main_text_head">
-        	מתעקשים על סדנא או הרצאה שמתאימה לכם בול ?
+        	מחפשים סדנה או הרצאה שמתאימה לכם  ?
         	<br/>
         	<span id="saturica_name">סאטוריקה</span>
         	תתאים לכם בדיוק...        	
