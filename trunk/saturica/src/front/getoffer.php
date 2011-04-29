@@ -8,23 +8,22 @@ connect();   //connect to mysql DB
 
   $approval_contact = isset($_POST['approval_contact_box'])? $_POST['approval_contact_box']: "";
   
+  $name  = isset($_POST['name'])? $_POST['name']: "";
+  $name = CleanText($name);
+  /*$phone = isset($_POST['phone'])? $_POST['phone']: "";
+  $phone = CleanText($phone);*/
+  $_subject = isset($_POST['subject'])? $_POST['subject']: "";
+  $_subject= CleanText($_subject);
+  $email = isset($_POST['email'])? $_POST['email']: "";
+  $email = CleanText($email);
+  $company = isset($_POST['company'])? $_POST['company']: "";
+  $company = CleanText($company);
+  $content = isset($_POST['content'])? $_POST['content']: "";
+  $content = CleanText($content);
+  /*$comments = isset($_POST['comments'])? $_POST['comments']: "";
+  $comments = CleanText($comments);*/
   if ($approval_contact == "on")
-  {		// add the customer to our database
-	  $name  = isset($_POST['name'])? $_POST['name']: "";
-	  $name = CleanText($name);
-	  /*$phone = isset($_POST['phone'])? $_POST['phone']: "";
-	  $phone = CleanText($phone);*/
-	  $_subject = isset($_POST['subject'])? $_POST['subject']: "";
-	  $_subject= CleanText($_subject);
-	  $email = isset($_POST['email'])? $_POST['email']: "";
-	  $email = CleanText($email);
-	  $company = isset($_POST['company'])? $_POST['company']: "";
-	  $company = CleanText($company);
-	  $content = isset($_POST['content'])? $_POST['content']: "";
-	  $content = CleanText($content);
-	  /*$comments = isset($_POST['comments'])? $_POST['comments']: "";
-	  $comments = CleanText($comments);*/
-	  
+  {		// add the customer to our database  
 	  $data[0] = $name;
   	  $data[1] = $company;
   	  $data[2] = "";
@@ -50,7 +49,7 @@ connect();   //connect to mysql DB
 	$preferences = GetRecord("preferences",1);  // get data
 	$manager_email = $preferences[1];
 
-	$subject = $_subject." - סאטוריקה";	
+	$subject = $_subject." - סאטוריקה";
 		
 	$mailcontent  = "התקבלה פנייה:";
 	$mailcontent  .= "<br/>";
