@@ -16,7 +16,7 @@ if(CheckIfIE())
 	}
 SetupSearchInputRest();
 ?>
-<title>סטוריקה - תודה על פנייתך</title>
+<title>סאטוריקה - תודה על פנייתך</title>
 <?php GoogleAnalytics();?>
 </head>
 <?php flush();?>
