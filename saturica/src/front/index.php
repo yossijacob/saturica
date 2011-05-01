@@ -38,13 +38,16 @@ $whatbudget_ddtext = CleanText($whatbudget_ddtext);
 <meta charset="utf-8"/>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" type="text/css" href="style.css" />
-<?php 
+<?php
+SetupJqueryContactDialogCss();
 if(CheckIfIE()) 
 	{
 		?>
 		<link rel="stylesheet" href="IEstyle.css" type="text/css" />
 		<?php 
 	}
+SetupJquery();
+SetupJqueryContactDialog();
 SetupSearchInputRest();
 ?>
 <script type="text/javascript">
@@ -302,8 +305,9 @@ var hide = false;
            
                 <div id="video">       
                 <object width="325" height="375" type="application/x-shockwave-flash">
+                    <param name="wmode" value="transparent">
                     <param name="movie" value="http://www.youtube.com/v/2QcTmqB4tCo?hl=en&fs=1&rel=1&amp;color1=0xAF674E&amp;color2=0xAF674E&amp;border=1&amp;fs=1"/>
-                    <param name="allowFullScreen" value="true"/><param name="allowscriptaccess" value="always"/>
+                    <param name="allowFullScreen" value="true"/><param name="allowscriptaccess" value="always"/>    
                     <embed src="http://www.youtube.com/v/2QcTmqB4tCo?rel=1&amp;color1=0xAF674E&amp;color2=0xAF674E&amp;border=1&amp;fs=1" 
                     type="application/x-shockwave-flash" 
                     allowscriptaccess="always" 
@@ -338,5 +342,6 @@ var hide = false;
 	   <img src="images/main_icon_managers_hover.jpg" width="1" height="1" alt="Image 15" />
 	   <img src="images/main_icon_team_hover.jpg" width="1" height="1" alt="Image 16" />
 	</div>
+	<?php DialogBoxHtml(); ?>
 </body>
 </html>
