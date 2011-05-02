@@ -47,7 +47,7 @@ SetupSearchInputRest();
 		
 		<div id="contact_us_text">
 					
-		   <form action="getoffer.php" method="get" id="contact_form">
+		   <form action="getoffer.php" method="post" id="contact_form">
 			<div id="client_name_A">
 			<input class="client_name_box" name="name" type="text" value="  " size="10" />
 			</div>
@@ -106,7 +106,7 @@ SetupSearchInputRest();
 	         ) 
            </span>
 		
-			<input class="approval_contact_box" name="approval_contact_box" type="checkbox" value="" size="20" checked/>
+			<input class="approval_contact_box" name="approval_contact_box" type="checkbox" value="on" size="20" checked/>
 			
 			<span id="approval_contact">
             מאשר את הצטרפותי למועדון הלקוחות של סאטוריקה וקבלת
