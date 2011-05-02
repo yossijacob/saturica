@@ -2517,3 +2517,8 @@ max-height: 400px;
         display: block;
 	}
 /***************************** GALLERY  END */
+
+#sapakim:hover
+{
+	cursor: pointer;
+}
