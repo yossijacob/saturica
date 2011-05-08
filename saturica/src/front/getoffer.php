@@ -10,6 +10,8 @@ connect();   //connect to mysql DB
   
   $name  = isset($_POST['name'])? $_POST['name']: "";
   $name = CleanText($name);
+  $phone  = isset($_POST['phone'])? $_POST['phone']: "";
+  $phone = CleanText($phone);
   /*$phone = isset($_POST['phone'])? $_POST['phone']: "";
   $phone = CleanText($phone);*/
   $_subject = isset($_POST['subject'])? $_POST['subject']: "";
@@ -26,7 +28,7 @@ connect();   //connect to mysql DB
   {		// add the customer to our database  
 	  $data[0] = $name;
   	  $data[1] = $company;
-  	  $data[2] = "";
+  	  $data[2] = $phone;
   	  $data[3] = $email;
   	  $data[4] = "";
   	  $data[5] = time();  // join date
@@ -61,8 +63,11 @@ connect();   //connect to mysql DB
 	$mailcontent  .= "<br/>";
 	$mailcontent  .= "אימייל: ".$email ;
 	$mailcontent  .= "<br/>";
+	$mailcontent  .= "טלפון: ".$phone ;
+	$mailcontent  .= "<br/>";
 	$mailcontent  .= "תוכן: ".$content ;
 	mail($manager_email, $subject, $mailcontent,$headers);
   
 	header('Location:thankyou.php');
 ?>
+limor@satorika.co.il
