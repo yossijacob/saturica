@@ -725,7 +725,7 @@ right: 1px;
 	
 	height:369px;
 	position:relative;
-	
+	font-family:Tahoma;
 	width:960px;
 	margin-left:139px;
 	margin-right:139px;
@@ -733,6 +733,16 @@ right: 1px;
 	background:url("images/about_header_bg.jpg") no-repeat;
 }
 
+#about_sat
+{
+	position:absolute;
+	top:35px;
+	right:55px;
+	color:#514E47;
+	font-size:22px;
+	font-family:Tahoma;
+	
+}
 
 #about_title
 {
