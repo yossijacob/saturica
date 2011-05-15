@@ -27,7 +27,11 @@ SetupSearchInputRest();
 	<?php HeaderFunc("whatwedo");?>
 	<div id="about_wizard">
 	<div id="about_wizard_main">
-		<div id="about_main_title" dir="rtl"> 
+		<div id="about_main_title" dir="rtl">
+			<div id="about_sat">
+			אודות סאטוריקה
+			</div> 
+		
         	<div id="about_title">
         	<br/>
                      סאטוריקה גאה להציג את הדור הבא בעולם הסדנאות - שירות ייחודי המאפשר לכם לבחור סדנא, הרצאה או פעילות תוכן
