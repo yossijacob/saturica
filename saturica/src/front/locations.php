@@ -171,7 +171,7 @@ SetupSearchInputRest();
 							     	Print_Single_Location($print_workshop);
 							     	echo "</div>";
 							     	?>
-							     	<div id='get_details_button' class='get_offer' alt="<?php echo $print_workshop[2];?>"> </div>
+							     	<div id='get_details_button' class='get_offer' alt='<?php echo $print_workshop[2];?>'> </div>
 			                        <?php 
 			                        echo "</div>";
 			                         $i++;
