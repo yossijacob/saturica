@@ -15,7 +15,7 @@ connect();   //connect to mysql DB
   /*$phone = isset($_POST['phone'])? $_POST['phone']: "";
   $phone = CleanText($phone);*/
   $_subject = isset($_POST['subject'])? $_POST['subject']: "";
-  $_subject= CleanText($_subject);
+  //$_subject= CleanText($_subject);
   $email = isset($_POST['email'])? $_POST['email']: "";
   $email = CleanText($email);
   $company = isset($_POST['company'])? $_POST['company']: "";
