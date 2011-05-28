@@ -21,7 +21,7 @@ connect();   //connect to mysql DB
   $company = isset($_POST['company'])? $_POST['company']: "";
   $company = CleanText($company);
   $content = isset($_POST['content'])? $_POST['content']: "";
-  $content = CleanText($content);
+  //$content = CleanText($content);
   /*$comments = isset($_POST['comments'])? $_POST['comments']: "";
   $comments = CleanText($comments);*/
   if ($approval_contact == "on")
